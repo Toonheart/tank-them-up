@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>menuevents</name>
+    <events>
+        <comment>Global Variables for Level Management</comment>
+        <variable comment="A number for completed levels" constant="0" name="CompletedLevels" static="0" type="number">-1</variable>
+        <variable comment="A number for unlocked levels, starts from 0 .. which is training level" constant="0" name="UnlockedLevel" static="0" type="number">0</variable>
+        <event-group collapsed="1" description="" title="Levels Management">
+            <sub-events>
+                <comment>Get current progress of Game from WebStorage</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-2" name="On start of layout" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">CompletedLevels</param>
+                            <param id="1" name="Value">int(WebStorage.LocalValue(&quot;SaveCompletedLevels&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">UnlockedLevel</param>
+                            <param id="1" name="Value">int(WebStorage.LocalValue(&quot;SaveCompletedLevels&quot;))+1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Reset to default game start if no saves data is available</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" type="WebStorage">
+                            <param id="0" name="Key">&quot;SaveCompletedLevels&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" type="System" />
+                    </actions>
+                </event-block>
+                <comment>Pick the current running level and keep it unlocked</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" type="System">
+                            <param id="0" name="Object">levelmap</param>
+                            <param id="1" name="Instance">UnlockedLevel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" type="levelmap">
+                            <param id="0" name="Animation">&quot;levelcurrent&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Pick everything greater than current level and make them locked</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" type="System">
+                            <param id="0" name="Object">levelmap</param>
+                            <param id="1" name="Expression">0</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">levelmap.levelnumber</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">UnlockedLevel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" type="levelmap">
+                            <param id="0" name="Animation">&quot;levellocked&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Pick all levels that are completed and tick mark them</comment>
+                <event-block collapsed="1">
+                    <conditions>
+                        <condition id="-23" name="While" type="System" />
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">CompletedLevels</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="-13" name="Pick nth instance" type="System">
+                                    <param id="0" name="Object">levelmap</param>
+                                    <param id="1" name="Instance">CompletedLevels</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" type="levelmap">
+                                    <param id="0" name="Animation">&quot;levelcomplete&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-11" name="Subtract from" type="System">
+                                    <param id="0" name="Variable">CompletedLevels</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Set Stage number on the Stage</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-11" name="For Each" type="System">
+                            <param id="0" name="Object">stagenumber</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" type="levelmap">
+                            <param id="0" name="Object">stagenumber</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" type="stagenumber">
+                            <param id="0" name="Text">levelmap.levelnumber</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="group that deals with user inputs on game menu screen." title="User Inputs">
+            <sub-events>
+                <comment>Menu Touches</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="3" name="On touched object" type="Touch">
+                            <param id="0" name="Object">newgame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Clear local storage" type="WebStorage" />
+                        <action id="-2" name="Go to layout" type="System">
+                            <param id="0" name="Layout">stage0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="3" name="On touched object" type="Touch">
+                            <param id="0" name="Object">loadsave</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" type="loadline">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="levelmap">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="stagenumber">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="3" name="On touched object" type="Touch">
+                            <param id="0" name="Object">exitgame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Close" type="Browser" />
+                    </actions>
+                </event-block>
+                <comment>Stage Selections - Allow user to play Unlocked level and also Completed levels</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="3" name="On touched object" type="Touch">
+                            <param id="0" name="Object">levelmap</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="-14" name="Compare variable" type="System">
+                                    <param id="0" name="Variable">UnlockedLevel</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">levelmap.levelnumber</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" type="System">
+                                    <param id="0" name="Layout">&quot;stage&quot;&amp;levelmap.levelnumber</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="debug n shit" title="Debug">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-1" name="Every tick" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
