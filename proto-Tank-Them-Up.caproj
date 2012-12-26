@@ -7,13 +7,15 @@
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>10802</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="ken@appMobi" id="appMobi" version="1">appMobi</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
@@ -1238,6 +1240,12 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="appMobi">
+            <plugin id="appMobi" />
+        </object-type>
+        <object-type name="Gamepad">
+            <plugin id="gamepad" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -1259,6 +1267,12 @@
         <global-instance type="Keyboard" />
         <global-instance type="WebStorage" />
         <global-instance type="Browser" />
+        <global-instance type="appMobi" />
+        <global-instance type="Gamepad">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
