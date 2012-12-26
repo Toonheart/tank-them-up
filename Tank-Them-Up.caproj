@@ -7,13 +7,13 @@
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>10802</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
@@ -29,23 +29,23 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>800</width>
-        <height>600</height>
+        <width>1536</width>
+        <height>2048</height>
     </window-size>
-    <pixel-rounding>0</pixel-rounding>
+    <pixel-rounding>1</pixel-rounding>
     <first-layout>menu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Scale</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Hide address bar">No</prop>
         <prop name="Loader style">Progress bar only</prop>
         <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-type name="background">
             <plugin id="TiledBg" />
             <texture />
@@ -76,15 +76,17 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.561538" hotspotY="0.504951">
+                        <image-point name="Imagepoint 1" x="0.453846" y="0.491749" />
                         <collision-poly>
-                            <point x="0.0105263" y="0.981481" />
-                            <point x="0.0105263" y="0.0185185" />
-                            <point x="0.494737" y="0" />
-                            <point x="0.989474" y="0.0185185" />
-                            <point x="0.926316" y="0.5" />
-                            <point x="0.989474" y="0.981481" />
-                            <point x="0.494737" y="1" />
+                            <point x="0.938462" y="0.0528053" />
+                            <point x="0.830769" y="0.49835" />
+                            <point x="0.938462" y="0.947195" />
+                            <point x="0.5" y="0.706271" />
+                            <point x="0.0192308" y="0.983498" />
+                            <point x="0.180769" y="0.49835" />
+                            <point x="0.0192308" y="0.0165017" />
+                            <point x="0.5" y="0.293729" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -94,17 +96,17 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.218391" hotspotY="0.461538">
-                        <image-point name="Imagepoint 1" x="0.988506" y="0.487179" />
+                    <frame duration="1" hotspotX="0.184502" hotspotY="0.505263">
+                        <image-point name="Imagepoint 1" x="1" y="0.494737" />
                         <collision-poly>
-                            <point x="0.0574713" y="0.871795" />
-                            <point x="0.0114943" y="0.51282" />
-                            <point x="0.0574713" y="0.128205" />
-                            <point x="0.494253" y="0.410256" />
-                            <point x="0.816092" y="0.410256" />
-                            <point x="1" y="0.51282" />
-                            <point x="0.804598" y="0.564103" />
-                            <point x="0.494253" y="0.564103" />
+                            <point x="0.856089" y="0.410526" />
+                            <point x="1" y="0.494737" />
+                            <point x="0.856089" y="0.589474" />
+                            <point x="0.501845" y="0.673684" />
+                            <point x="0.0479705" y="0.863158" />
+                            <point x="0.0774907" y="0.494737" />
+                            <point x="0.0479705" y="0.136842" />
+                            <point x="0.501845" y="0.326316" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -141,7 +143,7 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="stonewalls">
+        <object-type name="sidewallshexdigi">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable comment="Counts number of hits taken by object" name="hitcount" type="number" />
@@ -153,16 +155,14 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.503333" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.181818" y="0.181818" />
-                            <point x="0.5" y="0.030303" />
-                            <point x="0.818182" y="0.181818" />
-                            <point x="0.984848" y="0.5" />
-                            <point x="0.80303" y="0.80303" />
-                            <point x="0.5" y="0.954545" />
-                            <point x="0.181818" y="0.818182" />
-                            <point x="0.030303" y="0.5" />
+                            <point x="0.228333" y="0.058" />
+                            <point x="0.66" y="0.044" />
+                            <point x="0.928333" y="0.464" />
+                            <point x="0.686667" y="0.936" />
+                            <point x="0.248333" y="0.948" />
+                            <point x="0" y="0.508" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -899,14 +899,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="playersmine">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -1237,6 +1229,31 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="planertankshadow">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.589286" hotspotY="0.507937">
+                        <collision-poly>
+                            <point x="0.502041" y="1" />
+                            <point x="0.4" y="0.436782" />
+                            <point x="0.37551" y="0.528736" />
+                            <point x="0.502041" y="0.517241" />
+                            <point x="0.616327" y="0.54023" />
+                            <point x="0.604082" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fpscounter">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
         </object-type>
     </object-folder>
     <families />

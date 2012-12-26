@@ -4,7 +4,7 @@
     <name>stage1events</name>
     <events>
         <comment>STAGE 1 - EVENT SHEET</comment>
-        <event-group collapsed="1" description="Stuff that needs to make the game smooth." title="Game Stability Stuff">
+        <event-group description="Stuff that needs to make the game smooth." title="Game Stability Stuff">
             <sub-events>
                 <comment>Keep turret hovering over the tank</comment>
                 <event-block>
@@ -16,7 +16,17 @@
                             <param id="0" name="X">playertank.X</param>
                             <param id="1" name="Y">playertank.Y</param>
                         </action>
+                        <action id="-4" name="Set position to another object" type="planertankshadow">
+                            <param id="0" name="Object">playertank</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" type="planertankshadow">
+                            <param id="0" name="Angle">playertank.Angle</param>
+                        </action>
                         <action id="-24" name="Move to top" type="playertank" />
+                        <action id="0" name="Set text" type="fpscounter">
+                            <param id="0" name="Text">fps &amp; &quot; FPS (&quot; &amp; renderer &amp; &quot;)&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Allows spawning of bullet, explosion, forcefield, lineofsight objects later.  Also Set Range of Player to WindowWidth.. so it dynamically differs for different devices.&#x0D;&#x0A;Range can also be changed to hard values depending on different enemy.. lets say later if you want an enemy who can shoot you from any distance.</comment>
@@ -39,6 +49,9 @@
                             <param id="0" name="Angle">270</param>
                         </action>
                         <action id="-8" name="Set angle" type="playertank_turret">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="-8" name="Set angle" type="planertankshadow">
                             <param id="0" name="Angle">270</param>
                         </action>
                         <action id="-10" name="Set value" type="enemytower">
@@ -75,7 +88,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="All general game collisions" title="Collisions">
+        <event-group description="All general game collisions" title="Collisions">
             <sub-events>
                 <comment>Tank Crushing and Bullet hit behavior for Bushes.  If hitcount less than 2 it adds. greater or equal to 2... destroy bush.</comment>
                 <event-block>
@@ -337,12 +350,12 @@
                 <event-block>
                     <conditions>
                         <condition id="0" name="On collision with another object" type="normalbullet">
-                            <param id="0" name="Object">stonewalls</param>
+                            <param id="0" name="Object">sidewallshexdigi</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" type="normalbullet" />
-                        <action id="0" name="Spawn another object" type="stonewalls">
+                        <action id="0" name="Spawn another object" type="sidewallshexdigi">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
@@ -362,14 +375,14 @@
                     <sub-events>
                         <event-block>
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" type="stonewalls">
+                                <condition id="-7" name="Compare instance variable" type="sidewallshexdigi">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">15</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" type="stonewalls">
+                                <action id="-11" name="Add to" type="sidewallshexdigi">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -377,14 +390,14 @@
                         </event-block>
                         <event-block>
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" type="stonewalls">
+                                <condition id="-7" name="Compare instance variable" type="sidewallshexdigi">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">15</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Set opacity" type="stonewalls">
+                                <action id="-16" name="Set opacity" type="sidewallshexdigi">
                                     <param id="0" name="Opacity">75</param>
                                 </action>
                             </actions>
@@ -421,10 +434,10 @@
                     </conditions>
                     <actions>
                         <action behavior="Car" id="4" name="Set max speed" type="playertank">
-                            <param id="0" name="Max Speed">100</param>
+                            <param id="0" name="Max Speed">200</param>
                         </action>
                         <action behavior="Car" id="5" name="Set acceleration" type="playertank">
-                            <param id="0" name="Acceleration">200</param>
+                            <param id="0" name="Acceleration">400</param>
                         </action>
                     </actions>
                 </event-block>
@@ -950,7 +963,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="All user control actions." title="User Controls">
+        <event-group description="All user control actions." title="User Controls">
             <sub-events>
                 <comment>Movement and Navigation Controls</comment>
                 <event-block>
@@ -1074,7 +1087,7 @@
                     </actions>
                 </event-block>
                 <comment>Planting landmine</comment>
-                <event-block collapsed="1">
+                <event-block>
                     <conditions>
                         <condition id="4" name="Is touching object" type="Touch">
                             <param id="0" name="Object">firebutton</param>
@@ -1174,7 +1187,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="All debug stuff here" title="Debug">
+        <event-group description="All debug stuff here" title="Debug">
             <sub-events>
                 <comment>Start Debug Panel</comment>
                 <event-block>
@@ -1249,7 +1262,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Restart and Reload of Game" title="Game Restart/Reload">
+        <event-group description="Restart and Reload of Game" title="Game Restart/Reload">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -1285,7 +1298,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Deals with health calculations in the game" title="Health System">
+        <event-group description="Deals with health calculations in the game" title="Health System">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -1361,7 +1374,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Collectibles in the Game" title="Collectibles">
+        <event-group description="Collectibles in the Game" title="Collectibles">
             <sub-events>
                 <comment>Decrement PowerUp time out for remove player advantage</comment>
                 <event-block>
@@ -1401,7 +1414,7 @@
                         <action id="-9" name="Destroy" type="medkit" />
                     </actions>
                 </event-block>
-                <event-block collapsed="1">
+                <event-block>
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" type="playertank">
                             <param id="0" name="Instance variable">is_med</param>
@@ -1460,7 +1473,7 @@
                         <action id="-9" name="Destroy" type="speedfuel" />
                     </actions>
                 </event-block>
-                <event-block collapsed="1">
+                <event-block>
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" type="playertank">
                             <param id="0" name="Instance variable">is_speedfuel</param>
@@ -1478,10 +1491,10 @@
                             </conditions>
                             <actions>
                                 <action behavior="Car" id="4" name="Set max speed" type="playertank">
-                                    <param id="0" name="Max Speed">400</param>
+                                    <param id="0" name="Max Speed">600</param>
                                 </action>
                                 <action behavior="Car" id="5" name="Set acceleration" type="playertank">
-                                    <param id="0" name="Acceleration">500</param>
+                                    <param id="0" name="Acceleration">800</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1491,10 +1504,10 @@
                             </conditions>
                             <actions>
                                 <action behavior="Car" id="4" name="Set max speed" type="playertank">
-                                    <param id="0" name="Max Speed">100</param>
+                                    <param id="0" name="Max Speed">200</param>
                                 </action>
                                 <action behavior="Car" id="5" name="Set acceleration" type="playertank">
-                                    <param id="0" name="Acceleration">200</param>
+                                    <param id="0" name="Acceleration">400</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1524,7 +1537,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1">
+                <event-block>
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" type="playertank">
                             <param id="0" name="Instance variable">is_armor</param>
@@ -1559,7 +1572,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Aritificial intelligent for enemy minions and Bosses." title="Enemy AI">
+        <event-group description="Aritificial intelligent for enemy minions and Bosses." title="Enemy AI">
             <sub-events>
                 <comment>Make sure line of sight stays with moving enemy</comment>
                 <event-block>
@@ -1601,7 +1614,7 @@
                     </actions>
                 </event-block>
                 <comment>Every 3 secs, activate the enemy nearest to the player along with the line of sight, align angle towards the player and calculate distance to player</comment>
-                <event-block collapsed="1">
+                <event-block>
                     <conditions>
                         <condition id="-6" name="Every X seconds" type="System">
                             <param id="0" name="Interval (seconds)">2</param>
@@ -1632,7 +1645,7 @@
                     </actions>
                     <sub-events>
                         <comment>If calculated distance is within Range of the enemy,  check if line of sight is passing through any of the solid objects that should be blocking enemy&apos;s view.&#x0D;&#x0A;If the LoS is clear, then fire the effing player&apos;s ass.</comment>
-                        <event-block collapsed="1">
+                        <event-block>
                             <conditions>
                                 <condition id="-8" name="Compare two values" type="System">
                                     <param id="0" name="First value">distance(enemytower.X,enemytower.Y,playertank.X,playertank.Y)</param>
@@ -1648,7 +1661,7 @@
                                             <param id="0" name="Object">trees</param>
                                         </condition>
                                         <condition id="1" inverted="1" name="Is overlapping another object" type="lineofsight">
-                                            <param id="0" name="Object">stonewalls</param>
+                                            <param id="0" name="Object">sidewallshexdigi</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1683,7 +1696,7 @@
                             <param id="0" name="Object">MarkerSTOP</param>
                         </condition>
                         <condition id="1" inverted="1" name="Is overlapping another object" type="enemytank">
-                            <param id="0" name="Object">stonewalls</param>
+                            <param id="0" name="Object">sidewallshexdigi</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -1717,7 +1730,7 @@
                                             <param id="0" name="Object">trees</param>
                                         </condition>
                                         <condition id="1" inverted="1" name="Is overlapping another object" type="lineofsight">
-                                            <param id="0" name="Object">stonewalls</param>
+                                            <param id="0" name="Object">sidewallshexdigi</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1775,7 +1788,7 @@
                 <event-block>
                     <conditions>
                         <condition id="0" name="On collision with another object" type="enemytank">
-                            <param id="0" name="Object">stonewalls</param>
+                            <param id="0" name="Object">sidewallshexdigi</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Compare two values" type="System">
                             <param id="0" name="First value">distance(enemytank.X,enemytank.Y,playertank.X,playertank.Y)</param>
@@ -1877,7 +1890,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Animations that need to go on in the game independent of player inputs or gameplay." title="Game Environment Animations.">
+        <event-group description="Animations that need to go on in the game independent of player inputs or gameplay." title="Game Environment Animations.">
             <sub-events>
                 <comment>Stopping multiple explosions from happening when shooting at same spot.. consuming CPU cycles</comment>
                 <event-block>
@@ -1899,7 +1912,7 @@
         <event-group description="Conditions for game completion." title="Game Completion">
             <sub-events>
                 <comment>When Player kills all enemies, Level is complete. Stop input. Let player know and save the completed level number</comment>
-                <event-block collapsed="1">
+                <event-block>
                     <conditions>
                         <condition id="-8" name="Compare two values" type="System">
                             <param id="0" name="First value">enemytower.Count</param>
