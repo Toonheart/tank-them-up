@@ -354,14 +354,14 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" type="normalbullet" />
-                        <action id="0" name="Spawn another object" type="sidewallshexdigi">
+                        <action id="0" name="Spawn another object" type="normalbullet">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action id="-9" name="Destroy" type="normalbullet" />
                         <action id="9" name="Set scale" type="explosion">
-                            <param id="0" name="Scale">0.9</param>
+                            <param id="0" name="Scale">5</param>
                         </action>
                         <action id="4" name="Set animation" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
@@ -1399,7 +1399,7 @@
                 <event-block>
                     <conditions>
                         <condition id="0" name="On collision with another object" type="playertank">
-                            <param id="0" name="Object">medkit</param>
+                            <param id="0" name="Object">energyatom</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1411,7 +1411,7 @@
                             <param id="0" name="Instance variable">is_med</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-9" name="Destroy" type="medkit" />
+                        <action id="-9" name="Destroy" type="energyatom" />
                     </actions>
                 </event-block>
                 <event-block>
