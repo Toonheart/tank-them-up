@@ -758,30 +758,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="firebutton">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.228723" y="0.231579" />
-                            <point x="0.5" y="0.326316" />
-                            <point x="0.664894" y="0.336842" />
-                            <point x="0.819149" y="0.5" />
-                            <point x="0.744681" y="0.742105" />
-                            <point x="0.5" y="0.794737" />
-                            <point x="0.255319" y="0.742105" />
-                            <point x="0.138298" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="airplane">
             <plugin id="Sprite" />
             <instance-variables>

@@ -4,7 +4,7 @@
     <name>stage1events</name>
     <events>
         <comment>STAGE 1 - EVENT SHEET</comment>
-        <event-group collapsed="1" description="Stuff that needs to make the game smooth." title="Game Stability Stuff">
+        <event-group description="Stuff that needs to make the game smooth." title="Game Stability Stuff">
             <sub-events>
                 <comment>Keep turret hovering over the tank</comment>
                 <event-block>
@@ -88,7 +88,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="All general game collisions" title="Collisions">
+        <event-group description="All general game collisions" title="Collisions">
             <sub-events>
                 <comment>Bullet Hits Bullet</comment>
                 <event-block>
@@ -863,6 +863,23 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Spawn another object" type="normalbullet">
+                                    <param id="0" name="Object">explosion</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="9" name="Set scale" type="explosion">
+                                    <param id="0" name="Scale">10</param>
+                                </action>
+                                <action id="-9" name="Destroy" type="normalbullet" />
+                                <action id="4" name="Set animation" type="explosion">
+                                    <param id="0" name="Animation">&quot;BlowUp&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-9" name="Destroy" type="explosion" />
                                 <action id="-9" name="Destroy" type="enemytower" />
                             </actions>
                             <sub-events>
@@ -876,6 +893,35 @@
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Destroy" type="lineofsight" />
+                                    </actions>
+                                </event-block>
+                                <event-block>
+                                    <conditions>
+                                        <condition id="-15" name="Pick nearest/furthest" type="fuelpod">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="X">enemytower.X</param>
+                                            <param id="2" name="Y">enemytower.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" type="normalbullet">
+                                            <param id="0" name="Object">explosion</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="9" name="Set scale" type="explosion">
+                                            <param id="0" name="Scale">10</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" type="normalbullet" />
+                                        <action id="4" name="Set animation" type="explosion">
+                                            <param id="0" name="Animation">&quot;BlowUp&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" type="explosion" />
+                                        <action id="-9" name="Destroy" type="fuelpod" />
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -1227,11 +1273,11 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>Planting landmine</comment>
+                <comment>Planting landmine on touching the tank</comment>
                 <event-block>
                     <conditions>
                         <condition id="4" name="Is touching object" type="Touch">
-                            <param id="0" name="Object">firebutton</param>
+                            <param id="0" name="Object">playertank</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -1241,6 +1287,7 @@
                                 <condition id="1" inverted="1" name="Is overlapping another object" type="playertank">
                                     <param id="0" name="Object">playersmine</param>
                                 </condition>
+                                <condition id="2" inverted="1" name="Is pause" type="Pause" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" type="playertank">
@@ -1280,9 +1327,7 @@
                         <condition id="4" inverted="1" name="Is touching object" type="Touch">
                             <param id="0" name="Object">8padup</param>
                         </condition>
-                        <condition id="4" inverted="1" name="Is touching object" type="Touch">
-                            <param id="0" name="Object">firebutton</param>
-                        </condition>
+                        <condition id="2" inverted="1" name="Is pause" type="Pause" />
                     </conditions>
                     <actions>
                         <action id="-22" name="Set angle toward position" type="playertank_turret">
@@ -2037,16 +2082,16 @@
                 <comment>Stopping multiple explosions from happening when shooting at same spot.. consuming CPU cycles</comment>
                 <event-block>
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="explosion">
+                        <condition disabled="1" id="0" name="On collision with another object" type="explosion">
                             <param id="0" name="Object">explosion</param>
                         </condition>
-                        <condition id="-13" name="Pick nth instance" type="System">
+                        <condition disabled="1" id="-13" name="Pick nth instance" type="System">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Instance">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action disabled="1" id="-9" name="Destroy" type="explosion" />
                     </actions>
                 </event-block>
             </sub-events>
