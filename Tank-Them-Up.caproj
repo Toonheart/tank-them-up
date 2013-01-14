@@ -5,12 +5,13 @@
     <version>0.1</version>
     <author>Srikrishna Das(krish) - krish@toonheart.com</author>
     <unique-id>11x3p9zew2lzl</unique-id>
-    <saved-with-version>10802</saved-with-version>
+    <saved-with-version>11400</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
@@ -41,7 +42,7 @@
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Hide address bar">No</prop>
         <prop name="Loader style">Progress bar only</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">Firefox</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
@@ -121,12 +122,12 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.501066" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.936916" y="0.4625" />
-                            <point x="0.836448" y="0.75" />
-                            <point x="0.537383" y="0.5375" />
-                            <point x="0.831775" y="0.225" />
+                            <point x="0.923241" y="0.513158" />
+                            <point x="0.793177" y="0.802632" />
+                            <point x="0.58209" y="0.539474" />
+                            <point x="0.791045" y="0.25" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -141,9 +142,6 @@
         </object-type>
         <object-type name="sidewallshexdigi">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable comment="Counts number of hits taken by object" name="hitcount" type="number" />
-            </instance-variables>
             <behaviors>
                 <behavior-type name="Solid">
                     <behavior id="solid" />
@@ -256,7 +254,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="reload">
+        <object-type name="reloadButton">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Anchor">
@@ -647,17 +645,16 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.974576" y="0.923729" />
+                    <frame duration="1" hotspotX="0.400254" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.989835" y="0.51" />
                         <collision-poly>
-                            <point x="1" y="0.601695" />
-                            <point x="0.694915" y="0.940678" />
-                            <point x="0.5" y="0.923729" />
-                            <point x="0.228814" y="0.771186" />
-                            <point x="0.152542" y="0.5" />
-                            <point x="0.313559" y="0.313559" />
-                            <point x="0.5" y="0.194915" />
-                            <point x="0.686441" y="0.313559" />
+                            <point x="0.70521" y="0.386667" />
+                            <point x="0.936468" y="0.506667" />
+                            <point x="0.500635" y="0.74" />
+                            <point x="0.121982" y="0.84" />
+                            <point x="0.170267" y="0.5" />
+                            <point x="0.124524" y="0.163333" />
+                            <point x="0.500635" y="0.268333" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -1254,6 +1251,11 @@
         </object-type>
         <object-type name="fuelpod">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
                     <frame duration="1" hotspotX="0.501667" hotspotY="0.500849">
@@ -1333,6 +1335,33 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="pauseButton">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.508772" hotspotY="0.508772">
+                        <collision-poly>
+                            <point x="0.0701754" y="0.0701754" />
+                            <point x="0.491228" y="0.0175439" />
+                            <point x="0.929825" y="0.0701754" />
+                            <point x="0.982456" y="0.491228" />
+                            <point x="0.929825" y="0.929825" />
+                            <point x="0.491228" y="0.982456" />
+                            <point x="0.0526316" y="0.947368" />
+                            <point x="0.0175439" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Pause">
+            <plugin id="Rex_Pause" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -1354,6 +1383,7 @@
         <global-instance type="Keyboard" />
         <global-instance type="WebStorage" />
         <global-instance type="Browser" />
+        <global-instance type="Pause" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

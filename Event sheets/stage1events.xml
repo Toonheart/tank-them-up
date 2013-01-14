@@ -4,7 +4,7 @@
     <name>stage1events</name>
     <events>
         <comment>STAGE 1 - EVENT SHEET</comment>
-        <event-group description="Stuff that needs to make the game smooth." title="Game Stability Stuff">
+        <event-group collapsed="1" description="Stuff that needs to make the game smooth." title="Game Stability Stuff">
             <sub-events>
                 <comment>Keep turret hovering over the tank</comment>
                 <event-block>
@@ -56,7 +56,7 @@
                         </action>
                         <action id="-10" name="Set value" type="enemytower">
                             <param id="0" name="Instance variable">range</param>
-                            <param id="1" name="Value">384</param>
+                            <param id="1" name="Value">2048</param>
                         </action>
                         <action id="-10" name="Set value" type="enemytank">
                             <param id="0" name="Instance variable">range</param>
@@ -88,8 +88,64 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="All general game collisions" title="Collisions">
+        <event-group collapsed="1" description="All general game collisions" title="Collisions">
             <sub-events>
+                <comment>Bullet Hits Bullet</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="normalbullet">
+                            <param id="0" name="Object">normalbullet</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" type="normalbullet" />
+                        <action id="0" name="Spawn another object" type="normalbullet">
+                            <param id="0" name="Object">explosion</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="9" name="Set scale" type="explosion">
+                            <param id="0" name="Scale">5</param>
+                        </action>
+                        <action id="4" name="Set animation" type="explosion">
+                            <param id="0" name="Animation">&quot;BlowUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" type="explosion" />
+                    </actions>
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" type="bush">
+                                    <param id="0" name="Instance variable">hitcount</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" type="bush">
+                                    <param id="0" name="Instance variable">hitcount</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" type="bush">
+                                    <param id="0" name="Instance variable">hitcount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" type="bush" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <comment>Tank Crushing and Bullet hit behavior for Bushes.  If hitcount less than 2 it adds. greater or equal to 2... destroy bush.</comment>
                 <event-block>
                     <conditions>
@@ -372,37 +428,6 @@
                         </action>
                         <action id="-9" name="Destroy" type="explosion" />
                     </actions>
-                    <sub-events>
-                        <event-block>
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" type="sidewallshexdigi">
-                                    <param id="0" name="Instance variable">hitcount</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">15</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" type="sidewallshexdigi">
-                                    <param id="0" name="Instance variable">hitcount</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block>
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" type="sidewallshexdigi">
-                                    <param id="0" name="Instance variable">hitcount</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">15</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Set opacity" type="sidewallshexdigi">
-                                    <param id="0" name="Opacity">75</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <comment>Bullet hit behavior for SpikeBase structures</comment>
                 <event-block>
@@ -432,7 +457,7 @@
                     </actions>
                 </event-block>
                 <comment>Bullet hit behavior for Spikes.  Spikes retract on getting hit</comment>
-                <event-block collapsed="1">
+                <event-block>
                     <conditions>
                         <condition id="0" name="On collision with another object" type="normalbullet">
                             <param id="0" name="Object">spikebarrier</param>
@@ -718,13 +743,13 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="playertank">
+                        <action id="0" name="Spawn another object" type="normalbullet">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="9" name="Set scale" type="explosion">
-                            <param id="0" name="Scale">2</param>
+                            <param id="0" name="Scale">3</param>
                         </action>
                         <action id="-9" name="Destroy" type="normalbullet" />
                         <action id="4" name="Set animation" type="explosion">
@@ -795,13 +820,13 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="enemytower">
+                        <action id="0" name="Spawn another object" type="normalbullet">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="9" name="Set scale" type="explosion">
-                            <param id="0" name="Scale">2</param>
+                            <param id="0" name="Scale">5</param>
                         </action>
                         <action id="-9" name="Destroy" type="normalbullet" />
                         <action id="4" name="Set animation" type="explosion">
@@ -819,7 +844,7 @@
                                 <condition id="-7" name="Compare instance variable" type="enemytower">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">5</param>
+                                    <param id="2" name="Value">10</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -834,7 +859,7 @@
                                 <condition id="-7" name="Compare instance variable" type="enemytower">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">5</param>
+                                    <param id="2" name="Value">10</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1306,17 +1331,6 @@
         <event-group description="All debug stuff here" title="Debug">
             <sub-events>
                 <comment>Start Debug Panel</comment>
-                <event-block>
-                    <conditions>
-                        <condition id="-1" name="Every tick" type="System" />
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="-10" name="Set value" type="playertank">
-                            <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Value">100</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <comment>Enable / Disable AI markers for Enemy - Useful in Debugging</comment>
                 <event-block>
                     <conditions>
@@ -1370,7 +1384,7 @@
                         <condition id="-1" name="Every tick" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-10" name="Set value" type="playertank">
+                        <action id="-10" name="Set value" type="playertank">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">100</param>
                         </action>
@@ -1378,12 +1392,13 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Restart and Reload of Game" title="Game Restart/Reload">
+        <event-group description="Restart and Pause of Game" title="Game Restart/Pause">
             <sub-events>
+                <comment>ReStart the Game</comment>
                 <event-block>
                     <conditions>
                         <condition id="3" name="On touched object" type="Touch">
-                            <param id="0" name="Object">reload</param>
+                            <param id="0" name="Object">reloadButton</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1410,6 +1425,17 @@
                         <action id="-2" name="Go to layout" type="System">
                             <param id="0" name="Layout">menu</param>
                         </action>
+                    </actions>
+                </event-block>
+                <comment>Pause the Game</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="3" name="On touched object" type="Touch">
+                            <param id="0" name="Object">pauseButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Toggle pause" type="Pause" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -1733,7 +1759,7 @@
                 <event-block>
                     <conditions>
                         <condition id="-6" name="Every X seconds" type="System">
-                            <param id="0" name="Interval (seconds)">2</param>
+                            <param id="0" name="Interval (seconds)">3</param>
                         </condition>
                         <condition id="-15" name="Pick nearest/furthest" type="enemytower">
                             <param id="0" name="Which">0</param>
