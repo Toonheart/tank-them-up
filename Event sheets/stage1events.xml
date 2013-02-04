@@ -594,7 +594,7 @@
                     <actions>
                         <action id="-12" name="Subtract from" type="playertank">
                             <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Value">100</param>
+                            <param id="1" name="Value">70</param>
                         </action>
                         <action id="-4" name="Set position to another object" type="playertank">
                             <param id="0" name="Object">quicksand</param>
@@ -630,7 +630,7 @@
                         </action>
                         <action id="-12" name="Subtract from" type="playertank">
                             <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Value">33</param>
+                            <param id="1" name="Value">10</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" type="playertank">
                             <param id="0" name="Magnitude">20</param>
@@ -665,7 +665,7 @@
                         </action>
                         <action id="-12" name="Subtract from" type="playertank">
                             <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Value">33</param>
+                            <param id="1" name="Value">20</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" type="playertank">
                             <param id="0" name="Magnitude">20</param>
@@ -758,7 +758,7 @@
                         </action>
                         <action id="-12" name="Subtract from" type="playertank">
                             <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Value">33</param>
+                            <param id="1" name="Value">5</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" type="playertank">
                             <param id="0" name="Magnitude">10</param>
@@ -793,7 +793,7 @@
                         </action>
                         <action id="-12" name="Subtract from" type="playertank">
                             <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Value">33</param>
+                            <param id="1" name="Value">20</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" type="playertank">
                             <param id="0" name="Magnitude">5</param>
@@ -1083,7 +1083,7 @@
                         <action id="-9" name="Destroy" type="explosion" />
                         <action id="-10" name="Set value" type="playertank">
                             <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Value">playertank.health-67</param>
+                            <param id="1" name="Value">playertank.health-50</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1328,6 +1328,9 @@
                             <param id="0" name="Object">8padup</param>
                         </condition>
                         <condition id="2" inverted="1" name="Is pause" type="Pause" />
+                        <condition id="4" inverted="1" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">pauseButton</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-22" name="Set angle toward position" type="playertank_turret">
@@ -1376,6 +1379,12 @@
         <event-group description="All debug stuff here" title="Debug">
             <sub-events>
                 <comment>Start Debug Panel</comment>
+                <event-block disabled="1">
+                    <conditions>
+                        <condition id="-1" name="Every tick" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
                 <comment>Enable / Disable AI markers for Enemy - Useful in Debugging</comment>
                 <event-block>
                     <conditions>
@@ -1424,7 +1433,7 @@
                     </actions>
                 </event-block>
                 <comment>Player in GOD Mode -  To test the whole game without dying... except this doesnt test for math on player health</comment>
-                <event-block>
+                <event-block disabled="1">
                     <conditions>
                         <condition id="-1" name="Every tick" type="System" />
                     </conditions>
@@ -1496,12 +1505,29 @@
         </event-group>
         <event-group description="Deals with health calculations in the game" title="Health System">
             <sub-events>
+                <comment>Cap health at 100. Avoid God Mode. Disable if Debugging in Godmode</comment>
                 <event-block>
                     <conditions>
                         <condition id="-7" name="Compare instance variable" type="playertank">
                             <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">100</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">70</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">70</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Green - Good Health </comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">50</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1511,36 +1537,125 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Yellow - Medium Health </comment>
                 <event-block>
                     <conditions>
                         <condition id="-7" name="Compare instance variable" type="playertank">
                             <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">67</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">50</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">30</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" type="healthbar">
-                            <param id="0" name="Animation">&quot;health67&quot;</param>
+                            <param id="0" name="Animation">&quot;yellow&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
+                <comment>Orange - Approaching danger.. Be Cautious</comment>
                 <event-block>
                     <conditions>
                         <condition id="-7" name="Compare instance variable" type="playertank">
                             <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">34</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">30</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">10</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" type="healthbar">
-                            <param id="0" name="Animation">&quot;health33&quot;</param>
+                            <param id="0" name="Animation">&quot;orange&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
+                <comment>Flash Orange - Be Cautious</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">30</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" type="healthbar">
+                            <param id="0" name="&apos;On&apos; time">0.25</param>
+                            <param id="1" name="&apos;Off&apos; time">0.25</param>
+                            <param id="2" name="Duration">3</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Red - DANGER.. superlow health</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" type="healthbar">
+                            <param id="0" name="Animation">&quot;red&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>More Flash Red - Be Super Cautious</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" type="healthbar">
+                            <param id="0" name="&apos;On&apos; time">0.20</param>
+                            <param id="1" name="&apos;Off&apos; time">0.20</param>
+                            <param id="2" name="Duration">4</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>None - You&apos;re Fucked.</comment>
                 <event-block>
                     <conditions>
                         <condition id="-7" name="Compare instance variable" type="playertank">
@@ -1565,7 +1680,49 @@
                         </action>
                         <action id="-9" name="Destroy" type="playertank" />
                         <action id="-9" name="Destroy" type="playertank_turret" />
-                        <action id="-9" name="Destroy" type="healthbar" />
+                        <action id="-16" name="Set opacity" type="healthbar">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Hide off Lost health bars</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" type="System">
+                            <param id="0" name="Object">healthbar</param>
+                            <param id="1" name="Expression">0</param>
+                            <param id="2" name="Order">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">healthbar.IID</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">playertank.health/10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" type="healthbar">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>UnHide on recovery</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" type="System">
+                            <param id="0" name="Object">healthbar</param>
+                            <param id="1" name="Expression">0</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">healthbar.IID</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">playertank.health/10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" type="healthbar">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -1573,7 +1730,7 @@
         <event-group description="Collectibles in the Game" title="Collectibles">
             <sub-events>
                 <comment>Decrement PowerUp time out for remove player advantage</comment>
-                <event-block>
+                <event-block disabled="1">
                     <conditions>
                         <condition id="-6" name="Every X seconds" type="System">
                             <param id="0" name="Interval (seconds)">1.0</param>
@@ -1591,7 +1748,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>A new type of MedKit Adds Health for next 5 secs instead of just adding once</comment>
+                <comment>MedKit - Add Health</comment>
                 <event-block>
                     <conditions>
                         <condition id="0" name="On collision with another object" type="playertank">
@@ -1600,57 +1757,13 @@
                     </conditions>
                     <actions>
                         <action id="-11" name="Add to" type="playertank">
-                            <param id="0" name="Instance variable">powerup_timeout</param>
-                            <param id="1" name="Value">5</param>
-                        </action>
-                        <action id="-13" name="Set boolean" type="playertank">
-                            <param id="0" name="Instance variable">is_med</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">10</param>
                         </action>
                         <action id="-9" name="Destroy" type="energyatom" />
                     </actions>
                 </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" type="playertank">
-                            <param id="0" name="Instance variable">is_med</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block>
-                            <conditions>
-                                <condition id="-6" name="Every X seconds" type="System">
-                                    <param id="0" name="Interval (seconds)">1.0</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block>
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" type="playertank">
-                                            <param id="0" name="Instance variable">powerup_timeout</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" type="playertank">
-                                            <param id="0" name="Instance variable">health</param>
-                                            <param id="1" name="Comparison">2</param>
-                                            <param id="2" name="Value">100</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-11" name="Add to" type="playertank">
-                                            <param id="0" name="Instance variable">health</param>
-                                            <param id="1" name="Value">33</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>Collecting SpeedFuel adds 10s to powerup timeout and enables Speed</comment>
+                <comment>SpeedFuel - Increases Speedu</comment>
                 <event-block>
                     <conditions>
                         <condition id="0" name="On collision with another object" type="playertank">
@@ -1658,18 +1771,26 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-11" name="Add to" type="playertank">
-                            <param id="0" name="Instance variable">powerup_timeout</param>
-                            <param id="1" name="Value">10</param>
-                        </action>
-                        <action id="-13" name="Set boolean" type="playertank">
-                            <param id="0" name="Instance variable">is_speedfuel</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                         <action id="-9" name="Destroy" type="speedfuel" />
+                        <action behavior="Car" id="4" name="Set max speed" type="playertank">
+                            <param id="0" name="Max Speed">600</param>
+                        </action>
+                        <action behavior="Car" id="5" name="Set acceleration" type="playertank">
+                            <param id="0" name="Acceleration">1200</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">10</param>
+                        </action>
+                        <action behavior="Car" id="4" name="Set max speed" type="playertank">
+                            <param id="0" name="Max Speed">200</param>
+                        </action>
+                        <action behavior="Car" id="5" name="Set acceleration" type="playertank">
+                            <param id="0" name="Acceleration">400</param>
+                        </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <comment>TEST AND DELETE LATER - Collecting SpeedFuel adds 10s to powerup timeout and enables Speed</comment>
+                <event-block disabled="1">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" type="playertank">
                             <param id="0" name="Instance variable">is_speedfuel</param>
@@ -1677,7 +1798,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block>
+                        <event-block disabled="1">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" type="playertank">
                                     <param id="0" name="Instance variable">powerup_timeout</param>
@@ -1694,7 +1815,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block disabled="1">
                             <conditions>
                                 <condition id="-22" name="Else" type="System" />
                             </conditions>
