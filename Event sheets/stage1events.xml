@@ -1729,25 +1729,6 @@
         </event-group>
         <event-group description="Collectibles in the Game" title="Collectibles">
             <sub-events>
-                <comment>Decrement PowerUp time out for remove player advantage</comment>
-                <event-block disabled="1">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" type="System">
-                            <param id="0" name="Interval (seconds)">1.0</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" type="playertank">
-                            <param id="0" name="Instance variable">powerup_timeout</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Subtract from" type="playertank">
-                            <param id="0" name="Instance variable">powerup_timeout</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <comment>MedKit - Add Health</comment>
                 <event-block>
                     <conditions>
@@ -1773,62 +1754,21 @@
                     <actions>
                         <action id="-9" name="Destroy" type="speedfuel" />
                         <action behavior="Car" id="4" name="Set max speed" type="playertank">
-                            <param id="0" name="Max Speed">600</param>
+                            <param id="0" name="Max Speed">800</param>
                         </action>
                         <action behavior="Car" id="5" name="Set acceleration" type="playertank">
-                            <param id="0" name="Acceleration">1200</param>
+                            <param id="0" name="Acceleration">1000</param>
                         </action>
                         <action id="-16" name="Wait" type="System">
                             <param id="0" name="Seconds">10</param>
                         </action>
                         <action behavior="Car" id="4" name="Set max speed" type="playertank">
-                            <param id="0" name="Max Speed">200</param>
+                            <param id="0" name="Max Speed">500</param>
                         </action>
                         <action behavior="Car" id="5" name="Set acceleration" type="playertank">
-                            <param id="0" name="Acceleration">400</param>
+                            <param id="0" name="Acceleration">700</param>
                         </action>
                     </actions>
-                </event-block>
-                <comment>TEST AND DELETE LATER - Collecting SpeedFuel adds 10s to powerup timeout and enables Speed</comment>
-                <event-block disabled="1">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" type="playertank">
-                            <param id="0" name="Instance variable">is_speedfuel</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block disabled="1">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" type="playertank">
-                                    <param id="0" name="Instance variable">powerup_timeout</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Car" id="4" name="Set max speed" type="playertank">
-                                    <param id="0" name="Max Speed">600</param>
-                                </action>
-                                <action behavior="Car" id="5" name="Set acceleration" type="playertank">
-                                    <param id="0" name="Acceleration">800</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1">
-                            <conditions>
-                                <condition id="-22" name="Else" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Car" id="4" name="Set max speed" type="playertank">
-                                    <param id="0" name="Max Speed">200</param>
-                                </action>
-                                <action behavior="Car" id="5" name="Set acceleration" type="playertank">
-                                    <param id="0" name="Acceleration">400</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <comment>Collecting Armor adds 10s to powerup timeout and enables Armor</comment>
                 <event-block>

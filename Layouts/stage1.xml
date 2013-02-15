@@ -1021,10 +1021,10 @@
                         </behavior-instance>
                         <behavior-instance type="Car">
                             <properties>
-                                <max-speed>250</max-speed>
-                                <acceleration>400</acceleration>
-                                <deceleration>500</deceleration>
-                                <steer-speed>100</steer-speed>
+                                <max-speed>500</max-speed>
+                                <acceleration>700</acceleration>
+                                <deceleration>300</deceleration>
+                                <steer-speed>200</steer-speed>
                                 <drift-recover>185</drift-recover>
                                 <friction>0.8</friction>
                                 <set-angle>Yes</set-angle>
@@ -3059,7 +3059,7 @@
                         <hotspotX>0.508771956</hotspotX>
                         <hotspotY>0.508771956</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.400000006</opacity>
+                        <opacity>0.75</opacity>
                     </world>
                 </instance>
                 <instance type="healthbar">
@@ -3273,7 +3273,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>172</x>
+                        <x>222</x>
                         <y>67</y>
                         <z>0</z>
                         <width>96</width>
@@ -3304,11 +3304,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>0</x>
-                        <y>97</y>
+                        <x>55.11000061</x>
+                        <y>76</y>
                         <z>0</z>
-                        <width>32.479858398</width>
-                        <height>105.172874451</height>
+                        <width>37.369773865</width>
+                        <height>121.006889343</height>
                         <depth>0</depth>
                         <hotspotX>-1</hotspotX>
                         <hotspotY>-1</hotspotY>
@@ -3331,7 +3331,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>96</x>
+                        <x>146</x>
                         <y>223</y>
                         <z>0</z>
                         <width>126</width>
@@ -3358,7 +3358,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>376</x>
+                        <x>426</x>
                         <y>223</y>
                         <z>0</z>
                         <width>87</width>
