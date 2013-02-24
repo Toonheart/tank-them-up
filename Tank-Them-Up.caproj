@@ -5,22 +5,23 @@
     <version>0.1</version>
     <author>Srikrishna Das(krish) - krish@toonheart.com</author>
     <unique-id>11x3p9zew2lzl</unique-id>
-    <saved-with-version>11800</saved-with-version>
+    <saved-with-version>11900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="" id="Rex_DebugPanel" version="0.100000001">Debug Panel</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
-        <behavior author="Scirra" id="Car" version="1">Car</behavior>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Car" version="1">Car</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -57,9 +58,11 @@
                 <instance-variable comment="Variable set to change tank dynamics if tank is driving through water." name="in_water" type="boolean" />
                 <instance-variable comment="Calculates health of object" name="health" type="number" />
                 <instance-variable comment="Counts timeout for user collectible powers" name="powerup_timeout" type="number" />
-                <instance-variable comment="Bool to check if player has collected speedfuel" name="is_speedfuel" type="boolean" />
                 <instance-variable comment="Variable to check if player&apos;s special armor is up." name="is_armor" type="boolean" />
                 <instance-variable comment="Tested if Medkit was collected" name="is_med" type="boolean" />
+                <instance-variable comment="Primary Ammo Count" name="primaryAmmo" type="number" />
+                <instance-variable comment="Secondary Ammo Count" name="secondaryAmmo" type="number" />
+                <instance-variable comment="CoolDown time for Turret" name="cooldown" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout">
@@ -549,25 +552,6 @@
                             <point x="0.5" y="0.715818" />
                             <point x="0.148889" y="0.820375" />
                             <point x="0.122222" y="0.466488" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="speedfuel">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.101563" y="0.0714286" />
-                            <point x="0.5" y="0.0604396" />
-                            <point x="0.78125" y="0.153846" />
-                            <point x="1" y="0.5" />
-                            <point x="0.867188" y="0.906593" />
-                            <point x="0.5" y="0.961538" />
-                            <point x="0.226563" y="0.840659" />
-                            <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -1290,30 +1274,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="pauseButton">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.508772" hotspotY="0.508772">
-                        <collision-poly>
-                            <point x="0.146751" y="0.146751" />
-                            <point x="0.498952" y="0" />
-                            <point x="0.853249" y="0.146751" />
-                            <point x="1" y="0.498952" />
-                            <point x="0.853249" y="0.853249" />
-                            <point x="0.498952" y="1" />
-                            <point x="0.146751" y="0.853249" />
-                            <point x="0" y="0.498952" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Pause">
             <plugin id="Rex_Pause" />
         </object-type>
@@ -1389,11 +1349,30 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="primaryAmmo">
+        <object-type name="AmmoCntPrimary">
             <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor">
+                    <behavior id="Anchor" />
+                </behavior-type>
+                <behavior-type name="Flash">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
         </object-type>
-        <object-type name="Text">
+        <object-type name="AmmoCntSecondary">
             <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor">
+                    <behavior id="Anchor" />
+                </behavior-type>
+                <behavior-type name="Flash">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type global="1" name="DebugPanel">
+            <plugin id="Rex_DebugPanel" />
         </object-type>
     </object-folder>
     <families />
