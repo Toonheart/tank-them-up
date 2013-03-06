@@ -91,14 +91,10 @@
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">70</param>
                         </action>
-                        <action id="-10" name="Set value" type="playertank">
-                            <param id="0" name="Instance variable">cooldown</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
                     </actions>
                 </event-block>
                 <comment>Allows tank to shoot again if bullet is out of the game. Also stops potential slowing down if more and more bullets zoom off forever.</comment>
-                <event-block>
+                <event-block disabled="1">
                     <conditions>
                         <condition id="-4" name="Is outside layout" type="normalbullet" />
                     </conditions>
@@ -108,6 +104,15 @@
                         <action id="-9" name="Destroy" type="missile" />
                     </actions>
                 </event-block>
+                <comment>CoolDown calculation for turret</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
             </sub-events>
         </event-group>
         <event-group collapsed="1" description="All general game collisions" title="Collisions">
@@ -116,11 +121,12 @@
                 <event-block>
                     <conditions>
                         <condition id="0" name="On collision with another object" type="normalbullet">
-                            <param id="0" name="Object">normalbullet</param>
+                            <param id="0" name="Object">enemynormalbullet</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" type="normalbullet" />
+                        <action id="-9" name="Destroy" type="enemynormalbullet" />
                         <action id="0" name="Spawn another object" type="normalbullet">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">1</param>
@@ -138,37 +144,7 @@
                         </action>
                         <action id="-9" name="Destroy" type="explosion" />
                     </actions>
-                    <sub-events>
-                        <event-block>
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" type="bush">
-                                    <param id="0" name="Instance variable">hitcount</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" type="bush">
-                                    <param id="0" name="Instance variable">hitcount</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block>
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" type="bush">
-                                    <param id="0" name="Instance variable">hitcount</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" type="bush" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
-                <comment>Tank Crushing and Bullet hit behavior for Bushes.  If hitcount less than 2 it adds. greater or equal to 2... destroy bush.</comment>
                 <event-block>
                     <conditions>
                         <condition id="0" name="On collision with another object" type="normalbullet">
@@ -224,6 +200,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Tank Crushing and Bullet hit behavior for Bushes.  If hitcount less than 2 it adds. greater or equal to 2... destroy bush.</comment>
                 <event-block>
                     <conditions>
                         <condition id="0" name="On collision with another object" type="playertank">
@@ -749,11 +726,11 @@
                 <event-block>
                     <conditions>
                         <condition id="0" name="On collision with another object" type="playertank">
-                            <param id="0" name="Object">normalbullet</param>
+                            <param id="0" name="Object">enemynormalbullet</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="normalbullet">
+                        <action id="0" name="Spawn another object" type="enemynormalbullet">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
@@ -761,7 +738,7 @@
                         <action id="9" name="Set scale" type="explosion">
                             <param id="0" name="Scale">3</param>
                         </action>
-                        <action id="-9" name="Destroy" type="normalbullet" />
+                        <action id="-9" name="Destroy" type="enemynormalbullet" />
                         <action id="4" name="Set animation" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
@@ -1374,7 +1351,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <comment>Counts how many bullets exist in the world. If less than 1, fire, otherwise, do nothing.&#x0D;&#x0A;CoolDown - Work in Progress</comment>
+                        <comment>Counts how many bullets exist in the world. If less than 1, fire, otherwise, do nothing.&#x0D;&#x0A;CoolDown using Recoil Mechanism. If Recoiling, dont allow fire.</comment>
                         <event-block>
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" type="playertank">
@@ -1382,13 +1359,15 @@
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
-                                <condition id="-8" name="Compare two values" type="System">
-                                    <param id="0" name="First value">floor(playertank.cooldown % 60)</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">2</param>
+                                <condition id="2" inverted="1" name="Is playing" type="playertank_turret">
+                                    <param id="0" name="Animation">&quot;recoil&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="4" name="Set animation" type="playertank_turret">
+                                    <param id="0" name="Animation">&quot;recoil&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="0" name="Spawn another object" type="playertank_turret">
                                     <param id="0" name="Object">explosion</param>
                                     <param id="1" name="Layer">1</param>
@@ -1414,9 +1393,9 @@
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
                                 <action id="-9" name="Destroy" type="explosion" />
-                                <action id="-11" name="Add to" type="playertank">
-                                    <param id="0" name="Instance variable">cooldown</param>
-                                    <param id="1" name="Value">dt</param>
+                                <action id="4" name="Set animation" type="playertank_turret">
+                                    <param id="0" name="Animation">&quot;default&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1440,10 +1419,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="All debug stuff here" title="Debug">
+        <event-group collapsed="1" description="All debug stuff here" title="Debug">
             <sub-events>
                 <comment>Start Debug Panel</comment>
-                <event-block disabled="1">
+                <event-block>
                     <conditions>
                         <condition id="-1" name="Every tick" type="System" />
                     </conditions>
@@ -1505,10 +1484,6 @@
                         <action disabled="1" id="-10" name="Set value" type="playertank">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">100</param>
-                        </action>
-                        <action id="3" name="Update watch variable" type="DebugPanel">
-                            <param id="0" name="Name">&quot;cooldown dt&quot;</param>
-                            <param id="1" name="Value">floor(playertank.cooldown % 60)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2020,7 +1995,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Spawn another object" type="enemytower">
-                                            <param id="0" name="Object">normalbullet</param>
+                                            <param id="0" name="Object">enemynormalbullet</param>
                                             <param id="1" name="Layer">1</param>
                                             <param id="2" name="Image point">1</param>
                                         </action>
@@ -2089,7 +2064,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Spawn another object" type="enemytank">
-                                            <param id="0" name="Object">normalbullet</param>
+                                            <param id="0" name="Object">enemynormalbullet</param>
                                             <param id="1" name="Layer">1</param>
                                             <param id="2" name="Image point">1</param>
                                         </action>

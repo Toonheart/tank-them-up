@@ -359,6 +359,7 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -386,6 +387,7 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -476,6 +478,7 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -503,6 +506,7 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -719,6 +723,7 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -992,7 +997,6 @@
                         <is_med>false</is_med>
                         <primaryAmmo>99</primaryAmmo>
                         <secondaryAmmo>5</secondaryAmmo>
-                        <cooldown>0</cooldown>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -2270,6 +2274,7 @@
                                 <set-angle>Yes</set-angle>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2349,6 +2354,39 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="enemynormalbullet">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-636</x>
+                        <y>1398</y>
+                        <z>0</z>
+                        <width>281</width>
+                        <height>45</height>
+                        <depth>0</depth>
+                        <hotspotX>0.498933911</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -2378,10 +2416,10 @@
                         <x>795</x>
                         <y>9981</y>
                         <z>0</z>
-                        <width>324.125732422</width>
+                        <width>358.810760498</width>
                         <height>113.623413086</height>
                         <depth>0</depth>
-                        <hotspotX>0.184501842</hotspotX>
+                        <hotspotX>0.270000011</hotspotX>
                         <hotspotY>0.50526315</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -2483,6 +2521,7 @@
                                 <set-angle>Yes</set-angle>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3377,15 +3416,6 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances>
-        <instance type="DebugPanel">
-            <properties>
-                <enable>Yes</enable>
-                <activated>Yes</activated>
-                <stay-on-top>No</stay-on-top>
-                <log-buffer-length>100</log-buffer-length>
-            </properties>
-        </instance>
-    </nonworld-instances>
+    <nonworld-instances />
     <effects />
 </c2layout>

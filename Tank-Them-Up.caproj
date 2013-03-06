@@ -7,9 +7,8 @@
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>11900</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
-        <plugin author="" id="Rex_DebugPanel" version="0.100000001">Debug Panel</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -23,6 +22,7 @@
         <behavior author="Scirra" id="Car" version="1">Car</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -62,7 +62,6 @@
                 <instance-variable comment="Tested if Medkit was collected" name="is_med" type="boolean" />
                 <instance-variable comment="Primary Ammo Count" name="primaryAmmo" type="number" />
                 <instance-variable comment="Secondary Ammo Count" name="secondaryAmmo" type="number" />
-                <instance-variable comment="CoolDown time for Turret" name="cooldown" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout">
@@ -100,17 +99,123 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.184502" hotspotY="0.505263">
-                        <image-point name="Imagepoint 1" x="1" y="0.494737" />
+                    <frame duration="1" hotspotX="0.27" hotspotY="0.505263">
+                        <image-point name="Imagepoint 1" x="1.00333" y="0.484211" />
                         <collision-poly>
-                            <point x="0.856089" y="0.410526" />
+                            <point x="0.87" y="0.410526" />
                             <point x="1" y="0.494737" />
-                            <point x="0.856089" y="0.589474" />
-                            <point x="0.501845" y="0.673684" />
-                            <point x="0.0479705" y="0.863158" />
-                            <point x="0.0774907" y="0.494737" />
-                            <point x="0.0479705" y="0.136842" />
-                            <point x="0.501845" y="0.326316" />
+                            <point x="0.87" y="0.589474" />
+                            <point x="0.5" y="0.673684" />
+                            <point x="0.163333" y="0.484211" />
+                            <point x="0.166667" y="0.494737" />
+                            <point x="0.163333" y="0.515789" />
+                            <point x="0.5" y="0.326316" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="8" loop="0" name="recoil" pingpong="0" repeatcount="1" repeatto="0" speed="24">
+                    <frame duration="1" hotspotX="0.27" hotspotY="0.505263">
+                        <image-point name="Imagepoint 1" x="1.00333" y="0.484211" />
+                        <collision-poly>
+                            <point x="0.87" y="0.410526" />
+                            <point x="1" y="0.494737" />
+                            <point x="0.87" y="0.589474" />
+                            <point x="0.5" y="0.673684" />
+                            <point x="0.163333" y="0.484211" />
+                            <point x="0.166667" y="0.494737" />
+                            <point x="0.163333" y="0.515789" />
+                            <point x="0.5" y="0.326316" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.3" hotspotY="0.505263">
+                        <image-point name="Imagepoint 1" x="1.00333" y="0.484211" />
+                        <collision-poly>
+                            <point x="0.87" y="0.410526" />
+                            <point x="1" y="0.494737" />
+                            <point x="0.87" y="0.589474" />
+                            <point x="0.5" y="0.673684" />
+                            <point x="0.163333" y="0.484211" />
+                            <point x="0.166667" y="0.494737" />
+                            <point x="0.163333" y="0.515789" />
+                            <point x="0.5" y="0.326316" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.316667" hotspotY="0.505263">
+                        <image-point name="Imagepoint 1" x="1.00333" y="0.484211" />
+                        <collision-poly>
+                            <point x="0.87" y="0.410526" />
+                            <point x="1" y="0.494737" />
+                            <point x="0.87" y="0.589474" />
+                            <point x="0.5" y="0.673684" />
+                            <point x="0.163333" y="0.484211" />
+                            <point x="0.166667" y="0.494737" />
+                            <point x="0.163333" y="0.515789" />
+                            <point x="0.5" y="0.326316" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.333333" hotspotY="0.505263">
+                        <image-point name="Imagepoint 1" x="1.00333" y="0.484211" />
+                        <collision-poly>
+                            <point x="0.87" y="0.410526" />
+                            <point x="1" y="0.494737" />
+                            <point x="0.87" y="0.589474" />
+                            <point x="0.5" y="0.673684" />
+                            <point x="0.163333" y="0.484211" />
+                            <point x="0.166667" y="0.494737" />
+                            <point x="0.163333" y="0.515789" />
+                            <point x="0.5" y="0.326316" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.316667" hotspotY="0.505263">
+                        <image-point name="Imagepoint 1" x="1.00333" y="0.484211" />
+                        <collision-poly>
+                            <point x="0.87" y="0.410526" />
+                            <point x="1" y="0.494737" />
+                            <point x="0.87" y="0.589474" />
+                            <point x="0.5" y="0.673684" />
+                            <point x="0.163333" y="0.484211" />
+                            <point x="0.166667" y="0.494737" />
+                            <point x="0.163333" y="0.515789" />
+                            <point x="0.5" y="0.326316" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.3" hotspotY="0.505263">
+                        <image-point name="Imagepoint 1" x="1.00333" y="0.484211" />
+                        <collision-poly>
+                            <point x="0.87" y="0.410526" />
+                            <point x="1" y="0.494737" />
+                            <point x="0.87" y="0.589474" />
+                            <point x="0.5" y="0.673684" />
+                            <point x="0.163333" y="0.484211" />
+                            <point x="0.166667" y="0.494737" />
+                            <point x="0.163333" y="0.515789" />
+                            <point x="0.5" y="0.326316" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.283333" hotspotY="0.505263">
+                        <image-point name="Imagepoint 1" x="1.00333" y="0.484211" />
+                        <collision-poly>
+                            <point x="0.87" y="0.410526" />
+                            <point x="1" y="0.494737" />
+                            <point x="0.87" y="0.589474" />
+                            <point x="0.5" y="0.673684" />
+                            <point x="0.163333" y="0.484211" />
+                            <point x="0.166667" y="0.494737" />
+                            <point x="0.163333" y="0.515789" />
+                            <point x="0.5" y="0.326316" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.27" hotspotY="0.505263">
+                        <image-point name="Imagepoint 1" x="1.00333" y="0.484211" />
+                        <collision-poly>
+                            <point x="0.87" y="0.410526" />
+                            <point x="1" y="0.494737" />
+                            <point x="0.87" y="0.589474" />
+                            <point x="0.5" y="0.673684" />
+                            <point x="0.163333" y="0.484211" />
+                            <point x="0.166667" y="0.494737" />
+                            <point x="0.163333" y="0.515789" />
+                            <point x="0.5" y="0.326316" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -121,6 +226,9 @@
             <behaviors>
                 <behavior-type name="Bullet">
                     <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout">
+                    <behavior id="destroy" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -219,6 +327,9 @@
             <behaviors>
                 <behavior-type name="Solid">
                     <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout">
+                    <behavior id="destroy" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -729,6 +840,9 @@
             <behaviors>
                 <behavior-type name="Bullet">
                     <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout">
+                    <behavior id="destroy" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -1371,8 +1485,29 @@
                 </behavior-type>
             </behaviors>
         </object-type>
-        <object-type global="1" name="DebugPanel">
-            <plugin id="Rex_DebugPanel" />
+        <object-type name="enemynormalbullet">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.498934" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.901919" y="0.5" />
+                            <point x="0.816631" y="0.68421" />
+                            <point x="0.665245" y="0.710526" />
+                            <point x="0.666311" y="0.328947" />
+                            <point x="0.814499" y="0.315789" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
