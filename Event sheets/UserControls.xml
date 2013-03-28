@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>UserControls</name>
+    <events>
+        <event-group collapsed="1" description="All user control actions." disabled="1" title="Old User Controls">
+            <sub-events>
+                <comment>Movement and Navigation Controls</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="4" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">8padup</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" type="playertank">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="4" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">8padrightup</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" type="playertank">
+                            <param id="0" name="Angle">315</param>
+                        </action>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="4" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">8padright</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" type="playertank">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="4" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">8padrightdown</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" type="playertank">
+                            <param id="0" name="Angle">45</param>
+                        </action>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="4" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">8paddown</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" type="playertank">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="4" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">8padleftdown</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" type="playertank">
+                            <param id="0" name="Angle">135</param>
+                        </action>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="4" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">8padleft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" type="playertank">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="4" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">8padleftup</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" type="playertank">
+                            <param id="0" name="Angle">225</param>
+                        </action>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Planting landmine on touching the tank</comment>
+                <event-block collapsed="1">
+                    <conditions>
+                        <condition id="3" name="On touched object" type="Touch">
+                            <param id="0" name="Object">playertank</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" type="playertank">
+                                    <param id="0" name="Object">playersmine</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is pause" type="Pause" />
+                                <condition id="-7" name="Compare instance variable" type="playertank">
+                                    <param id="0" name="Instance variable">secondaryAmmo</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" type="playertank">
+                                    <param id="0" name="Object">playersmine</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-12" name="Subtract from" type="playertank">
+                                    <param id="0" name="Instance variable">secondaryAmmo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" type="playertank">
+                                    <param id="0" name="Instance variable">secondaryAmmo</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" type="AmmoCntSecondary">
+                                    <param id="0" name="&apos;On&apos; time">0.25</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.25</param>
+                                    <param id="2" name="Duration">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Deals with moving of turret and creating of bullet. &#x0D;&#x0A;Using On Touch object here instead of Mouse just so it will be more compatible. &#x0D;&#x0A;Can work just as well with Mouse object and Mouse.X and Mouse.Y</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On any touch start" type="Touch" />
+                        <condition id="4" inverted="1" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">8paddown</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">8padleft</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">8padleftdown</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">8padleftup</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">8padright</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">8padrightdown</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">8padrightup</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">8padup</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is pause" type="Pause" />
+                        <condition id="4" inverted="1" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">hudHolder</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" type="playertank_turret">
+                            <param id="0" name="X">touch.X</param>
+                            <param id="1" name="Y">touch.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Counts how many bullets exist in the world. If less than 1, fire, otherwise, do nothing.&#x0D;&#x0A;CoolDown using Recoil Mechanism. If Recoiling, dont allow fire.</comment>
+                        <event-block>
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" type="playertank">
+                                    <param id="0" name="Instance variable">primaryAmmo</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" type="playertank_turret">
+                                    <param id="0" name="Animation">&quot;recoil&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" type="playertank_turret">
+                                    <param id="0" name="Animation">&quot;recoil&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" type="playertank_turret">
+                                    <param id="0" name="Object">explosion</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="9" name="Set scale" type="explosion">
+                                    <param id="0" name="Scale">0.4</param>
+                                </action>
+                                <action id="4" name="Set animation" type="explosion">
+                                    <param id="0" name="Animation">&quot;BlowUp&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" type="playertank_turret">
+                                    <param id="0" name="Object">normalbullet</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" type="playertank">
+                                    <param id="0" name="Instance variable">primaryAmmo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-9" name="Destroy" type="explosion" />
+                                <action id="4" name="Set animation" type="playertank_turret">
+                                    <param id="0" name="Animation">&quot;default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" type="playertank">
+                                    <param id="0" name="Instance variable">primaryAmmo</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" type="AmmoCntPrimary">
+                                    <param id="0" name="&apos;On&apos; time">0.25</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.25</param>
+                                    <param id="2" name="Duration">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="All user control actions." title="New User Controls">
+            <sub-events>
+                <comment>Control DPad from anywhere on the screen</comment>
+                <event-block disabled="1">
+                    <conditions>
+                        <condition id="3" name="On touched object" type="Touch">
+                            <param id="0" name="Object">TiledBackground</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" type="System">
+                            <param id="0" name="Object to create">dpadUP</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="X">touch.X</param>
+                            <param id="3" name="Y">touch.Y</param>
+                        </action>
+                        <action id="0" name="Spawn another object" type="dpadUP">
+                            <param id="0" name="Object">dpadRIGHT</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" type="dpadUP">
+                            <param id="0" name="Object">dpadLEFT</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" type="dpadUP">
+                            <param id="0" name="Object">dpadDOWN</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Is in touch" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" type="dpadUP" />
+                        <action id="-9" name="Destroy" type="dpadRIGHT" />
+                        <action id="-9" name="Destroy" type="dpadLEFT" />
+                        <action id="-9" name="Destroy" type="dpadDOWN" />
+                    </actions>
+                </event-block>
+                <comment>Movement and Navigation Controls</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="4" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">dpadUP</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="-13" name="Set boolean" type="playertank">
+                            <param id="0" name="Instance variable">PrevTouch_Accelerator</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="4" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">dpadRIGHT</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" type="playertank">
+                            <param id="0" name="Instance variable">PrevTouch_Accelerator</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="4" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">dpadRIGHT</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="playertank">
+                            <param id="0" name="Instance variable">PrevTouch_Accelerator</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="4" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">dpadLEFT</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" type="playertank">
+                            <param id="0" name="Instance variable">PrevTouch_Accelerator</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="4" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">dpadLEFT</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="playertank">
+                            <param id="0" name="Instance variable">PrevTouch_Accelerator</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="4" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">dpadDOWN</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="7" name="Simulate control" type="playertank">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                        <action id="-13" name="Set boolean" type="playertank">
+                            <param id="0" name="Instance variable">PrevTouch_Accelerator</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Planting landmine on touching the tank</comment>
+                <event-block collapsed="1">
+                    <conditions>
+                        <condition id="3" name="On touched object" type="Touch">
+                            <param id="0" name="Object">playertank</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" type="playertank">
+                                    <param id="0" name="Object">playersmine</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is pause" type="Pause" />
+                                <condition id="-7" name="Compare instance variable" type="playertank">
+                                    <param id="0" name="Instance variable">secondaryAmmo</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" type="playertank">
+                                    <param id="0" name="Object">playersmine</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-12" name="Subtract from" type="playertank">
+                                    <param id="0" name="Instance variable">secondaryAmmo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" type="playertank">
+                                    <param id="0" name="Instance variable">secondaryAmmo</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" type="AmmoCntSecondary">
+                                    <param id="0" name="&apos;On&apos; time">0.25</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.25</param>
+                                    <param id="2" name="Duration">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Deals with moving of turret and creating of bullet. &#x0D;&#x0A;Using On Touch END - to differenciate that touch is a tap. &#x0D;&#x0A;Can work just as well with Mouse object and Mouse.X and Mouse.Y</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="1" name="On any touch end" type="Touch" />
+                        <condition id="4" inverted="1" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">dpadUP</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">dpadRIGHT</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">dpadLEFT</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">dpadDOWN</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is pause" type="Pause" />
+                        <condition id="4" inverted="1" name="Is touching object" type="Touch">
+                            <param id="0" name="Object">hudHolder</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" type="playertank_turret">
+                            <param id="0" name="X">touch.X</param>
+                            <param id="1" name="Y">touch.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Counts how many bullets exist in the world. If less than 1, fire, otherwise, do nothing.&#x0D;&#x0A;CoolDown using Recoil Mechanism. If Recoiling, dont allow fire.</comment>
+                        <event-block>
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" type="playertank">
+                                    <param id="0" name="Instance variable">primaryAmmo</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" type="playertank_turret">
+                                    <param id="0" name="Animation">&quot;recoil&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" type="playertank_turret">
+                                    <param id="0" name="Animation">&quot;recoil&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" type="playertank_turret">
+                                    <param id="0" name="Object">explosion</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="9" name="Set scale" type="explosion">
+                                    <param id="0" name="Scale">0.4</param>
+                                </action>
+                                <action id="4" name="Set animation" type="explosion">
+                                    <param id="0" name="Animation">&quot;BlowUp&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" type="playertank_turret">
+                                    <param id="0" name="Object">normalbullet</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" type="playertank">
+                                    <param id="0" name="Instance variable">primaryAmmo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-9" name="Destroy" type="explosion" />
+                                <action id="4" name="Set animation" type="playertank_turret">
+                                    <param id="0" name="Animation">&quot;default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" type="playertank">
+                                    <param id="0" name="Instance variable">primaryAmmo</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" type="AmmoCntPrimary">
+                                    <param id="0" name="&apos;On&apos; time">0.25</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.25</param>
+                                    <param id="2" name="Duration">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
