@@ -1138,7 +1138,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="All debug stuff here" title="Debug">
+        <event-group description="All debug stuff here" title="Debug">
             <sub-events>
                 <comment>Start Debug Panel</comment>
                 <event-block>
@@ -1200,7 +1200,7 @@
                         <condition id="-1" name="Every tick" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-10" name="Set value" type="playertank">
+                        <action id="-10" name="Set value" type="playertank">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">100</param>
                         </action>
@@ -1915,10 +1915,10 @@
                         <action id="-8" name="Set angle" type="airplane">
                             <param id="0" name="Angle">airplane.angle+airplane.customdrift</param>
                         </action>
-                        <action id="-5" name="Set width" type="missile">
+                        <action disabled="1" id="-5" name="Set width" type="missile">
                             <param id="0" name="Width">missile.Width*0.99</param>
                         </action>
-                        <action id="-6" name="Set height" type="missile">
+                        <action disabled="1" id="-6" name="Set height" type="missile">
                             <param id="0" name="Height">missile.Height*0.99</param>
                         </action>
                     </actions>
