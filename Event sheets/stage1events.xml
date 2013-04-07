@@ -101,12 +101,6 @@
                             <param id="1" name="Value">70</param>
                         </action>
                         <action id="4" name="Preload" type="Audio">
-                            <param id="0" name="Audio file">backgroundtheme1</param>
-                        </action>
-                        <action id="4" name="Preload" type="Audio">
-                            <param id="0" name="Audio file">bossfight</param>
-                        </action>
-                        <action id="4" name="Preload" type="Audio">
                             <param id="0" name="Audio file">dropmine</param>
                         </action>
                         <action id="4" name="Preload" type="Audio">
@@ -117,12 +111,6 @@
                         </action>
                         <action id="4" name="Preload" type="Audio">
                             <param id="0" name="Audio file">tankfire</param>
-                        </action>
-                        <action id="4" name="Preload" type="Audio">
-                            <param id="0" name="Audio file">levelfailed</param>
-                        </action>
-                        <action id="4" name="Preload" type="Audio">
-                            <param id="0" name="Audio file">levelsuccess</param>
                         </action>
                         <action id="4" name="Preload" type="Audio">
                             <param id="0" name="Audio file">smallexplosion</param>
@@ -144,46 +132,7 @@
                     <conditions>
                         <condition id="-25" name="On loading finished" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="0" name="Play" type="Audio">
-                            <param id="0" name="Audio file">backgroundtheme1</param>
-                            <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">-5</param>
-                            <param id="1" name="Tag (optional)">&quot;game background&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="-3" name="Is on-screen" type="enemytower" />
-                    </conditions>
-                    <actions>
-                        <action id="6" name="Stop" type="Audio">
-                            <param id="0" name="Tag">&quot;backgroundtheme1&quot;</param>
-                        </action>
-                        <action id="0" name="Play" type="Audio">
-                            <param id="0" name="Audio file">bossfight</param>
-                            <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">-10</param>
-                            <param id="1" name="Tag (optional)">&quot;bossfighttheme&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="-22" name="Else" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="6" name="Stop" type="Audio">
-                            <param id="0" name="Tag">&quot;bossfight&quot;</param>
-                        </action>
-                        <action id="0" name="Play" type="Audio">
-                            <param id="0" name="Audio file">backgroundtheme1</param>
-                            <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">-5</param>
-                            <param id="1" name="Tag (optional)">&quot;game background&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>

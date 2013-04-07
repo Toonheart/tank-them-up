@@ -1465,9 +1465,6 @@
         </global-instance>
     </global-instances>
     <sounds-folder expanded="1">
-        <file name="bossfight.m4a" />
-        <file name="bossfight.ogg" />
-        <file name="bossfight.wav" />
         <file name="dropmine.m4a" />
         <file name="dropmine.ogg" />
         <file name="dropmine.wav" />
@@ -1494,19 +1491,6 @@
         <file name="tada.ogg" />
         <file name="tada.wav" />
     </sounds-folder>
-    <music-folder expanded="1">
-        <file name="backgroundtheme1.m4a" />
-        <file name="backgroundtheme1.ogg" />
-        <file name="backgroundtheme1.wav" />
-        <file name="levelfailed.m4a" />
-        <file name="levelfailed.ogg" />
-        <file name="levelfailed.wav" />
-        <file name="levelsuccess.m4a" />
-        <file name="levelsuccess.ogg" />
-        <file name="levelsuccess.wav" />
-        <file name="titlemusic.m4a" />
-        <file name="titlemusic.ogg" />
-        <file name="titlemusic.wav" />
-    </music-folder>
+    <music-folder expanded="1" />
     <files-folder expanded="1" />
 </c2project>

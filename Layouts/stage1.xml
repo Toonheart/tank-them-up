@@ -1007,11 +1007,11 @@
                         </behavior-instance>
                         <behavior-instance type="Car">
                             <properties>
-                                <max-speed>300</max-speed>
+                                <max-speed>400</max-speed>
                                 <acceleration>700</acceleration>
                                 <deceleration>1500</deceleration>
-                                <steer-speed>50</steer-speed>
-                                <drift-recover>185</drift-recover>
+                                <steer-speed>80</steer-speed>
+                                <drift-recover>220</drift-recover>
                                 <friction>0.8</friction>
                                 <set-angle>Yes</set-angle>
                                 <default-controls>Yes</default-controls>
@@ -2244,7 +2244,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>400</speed>
+                                <speed>500</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -2340,7 +2340,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>400</speed>
+                                <speed>500</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
