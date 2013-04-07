@@ -2,19 +2,20 @@
 <c2project>
     <name>Tank-Them-Up</name>
     <description>A funny tank shooter game with missions</description>
-    <version>0.1</version>
+    <version>0.4</version>
     <author>Srikrishna Das(krish) - krish@toonheart.com</author>
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>11900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
@@ -35,7 +36,7 @@
         <height>2048</height>
     </window-size>
     <pixel-rounding>1</pixel-rounding>
-    <first-layout>menu</first-layout>
+    <first-layout>stage1</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -442,184 +443,6 @@
                             <point x="0.5" y="0.688442" />
                             <point x="0.115" y="0.884422" />
                             <point x="0.3125" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="8padup">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.508197" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0286885" y="0.10625" />
-                            <point x="0.495902" y="0" />
-                            <point x="0.946721" y="0.096875" />
-                            <point x="0.737705" y="0.5" />
-                            <point x="0.491803" y="0.95" />
-                            <point x="0.360656" y="0.725" />
-                            <point x="0.245902" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="8padrightup">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.305556" y="0.305556" />
-                            <point x="0.423611" y="0.0104167" />
-                            <point x="0.798611" y="0.21875" />
-                            <point x="0.979167" y="0.5625" />
-                            <point x="0.680556" y="0.680556" />
-                            <point x="0.0416667" y="0.958333" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="8padrightdown">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0416667" y="0.0416667" />
-                            <point x="0.680556" y="0.319444" />
-                            <point x="0.975694" y="0.427083" />
-                            <point x="0.777778" y="0.805555" />
-                            <point x="0.402778" y="0.979167" />
-                            <point x="0.305556" y="0.694444" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="8padleftup">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.305556" y="0.694444" />
-                            <point x="0" y="0.586805" />
-                            <point x="0.211806" y="0.225694" />
-                            <point x="0.565972" y="0.0069444" />
-                            <point x="0.680556" y="0.319444" />
-                            <point x="0.958333" y="0.958333" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="8paddown">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.508475" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.237288" y="0.5" />
-                            <point x="0.355932" y="0.269231" />
-                            <point x="0.491525" y="0.0384616" />
-                            <point x="0.745763" y="0.5" />
-                            <point x="0.991525" y="0.910256" />
-                            <point x="0.512712" y="0.99359" />
-                            <point x="0.0127118" y="0.900641" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="8padleftdown">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.958333" y="0.0416667" />
-                            <point x="0.680556" y="0.680556" />
-                            <point x="0.576389" y="0.958333" />
-                            <point x="0.215278" y="0.784722" />
-                            <point x="0.0208333" y="0.409722" />
-                            <point x="0.305556" y="0.305556" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="8padright">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.506329" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.493671" y="0.25" />
-                            <point x="0.908228" y="0.0208333" />
-                            <point x="1" y="0.491667" />
-                            <point x="0.911393" y="0.975" />
-                            <point x="0.493671" y="0.75" />
-                            <point x="0.0506329" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="8padleft">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.506329" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.949367" y="0.5" />
-                            <point x="0.506329" y="0.75" />
-                            <point x="0.101266" y="0.958333" />
-                            <point x="0.00632911" y="0.516667" />
-                            <point x="0.0886076" y="0.0166667" />
-                            <point x="0.506329" y="0.25" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -1601,6 +1424,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Audio">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -1613,6 +1439,14 @@
         <event-sheet>menuevents.xml</event-sheet>
         <event-sheet>stage0events.xml</event-sheet>
         <event-sheet>UserControls.xml</event-sheet>
+        <event-sheet>Collisions.xml</event-sheet>
+        <event-sheet>Debug.xml</event-sheet>
+        <event-sheet>LevelFailed.xml</event-sheet>
+        <event-sheet>HealthSystem.xml</event-sheet>
+        <event-sheet>AmmoSystem.xml</event-sheet>
+        <event-sheet>Collectibles.xml</event-sheet>
+        <event-sheet>EnemyAI.xml</event-sheet>
+        <event-sheet>LevelComplete.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch">
@@ -1624,8 +1458,55 @@
         <global-instance type="WebStorage" />
         <global-instance type="Browser" />
         <global-instance type="Pause" />
+        <global-instance type="Audio">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder expanded="1" />
-    <music-folder expanded="1" />
+    <sounds-folder expanded="1">
+        <file name="bossfight.m4a" />
+        <file name="bossfight.ogg" />
+        <file name="bossfight.wav" />
+        <file name="dropmine.m4a" />
+        <file name="dropmine.ogg" />
+        <file name="dropmine.wav" />
+        <file name="metalexplosion.m4a" />
+        <file name="metalexplosion.ogg" />
+        <file name="metalexplosion.wav" />
+        <file name="mineexplode.m4a" />
+        <file name="mineexplode.ogg" />
+        <file name="mineexplode.wav" />
+        <file name="missle.m4a" />
+        <file name="missle.ogg" />
+        <file name="missle.wav" />
+        <file name="tankdriving.wav" />
+        <file name="tankfire.m4a" />
+        <file name="tankfire.ogg" />
+        <file name="tankfire.wav" />
+        <file name="smallexplosion.m4a" />
+        <file name="smallexplosion.ogg" />
+        <file name="smallexplosion.wav" />
+        <file name="tankDRIVE.m4a" />
+        <file name="tankDRIVE.ogg" />
+        <file name="tankDRIVE.wav" />
+        <file name="tada.m4a" />
+        <file name="tada.ogg" />
+        <file name="tada.wav" />
+    </sounds-folder>
+    <music-folder expanded="1">
+        <file name="backgroundtheme1.m4a" />
+        <file name="backgroundtheme1.ogg" />
+        <file name="backgroundtheme1.wav" />
+        <file name="levelfailed.m4a" />
+        <file name="levelfailed.ogg" />
+        <file name="levelfailed.wav" />
+        <file name="levelsuccess.m4a" />
+        <file name="levelsuccess.ogg" />
+        <file name="levelsuccess.wav" />
+        <file name="titlemusic.m4a" />
+        <file name="titlemusic.ogg" />
+        <file name="titlemusic.wav" />
+    </music-folder>
     <files-folder expanded="1" />
 </c2project>

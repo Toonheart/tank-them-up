@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Collectibles</name>
+    <events>
+        <event-group description="Collectibles in the Game" title="Collectibles">
+            <sub-events>
+                <comment>MedKit - Add Health</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="playertank">
+                            <param id="0" name="Object">energyatom</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" type="Audio">
+                            <param id="0" name="Audio file">tada</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;collectiblesound&quot;</param>
+                        </action>
+                        <action id="-11" name="Add to" type="playertank">
+                            <param id="0" name="Instance variable">primaryAmmo</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-9" name="Destroy" type="energyatom" />
+                    </actions>
+                </event-block>
+                <comment>Collecting Armor adds 10s to powerup timeout and enables Armor</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="playertank">
+                            <param id="0" name="Object">armor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" type="playertank">
+                            <param id="0" name="Instance variable">powerup_timeout</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-13" name="Set boolean" type="playertank">
+                            <param id="0" name="Instance variable">is_armor</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" type="armor" />
+                        <action id="0" name="Spawn another object" type="playertank">
+                            <param id="0" name="Object">forcefield</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" type="playertank">
+                            <param id="0" name="Instance variable">is_armor</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" type="playertank">
+                                    <param id="0" name="Instance variable">powerup_timeout</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" type="forcefield" />
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-1" name="Every tick" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" type="forcefield">
+                                    <param id="0" name="Object">playertank</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

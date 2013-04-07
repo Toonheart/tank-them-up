@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EnemyAI</name>
+    <events>
+        <event-group collapsed="1" description="Aritificial intelligent for enemy minions and Bosses." title="Enemy AI">
+            <sub-events>
+                <comment>Make sure line of sight stays with moving enemy</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-1" name="Every tick" type="System" />
+                        <condition id="-11" name="For Each" type="System">
+                            <param id="0" name="Object">enemytank</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" type="lineofsight">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">enemytank.X</param>
+                            <param id="2" name="Y">enemytank.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" type="lineofsight">
+                            <param id="0" name="Object">enemytank</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-1" name="Every tick" type="System" />
+                        <condition id="-11" name="For Each" type="System">
+                            <param id="0" name="Object">enemytower</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" type="lineofsight">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">enemytower.X</param>
+                            <param id="2" name="Y">enemytower.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" type="lineofsight">
+                            <param id="0" name="Object">enemytower</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Every 3 secs, activate the enemy nearest to the player along with the line of sight, align angle towards the player and calculate distance to player</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" type="System">
+                            <param id="0" name="Interval (seconds)">3</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" type="enemytower">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">playertank.X</param>
+                            <param id="2" name="Y">playertank.Y</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" type="lineofsight">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">enemytower.X</param>
+                            <param id="2" name="Y">enemytower.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" type="lineofsight">
+                            <param id="0" name="X">playertank.X</param>
+                            <param id="1" name="Y">playertank.Y</param>
+                        </action>
+                        <action id="-5" name="Set width" type="lineofsight">
+                            <param id="0" name="Width">distance(enemytower.X,enemytower.Y,playertank.X,playertank.Y)</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" type="enemytower">
+                            <param id="0" name="X">playertank.X</param>
+                            <param id="1" name="Y">playertank.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>If calculated distance is within Range of the enemy,  check if line of sight is passing through any of the solid objects that should be blocking enemy&apos;s view.&#x0D;&#x0A;If the LoS is clear, then fire the effing player&apos;s ass.</comment>
+                        <event-block>
+                            <conditions>
+                                <condition id="-8" name="Compare two values" type="System">
+                                    <param id="0" name="First value">distance(enemytower.X,enemytower.Y,playertank.X,playertank.Y)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">enemytower.range</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block>
+                                    <conditions>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" type="lineofsight">
+                                            <param id="0" name="Object">trees</param>
+                                        </condition>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" type="lineofsight">
+                                            <param id="0" name="Object">sidewallshexdigi</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" type="enemytower">
+                                            <param id="0" name="Object">enemynormalbullet</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Do the same for Moving Enemy.. keep it under seperate block to avoid clutter and confusion</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" type="System">
+                            <param id="0" name="Interval (seconds)">3</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" type="enemytank">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">playertank.X</param>
+                            <param id="2" name="Y">playertank.Y</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" type="lineofsight">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">enemytank.X</param>
+                            <param id="2" name="Y">enemytank.Y</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" type="enemytank">
+                            <param id="0" name="Object">MarkerSTOP</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" type="enemytank">
+                            <param id="0" name="Object">sidewallshexdigi</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>If calculated distance is within Range of the enemy,  check if line of sight is passing through any of the solid objects that should be blocking enemy&apos;s view.&#x0D;&#x0A;If the LoS is clear, then fire the effing player&apos;s ass.</comment>
+                        <event-block>
+                            <conditions>
+                                <condition id="-8" name="Compare two values" type="System">
+                                    <param id="0" name="First value">distance(enemytank.X,enemytank.Y,playertank.X,playertank.Y)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">enemytank.range</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" type="lineofsight">
+                                    <param id="0" name="X">playertank.X</param>
+                                    <param id="1" name="Y">playertank.Y</param>
+                                </action>
+                                <action id="-5" name="Set width" type="lineofsight">
+                                    <param id="0" name="Width">distance(enemytower.X,enemytower.Y,playertank.X,playertank.Y)</param>
+                                </action>
+                                <action id="-22" name="Set angle toward position" type="enemytank">
+                                    <param id="0" name="X">playertank.X</param>
+                                    <param id="1" name="Y">playertank.Y</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block>
+                                    <conditions>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" type="lineofsight">
+                                            <param id="0" name="Object">trees</param>
+                                        </condition>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" type="lineofsight">
+                                            <param id="0" name="Object">sidewallshexdigi</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" type="enemytank">
+                                            <param id="0" name="Object">enemynormalbullet</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Moving Enemy tank Patrolling Behavior</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-1" name="Every tick" type="System" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" type="enemytank">
+                            <param id="0" name="Object">MarkerSTOP</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" type="enemytank">
+                            <param id="0" name="Object">MarkerLeftRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="7" name="Simulate control" type="enemytank">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Patrolling on reaching open end of maps</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" type="enemytank">
+                            <param id="0" name="Object">MarkerLeftRight</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Compare two values" type="System">
+                            <param id="0" name="First value">distance(enemytank.X,enemytank.Y,playertank.X,playertank.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">enemytank.range</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="0" name="Stop" type="enemytank" />
+                        <action id="-8" name="Set angle" type="enemytank">
+                            <param id="0" name="Angle">enemytank.Angle+random(90)</param>
+                        </action>
+                        <action behavior="Car" id="7" name="Simulate control" type="enemytank">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Patrolling on Colliding with solids </comment>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="enemytank">
+                            <param id="0" name="Object">sidewallshexdigi</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Compare two values" type="System">
+                            <param id="0" name="First value">distance(enemytank.X,enemytank.Y,playertank.X,playertank.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">enemytank.range</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="0" name="Stop" type="enemytank" />
+                        <action id="-8" name="Set angle" type="enemytank">
+                            <param id="0" name="Angle">enemytank.Angle+random(180)</param>
+                        </action>
+                        <action behavior="Car" id="7" name="Simulate control" type="enemytank">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Change Patrol direction regardless of enemy in range or not - Enemies dont cross this line</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" type="enemytank">
+                            <param id="0" name="Object">MarkerSTOP</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="0" name="Stop" type="enemytank" />
+                        <action id="-8" name="Set angle" type="enemytank">
+                            <param id="0" name="Angle">enemytank.Angle+180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>AIRPLANE - AI behavior - Spawn random on lines of playertank and drop a effing nuke</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" type="System">
+                            <param id="0" name="Interval (seconds)">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" type="System">
+                            <param id="0" name="Object to create">airplane</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">WindowHeight</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" type="airplane">
+                            <param id="0" name="X">playertank.X</param>
+                            <param id="1" name="Y">playertank.Y</param>
+                        </action>
+                        <action id="0" name="Spawn another object" type="airplane">
+                            <param id="0" name="Object">missile</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" type="airplane">
+                            <param id="0" name="X">WindowWidth</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" type="missile">
+                            <param id="0" name="X">playertank.X</param>
+                            <param id="1" name="Y">playertank.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-1" name="Every tick" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" type="airplane">
+                            <param id="0" name="Angle">airplane.angle+airplane.customdrift</param>
+                        </action>
+                        <action disabled="1" id="-5" name="Set width" type="missile">
+                            <param id="0" name="Width">missile.Width*0.99</param>
+                        </action>
+                        <action disabled="1" id="-6" name="Set height" type="missile">
+                            <param id="0" name="Height">missile.Height*0.99</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" type="System">
+                            <param id="0" name="Interval (seconds)">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" type="airplane">
+                            <param id="0" name="Instance variable">customdrift</param>
+                            <param id="1" name="Value">-airplane.customdrift</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

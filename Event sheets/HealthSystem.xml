@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>HealthSystem</name>
+    <events>
+        <event-group collapsed="1" description="Deals with health calculations in the game" title="Health System">
+            <sub-events>
+                <comment>Cap health at 100. Avoid God Mode. Disable if Debugging in Godmode</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">70</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">70</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Green - Good Health </comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" type="healthbar">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Yellow - Medium Health </comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">50</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" type="healthbar">
+                            <param id="0" name="Animation">&quot;yellow&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Orange - Approaching danger.. Be Cautious</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">30</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" type="healthbar">
+                            <param id="0" name="Animation">&quot;orange&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Flash Orange - Be Cautious</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">30</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" type="healthbar">
+                            <param id="0" name="&apos;On&apos; time">0.25</param>
+                            <param id="1" name="&apos;Off&apos; time">0.25</param>
+                            <param id="2" name="Duration">3</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Red - DANGER.. superlow health</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" type="healthbar">
+                            <param id="0" name="Animation">&quot;red&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>More Flash Red - Be Super Cautious</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" type="healthbar">
+                            <param id="0" name="&apos;On&apos; time">0.20</param>
+                            <param id="1" name="&apos;Off&apos; time">0.20</param>
+                            <param id="2" name="Duration">4</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>None - You&apos;re Fucked.</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="0" name="Stop" type="playertank" />
+                        <action behavior="Car" id="2" name="Set ignoring input" type="playertank">
+                            <param id="0" name="Input">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" type="playertank">
+                            <param id="0" name="Opacity">50</param>
+                        </action>
+                        <action id="-16" name="Set opacity" type="playertank_turret">
+                            <param id="0" name="Opacity">50</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" type="playertank" />
+                        <action id="-9" name="Destroy" type="playertank_turret" />
+                        <action id="-16" name="Set opacity" type="healthbar">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Hide off Lost health bars</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" type="System">
+                            <param id="0" name="Object">healthbar</param>
+                            <param id="1" name="Expression">0</param>
+                            <param id="2" name="Order">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">healthbar.IID</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">playertank.health/10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" type="healthbar">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>UnHide on recovery</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" type="System">
+                            <param id="0" name="Object">healthbar</param>
+                            <param id="1" name="Expression">0</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">healthbar.IID</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">playertank.health/10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" type="healthbar">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
