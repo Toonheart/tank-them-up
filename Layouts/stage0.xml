@@ -3,8 +3,8 @@
     <name>stage0</name>
     <event-sheet>stage0events</event-sheet>
     <size>
-        <width>1366</width>
-        <height>768</height>
+        <width>1536</width>
+        <height>2048</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -12,25 +12,9 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Layer 1">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
         <layer name="Layer 0">
             <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
+            <background-color>0,0,0</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>0</x>
@@ -42,118 +26,29 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="trainingfire">
+                <instance type="stage0text">
                     <properties>
+                        <text>No more D-pad.</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <font>Courier New,-64,700,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Anchor">
-                            <properties>
-                                <left-edge>Window left</left-edge>
-                                <top-edge>Window top</top-edge>
-                                <right-edge>None</right-edge>
-                                <bottom-edge>None</bottom-edge>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>184</x>
-                        <y>156</y>
+                        <x>813</x>
+                        <y>190</y>
                         <z>0</z>
-                        <width>197.876220703</width>
-                        <height>197.876220703</height>
+                        <width>638</width>
+                        <height>126</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="stage0text">
-                    <properties>
-                        <text>Touch on Bang Button to drop Mines.</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-29,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-175.921447754</x>
-                        <y>268.078552246</y>
-                        <z>0</z>
-                        <width>592.842834473</width>
-                        <height>103.84286499</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="8dircontrol">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Anchor">
-                            <properties>
-                                <left-edge>Window right</left-edge>
-                                <top-edge>Window top</top-edge>
-                                <right-edge>None</right-edge>
-                                <bottom-edge>None</bottom-edge>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>629</x>
-                        <y>151</y>
-                        <z>0</z>
-                        <width>237.842880249</width>
-                        <height>237.842880249</height>
-                        <depth>0</depth>
-                        <hotspotX>0.511029422</hotspotX>
-                        <hotspotY>0.492647052</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="stage0text">
-                    <properties>
-                        <text>Use 8 directional pad to move around.</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-29,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>344</x>
-                        <y>269</y>
-                        <z>0</z>
-                        <width>627</width>
-                        <height>138</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -177,8 +72,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>398.078369141</x>
-                        <y>420.078369141</y>
+                        <x>1796</x>
+                        <y>1460</y>
                         <z>0</z>
                         <width>176.639450073</width>
                         <height>126.756286621</height>
@@ -189,56 +84,385 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="stage0text">
+                <instance type="dpadUP">
                     <properties>
-                        <text>Press OK if you are Ready!</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-29,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Anchor">
+                            <properties>
+                                <left-edge>Window left</left-edge>
+                                <top-edge>Window top</top-edge>
+                                <right-edge>None</right-edge>
+                                <bottom-edge>None</bottom-edge>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>104.078552246</x>
-                        <y>500.078369141</y>
+                        <x>125.190238953</x>
+                        <y>389.164001465</y>
                         <z>0</z>
-                        <width>592.842834473</width>
-                        <height>41.84286499</height>
+                        <width>526.786865234</width>
+                        <height>371.592407227</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.188796684</hotspotX>
+                        <hotspotY>0.988235295</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="stage0text">
                     <properties>
-                        <text>You don&apos;t have a choice anyway!</text>
+                        <text>Innovative &amp; Ergonomic &quot;CrashPad&quot;.</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-29,400,0</font>
-                        <color>0,0,0</color>
+                        <font>Segoe Print,-64,700,0</font>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4.078552246</x>
-                        <y>539.078369141</y>
+                        <x>971</x>
+                        <y>317</y>
                         <z>0</z>
-                        <width>783.842834473</width>
-                        <height>41.84286499</height>
+                        <width>949</width>
+                        <height>281</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="normalbullet">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1364</x>
+                        <y>627</y>
+                        <z>0</z>
+                        <width>469</width>
+                        <height>76</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501066089</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-2.760572195</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="stage0text">
+                    <properties>
+                        <text>Tap anywhere on screen to FIRE!</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Courier New,-64,700,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>674</x>
+                        <y>687</y>
+                        <z>0</z>
+                        <width>1280</width>
+                        <height>211</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="stage0text">
+                    <properties>
+                        <text>Tap on Tank to plant MINE!!</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Courier New,-64,700,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>859</x>
+                        <y>1000</y>
+                        <z>0</z>
+                        <width>1280</width>
+                        <height>211</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="playertank">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <in_water>false</in_water>
+                        <health>70</health>
+                        <powerup_timeout>0</powerup_timeout>
+                        <is_armor>false</is_armor>
+                        <is_med>false</is_med>
+                        <primaryAmmo>99</primaryAmmo>
+                        <secondaryAmmo>5</secondaryAmmo>
+                        <PrevTouch_Accelerator>true</PrevTouch_Accelerator>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Car">
+                            <properties>
+                                <max-speed>350</max-speed>
+                                <acceleration>200</acceleration>
+                                <deceleration>300</deceleration>
+                                <steer-speed>225</steer-speed>
+                                <drift-recover>185</drift-recover>
+                                <friction>0.4</friction>
+                                <set-angle>Yes</set-angle>
+                                <default-controls>Yes</default-controls>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo" />
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>200</x>
+                        <y>953</y>
+                        <z>0</z>
+                        <width>260</width>
+                        <height>303</height>
+                        <depth>0</depth>
+                        <hotspotX>0.561538458</hotspotX>
+                        <hotspotY>0.504950523</hotspotY>
+                        <angle>-1.507596612</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="playertank_turret">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>199</x>
+                        <y>951</y>
+                        <z>0</z>
+                        <width>300</width>
+                        <height>95</height>
+                        <depth>0</depth>
+                        <hotspotX>0.270000011</hotspotX>
+                        <hotspotY>0.50526315</hotspotY>
+                        <angle>-1.117062569</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="playersmine">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1258</x>
+                        <y>1118</y>
+                        <z>0</z>
+                        <width>182.88041687</width>
+                        <height>177.028244019</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.497933894</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="playersmine">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1443</x>
+                        <y>1046</y>
+                        <z>0</z>
+                        <width>182.88041687</width>
+                        <height>177.028244019</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.497933894</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="playersmine">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1349</x>
+                        <y>846</y>
+                        <z>0</z>
+                        <width>182.88041687</width>
+                        <height>177.028244019</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.497933894</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="energyatom">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>784</x>
+                        <y>1255</y>
+                        <z>0</z>
+                        <width>334.792724609</width>
+                        <height>277.505981445</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.504021466</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="stage0text">
+                    <properties>
+                        <text>COLLECT Energy Spheres&apos;!!!</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Courier New,-64,700,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>800</x>
+                        <y>1473</y>
+                        <z>0</z>
+                        <width>1280</width>
+                        <height>211</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="stage0text">
+                    <properties>
+                        <text>AVOID / DESTROY Everything Else!</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Courier New,-64,700,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>806</x>
+                        <y>1641</y>
+                        <z>0</z>
+                        <width>1280</width>
+                        <height>211</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="stage0text">
+                    <properties>
+                        <text>ENTER to PLAY!</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Courier New,-96,700,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>780.463623047</x>
+                        <y>1908.744873047</y>
+                        <z>0</z>
+                        <width>1371.072753906</width>
+                        <height>226.012786865</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>LevelComplete</name>
     <events>
-        <event-group collapsed="1" description="Conditions for game completion." title="Game Completion">
+        <event-group description="Conditions for game completion." title="Game Completion">
             <sub-events>
                 <comment>When Player kills all enemies, Level is complete. Stop input. Let player know and save the completed level number</comment>
                 <event-block>
@@ -72,7 +72,7 @@
                                     <param id="1" name="Value">&quot;1&quot;</param>
                                 </action>
                                 <action id="-2" name="Go to layout" type="System">
-                                    <param id="0" name="Layout">menu</param>
+                                    <param id="0" name="Layout">stage0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -82,7 +82,7 @@
                             </conditions>
                             <actions>
                                 <action id="-2" name="Go to layout" type="System">
-                                    <param id="0" name="Layout">menu</param>
+                                    <param id="0" name="Layout">stage0</param>
                                 </action>
                             </actions>
                         </event-block>

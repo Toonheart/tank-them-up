@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EnemyAI</name>
     <events>
-        <event-group collapsed="1" description="Aritificial intelligent for enemy minions and Bosses." title="Enemy AI">
+        <event-group description="Aritificial intelligent for enemy minions and Bosses." title="Enemy AI">
             <sub-events>
                 <comment>Make sure line of sight stays with moving enemy</comment>
                 <event-block>
@@ -111,7 +111,7 @@
                 <event-block>
                     <conditions>
                         <condition id="-6" name="Every X seconds" type="System">
-                            <param id="0" name="Interval (seconds)">3</param>
+                            <param id="0" name="Interval (seconds)">1</param>
                         </condition>
                         <condition id="-15" name="Pick nearest/furthest" type="enemytank">
                             <param id="0" name="Which">0</param>
@@ -140,6 +140,11 @@
                                     <param id="1" name="Comparison">3</param>
                                     <param id="2" name="Second value">enemytank.range</param>
                                 </condition>
+                                <condition id="-8" name="Compare two values" type="System">
+                                    <param id="0" name="First value">distance(enemytank.X,enemytank.Y,playertank.X,playertank.Y)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">200</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-22" name="Set angle toward position" type="lineofsight">
@@ -165,7 +170,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" type="enemytank">
+                                        <action disabled="1" id="0" name="Spawn another object" type="enemytank">
                                             <param id="0" name="Object">enemynormalbullet</param>
                                             <param id="1" name="Layer">1</param>
                                             <param id="2" name="Image point">1</param>
@@ -186,6 +191,11 @@
                         <condition id="1" inverted="1" name="Is overlapping another object" type="enemytank">
                             <param id="0" name="Object">MarkerLeftRight</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Compare two values" type="System">
+                            <param id="0" name="First value">distance(enemytank.X,enemytank.Y,playertank.X,playertank.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">200</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Car" id="7" name="Simulate control" type="enemytank">
@@ -193,8 +203,20 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>Patrolling on reaching open end of maps</comment>
                 <event-block>
+                    <conditions>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">distance(enemytank.X,enemytank.Y,playertank.X,playertank.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="0" name="Stop" type="enemytank" />
+                    </actions>
+                </event-block>
+                <comment>Patrolling on reaching open end of maps</comment>
+                <event-block disabled="1">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" type="enemytank">
                             <param id="0" name="Object">MarkerLeftRight</param>
@@ -216,7 +238,7 @@
                     </actions>
                 </event-block>
                 <comment>Patrolling on Colliding with solids </comment>
-                <event-block>
+                <event-block disabled="1">
                     <conditions>
                         <condition id="0" name="On collision with another object" type="enemytank">
                             <param id="0" name="Object">sidewallshexdigi</param>
@@ -238,7 +260,7 @@
                     </actions>
                 </event-block>
                 <comment>Change Patrol direction regardless of enemy in range or not - Enemies dont cross this line</comment>
-                <event-block>
+                <event-block disabled="1">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" type="enemytank">
                             <param id="0" name="Object">MarkerSTOP</param>

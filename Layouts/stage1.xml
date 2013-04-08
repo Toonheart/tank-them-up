@@ -749,10 +749,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1358</x>
-                        <y>-589</y>
+                        <x>1759</x>
+                        <y>-344</y>
                         <z>0</z>
-                        <width>7</width>
+                        <width>23</width>
                         <height>385</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -770,11 +770,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>912</x>
-                        <y>-400</y>
+                        <x>1632</x>
+                        <y>-345</y>
                         <z>0</z>
-                        <width>3</width>
-                        <height>223</height>
+                        <width>23</width>
+                        <height>418</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -884,10 +884,10 @@
                         </behavior-instance>
                         <behavior-instance type="Car">
                             <properties>
-                                <max-speed>75</max-speed>
+                                <max-speed>150</max-speed>
                                 <acceleration>200</acceleration>
-                                <deceleration>400</deceleration>
-                                <steer-speed>80</steer-speed>
+                                <deceleration>200</deceleration>
+                                <steer-speed>100</steer-speed>
                                 <drift-recover>185</drift-recover>
                                 <friction>0.8</friction>
                                 <set-angle>Yes</set-angle>
@@ -899,59 +899,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2013</x>
-                        <y>-92</y>
+                        <x>914</x>
+                        <y>4471</y>
                         <z>0</z>
-                        <width>83</width>
-                        <height>62</height>
+                        <width>50</width>
+                        <height>50</height>
                         <depth>0</depth>
-                        <hotspotX>0.409638554</hotspotX>
-                        <hotspotY>0.306451619</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="enemytank">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <hitcount>0</hitcount>
-                        <range>0</range>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Edge</bound-by>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Car">
-                            <properties>
-                                <max-speed>75</max-speed>
-                                <acceleration>200</acceleration>
-                                <deceleration>400</deceleration>
-                                <steer-speed>80</steer-speed>
-                                <drift-recover>185</drift-recover>
-                                <friction>0.8</friction>
-                                <set-angle>Yes</set-angle>
-                                <default-controls>No</default-controls>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1164</x>
-                        <y>-214</y>
-                        <z>0</z>
-                        <width>83</width>
-                        <height>62</height>
-                        <depth>0</depth>
-                        <hotspotX>0.409638554</hotspotX>
-                        <hotspotY>0.306451619</hotspotY>
+                        <hotspotX>0.693333328</hotspotX>
+                        <hotspotY>0.409999996</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1007,10 +962,10 @@
                         </behavior-instance>
                         <behavior-instance type="Car">
                             <properties>
-                                <max-speed>400</max-speed>
+                                <max-speed>500</max-speed>
                                 <acceleration>700</acceleration>
                                 <deceleration>1500</deceleration>
-                                <steer-speed>80</steer-speed>
+                                <steer-speed>100</steer-speed>
                                 <drift-recover>220</drift-recover>
                                 <friction>0.8</friction>
                                 <set-angle>Yes</set-angle>
@@ -1425,8 +1380,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1085</x>
-                        <y>7183</y>
+                        <x>1138</x>
+                        <y>7151</y>
                         <z>0</z>
                         <width>294.164337158</width>
                         <height>292.69354248</height>
@@ -1623,54 +1578,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="spikebarrier">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1087</x>
-                        <y>5433</y>
-                        <z>0</z>
-                        <width>283</width>
-                        <height>396</height>
-                        <depth>0</depth>
-                        <hotspotX>0.13176471</hotspotX>
-                        <hotspotY>0.456558764</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="spikebarrier">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1278</x>
-                        <y>5433</y>
-                        <z>0</z>
-                        <width>283</width>
-                        <height>396</height>
-                        <depth>0</depth>
-                        <hotspotX>0.13176471</hotspotX>
-                        <hotspotY>0.456558764</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="sidewallshexdigi">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1716,30 +1623,6 @@
                         <hotspotX>0.505843043</hotspotX>
                         <hotspotY>0.501006007</hotspotY>
                         <angle>-0.946220517</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="spikebarrier">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1470</x>
-                        <y>5433</y>
-                        <z>0</z>
-                        <width>283</width>
-                        <height>396</height>
-                        <depth>0</depth>
-                        <hotspotX>0.13176471</hotspotX>
-                        <hotspotY>0.456558764</hotspotY>
-                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -1847,7 +1730,7 @@
                         <depth>0</depth>
                         <hotspotX>0.477499992</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0.240375519</angle>
+                        <angle>-0.203318432</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -2199,8 +2082,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-17</x>
-                        <y>3980</y>
+                        <x>-23</x>
+                        <y>3981</y>
                         <z>0</z>
                         <width>599</width>
                         <height>497</height>
@@ -2394,8 +2277,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>310</x>
-                        <y>780</y>
+                        <x>363</x>
+                        <y>757</y>
                         <z>0</z>
                         <width>450</width>
                         <height>373</height>
@@ -2490,6 +2373,207 @@
                         <hotspotX>0.477499992</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0.342880309</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="enemytank">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitcount>0</hitcount>
+                        <range>0</range>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Car">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>200</acceleration>
+                                <deceleration>200</deceleration>
+                                <steer-speed>100</steer-speed>
+                                <drift-recover>185</drift-recover>
+                                <friction>0.8</friction>
+                                <set-angle>Yes</set-angle>
+                                <default-controls>No</default-controls>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>743</x>
+                        <y>1088</y>
+                        <z>0</z>
+                        <width>50</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.693333328</hotspotX>
+                        <hotspotY>0.409999996</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="enemytank">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitcount>0</hitcount>
+                        <range>0</range>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Car">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>200</acceleration>
+                                <deceleration>200</deceleration>
+                                <steer-speed>100</steer-speed>
+                                <drift-recover>185</drift-recover>
+                                <friction>0.8</friction>
+                                <set-angle>Yes</set-angle>
+                                <default-controls>No</default-controls>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1331</x>
+                        <y>6004</y>
+                        <z>0</z>
+                        <width>50</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.693333328</hotspotX>
+                        <hotspotY>0.409999996</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="enemytank">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitcount>0</hitcount>
+                        <range>0</range>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Car">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>200</acceleration>
+                                <deceleration>200</deceleration>
+                                <steer-speed>100</steer-speed>
+                                <drift-recover>185</drift-recover>
+                                <friction>0.8</friction>
+                                <set-angle>Yes</set-angle>
+                                <default-controls>No</default-controls>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>281</x>
+                        <y>7631</y>
+                        <z>0</z>
+                        <width>50</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.693333328</hotspotX>
+                        <hotspotY>0.409999996</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="enemytank">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitcount>0</hitcount>
+                        <range>0</range>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Car">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>200</acceleration>
+                                <deceleration>200</deceleration>
+                                <steer-speed>100</steer-speed>
+                                <drift-recover>185</drift-recover>
+                                <friction>0.8</friction>
+                                <set-angle>Yes</set-angle>
+                                <default-controls>No</default-controls>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>980</x>
+                        <y>2591</y>
+                        <z>0</z>
+                        <width>50</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.693333328</hotspotX>
+                        <hotspotY>0.409999996</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="energyatom">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>340</x>
+                        <y>2029</y>
+                        <z>0</z>
+                        <width>450</width>
+                        <height>373</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.504021466</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>

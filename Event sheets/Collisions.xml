@@ -405,7 +405,7 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" type="spikebarrier">
-                                    <param id="0" name="X">spikebarrier.X-50</param>
+                                    <param id="0" name="X">spikebarrier.X-100</param>
                                     <param id="1" name="Y">spikebarrier.Y</param>
                                 </action>
                             </actions>
@@ -425,67 +425,7 @@
                     </actions>
                 </event-block>
                 <comment>Check if Player is in Water... if in Water.. slow him down</comment>
-                <event-block>
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" type="playertank">
-                            <param id="0" name="Object">water</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Car" id="4" name="Set max speed" type="playertank">
-                            <param id="0" name="Max Speed">50</param>
-                        </action>
-                        <action behavior="Car" id="5" name="Set acceleration" type="playertank">
-                            <param id="0" name="Acceleration">100</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="1" inverted="1" name="Is overlapping another object" type="playertank">
-                            <param id="0" name="Object">water</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Car" id="4" name="Set max speed" type="playertank">
-                            <param id="0" name="Max Speed">300</param>
-                        </action>
-                        <action behavior="Car" id="5" name="Set acceleration" type="playertank">
-                            <param id="0" name="Acceleration">700</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <comment>Enemy unit in Water Behavior</comment>
-                <event-block>
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" type="enemytank">
-                            <param id="0" name="Object">water</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Car" id="4" name="Set max speed" type="enemytank">
-                            <param id="0" name="Max Speed">35</param>
-                        </action>
-                        <action behavior="Car" id="5" name="Set acceleration" type="enemytank">
-                            <param id="0" name="Acceleration">100</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="1" inverted="1" name="Is overlapping another object" type="enemytank">
-                            <param id="0" name="Object">water</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Car" id="4" name="Set max speed" type="enemytank">
-                            <param id="0" name="Max Speed">75</param>
-                        </action>
-                        <action behavior="Car" id="5" name="Set acceleration" type="enemytank">
-                            <param id="0" name="Acceleration">200</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <comment>Player Tank in QuickSand Behaviour</comment>
                 <event-block>
                     <conditions>
@@ -627,36 +567,8 @@
                             <param id="0" name="Seconds">1.0</param>
                         </action>
                         <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" type="enemytank" />
                     </actions>
-                    <sub-events>
-                        <event-block>
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" type="enemytank">
-                                    <param id="0" name="Instance variable">hitcount</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">3</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" type="enemytank">
-                                    <param id="0" name="Instance variable">hitcount</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block>
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" type="enemytank">
-                                    <param id="0" name="Instance variable">hitcount</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">3</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" type="enemytank" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <comment>Player Tank on taking a Bullet Hit Behavior - Damage</comment>
                 <event-block>
@@ -904,7 +816,7 @@
                                 <condition id="-7" name="Compare instance variable" type="enemytank">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -919,10 +831,34 @@
                                 <condition id="-7" name="Compare instance variable" type="enemytank">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Play" type="Audio">
+                                    <param id="0" name="Audio file">smallexplosion</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Spawn another object" type="enemytank">
+                                    <param id="0" name="Object">explosion</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-24" name="Move to top" type="explosion" />
+                                <action id="9" name="Set scale" type="explosion">
+                                    <param id="0" name="Scale">2</param>
+                                </action>
+                                <action id="-9" name="Destroy" type="normalbullet" />
+                                <action id="4" name="Set animation" type="explosion">
+                                    <param id="0" name="Animation">&quot;BlowUp&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-9" name="Destroy" type="explosion" />
                                 <action id="-9" name="Destroy" type="enemytank" />
                             </actions>
                             <sub-events>
@@ -1035,7 +971,7 @@
                         <action id="-9" name="Destroy" type="explosion" />
                         <action id="-10" name="Set value" type="playertank">
                             <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Value">playertank.health-50</param>
+                            <param id="1" name="Value">playertank.health-25</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1112,6 +1048,50 @@
                             <param id="0" name="Seconds">1.0</param>
                         </action>
                         <action id="-9" name="Destroy" type="explosion" />
+                    </actions>
+                </event-block>
+                <comment>Bugs touching tank </comment>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="enemytank">
+                            <param id="0" name="Object">playertank</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" type="Audio">
+                            <param id="0" name="Audio file">mineexplode</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;missleexplosion&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" type="enemytank">
+                            <param id="0" name="Object">explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-24" name="Move to top" type="explosion" />
+                        <action behavior="ScrollTo" id="0" name="Shake" type="playertank">
+                            <param id="0" name="Magnitude">50</param>
+                            <param id="1" name="Duration">0.5</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" type="missile" />
+                        <action id="9" name="Set scale" type="explosion">
+                            <param id="0" name="Scale">3</param>
+                        </action>
+                        <action id="4" name="Set animation" type="explosion">
+                            <param id="0" name="Animation">&quot;BlowUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" type="enemytank" />
+                        <action id="-10" name="Set value" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">playertank.health-5</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

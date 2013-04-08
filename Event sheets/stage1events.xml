@@ -75,7 +75,7 @@
                         </action>
                         <action id="-10" name="Set value" type="enemytank">
                             <param id="0" name="Instance variable">range</param>
-                            <param id="1" name="Value">384</param>
+                            <param id="1" name="Value">600</param>
                         </action>
                         <action id="-9" name="Destroy" type="lineofsight" />
                         <action id="0" name="Spawn another object" type="enemytower">
@@ -115,6 +115,9 @@
                         <action id="4" name="Preload" type="Audio">
                             <param id="0" name="Audio file">smallexplosion</param>
                         </action>
+                        <action id="4" name="Preload" type="Audio">
+                            <param id="0" name="Audio file">backgroundtheme1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Allows tank to shoot again if bullet is out of the game. Also stops potential slowing down if more and more bullets zoom off forever.</comment>
@@ -132,7 +135,14 @@
                     <conditions>
                         <condition id="-25" name="On loading finished" type="System" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Play" type="Audio">
+                            <param id="0" name="Audio file">backgroundtheme1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;theme&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

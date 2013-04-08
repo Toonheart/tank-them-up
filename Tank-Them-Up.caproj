@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
     <name>Tank-Them-Up</name>
-    <description>A funny tank shooter game with missions</description>
+    <description>A Top down 2D tank shooter game with lots and lots of bombs!</description>
     <version>0.4</version>
     <author>Srikrishna Das(krish) - krish@toonheart.com</author>
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>11900</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -36,7 +36,7 @@
         <height>2048</height>
     </window-size>
     <pixel-rounding>1</pixel-rounding>
-    <first-layout>stage1</first-layout>
+    <first-layout>stage0</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -596,17 +596,17 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.409639" hotspotY="0.306452">
-                        <image-point name="Imagepoint 1" x="1.0241" y="0.693548" />
+                    <frame duration="1" hotspotX="0.693333" hotspotY="0.41">
+                        <image-point name="Imagepoint 1" x="0.306667" y="1.02333" />
                         <collision-poly>
-                            <point x="0.192771" y="0.016129" />
-                            <point x="0.409639" y="0.0322581" />
-                            <point x="0.614458" y="0.0322581" />
-                            <point x="0.939759" y="0.306452" />
-                            <point x="0.795181" y="0.822581" />
-                            <point x="0.409639" y="0.983871" />
-                            <point x="0.0120482" y="0.83871" />
-                            <point x="0.0120482" y="0.306452" />
+                            <point x="0.973333" y="0.263333" />
+                            <point x="0.91" y="0.5" />
+                            <point x="0.973333" y="0.776667" />
+                            <point x="0.5" y="0.72" />
+                            <point x="0.0966668" y="0.886667" />
+                            <point x="0.0733333" y="0.5" />
+                            <point x="0.0600002" y="0.223333" />
+                            <point x="0.5" y="0.27" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -973,30 +973,6 @@
         <object-type name="Browser">
             <plugin id="Browser" />
         </object-type>
-        <object-type name="trainingfire">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.231579" y="0.231579" />
-                            <point x="0.5" y="0.326316" />
-                            <point x="0.663158" y="0.336842" />
-                            <point x="0.815789" y="0.5" />
-                            <point x="0.742105" y="0.742105" />
-                            <point x="0.5" y="0.794737" />
-                            <point x="0.257895" y="0.742105" />
-                            <point x="0.142105" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="stage0text">
             <plugin id="Text" />
         </object-type>
@@ -1050,30 +1026,6 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
                     <frame duration="1" hotspotX="0.50289" hotspotY="0.506329" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="8dircontrol">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.511029" hotspotY="0.492647">
-                        <collision-poly>
-                            <point x="0.167286" y="0.151852" />
-                            <point x="0.509294" y="0.00740741" />
-                            <point x="0.843866" y="0.159259" />
-                            <point x="0.966543" y="0.492593" />
-                            <point x="0.832714" y="0.814815" />
-                            <point x="0.509294" y="0.962963" />
-                            <point x="0.171004" y="0.82963" />
-                            <point x="0.0260223" y="0.492593" />
-                        </collision-poly>
-                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1484,13 +1436,14 @@
         <file name="smallexplosion.m4a" />
         <file name="smallexplosion.ogg" />
         <file name="smallexplosion.wav" />
-        <file name="tankDRIVE.m4a" />
-        <file name="tankDRIVE.ogg" />
-        <file name="tankDRIVE.wav" />
         <file name="tada.m4a" />
         <file name="tada.ogg" />
         <file name="tada.wav" />
     </sounds-folder>
-    <music-folder expanded="1" />
+    <music-folder expanded="1">
+        <file name="backgroundtheme1.m4a" />
+        <file name="backgroundtheme1.ogg" />
+        <file name="backgroundtheme1.wav" />
+    </music-folder>
     <files-folder expanded="1" />
 </c2project>
