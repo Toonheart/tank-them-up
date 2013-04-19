@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UserControls</name>
     <events>
-        <event-group description="All user control actions." title="User Inputs and Controls">
+        <event-group collapsed="1" description="All user control actions." title="User Inputs and Controls">
             <sub-events>
                 <comment>Movement and Navigation Controls</comment>
                 <event-block>

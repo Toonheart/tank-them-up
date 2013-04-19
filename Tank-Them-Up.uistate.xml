@@ -10,11 +10,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout>stage1</layout>
-        <layout>stage0</layout>
-        <event-sheet>stage1events</event-sheet>
-        <event-sheet>EnemyAI</event-sheet>
-        <event-sheet active="1">Collisions</event-sheet>
+        <layout active="1">TitleScreen</layout>
+        <event-sheet>TitleScreenEvents</event-sheet>
+        <event-sheet>UserControls</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />
