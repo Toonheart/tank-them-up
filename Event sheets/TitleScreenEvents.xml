@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>TitleScreenEvents</name>
     <events>
+        <variable comment="Shifts Opacity of layers" constant="0" name="OpacityShifter" static="0" type="number">0.25</variable>
         <event-group description="Actions for the menus" title="Menu Actions">
             <sub-events>
                 <comment>Play the Game</comment>
@@ -13,6 +14,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
                         <action id="-2" name="Go to layout" type="System">
                             <param id="0" name="Layout">stage1</param>
                         </action>
@@ -31,12 +35,55 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Animations" />
-        <event-block>
-            <conditions>
-                <condition id="-1" name="Every tick" type="System" />
-            </conditions>
-            <actions />
-        </event-block>
+        <event-group description="" title="Animations">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-1" name="Every tick" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Set layer opacity" type="System">
+                            <param id="0" name="Layer">3</param>
+                            <param id="1" name="Opacity">LayerOpacity(3)+OpacityShifter</param>
+                        </action>
+                        <action id="-18" name="Set layer opacity" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Opacity">LayerOpacity(1)-OpacityShifter</param>
+                        </action>
+                        <action id="3" name="Update watch variable" type="DebugPanel">
+                            <param id="0" name="Name">&quot;Opacity&quot;</param>
+                            <param id="1" name="Value">LayerOpacity(3)</param>
+                        </action>
+                        <action id="3" name="Update watch variable" type="DebugPanel">
+                            <param id="0" name="Name">&quot;Shifter&quot;</param>
+                            <param id="1" name="Value">OpacityShifter</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">LayerOpacity(3)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">100</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">LayerOpacity(3)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">OpacityShifter</param>
+                            <param id="1" name="Value">-OpacityShifter</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

@@ -5,10 +5,10 @@ It is entirely optional and the project will load without it.  If you are placin
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
         <position-x>768</position-x>
-        <position-y>905.508</position-y>
-        <position-z>561.081</position-z>
+        <position-y>1675.59</position-y>
+        <position-z>280.54</position-z>
         <lookat-x>768</lookat-x>
-        <lookat-y>905.508</lookat-y>
+        <lookat-y>1675.59</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>0</snap-to-grid>
@@ -20,12 +20,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="TitleSlide2" />
+    <active-layer name="Tank-Color" />
     <layers>
         <layer locked="1" name="BG" parallax-in-editor="0" visible="1" />
-        <layer locked="1" name="TitleSlide1" parallax-in-editor="0" visible="1" />
-        <layer locked="1" name="TitleSlide2" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="TitleSlide3" parallax-in-editor="0" visible="0" />
-        <layer locked="1" name="MenuTexts" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Tank" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Objects" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Tank-Color" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="MenuTexts" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>

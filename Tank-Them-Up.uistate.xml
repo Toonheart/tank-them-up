@@ -12,7 +12,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout active="1">TitleScreen</layout>
         <event-sheet>TitleScreenEvents</event-sheet>
-        <event-sheet>UserControls</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />

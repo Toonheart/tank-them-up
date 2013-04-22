@@ -7,15 +7,16 @@
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>11900</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="" id="Rex_DebugPanel" version="0.100000001">Debug Panel</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
@@ -1541,14 +1542,14 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
                     <frame duration="1" hotspotX="0.501618" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.223301" y="0.313636" />
-                            <point x="0.498382" y="0.122727" />
-                            <point x="0.776699" y="0.313636" />
-                            <point x="0.854369" y="0.5" />
-                            <point x="0.773463" y="0.681818" />
-                            <point x="0.498382" y="0.913636" />
-                            <point x="0.210356" y="0.704545" />
-                            <point x="0.132686" y="0.5" />
+                            <point x="0.172131" y="0.207921" />
+                            <point x="0.5" y="0.0643564" />
+                            <point x="0.790984" y="0.252475" />
+                            <point x="0.897541" y="0.5" />
+                            <point x="0.778689" y="0.732673" />
+                            <point x="0.5" y="0.930693" />
+                            <point x="0.17623" y="0.787129" />
+                            <point x="0.00409836" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -1587,6 +1588,47 @@
                             <point x="0.5" y="0.632979" />
                             <point x="0.178571" y="0.81383" />
                             <point x="0.30102" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Title_Tank_1_Color">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.154" y="0.186893" />
+                            <point x="0.5" y="0.196602" />
+                            <point x="0.62" y="0.461165" />
+                            <point x="0.852" y="0.5" />
+                            <point x="0.964" y="0.956311" />
+                            <point x="0.5" y="0.912621" />
+                            <point x="0.08" y="0.902913" />
+                            <point x="0.078" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="DebugPanel">
+            <plugin id="Rex_DebugPanel" />
+        </object-type>
+        <object-type name="Sprite">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.172131" y="0.207921" />
+                            <point x="0.5" y="0.0643564" />
+                            <point x="0.790984" y="0.252475" />
+                            <point x="0.897541" y="0.5" />
+                            <point x="0.778689" y="0.732673" />
+                            <point x="0.5" y="0.930693" />
+                            <point x="0.17623" y="0.787129" />
+                            <point x="0.00409836" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>

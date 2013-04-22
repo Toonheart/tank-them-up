@@ -60,12 +60,12 @@
                     </actions>
                 </event-block>
                 <comment>Player in GOD Mode -  To test the whole game without dying... except this doesnt test for math on player health</comment>
-                <event-block disabled="1">
+                <event-block>
                     <conditions>
                         <condition id="-1" name="Every tick" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-10" name="Set value" type="playertank">
+                        <action id="-10" name="Set value" type="playertank">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">100</param>
                         </action>
