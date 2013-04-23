@@ -3,69 +3,69 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Debug</name>
     <events>
-        <event-group description="All debug stuff here" title="Debug">
+        <event-group description="All debug stuff here" sid="726" title="Debug">
             <sub-events>
                 <comment>Start Debug Panel</comment>
-                <event-block disabled="1">
+                <event-block disabled="1" sid="727">
                     <conditions>
-                        <condition id="-1" name="Every tick" type="System" />
+                        <condition id="-1" name="Every tick" sid="728" type="System" />
                     </conditions>
                     <actions />
                 </event-block>
                 <comment>Enable / Disable AI markers for Enemy - Useful in Debugging</comment>
-                <event-block disabled="1">
+                <event-block disabled="1" sid="729">
                     <conditions>
-                        <condition id="2" name="Key is down" type="Keyboard">
+                        <condition id="2" name="Key is down" sid="730" type="Keyboard">
                             <param id="0" name="Key">32 (Space)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" type="lineofsight">
+                        <action id="-15" name="Set visible" sid="731" type="lineofsight">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" type="MarkerLeftRight">
+                        <action id="-15" name="Set visible" sid="732" type="MarkerLeftRight">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" type="MarkerSTOP">
+                        <action id="-15" name="Set visible" sid="733" type="MarkerSTOP">
                             <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1">
+                <event-block disabled="1" sid="734">
                     <conditions>
-                        <condition id="2" name="Key is down" type="Keyboard">
+                        <condition id="2" name="Key is down" sid="735" type="Keyboard">
                             <param id="0" name="Key">73 (I)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" type="lineofsight">
+                        <action id="-15" name="Set visible" sid="736" type="lineofsight">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" type="MarkerLeftRight">
+                        <action id="-15" name="Set visible" sid="737" type="MarkerLeftRight">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" type="MarkerSTOP">
+                        <action id="-15" name="Set visible" sid="738" type="MarkerSTOP">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="739">
                     <conditions>
-                        <condition id="0" name="On key pressed" type="Keyboard">
+                        <condition id="0" name="On key pressed" sid="740" type="Keyboard">
                             <param id="0" name="Key">27 (Esc)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-26" name="Restart layout" type="System" />
+                        <action id="-26" name="Restart layout" sid="741" type="System" />
                     </actions>
                 </event-block>
                 <comment>Player in GOD Mode -  To test the whole game without dying... except this doesnt test for math on player health</comment>
-                <event-block>
+                <event-block sid="742">
                     <conditions>
-                        <condition id="-1" name="Every tick" type="System" />
+                        <condition id="-1" name="Every tick" sid="743" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" type="playertank">
+                        <action id="-10" name="Set value" sid="744" type="playertank">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">100</param>
                         </action>

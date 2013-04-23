@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>stage0</name>
+    <sid>226</sid>
     <event-sheet>stage0events</event-sheet>
     <size>
         <width>1536</width>
@@ -12,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Layer 0">
+        <layer name="Layer 0" sid="227">
             <initially-visible>1</initially-visible>
             <background-color>0,0,0</background-color>
             <transparent>0</transparent>
@@ -26,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="stage0text">
+                <instance type="stage0text" uid="142">
                     <properties>
                         <text>No more D-pad.</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -53,7 +54,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="okButton">
+                <instance type="okButton" uid="143">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -84,7 +85,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="dpadUP">
+                <instance type="dpadUP" uid="144">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -115,7 +116,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="stage0text">
+                <instance type="stage0text" uid="145">
                     <properties>
                         <text>Innovative &amp; Ergonomic &quot;CrashPad&quot;.</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -142,7 +143,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="normalbullet">
+                <instance type="normalbullet" uid="146">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -175,7 +176,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="stage0text">
+                <instance type="stage0text" uid="147">
                     <properties>
                         <text>Tap anywhere on screen to FIRE!</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -202,7 +203,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="stage0text">
+                <instance type="stage0text" uid="148">
                     <properties>
                         <text>Tap on Tank to plant MINE!!</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -229,7 +230,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="playertank">
+                <instance type="playertank" uid="149">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -244,6 +245,7 @@
                         <primaryAmmo>99</primaryAmmo>
                         <secondaryAmmo>5</secondaryAmmo>
                         <PrevTouch_Accelerator>true</PrevTouch_Accelerator>
+                        <ReverseGearEngaged>false</ReverseGearEngaged>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -281,7 +283,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="playertank_turret">
+                <instance type="playertank_turret" uid="150">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -302,7 +304,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="playersmine">
+                <instance type="playersmine" uid="151">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -323,7 +325,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="playersmine">
+                <instance type="playersmine" uid="152">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -344,7 +346,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="playersmine">
+                <instance type="playersmine" uid="153">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -365,7 +367,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="energyatom">
+                <instance type="energyatom" uid="154">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -381,12 +383,12 @@
                         <height>277.505981445</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504021466</hotspotY>
+                        <hotspotY>0.502604187</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="stage0text">
+                <instance type="stage0text" uid="155">
                     <properties>
                         <text>COLLECT Energy Spheres&apos;!!!</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -413,7 +415,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="stage0text">
+                <instance type="stage0text" uid="156">
                     <properties>
                         <text>AVOID / DESTROY Everything Else!</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -440,7 +442,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="stage0text">
+                <instance type="stage0text" uid="157">
                     <properties>
                         <text>ENTER to PLAY!</text>
                         <initial-visibility>Visible</initial-visibility>

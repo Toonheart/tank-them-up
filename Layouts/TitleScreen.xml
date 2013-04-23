@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>TitleScreen</name>
+    <sid>228</sid>
     <event-sheet>TitleScreenEvents</event-sheet>
     <size>
         <width>1536</width>
@@ -12,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="BG">
+        <layer name="BG" sid="229">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -26,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Title_Tile">
+                <instance type="Title_Tile" uid="158">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -49,7 +50,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Tank">
+        <layer name="Pencil" sid="230">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -63,7 +64,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Title_Tank_1">
+                <instance type="Title_Tank_1" uid="159">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -84,7 +85,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Title_Wall_Big">
+                <instance type="Title_Wall_Big" uid="160">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -105,7 +106,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Title_Wall_Big">
+                <instance type="Title_Wall_Big" uid="161">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -126,7 +127,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Title_Wall_Big">
+                <instance type="Title_Wall_Big" uid="162">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -147,7 +148,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Title_Wall_Big">
+                <instance type="Title_Wall_Big" uid="164">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -156,29 +157,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1456</x>
-                        <y>2058</y>
-                        <z>0</z>
-                        <width>606.037658691</width>
-                        <height>431.483093262</height>
-                        <depth>0</depth>
-                        <hotspotX>0.501618147</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Title_Wall_Big">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1144</x>
-                        <y>1973</y>
+                        <x>1338</x>
+                        <y>2093</y>
                         <z>0</z>
                         <width>503.59185791</width>
                         <height>358.544342041</height>
@@ -189,70 +169,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Title_Wall_Big">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>919</x>
-                        <y>2113</y>
-                        <z>0</z>
-                        <width>434.296661377</width>
-                        <height>309.207977295</height>
-                        <depth>0</depth>
-                        <hotspotX>0.501618147</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Title_Wall_Big">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-45</x>
-                        <y>512</y>
-                        <z>0</z>
-                        <width>500.910003662</width>
-                        <height>356.63494873</height>
-                        <depth>0</depth>
-                        <hotspotX>0.501618147</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Title_Wall_Big">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-64</x>
-                        <y>820</y>
-                        <z>0</z>
-                        <width>633.062988281</width>
-                        <height>450.724456787</height>
-                        <depth>0</depth>
-                        <hotspotX>0.501618147</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Title_Wall_Big">
+                <instance type="Title_Wall_Big" uid="168">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -273,7 +190,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Title_Wall_Big">
+                <instance type="Title_Mine" uid="180">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -282,19 +199,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1579</x>
-                        <y>1352</y>
+                        <x>143</x>
+                        <y>149</y>
                         <z>0</z>
-                        <width>689.198669434</width>
-                        <height>490.691589355</height>
+                        <width>304.373718262</width>
+                        <height>291.950317383</height>
                         <depth>0</depth>
-                        <hotspotX>0.501618147</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>3.141592741</angle>
+                        <angle>0.254423201</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Title_Wall_Big">
+                <instance type="Title_Player_Mine" uid="182">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -303,19 +220,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1134</x>
-                        <y>-12</y>
+                        <x>1416</x>
+                        <y>352</y>
                         <z>0</z>
-                        <width>298.498840332</width>
-                        <height>212.5234375</height>
+                        <width>253.26953125</width>
+                        <height>248.746856689</height>
                         <depth>0</depth>
-                        <hotspotX>0.501618147</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
+                        <angle>-0.216464147</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Title_Wall_Big">
+                <instance type="Title_EnergySphere" uid="175">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -324,207 +241,22 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>188</x>
-                        <y>98</y>
+                        <x>813</x>
+                        <y>426</y>
                         <z>0</z>
-                        <width>179.773727417</width>
-                        <height>127.994232178</height>
+                        <width>249.321350098</width>
+                        <height>199.950790405</height>
                         <depth>0</depth>
-                        <hotspotX>0.501618147</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>3.141592741</angle>
+                        <angle>0.233743727</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
             <effects />
         </layer>
-        <layer name="Objects">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="Title_Wall">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>695</x>
-                        <y>376</y>
-                        <z>0</z>
-                        <width>309.281646729</width>
-                        <height>220.620910645</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504672885</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Title_Wall">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>851</x>
-                        <y>453</y>
-                        <z>0</z>
-                        <width>309.281646729</width>
-                        <height>220.620910645</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504672885</hotspotY>
-                        <angle>-0.015562163</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Title_Wall">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1325</x>
-                        <y>366</y>
-                        <z>0</z>
-                        <width>178.073806763</width>
-                        <height>127.025985718</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504672885</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Title_Wall">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1430</x>
-                        <y>306</y>
-                        <z>0</z>
-                        <width>209.163894653</width>
-                        <height>149.203582764</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504672885</hotspotY>
-                        <angle>-0.015562163</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Title_Wall">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1427.005737305</x>
-                        <y>179.389129639</y>
-                        <z>0</z>
-                        <width>271.195220947</width>
-                        <height>193.452606201</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504672885</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Title_Wall">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>977.56652832</x>
-                        <y>68.527389526</y>
-                        <z>0</z>
-                        <width>246.331558228</width>
-                        <height>175.716522217</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504672885</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Title_Wall">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>100</x>
-                        <y>18</y>
-                        <z>0</z>
-                        <width>260.373535156</width>
-                        <height>185.733139038</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504672885</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Title_Wall">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>85</x>
-                        <y>155</y>
-                        <z>0</z>
-                        <width>220.097671509</width>
-                        <height>157.00302124</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504672885</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-            </instances>
-            <effects />
-        </layer>
-        <layer name="Tank-Color">
+        <layer name="Color" sid="232">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -538,28 +270,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Title_Mine">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>2212</x>
-                        <y>465</y>
-                        <z>0</z>
-                        <width>304.373718262</width>
-                        <height>291.950317383</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0.149687558</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Title_Tank_1_Color">
+                <instance type="Title_Tank_1_Color" uid="181">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -580,49 +291,103 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite">
+                <instance type="sidewallshexdigi" uid="18">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>697</x>
-                        <y>1620</y>
+                        <x>699</x>
+                        <y>1624</y>
                         <z>0</z>
-                        <width>507.76675415</width>
-                        <height>420.36428833</height>
+                        <width>507.766998291</width>
+                        <height>420.364013672</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite">
+                <instance type="sidewallshexdigi" uid="169">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>315</x>
-                        <y>1440</y>
+                        <x>319</x>
+                        <y>1445</y>
                         <z>0</z>
-                        <width>507.76675415</width>
-                        <height>420.36428833</height>
+                        <width>507.766998291</width>
+                        <height>420.364013672</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
                         <angle>3.141592741</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite">
+                <instance type="sidewallshexdigi" uid="171">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>329</x>
+                        <y>1804</y>
+                        <z>0</z>
+                        <width>507.766998291</width>
+                        <height>420.364013672</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sidewallshexdigi" uid="178">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1578</x>
+                        <y>700</y>
+                        <z>0</z>
+                        <width>473.319030762</width>
+                        <height>391.84564209</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="landmine" uid="179">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -631,22 +396,88 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>329</x>
-                        <y>1806</y>
+                        <x>132.845489502</x>
+                        <y>134.077331543</y>
                         <z>0</z>
-                        <width>507.76675415</width>
-                        <height>420.36428833</height>
+                        <width>265.972808838</width>
+                        <height>255.11630249</height>
+                        <depth>0</depth>
+                        <hotspotX>0.477499992</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0.287979335</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="playersmine" uid="174">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1410</x>
+                        <y>346</y>
+                        <z>0</z>
+                        <width>255.769943237</width>
+                        <height>251.202301025</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.497933894</hotspotY>
+                        <angle>-0.179366365</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sidewallshexdigi" uid="173">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1326</x>
+                        <y>2091</y>
+                        <z>0</z>
+                        <width>423.089111328</width>
+                        <height>350.261901855</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
                         <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="energyatom" uid="176">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>830</x>
+                        <y>456</y>
+                        <z>0</z>
+                        <width>391.592315674</width>
+                        <height>334.158782959</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.502604187</hotspotY>
+                        <angle>0.233751938</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
             <effects />
         </layer>
-        <layer name="MenuTexts">
+        <layer name="MenuTexts" sid="233">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -660,7 +491,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Text_Title">
+                <instance type="Text_Title" uid="185">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -679,7 +510,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>758</x>
+                        <x>778</x>
                         <y>221</y>
                         <z>0</z>
                         <width>1161.567993164</width>
@@ -691,7 +522,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Play">
+                <instance type="Text_Play" uid="186">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -722,7 +553,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Conquers">
+                <instance type="Text_Conquers" uid="187">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -753,7 +584,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Ranking">
+                <instance type="Text_Ranking" uid="188">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -784,7 +615,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Music">
+                <instance type="Text_Music" uid="189">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -815,7 +646,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_About">
+                <instance type="Text_About" uid="190">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -846,7 +677,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Help">
+                <instance type="Text_Help" uid="191">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -877,7 +708,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Quit">
+                <instance type="Text_Quit" uid="192">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -908,19 +739,47 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="StrikeRED" uid="193">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2125</x>
+                        <y>913</y>
+                        <z>0</z>
+                        <width>680</width>
+                        <height>62</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
+        <layer name="Black" sid="981">
+            <initially-visible>1</initially-visible>
+            <background-color>0,0,0</background-color>
+            <transparent>0</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
     </layers>
-    <nonworld-instances>
-        <instance type="DebugPanel">
-            <properties>
-                <enable>Yes</enable>
-                <activated>Yes</activated>
-                <stay-on-top>No</stay-on-top>
-                <log-buffer-length>100</log-buffer-length>
-            </properties>
-        </instance>
-    </nonworld-instances>
+    <nonworld-instances />
     <effects />
 </c2layout>

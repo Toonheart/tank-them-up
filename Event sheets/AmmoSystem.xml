@@ -3,63 +3,63 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>AmmoSystem</name>
     <events>
-        <event-group collapsed="1" description="Deals with Ammo calculations" title="Ammo System">
+        <event-group collapsed="1" description="Deals with Ammo calculations" sid="808" title="Ammo System">
             <sub-events>
                 <comment>Primary Ammo count is 2 digit... looks out of alignment when it counts down to single digits.&#x0D;&#x0A;So reset X position to secondary Ammo to keep it aligned.</comment>
-                <event-block>
+                <event-block sid="809">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" type="playertank">
+                        <condition id="-7" name="Compare instance variable" sid="810" type="playertank">
                             <param id="0" name="Instance variable">primaryAmmo</param>
                             <param id="1" name="Comparison">2</param>
                             <param id="2" name="Value">10</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" type="AmmoCntPrimary">
+                        <action id="-1" name="Set X" sid="811" type="AmmoCntPrimary">
                             <param id="0" name="X">AmmoCntSecondary.X</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="812">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" type="playertank">
+                        <condition id="-7" name="Compare instance variable" sid="813" type="playertank">
                             <param id="0" name="Instance variable">primaryAmmo</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">10</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" type="AmmoCntPrimary">
+                        <action id="-1" name="Set X" sid="814" type="AmmoCntPrimary">
                             <param id="0" name="X">1400</param>
                         </action>
                     </actions>
                 </event-block>
                 <comment>Cap Ammo Counts.</comment>
-                <event-block>
+                <event-block sid="815">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" type="playertank">
+                        <condition id="-7" name="Compare instance variable" sid="816" type="playertank">
                             <param id="0" name="Instance variable">primaryAmmo</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">99</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" type="playertank">
+                        <action id="-10" name="Set value" sid="817" type="playertank">
                             <param id="0" name="Instance variable">primaryAmmo</param>
                             <param id="1" name="Value">99</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="818">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" type="playertank">
+                        <condition id="-7" name="Compare instance variable" sid="819" type="playertank">
                             <param id="0" name="Instance variable">secondaryAmmo</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">5</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" type="playertank">
+                        <action id="-10" name="Set value" sid="820" type="playertank">
                             <param id="0" name="Instance variable">secondaryAmmo</param>
                             <param id="1" name="Value">5</param>
                         </action>

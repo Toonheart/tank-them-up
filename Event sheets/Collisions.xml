@@ -3,408 +3,408 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Collisions</name>
     <events>
-        <event-group description="All general game collisions" title="Collisions">
+        <event-group description="All general game collisions" sid="429" title="Collisions">
             <sub-events>
                 <comment>Bullet Hits Bullet</comment>
-                <event-block>
+                <event-block sid="430">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="normalbullet">
+                        <condition id="0" name="On collision with another object" sid="431" type="normalbullet">
                             <param id="0" name="Object">enemynormalbullet</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" type="Audio">
+                        <action id="0" name="Play" sid="432" type="Audio">
                             <param id="0" name="Audio file">smallexplosion</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" type="normalbullet" />
-                        <action id="-9" name="Destroy" type="enemynormalbullet" />
-                        <action id="0" name="Spawn another object" type="normalbullet">
+                        <action id="-9" name="Destroy" sid="433" type="normalbullet" />
+                        <action id="-9" name="Destroy" sid="434" type="enemynormalbullet" />
+                        <action id="0" name="Spawn another object" sid="435" type="normalbullet">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="9" name="Set scale" sid="436" type="explosion">
                             <param id="0" name="Scale">5</param>
                         </action>
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="4" name="Set animation" sid="437" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="438" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" sid="439" type="explosion" />
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="440">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="normalbullet">
+                        <condition id="0" name="On collision with another object" sid="441" type="normalbullet">
                             <param id="0" name="Object">bush</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" type="normalbullet" />
-                        <action id="0" name="Spawn another object" type="bush">
+                        <action id="-9" name="Destroy" sid="442" type="normalbullet" />
+                        <action id="0" name="Spawn another object" sid="443" type="bush">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="9" name="Set scale" sid="444" type="explosion">
                             <param id="0" name="Scale">0.7</param>
                         </action>
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="4" name="Set animation" sid="445" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="446" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" sid="447" type="explosion" />
                     </actions>
                     <sub-events>
-                        <event-block>
+                        <event-block sid="448">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" type="bush">
+                                <condition id="-7" name="Compare instance variable" sid="449" type="bush">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" type="bush">
+                                <action id="-11" name="Add to" sid="450" type="bush">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="451">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" type="bush">
+                                <condition id="-7" name="Compare instance variable" sid="452" type="bush">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" type="bush" />
+                                <action id="-9" name="Destroy" sid="453" type="bush" />
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
                 <comment>Tank Crushing and Bullet hit behavior for Bushes.  If hitcount less than 2 it adds. greater or equal to 2... destroy bush.</comment>
-                <event-block>
+                <event-block sid="454">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="playertank">
+                        <condition id="0" name="On collision with another object" sid="455" type="playertank">
                             <param id="0" name="Object">bush</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" type="bush">
+                        <action id="-16" name="Set opacity" sid="456" type="bush">
                             <param id="0" name="Opacity">bush.Opacity-33</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block>
+                        <event-block sid="457">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" type="bush">
+                                <condition id="-7" name="Compare instance variable" sid="458" type="bush">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">3</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" type="bush">
+                                <action id="-11" name="Add to" sid="459" type="bush">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="460">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" type="bush">
+                                <condition id="-7" name="Compare instance variable" sid="461" type="bush">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">3</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" type="bush" />
+                                <action id="-9" name="Destroy" sid="462" type="bush" />
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
                 <comment>Tank Crushing and Bullet hit behavior for Trees.  If hitcount less than 5 it adds. greater or equal to 5... destroy tree.</comment>
-                <event-block>
+                <event-block sid="463">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="normalbullet">
+                        <condition id="0" name="On collision with another object" sid="464" type="normalbullet">
                             <param id="0" name="Object">trees</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" type="normalbullet" />
-                        <action id="0" name="Spawn another object" type="trees">
+                        <action id="-9" name="Destroy" sid="465" type="normalbullet" />
+                        <action id="0" name="Spawn another object" sid="466" type="trees">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="9" name="Set scale" sid="467" type="explosion">
                             <param id="0" name="Scale">0.8</param>
                         </action>
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="4" name="Set animation" sid="468" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="469" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" sid="470" type="explosion" />
                     </actions>
                     <sub-events>
-                        <event-block>
+                        <event-block sid="471">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" type="trees">
+                                <condition id="-7" name="Compare instance variable" sid="472" type="trees">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">5</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" type="trees">
+                                <action id="-11" name="Add to" sid="473" type="trees">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="474">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" type="trees">
+                                <condition id="-7" name="Compare instance variable" sid="475" type="trees">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">5</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" type="trees" />
+                                <action id="-9" name="Destroy" sid="476" type="trees" />
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block>
+                <event-block sid="477">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="playertank">
+                        <condition id="0" name="On collision with another object" sid="478" type="playertank">
                             <param id="0" name="Object">trees</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" type="trees">
+                        <action id="-16" name="Set opacity" sid="479" type="trees">
                             <param id="0" name="Opacity">trees.Opacity-33</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block>
+                        <event-block sid="480">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" type="trees">
+                                <condition id="-7" name="Compare instance variable" sid="481" type="trees">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">5</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" type="trees">
+                                <action id="-11" name="Add to" sid="482" type="trees">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="483">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" type="trees">
+                                <condition id="-7" name="Compare instance variable" sid="484" type="trees">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">5</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" type="trees" />
+                                <action id="-9" name="Destroy" sid="485" type="trees" />
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
                 <comment>Bullet hits on lazer shocks and what happens if tank tries to cross it without destroying it</comment>
-                <event-block>
+                <event-block sid="486">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="normalbullet">
+                        <condition id="0" name="On collision with another object" sid="487" type="normalbullet">
                             <param id="0" name="Object">lazershock</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" type="normalbullet" />
-                        <action id="0" name="Spawn another object" type="lazershock">
+                        <action id="-9" name="Destroy" sid="488" type="normalbullet" />
+                        <action id="0" name="Spawn another object" sid="489" type="lazershock">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="9" name="Set scale" sid="490" type="explosion">
                             <param id="0" name="Scale">0.8</param>
                         </action>
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="4" name="Set animation" sid="491" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Set opacity" type="lazershock">
+                        <action id="-16" name="Set opacity" sid="492" type="lazershock">
                             <param id="0" name="Opacity">50</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="493" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-16" name="Set opacity" type="lazershock">
+                        <action id="-16" name="Set opacity" sid="494" type="lazershock">
                             <param id="0" name="Opacity">100</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" sid="495" type="explosion" />
                     </actions>
                     <sub-events>
-                        <event-block>
+                        <event-block sid="496">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" type="lazershock">
+                                <condition id="-7" name="Compare instance variable" sid="497" type="lazershock">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">8</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" type="lazershock">
+                                <action id="-11" name="Add to" sid="498" type="lazershock">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="499">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" type="lazershock">
+                                <condition id="-7" name="Compare instance variable" sid="500" type="lazershock">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">8</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" type="lazershock" />
+                                <action id="-9" name="Destroy" sid="501" type="lazershock" />
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
                 <comment>Bullet hit behavior for StoneWalls.  Hitcount less than 15 it adds. greater or equal to 15... fuck no you cant destroy a stonewall.</comment>
-                <event-block>
+                <event-block sid="502">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="normalbullet">
+                        <condition id="0" name="On collision with another object" sid="503" type="normalbullet">
                             <param id="0" name="Object">sidewallshexdigi</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" type="Audio">
+                        <action id="0" name="Play" sid="504" type="Audio">
                             <param id="0" name="Audio file">smallexplosion</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;sidewallsexplosion&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="normalbullet">
+                        <action id="0" name="Spawn another object" sid="505" type="normalbullet">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-24" name="Move to top" type="explosion" />
-                        <action id="-9" name="Destroy" type="normalbullet" />
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="-24" name="Move to top" sid="506" type="explosion" />
+                        <action id="-9" name="Destroy" sid="507" type="normalbullet" />
+                        <action id="9" name="Set scale" sid="508" type="explosion">
                             <param id="0" name="Scale">5</param>
                         </action>
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="4" name="Set animation" sid="509" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="510" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" sid="511" type="explosion" />
                     </actions>
                 </event-block>
                 <comment>Bullet hit behavior for SpikeBase structures</comment>
-                <event-block>
+                <event-block sid="512">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="normalbullet">
+                        <condition id="0" name="On collision with another object" sid="513" type="normalbullet">
                             <param id="0" name="Object">spikebase</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" type="Audio">
+                        <action id="0" name="Play" sid="514" type="Audio">
                             <param id="0" name="Audio file">metalexplosion</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;metalexplosion&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="normalbullet">
+                        <action id="0" name="Spawn another object" sid="515" type="normalbullet">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-24" name="Move to top" type="explosion" />
-                        <action id="-9" name="Destroy" type="normalbullet" />
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="-24" name="Move to top" sid="516" type="explosion" />
+                        <action id="-9" name="Destroy" sid="517" type="normalbullet" />
+                        <action id="9" name="Set scale" sid="518" type="explosion">
                             <param id="0" name="Scale">5</param>
                         </action>
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="4" name="Set animation" sid="519" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="520" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" sid="521" type="explosion" />
                     </actions>
                 </event-block>
                 <comment>Bullet hit behavior for Spikes.  Spikes retract on getting hit</comment>
-                <event-block>
+                <event-block sid="522">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="normalbullet">
+                        <condition id="0" name="On collision with another object" sid="523" type="normalbullet">
                             <param id="0" name="Object">spikebarrier</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" type="Audio">
+                        <action id="0" name="Play" sid="524" type="Audio">
                             <param id="0" name="Audio file">metalexplosion</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;metalexplosion&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="normalbullet">
+                        <action id="0" name="Spawn another object" sid="525" type="normalbullet">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-24" name="Move to top" type="explosion" />
-                        <action id="-9" name="Destroy" type="normalbullet" />
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="-24" name="Move to top" sid="526" type="explosion" />
+                        <action id="-9" name="Destroy" sid="527" type="normalbullet" />
+                        <action id="9" name="Set scale" sid="528" type="explosion">
                             <param id="0" name="Scale">5</param>
                         </action>
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="4" name="Set animation" sid="529" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="530" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" sid="531" type="explosion" />
                     </actions>
                     <sub-events>
-                        <event-block>
+                        <event-block sid="532">
                             <conditions>
-                                <condition id="-19" name="Pick all" type="System">
+                                <condition id="-19" name="Pick all" sid="533" type="System">
                                     <param id="0" name="Object">spikebarrier</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" type="spikebarrier">
+                                <action id="-3" name="Set position" sid="534" type="spikebarrier">
                                     <param id="0" name="X">spikebarrier.X-100</param>
                                     <param id="1" name="Y">spikebarrier.Y</param>
                                 </action>
@@ -412,37 +412,37 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block>
+                <event-block sid="535">
                     <conditions>
-                        <condition id="9" name="Is overlapping at offset" type="MarkerSTOP">
+                        <condition id="9" name="Is overlapping at offset" sid="536" type="MarkerSTOP">
                             <param id="0" name="Object">spikebarrier</param>
                             <param id="1" name="Offset X">0</param>
                             <param id="2" name="Offset Y">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" type="spikebarrier" />
+                        <action id="-9" name="Destroy" sid="537" type="spikebarrier" />
                     </actions>
                 </event-block>
                 <comment>Check if Player is in Water... if in Water.. slow him down</comment>
                 <comment>Enemy unit in Water Behavior</comment>
                 <comment>Player Tank in QuickSand Behaviour</comment>
-                <event-block>
+                <event-block sid="538">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" type="playertank">
+                        <condition id="1" name="Is overlapping another object" sid="539" type="playertank">
                             <param id="0" name="Object">quicksand</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" type="playertank">
+                        <action id="-12" name="Subtract from" sid="540" type="playertank">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">70</param>
                         </action>
-                        <action id="-4" name="Set position to another object" type="playertank">
+                        <action id="-4" name="Set position to another object" sid="541" type="playertank">
                             <param id="0" name="Object">quicksand</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
-                        <action behavior="ScrollTo" id="0" name="Shake" type="playertank">
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="542" type="playertank">
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
@@ -450,327 +450,327 @@
                     </actions>
                 </event-block>
                 <comment>Player Tank on Land Mine Behavior - BOOM BOOM</comment>
-                <event-block>
+                <event-block sid="543">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="playertank">
+                        <condition id="0" name="On collision with another object" sid="544" type="playertank">
                             <param id="0" name="Object">landmine</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" type="Audio">
+                        <action id="0" name="Play" sid="545" type="Audio">
                             <param id="0" name="Audio file">mineexplode</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;mineexplosion&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="landmine">
+                        <action id="0" name="Spawn another object" sid="546" type="landmine">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-24" name="Move to top" type="explosion" />
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="-24" name="Move to top" sid="547" type="explosion" />
+                        <action id="9" name="Set scale" sid="548" type="explosion">
                             <param id="0" name="Scale">10</param>
                         </action>
-                        <action id="-9" name="Destroy" type="landmine" />
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="-9" name="Destroy" sid="549" type="landmine" />
+                        <action id="4" name="Set animation" sid="550" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-12" name="Subtract from" type="playertank">
+                        <action id="-12" name="Subtract from" sid="551" type="playertank">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">10</param>
                         </action>
-                        <action behavior="ScrollTo" id="0" name="Shake" type="playertank">
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="552" type="playertank">
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="553" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" sid="554" type="explosion" />
                     </actions>
                 </event-block>
                 <comment>Player Tank touching Spikes</comment>
-                <event-block>
+                <event-block sid="555">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="playertank">
+                        <condition id="0" name="On collision with another object" sid="556" type="playertank">
                             <param id="0" name="Object">spikebarrier</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" type="Audio">
+                        <action id="0" name="Play" sid="557" type="Audio">
                             <param id="0" name="Audio file">smallexplosion</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;spikesound&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="playertank">
+                        <action id="0" name="Spawn another object" sid="558" type="playertank">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-24" name="Move to top" type="explosion" />
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="-24" name="Move to top" sid="559" type="explosion" />
+                        <action id="9" name="Set scale" sid="560" type="explosion">
                             <param id="0" name="Scale">7</param>
                         </action>
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="4" name="Set animation" sid="561" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-12" name="Subtract from" type="playertank">
+                        <action id="-12" name="Subtract from" sid="562" type="playertank">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">20</param>
                         </action>
-                        <action behavior="ScrollTo" id="0" name="Shake" type="playertank">
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="563" type="playertank">
                             <param id="0" name="Magnitude">20</param>
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="564" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" sid="565" type="explosion" />
                     </actions>
                 </event-block>
                 <comment>Enemy Tank on Player planted landmine Behavior - BOOM BOOM BOOM</comment>
-                <event-block>
+                <event-block sid="566">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="enemytank">
+                        <condition id="0" name="On collision with another object" sid="567" type="enemytank">
                             <param id="0" name="Object">playersmine</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" type="Audio">
+                        <action id="0" name="Play" sid="568" type="Audio">
                             <param id="0" name="Audio file">mineexplode</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;mineexplosion&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="playersmine">
+                        <action id="0" name="Spawn another object" sid="569" type="playersmine">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-24" name="Move to top" type="explosion" />
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="-24" name="Move to top" sid="570" type="explosion" />
+                        <action id="9" name="Set scale" sid="571" type="explosion">
                             <param id="0" name="Scale">3</param>
                         </action>
-                        <action id="-9" name="Destroy" type="playersmine" />
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="-9" name="Destroy" sid="572" type="playersmine" />
+                        <action id="4" name="Set animation" sid="573" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action behavior="Car" id="0" name="Stop" type="enemytank" />
-                        <action id="-16" name="Wait" type="System">
+                        <action behavior="Car" id="0" name="Stop" sid="574" type="enemytank" />
+                        <action id="-16" name="Wait" sid="575" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
-                        <action id="-9" name="Destroy" type="enemytank" />
+                        <action id="-9" name="Destroy" sid="576" type="explosion" />
+                        <action id="-9" name="Destroy" sid="577" type="enemytank" />
                     </actions>
                 </event-block>
                 <comment>Player Tank on taking a Bullet Hit Behavior - Damage</comment>
-                <event-block>
+                <event-block sid="578">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="playertank">
+                        <condition id="0" name="On collision with another object" sid="579" type="playertank">
                             <param id="0" name="Object">enemynormalbullet</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" type="Audio">
+                        <action id="0" name="Play" sid="580" type="Audio">
                             <param id="0" name="Audio file">smallexplosion</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="enemynormalbullet">
+                        <action id="0" name="Spawn another object" sid="581" type="enemynormalbullet">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-24" name="Move to top" type="explosion" />
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="-24" name="Move to top" sid="582" type="explosion" />
+                        <action id="9" name="Set scale" sid="583" type="explosion">
                             <param id="0" name="Scale">3</param>
                         </action>
-                        <action id="-9" name="Destroy" type="enemynormalbullet" />
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="-9" name="Destroy" sid="584" type="enemynormalbullet" />
+                        <action id="4" name="Set animation" sid="585" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-12" name="Subtract from" type="playertank">
+                        <action id="-12" name="Subtract from" sid="586" type="playertank">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">5</param>
                         </action>
-                        <action behavior="ScrollTo" id="0" name="Shake" type="playertank">
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="587" type="playertank">
                             <param id="0" name="Magnitude">10</param>
                             <param id="1" name="Duration">0.2</param>
                             <param id="2" name="Mode">0</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="588" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" sid="589" type="explosion" />
                     </actions>
                 </event-block>
                 <comment>Player Tank on touching Lazer Shock - AIY AAYE AYAYAYYA AYAYYEEEE</comment>
-                <event-block>
+                <event-block sid="590">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="playertank">
+                        <condition id="0" name="On collision with another object" sid="591" type="playertank">
                             <param id="0" name="Object">lazershock</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="playertank">
+                        <action id="0" name="Spawn another object" sid="592" type="playertank">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="9" name="Set scale" sid="593" type="explosion">
                             <param id="0" name="Scale">1.5</param>
                         </action>
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="4" name="Set animation" sid="594" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-12" name="Subtract from" type="playertank">
+                        <action id="-12" name="Subtract from" sid="595" type="playertank">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">20</param>
                         </action>
-                        <action behavior="ScrollTo" id="0" name="Shake" type="playertank">
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="596" type="playertank">
                             <param id="0" name="Magnitude">5</param>
                             <param id="1" name="Duration">0.2</param>
                             <param id="2" name="Mode">0</param>
                         </action>
-                        <action id="-16" name="Set opacity" type="lazershock">
+                        <action id="-16" name="Set opacity" sid="597" type="lazershock">
                             <param id="0" name="Opacity">50</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="598" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-16" name="Set opacity" type="lazershock">
+                        <action id="-16" name="Set opacity" sid="599" type="lazershock">
                             <param id="0" name="Opacity">100</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" sid="600" type="explosion" />
                     </actions>
                 </event-block>
                 <comment>EnemyTower on taking a Bullet Hit Behavior - Damage</comment>
-                <event-block>
+                <event-block sid="601">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="enemytower">
+                        <condition id="0" name="On collision with another object" sid="602" type="enemytower">
                             <param id="0" name="Object">normalbullet</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" type="Audio">
+                        <action id="0" name="Play" sid="603" type="Audio">
                             <param id="0" name="Audio file">smallexplosion</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="normalbullet">
+                        <action id="0" name="Spawn another object" sid="604" type="normalbullet">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-24" name="Move to top" type="explosion" />
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="-24" name="Move to top" sid="605" type="explosion" />
+                        <action id="9" name="Set scale" sid="606" type="explosion">
                             <param id="0" name="Scale">5</param>
                         </action>
-                        <action id="-9" name="Destroy" type="normalbullet" />
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="-9" name="Destroy" sid="607" type="normalbullet" />
+                        <action id="4" name="Set animation" sid="608" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="609" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" sid="610" type="explosion" />
                     </actions>
                     <sub-events>
-                        <event-block>
+                        <event-block sid="611">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" type="enemytower">
+                                <condition id="-7" name="Compare instance variable" sid="612" type="enemytower">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">10</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" type="enemytower">
+                                <action id="-11" name="Add to" sid="613" type="enemytower">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="614">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" type="enemytower">
+                                <condition id="-7" name="Compare instance variable" sid="615" type="enemytower">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">10</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" type="normalbullet">
+                                <action id="0" name="Spawn another object" sid="616" type="normalbullet">
                                     <param id="0" name="Object">explosion</param>
                                     <param id="1" name="Layer">2</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="9" name="Set scale" type="explosion">
+                                <action id="9" name="Set scale" sid="617" type="explosion">
                                     <param id="0" name="Scale">10</param>
                                 </action>
-                                <action id="-9" name="Destroy" type="normalbullet" />
-                                <action id="4" name="Set animation" type="explosion">
+                                <action id="-9" name="Destroy" sid="618" type="normalbullet" />
+                                <action id="4" name="Set animation" sid="619" type="explosion">
                                     <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-16" name="Wait" type="System">
+                                <action id="-16" name="Wait" sid="620" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
-                                <action id="-9" name="Destroy" type="explosion" />
-                                <action id="-9" name="Destroy" type="enemytower" />
+                                <action id="-9" name="Destroy" sid="621" type="explosion" />
+                                <action id="-9" name="Destroy" sid="622" type="enemytower" />
                             </actions>
                             <sub-events>
-                                <event-block>
+                                <event-block sid="623">
                                     <conditions>
-                                        <condition id="-15" name="Pick nearest/furthest" type="lineofsight">
+                                        <condition id="-15" name="Pick nearest/furthest" sid="624" type="lineofsight">
                                             <param id="0" name="Which">0</param>
                                             <param id="1" name="X">enemytower.X</param>
                                             <param id="2" name="Y">enemytower.Y</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" type="lineofsight" />
+                                        <action id="-9" name="Destroy" sid="625" type="lineofsight" />
                                     </actions>
                                 </event-block>
-                                <event-block>
+                                <event-block sid="626">
                                     <conditions>
-                                        <condition id="-15" name="Pick nearest/furthest" type="fuelpod">
+                                        <condition id="-15" name="Pick nearest/furthest" sid="627" type="fuelpod">
                                             <param id="0" name="Which">0</param>
                                             <param id="1" name="X">enemytower.X</param>
                                             <param id="2" name="Y">enemytower.Y</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" type="normalbullet">
+                                        <action id="0" name="Spawn another object" sid="628" type="normalbullet">
                                             <param id="0" name="Object">explosion</param>
                                             <param id="1" name="Layer">2</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
-                                        <action id="9" name="Set scale" type="explosion">
+                                        <action id="9" name="Set scale" sid="629" type="explosion">
                                             <param id="0" name="Scale">10</param>
                                         </action>
-                                        <action id="-9" name="Destroy" type="normalbullet" />
-                                        <action id="4" name="Set animation" type="explosion">
+                                        <action id="-9" name="Destroy" sid="630" type="normalbullet" />
+                                        <action id="4" name="Set animation" sid="631" type="explosion">
                                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
-                                        <action id="-16" name="Wait" type="System">
+                                        <action id="-16" name="Wait" sid="632" type="System">
                                             <param id="0" name="Seconds">1.0</param>
                                         </action>
-                                        <action id="-9" name="Destroy" type="explosion" />
-                                        <action id="-9" name="Destroy" type="fuelpod" />
+                                        <action id="-9" name="Destroy" sid="633" type="explosion" />
+                                        <action id="-9" name="Destroy" sid="634" type="fuelpod" />
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -778,100 +778,100 @@
                     </sub-events>
                 </event-block>
                 <comment>EnemyTank on taking a Bullet Hit Behavior - Damage</comment>
-                <event-block>
+                <event-block sid="635">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="enemytank">
+                        <condition id="0" name="On collision with another object" sid="636" type="enemytank">
                             <param id="0" name="Object">normalbullet</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" type="Audio">
+                        <action id="0" name="Play" sid="637" type="Audio">
                             <param id="0" name="Audio file">smallexplosion</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="enemytank">
+                        <action id="0" name="Spawn another object" sid="638" type="enemytank">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-24" name="Move to top" type="explosion" />
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="-24" name="Move to top" sid="639" type="explosion" />
+                        <action id="9" name="Set scale" sid="640" type="explosion">
                             <param id="0" name="Scale">2</param>
                         </action>
-                        <action id="-9" name="Destroy" type="normalbullet" />
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="-9" name="Destroy" sid="641" type="normalbullet" />
+                        <action id="4" name="Set animation" sid="642" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="643" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" sid="644" type="explosion" />
                     </actions>
                     <sub-events>
-                        <event-block>
+                        <event-block sid="645">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" type="enemytank">
+                                <condition id="-7" name="Compare instance variable" sid="646" type="enemytank">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" type="enemytank">
+                                <action id="-11" name="Add to" sid="647" type="enemytank">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="648">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" type="enemytank">
+                                <condition id="-7" name="Compare instance variable" sid="649" type="enemytank">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Play" type="Audio">
+                                <action id="0" name="Play" sid="650" type="Audio">
                                     <param id="0" name="Audio file">smallexplosion</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
-                                <action id="0" name="Spawn another object" type="enemytank">
+                                <action id="0" name="Spawn another object" sid="651" type="enemytank">
                                     <param id="0" name="Object">explosion</param>
                                     <param id="1" name="Layer">2</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="-24" name="Move to top" type="explosion" />
-                                <action id="9" name="Set scale" type="explosion">
+                                <action id="-24" name="Move to top" sid="652" type="explosion" />
+                                <action id="9" name="Set scale" sid="653" type="explosion">
                                     <param id="0" name="Scale">2</param>
                                 </action>
-                                <action id="-9" name="Destroy" type="normalbullet" />
-                                <action id="4" name="Set animation" type="explosion">
+                                <action id="-9" name="Destroy" sid="654" type="normalbullet" />
+                                <action id="4" name="Set animation" sid="655" type="explosion">
                                     <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-16" name="Wait" type="System">
+                                <action id="-16" name="Wait" sid="656" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
-                                <action id="-9" name="Destroy" type="explosion" />
-                                <action id="-9" name="Destroy" type="enemytank" />
+                                <action id="-9" name="Destroy" sid="657" type="explosion" />
+                                <action id="-9" name="Destroy" sid="658" type="enemytank" />
                             </actions>
                             <sub-events>
-                                <event-block>
+                                <event-block sid="659">
                                     <conditions>
-                                        <condition id="-15" name="Pick nearest/furthest" type="lineofsight">
+                                        <condition id="-15" name="Pick nearest/furthest" sid="660" type="lineofsight">
                                             <param id="0" name="Which">0</param>
                                             <param id="1" name="X">enemytank.X</param>
                                             <param id="2" name="Y">enemytank.Y</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" type="lineofsight" />
+                                        <action id="-9" name="Destroy" sid="661" type="lineofsight" />
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -879,216 +879,216 @@
                     </sub-events>
                 </event-block>
                 <comment>ForceField Collision destroys everything</comment>
-                <event-block>
+                <event-block sid="662">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="forcefield">
+                        <condition id="0" name="On collision with another object" sid="663" type="forcefield">
                             <param id="0" name="Object">normalbullet</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="normalbullet">
+                        <action id="0" name="Spawn another object" sid="664" type="normalbullet">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="normalbullet" />
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="-9" name="Destroy" sid="665" type="normalbullet" />
+                        <action id="9" name="Set scale" sid="666" type="explosion">
                             <param id="0" name="Scale">0.8</param>
                         </action>
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="4" name="Set animation" sid="667" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="668" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" sid="669" type="explosion" />
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="670">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="forcefield">
+                        <condition id="0" name="On collision with another object" sid="671" type="forcefield">
                             <param id="0" name="Object">landmine</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="landmine">
+                        <action id="0" name="Spawn another object" sid="672" type="landmine">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-24" name="Move to top" type="explosion" />
-                        <action id="-9" name="Destroy" type="landmine" />
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="-24" name="Move to top" sid="673" type="explosion" />
+                        <action id="-9" name="Destroy" sid="674" type="landmine" />
+                        <action id="9" name="Set scale" sid="675" type="explosion">
                             <param id="0" name="Scale">0.8</param>
                         </action>
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="4" name="Set animation" sid="676" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="677" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" sid="678" type="explosion" />
                     </actions>
                 </event-block>
                 <comment>Missile on Collision with Playertank</comment>
-                <event-block>
+                <event-block sid="679">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" type="playertank">
+                        <condition id="1" name="Is overlapping another object" sid="680" type="playertank">
                             <param id="0" name="Object">missile</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" type="Audio">
+                        <action id="0" name="Play" sid="681" type="Audio">
                             <param id="0" name="Audio file">metalexplosion</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;missleexplosion&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="missile">
+                        <action id="0" name="Spawn another object" sid="682" type="missile">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-24" name="Move to top" type="explosion" />
-                        <action behavior="ScrollTo" id="0" name="Shake" type="playertank">
+                        <action id="-24" name="Move to top" sid="683" type="explosion" />
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="684" type="playertank">
                             <param id="0" name="Magnitude">50</param>
                             <param id="1" name="Duration">0.5</param>
                             <param id="2" name="Mode">0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="missile" />
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="-9" name="Destroy" sid="685" type="missile" />
+                        <action id="9" name="Set scale" sid="686" type="explosion">
                             <param id="0" name="Scale">3</param>
                         </action>
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="4" name="Set animation" sid="687" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="688" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
-                        <action id="-10" name="Set value" type="playertank">
+                        <action id="-9" name="Destroy" sid="689" type="explosion" />
+                        <action id="-10" name="Set value" sid="690" type="playertank">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">playertank.health-25</param>
                         </action>
                     </actions>
                 </event-block>
                 <comment>Missile can blow up a planted mine</comment>
-                <event-block>
+                <event-block sid="691">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" type="playersmine">
+                        <condition id="1" name="Is overlapping another object" sid="692" type="playersmine">
                             <param id="0" name="Object">missile</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" type="Audio">
+                        <action id="0" name="Play" sid="693" type="Audio">
                             <param id="0" name="Audio file">mineexplode</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;mineexplosion&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="missile">
+                        <action id="0" name="Spawn another object" sid="694" type="missile">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-24" name="Move to top" type="explosion" />
-                        <action id="-9" name="Destroy" type="missile" />
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="-24" name="Move to top" sid="695" type="explosion" />
+                        <action id="-9" name="Destroy" sid="696" type="missile" />
+                        <action id="9" name="Set scale" sid="697" type="explosion">
                             <param id="0" name="Scale">5</param>
                         </action>
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="4" name="Set animation" sid="698" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="699" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
-                        <action id="-9" name="Destroy" type="playersmine" />
+                        <action id="-9" name="Destroy" sid="700" type="explosion" />
+                        <action id="-9" name="Destroy" sid="701" type="playersmine" />
                     </actions>
                 </event-block>
                 <comment>Missile hitting the ground</comment>
-                <event-block>
+                <event-block sid="702">
                     <conditions>
-                        <condition id="-5" name="Compare width" type="missile">
+                        <condition id="-5" name="Compare width" sid="703" type="missile">
                             <param id="0" name="Comparison">3</param>
                             <param id="1" name="Width">5</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" type="Audio">
+                        <action id="0" name="Play" sid="704" type="Audio">
                             <param id="0" name="Audio file">mineexplode</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">-13</param>
                             <param id="1" name="Tag (optional)">&quot;missleexplosion&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="missile">
+                        <action id="0" name="Spawn another object" sid="705" type="missile">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-24" name="Move to top" type="explosion" />
-                        <action behavior="ScrollTo" id="0" name="Shake" type="playertank">
+                        <action id="-24" name="Move to top" sid="706" type="explosion" />
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="707" type="playertank">
                             <param id="0" name="Magnitude">50</param>
                             <param id="1" name="Duration">0.5</param>
                             <param id="2" name="Mode">0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="missile" />
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="-9" name="Destroy" sid="708" type="missile" />
+                        <action id="9" name="Set scale" sid="709" type="explosion">
                             <param id="0" name="Scale">3</param>
                         </action>
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="4" name="Set animation" sid="710" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="711" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
+                        <action id="-9" name="Destroy" sid="712" type="explosion" />
                     </actions>
                 </event-block>
                 <comment>Bugs touching tank </comment>
-                <event-block>
+                <event-block sid="713">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="enemytank">
+                        <condition id="0" name="On collision with another object" sid="714" type="enemytank">
                             <param id="0" name="Object">playertank</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" type="Audio">
+                        <action id="0" name="Play" sid="715" type="Audio">
                             <param id="0" name="Audio file">mineexplode</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">-13</param>
                             <param id="1" name="Tag (optional)">&quot;missleexplosion&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="enemytank">
+                        <action id="0" name="Spawn another object" sid="716" type="enemytank">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-24" name="Move to top" type="explosion" />
-                        <action behavior="ScrollTo" id="0" name="Shake" type="playertank">
+                        <action id="-24" name="Move to top" sid="717" type="explosion" />
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="718" type="playertank">
                             <param id="0" name="Magnitude">50</param>
                             <param id="1" name="Duration">0.5</param>
                             <param id="2" name="Mode">0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="missile" />
-                        <action id="9" name="Set scale" type="explosion">
+                        <action id="-9" name="Destroy" sid="719" type="missile" />
+                        <action id="9" name="Set scale" sid="720" type="explosion">
                             <param id="0" name="Scale">3</param>
                         </action>
-                        <action id="4" name="Set animation" type="explosion">
+                        <action id="4" name="Set animation" sid="721" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" type="System">
+                        <action id="-16" name="Wait" sid="722" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="explosion" />
-                        <action id="-9" name="Destroy" type="enemytank" />
-                        <action id="-10" name="Set value" type="playertank">
+                        <action id="-9" name="Destroy" sid="723" type="explosion" />
+                        <action id="-9" name="Destroy" sid="724" type="enemytank" />
+                        <action id="-10" name="Set value" sid="725" type="playertank">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">playertank.health-5</param>
                         </action>

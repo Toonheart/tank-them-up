@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>menu</name>
+    <sid>217</sid>
     <event-sheet>menuevents</event-sheet>
     <size>
         <width>1366</width>
@@ -12,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="BG">
+        <layer name="BG" sid="218">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -26,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="menubg">
+                <instance type="menubg" uid="0">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -49,7 +50,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="menuHUD">
+        <layer name="menuHUD" sid="219">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -63,7 +64,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="menutank">
+                <instance type="menutank" uid="1">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -84,7 +85,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="newgame">
+                <instance type="newgame" uid="2">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -105,7 +106,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="loadsave">
+                <instance type="loadsave" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -126,7 +127,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="exitgame">
+                <instance type="exitgame" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -147,7 +148,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="loadline">
+                <instance type="loadline" uid="5">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -171,7 +172,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="levelmap">
+                <instance type="levelmap" uid="6">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -195,7 +196,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="levelmap">
+                <instance type="levelmap" uid="7">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -219,7 +220,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="levelmap">
+                <instance type="levelmap" uid="8">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -243,7 +244,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="levelmap">
+                <instance type="levelmap" uid="9">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -267,7 +268,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="stagenumber">
+                <instance type="stagenumber" uid="10">
                     <properties>
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -294,7 +295,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="stagenumber">
+                <instance type="stagenumber" uid="11">
                     <properties>
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -321,7 +322,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="stagenumber">
+                <instance type="stagenumber" uid="12">
                     <properties>
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -348,7 +349,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="stagenumber">
+                <instance type="stagenumber" uid="13">
                     <properties>
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>

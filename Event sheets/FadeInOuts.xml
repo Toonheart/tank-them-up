@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>FadeInOuts</name>
+    <events>
+        <variable comment="Variable to toggle fade of black in or out depending on screen change." constant="0" name="ScreenChange" sid="1011" static="0" type="number">0</variable>
+        <comment>On every stage....Set Layer Black on Screen then DeActivate Screen change</comment>
+        <event-block sid="996">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="997" type="System" />
+            </conditions>
+            <actions>
+                <action id="-18" name="Set layer opacity" sid="1010" type="System">
+                    <param id="0" name="Layer">&quot;Black&quot;</param>
+                    <param id="1" name="Opacity">100</param>
+                </action>
+                <action id="-9" name="Set value" sid="1007" type="System">
+                    <param id="0" name="Variable">ScreenChange</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>When exiting every stage, ScreenChange is triggered to 1. Hence do the FADE OUT thing</comment>
+        <event-block sid="999">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="1009" type="System">
+                    <param id="0" name="First value">LayerOpacity(&quot;Black&quot;)</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">100</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="1000" type="System">
+                    <param id="0" name="First value">ScreenChange</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Set layer opacity" sid="1001" type="System">
+                    <param id="0" name="Layer">&quot;Black&quot;</param>
+                    <param id="1" name="Opacity">LayerOpacity(&quot;Black&quot;)+2</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>When starting every stage, ScreenChange is untriggered to 0. Hence do the FADE IN thing</comment>
+        <event-block sid="1004">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="1008" type="System">
+                    <param id="0" name="First value">LayerOpacity(&quot;Black&quot;)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="1005" type="System">
+                    <param id="0" name="First value">ScreenChange</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Set layer opacity" sid="1006" type="System">
+                    <param id="0" name="Layer">&quot;Black&quot;</param>
+                    <param id="1" name="Opacity">LayerOpacity(&quot;Black&quot;)-2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

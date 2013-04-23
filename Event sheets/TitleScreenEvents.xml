@@ -3,81 +3,129 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>TitleScreenEvents</name>
     <events>
-        <variable comment="Shifts Opacity of layers" constant="0" name="OpacityShifter" static="0" type="number">0.25</variable>
-        <event-group description="Actions for the menus" title="Menu Actions">
+        <variable comment="Whether Music is ON or OFF" constant="0" name="IsMusic" sid="1118" static="0" type="number">1</variable>
+        <include>FadeInOuts</include>
+        <variable comment="Shifts Opacity of layers" constant="0" name="OpacityShifter" sid="956" static="0" type="number">0.3</variable>
+        <event-group description="Actions for the menus" sid="957" title="Menu Actions">
             <sub-events>
                 <comment>Play the Game</comment>
-                <event-block>
+                <event-block sid="958">
                     <conditions>
-                        <condition id="3" name="On touched object" type="Touch">
+                        <condition id="3" name="On touched object" sid="959" type="Touch">
                             <param id="0" name="Object">Text_Play</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" type="System">
-                            <param id="0" name="Seconds">1.0</param>
+                        <action id="-9" name="Set value" sid="994" type="System">
+                            <param id="0" name="Variable">ScreenChange</param>
+                            <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-2" name="Go to layout" type="System">
+                        <action id="-4" name="Set position to another object" sid="979" type="StrikeRED">
+                            <param id="0" name="Object">Text_Play</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="980" type="StrikeRED">
+                            <param id="0" name="Width">Text_Play.Width+100</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="960" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="961" type="System">
                             <param id="0" name="Layout">stage1</param>
                         </action>
                     </actions>
                 </event-block>
                 <comment>Quit Game</comment>
-                <event-block>
+                <event-block sid="962">
                     <conditions>
-                        <condition id="3" name="On touched object" type="Touch">
+                        <condition id="3" name="On touched object" sid="963" type="Touch">
                             <param id="0" name="Object">Text_Quit</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Close" type="Browser" />
+                        <action id="1" name="Close" sid="964" type="Browser" />
+                    </actions>
+                </event-block>
+                <comment>Music Toggle OFF</comment>
+                <event-block sid="1109">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1110" type="Touch">
+                            <param id="0" name="Object">Text_Music</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="1141" type="System">
+                            <param id="0" name="Variable">IsMusic</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1142" type="System">
+                            <param id="0" name="Variable">IsMusic</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1143" type="Text_Music">
+                            <param id="0" name="Animation">&quot;NoMusic&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Music Toggle ON</comment>
+                <event-block sid="1119">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1145" type="Touch">
+                            <param id="0" name="Object">Text_Music</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="1120" type="System">
+                            <param id="0" name="Variable">IsMusic</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1121" type="System">
+                            <param id="0" name="Variable">IsMusic</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1127" type="Text_Music">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Animations">
+        <event-group description="" sid="965" title="Animations">
             <sub-events>
-                <event-block>
+                <event-block sid="966">
                     <conditions>
-                        <condition id="-1" name="Every tick" type="System" />
+                        <condition id="-1" name="Every tick" sid="967" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-18" name="Set layer opacity" type="System">
-                            <param id="0" name="Layer">3</param>
-                            <param id="1" name="Opacity">LayerOpacity(3)+OpacityShifter</param>
+                        <action id="-18" name="Set layer opacity" sid="968" type="System">
+                            <param id="0" name="Layer">&quot;Color&quot;</param>
+                            <param id="1" name="Opacity">LayerOpacity(&quot;Color&quot;)+OpacityShifter</param>
                         </action>
-                        <action id="-18" name="Set layer opacity" type="System">
-                            <param id="0" name="Layer">1</param>
-                            <param id="1" name="Opacity">LayerOpacity(1)-OpacityShifter</param>
-                        </action>
-                        <action id="3" name="Update watch variable" type="DebugPanel">
-                            <param id="0" name="Name">&quot;Opacity&quot;</param>
-                            <param id="1" name="Value">LayerOpacity(3)</param>
-                        </action>
-                        <action id="3" name="Update watch variable" type="DebugPanel">
-                            <param id="0" name="Name">&quot;Shifter&quot;</param>
-                            <param id="1" name="Value">OpacityShifter</param>
+                        <action id="-18" name="Set layer opacity" sid="969" type="System">
+                            <param id="0" name="Layer">&quot;Pencil&quot;</param>
+                            <param id="1" name="Opacity">LayerOpacity(&quot;Pencil&quot;)-OpacityShifter</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block any="1">
+                <event-block any="1" sid="972">
                     <conditions>
-                        <condition id="-8" name="Compare two values" type="System">
-                            <param id="0" name="First value">LayerOpacity(3)</param>
+                        <condition id="-8" name="Compare two values" sid="973" type="System">
+                            <param id="0" name="First value">LayerOpacity(&quot;Color&quot;)</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">100</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" type="System">
-                            <param id="0" name="First value">LayerOpacity(3)</param>
+                        <condition id="-8" name="Compare two values" sid="974" type="System">
+                            <param id="0" name="First value">LayerOpacity(&quot;Pencil&quot;)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" type="System">
-                            <param id="0" name="Seconds">3</param>
-                        </action>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="976" type="System">
                             <param id="0" name="Variable">OpacityShifter</param>
                             <param id="1" name="Value">-OpacityShifter</param>
                         </action>
