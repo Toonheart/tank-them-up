@@ -43,7 +43,17 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Close" sid="964" type="Browser" />
+                        <action id="-4" name="Set position to another object" sid="1154" type="StrikeRED">
+                            <param id="0" name="Object">Text_Quit</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="1155" type="StrikeRED">
+                            <param id="0" name="Width">Text_Quit.Width+100</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1156" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="1" name="Close" sid="1157" type="Browser" />
                     </actions>
                 </event-block>
                 <comment>Music Toggle OFF</comment>
@@ -96,6 +106,7 @@
         </event-group>
         <event-group description="" sid="965" title="Animations">
             <sub-events>
+                <comment>Toggle opacities of Color and Pencil for a nice effect</comment>
                 <event-block sid="966">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="967" type="System" />
@@ -111,6 +122,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Toggle shifter after color becomes 100 or 0opaque</comment>
                 <event-block any="1" sid="972">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="973" type="System">
@@ -118,8 +130,8 @@
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">100</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="974" type="System">
-                            <param id="0" name="First value">LayerOpacity(&quot;Pencil&quot;)</param>
+                        <condition id="-8" name="Compare two values" sid="1152" type="System">
+                            <param id="0" name="First value">LayerOpacity(&quot;Color&quot;)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">0</param>
                         </condition>

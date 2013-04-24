@@ -57,8 +57,8 @@
                         <action id="-9" name="Destroy" sid="249" type="airplane" />
                         <action id="-9" name="Destroy" sid="250" type="missile" />
                         <action id="-9" name="Destroy" sid="251" type="playersmine" />
-                        <action id="-9" name="Destroy" sid="252" type="textleveldone" />
-                        <action id="-9" name="Destroy" sid="253" type="gameovertryagain" />
+                        <action id="-9" name="Destroy" sid="252" type="Text_AreaConquered" />
+                        <action id="-9" name="Destroy" sid="253" type="Text_MissionFailed" />
                         <action id="-9" name="Destroy" sid="254" type="yesButton" />
                         <action id="-9" name="Destroy" sid="255" type="noButton" />
                         <action id="-8" name="Set angle" sid="256" type="playertank">
