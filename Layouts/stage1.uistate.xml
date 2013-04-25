@@ -5,10 +5,10 @@ It is entirely optional and the project will load without it.  If you are placin
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
         <position-x>768</position-x>
-        <position-y>2755</position-y>
-        <position-z>1000</position-z>
+        <position-y>2171.62</position-y>
+        <position-z>909.091</position-z>
         <lookat-x>768</lookat-x>
-        <lookat-y>2755</lookat-y>
+        <lookat-y>2171.62</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>0</snap-to-grid>
@@ -21,13 +21,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="HUD" />
+    <active-layer name="Menus" />
     <layers>
         <layer locked="1" name="Ground" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Objects" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Turret" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Sky" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="HUD" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Objects" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Turret" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Sky" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="HUD" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Menus" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Black" parallax-in-editor="0" visible="0" />
     </layers>
 </c2uistate>

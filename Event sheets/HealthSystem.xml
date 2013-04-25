@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>HealthSystem</name>
     <events>
-        <event-group collapsed="1" description="Deals with health calculations in the game" sid="758" title="Health System">
+        <event-group description="Deals with health calculations in the game" sid="758" title="Health System">
             <sub-events>
                 <comment>Cap health at 100. Avoid God Mode. Disable if Debugging in Godmode</comment>
                 <event-block sid="759">

@@ -192,15 +192,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="debug n shit" sid="327" title="Debug">
-            <sub-events>
-                <event-block sid="328">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="329" type="System" />
-                    </conditions>
-                    <actions />
-                </event-block>
-            </sub-events>
-        </event-group>
     </events>
 </c2eventsheet>

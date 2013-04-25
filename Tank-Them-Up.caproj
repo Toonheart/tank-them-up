@@ -6,9 +6,8 @@
     <author>Srikrishna Das(krish) - krish@toonheart.com</author>
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>12600</saved-with-version>
-    <next-sid>1165</next-sid>
+    <next-sid>1225</next-sid>
     <used-plugins>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
@@ -17,6 +16,7 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
@@ -251,7 +251,7 @@
         <object-type name="Touch" sid="22">
             <plugin id="Touch" />
         </object-type>
-        <object-type name="TiledBackground" sid="23">
+        <object-type name="BG_Mission1" sid="23">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
@@ -929,11 +929,6 @@
         </object-type>
         <object-type global="1" name="Text_AreaConquered" sid="113">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Flash" sid="114">
-                    <behavior id="Flash" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="115" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501577">
@@ -958,13 +953,8 @@
         <object-type name="stagenumber" sid="118">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Text_MissionFailed" sid="119">
+        <object-type name="Title_MissionFailed" sid="119">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor" sid="120">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="121" speed="5">
                     <frame duration="1" hotspotX="0.514602" hotspotY="0.491228">
@@ -979,13 +969,8 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="yesButton" sid="122">
+        <object-type name="Text_Retry" sid="122">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor" sid="123">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="124" speed="5">
                     <frame duration="1" hotspotX="0.502804" hotspotY="0.506329">
@@ -1003,13 +988,8 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="noButton" sid="125">
+        <object-type name="Text_Abort" sid="125">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor" sid="126">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="127" speed="5">
                     <frame duration="1" hotspotX="0.501953" hotspotY="0.50641">
@@ -1711,6 +1691,23 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Tile_PopMenus" sid="1166">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="1168">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1167" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="missionfailed" x="0.5" y="0.351563" />
+                        <image-point name="failedretry" x="0.5" y="0.46875" />
+                        <image-point name="failedabort" x="0.5" y="0.546875" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -1726,12 +1723,12 @@
         <event-sheet>UserControls.xml</event-sheet>
         <event-sheet>Collisions.xml</event-sheet>
         <event-sheet>Debug.xml</event-sheet>
-        <event-sheet>LevelFailed.xml</event-sheet>
+        <event-sheet>MissionFailedScreen.xml</event-sheet>
         <event-sheet>HealthSystem.xml</event-sheet>
         <event-sheet>AmmoSystem.xml</event-sheet>
         <event-sheet>Collectibles.xml</event-sheet>
         <event-sheet>EnemyAI.xml</event-sheet>
-        <event-sheet>LevelComplete.xml</event-sheet>
+        <event-sheet>AreaCompletedScreen.xml</event-sheet>
         <event-sheet>TitleScreenEvents.xml</event-sheet>
         <event-sheet>FadeInOuts.xml</event-sheet>
         <event-sheet>MusicSounds.xml</event-sheet>

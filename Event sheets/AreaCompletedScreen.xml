@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>AreaCompletedScreen</name>
+    <events>
+        <event-group description="Conditions for area completion of a mssion." sid="924" title="Area Completion">
+            <sub-events>
+                <comment>When Player kills all enemies, Level is complete. Stop input. Let player know and save the completed level number</comment>
+                <event-block sid="925">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="926" type="System">
+                            <param id="0" name="First value">enemytower.Count</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">5</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="927" type="System">
+                            <param id="0" name="First value">enemytank.Count</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">5</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="928" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="929" type="playertank">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.5</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action behavior="Car" id="0" name="Stop" sid="930" type="playertank" />
+                        <action behavior="Car" id="2" name="Set ignoring input" sid="931" type="playertank">
+                            <param id="0" name="Input">1</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="932" type="WebStorage">
+                            <param id="0" name="Key">&quot;SaveCompletedLevels&quot;</param>
+                            <param id="1" name="Value">&quot;1&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>OverWrite Webstorage completed level only if next stage is NOT unlocked already</comment>
+                        <event-block sid="938">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="939" type="System">
+                                    <param id="0" name="First value">int(WebStorage.LocalValue(&quot;SaveCompletedLevels&quot;))</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set local value" sid="940" type="WebStorage">
+                                    <param id="0" name="Key">&quot;SaveCompletedLevels&quot;</param>
+                                    <param id="1" name="Value">&quot;1&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1211" type="System">
+                                    <param id="0" name="Variable">ScreenChange</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="1212" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="1213" type="Tile_PopMenus">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action disabled="1" id="-4" name="Set position to another object" sid="1214" type="Text_AreaConquered">
+                                    <param id="0" name="Object">Tile_PopMenus</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="1223" type="Text_MissionAccomplished">
+                                    <param id="0" name="Object">Tile_PopMenus</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1215" type="System">
+                                    <param id="0" name="Variable">ScreenChange</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="942">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="943" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1217" type="System">
+                                    <param id="0" name="Variable">ScreenChange</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="1218" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="1219" type="Tile_PopMenus">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action disabled="1" id="-4" name="Set position to another object" sid="1220" type="Text_AreaConquered">
+                                    <param id="0" name="Object">Tile_PopMenus</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="1224" type="Text_MissionAccomplished">
+                                    <param id="0" name="Object">Tile_PopMenus</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1221" type="System">
+                                    <param id="0" name="Variable">ScreenChange</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MissionFailedScreen</name>
+    <events>
+        <event-group description="Menus and actions for Level Failed" sid="745" title="User Actions on MissionFailed">
+            <sub-events>
+                <comment>ReStart the Game</comment>
+                <event-block sid="746">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="747" type="Touch">
+                            <param id="0" name="Object">reloadButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="748" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="749">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="750" type="Touch">
+                            <param id="0" name="Object">Text_Retry</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1197" type="System">
+                            <param id="0" name="Variable">ScreenChange</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="1191" type="StrikeRED">
+                            <param id="0" name="Object">Text_Retry</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="1192" type="StrikeRED">
+                            <param id="0" name="Width">Text_Retry.Width+100</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1198" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="751" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="752">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="753" type="Touch">
+                            <param id="0" name="Object">Text_Abort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1199" type="System">
+                            <param id="0" name="Variable">ScreenChange</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="1195" type="StrikeRED">
+                            <param id="0" name="Object">Text_Abort</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="1196" type="StrikeRED">
+                            <param id="0" name="Width">Text_Abort.Width+100</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1200" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="754" type="System">
+                            <param id="0" name="Layout">stage0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Pause the Game</comment>
+                <event-block sid="755">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="756" type="Touch">
+                            <param id="0" name="Object">hudHolder</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="757" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="conditions that fail a mission or area" sid="1181" title="Condition to Mission Fail">
+            <sub-events>
+                <comment>When Player gets DESTROYED. level is lost. Stop input. Let player know and take input of restart/quit.&#x0D;&#x0A;Destroy HUDs to keep screen clear.</comment>
+                <event-block sid="1170">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1171" type="System">
+                            <param id="0" name="First value">playertank.Count</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="1172" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1201" type="System">
+                            <param id="0" name="Variable">ScreenChange</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1176" type="hudHolder">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1177" type="AmmoCntPrimary" />
+                        <action id="-9" name="Destroy" sid="1178" type="AmmoCntSecondary" />
+                        <action id="-9" name="Destroy" sid="1179" type="HUDprime" />
+                        <action id="-9" name="Destroy" sid="1180" type="HUDsecond" />
+                        <action id="-16" name="Wait" sid="1202" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1182" type="Tile_PopMenus">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="1183" type="Title_MissionFailed">
+                            <param id="0" name="Object">Tile_PopMenus</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="1184" type="Text_Retry">
+                            <param id="0" name="Object">Tile_PopMenus</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="1185" type="Text_Abort">
+                            <param id="0" name="Object">Tile_PopMenus</param>
+                            <param id="1" name="Image point (optional)">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1203" type="System">
+                            <param id="0" name="Variable">ScreenChange</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
