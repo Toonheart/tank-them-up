@@ -6,8 +6,9 @@
     <author>Srikrishna Das(krish) - krish@toonheart.com</author>
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>12600</saved-with-version>
-    <next-sid>1225</next-sid>
+    <next-sid>1250</next-sid>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
@@ -16,7 +17,6 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
@@ -1411,6 +1411,18 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="187" speed="5">
                     <frame duration="1" hotspotX="0.500635" hotspotY="0.502924" />
                 </animation>
+                <animation framecount="1" loop="0" name="NoConquers" pingpong="0" repeatcount="1" repeatto="0" sid="1225" speed="5">
+                    <frame duration="1" hotspotX="0.500635" hotspotY="0.502924">
+                        <collision-poly>
+                            <point x="0.0241423" y="0.111111" />
+                            <point x="0.97967" y="0.0935673" />
+                            <point x="0.987294" y="0.497076" />
+                            <point x="0.963151" y="0.830409" />
+                            <point x="0.0381194" y="0.824561" />
+                            <point x="0.00635324" y="0.497076" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Text_Ranking" sid="188">
@@ -1423,6 +1435,19 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="190" speed="5">
                     <frame duration="1" hotspotX="0.500745" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="NoRanking" pingpong="0" repeatcount="1" repeatto="0" sid="1226" speed="5">
+                    <frame duration="1" hotspotX="0.500745" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0193741" y="0.0878378" />
+                            <point x="0.499255" y="0.0405405" />
+                            <point x="0.973174" y="0.121622" />
+                            <point x="0.992548" y="0.5" />
+                            <point x="0.977645" y="0.898649" />
+                            <point x="0.0134128" y="0.939189" />
+                            <point x="0.0357675" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

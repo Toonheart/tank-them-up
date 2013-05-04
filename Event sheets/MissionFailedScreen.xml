@@ -74,7 +74,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-26" name="Restart layout" sid="757" type="System" />
+                        <action id="0" name="Toggle pause" sid="757" type="Pause" />
                     </actions>
                 </event-block>
             </sub-events>

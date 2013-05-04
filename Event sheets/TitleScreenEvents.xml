@@ -35,26 +35,23 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>Quit Game</comment>
-                <event-block sid="962">
+                <comment>Conquers - Check Awards</comment>
+                <event-block sid="1231">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="963" type="Touch">
-                            <param id="0" name="Object">Text_Quit</param>
+                        <condition id="3" name="On touched object" sid="1232" type="Touch">
+                            <param id="0" name="Object">Text_Conquers</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="1154" type="StrikeRED">
-                            <param id="0" name="Object">Text_Quit</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="-5" name="Set width" sid="1155" type="StrikeRED">
-                            <param id="0" name="Width">Text_Quit.Width+100</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="1156" type="System">
-                            <param id="0" name="Seconds">1</param>
-                        </action>
-                        <action id="1" name="Close" sid="1157" type="Browser" />
-                    </actions>
+                    <actions />
+                </event-block>
+                <comment>Ranking - Check Ranking on Leaderboards</comment>
+                <event-block sid="1238">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1239" type="Touch">
+                            <param id="0" name="Object">Text_Ranking</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
                 <comment>Music Toggle OFF</comment>
                 <event-block sid="1109">
@@ -102,6 +99,61 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>About - Info about Toonheart</comment>
+                <event-block sid="1242">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1243" type="Touch">
+                            <param id="0" name="Object">Text_About</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="1246" type="StrikeRED">
+                            <param id="0" name="Object">Text_About</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="1247" type="StrikeRED">
+                            <param id="0" name="Width">Text_About.Width+100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>HELP  - How to Play the Game - Tutorial Page</comment>
+                <event-block sid="1244">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1245" type="Touch">
+                            <param id="0" name="Object">Text_Help</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="1248" type="StrikeRED">
+                            <param id="0" name="Object">Text_Help</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="1249" type="StrikeRED">
+                            <param id="0" name="Width">Text_Help.Width+100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Quit Game</comment>
+                <event-block sid="962">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="963" type="Touch">
+                            <param id="0" name="Object">Text_Quit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="1154" type="StrikeRED">
+                            <param id="0" name="Object">Text_Quit</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="1155" type="StrikeRED">
+                            <param id="0" name="Width">Text_Quit.Width+100</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1156" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="1" name="Close" sid="1157" type="Browser" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="965" title="Animations">
@@ -140,6 +192,22 @@
                         <action id="-9" name="Set value" sid="976" type="System">
                             <param id="0" name="Variable">OpacityShifter</param>
                             <param id="1" name="Value">-OpacityShifter</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>PRIVATE ALPHA LOCK - Conquers and Ranking Menus Disabled</comment>
+                <event-block sid="1227">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="1228" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1229" type="Text_Conquers">
+                            <param id="0" name="Animation">&quot;NoConquers&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1230" type="Text_Ranking">
+                            <param id="0" name="Animation">&quot;NoRanking&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
