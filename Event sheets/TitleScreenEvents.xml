@@ -4,8 +4,8 @@
     <name>TitleScreenEvents</name>
     <events>
         <variable comment="Whether Music is ON or OFF" constant="0" name="IsMusic" sid="1118" static="0" type="number">1</variable>
-        <include>FadeInOuts</include>
         <variable comment="Shifts Opacity of layers" constant="0" name="OpacityShifter" sid="956" static="0" type="number">0.3</variable>
+        <include>FadeInOuts</include>
         <event-group description="Actions for the menus" sid="957" title="Menu Actions">
             <sub-events>
                 <comment>Play the Game</comment>
@@ -174,7 +174,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>Toggle shifter after color becomes 100 or 0opaque</comment>
+                <comment>Toggle shifter after color becomes 100 or 0</comment>
                 <event-block any="1" sid="972">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="973" type="System">
@@ -189,6 +189,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-16" name="Wait" sid="1250" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
                         <action id="-9" name="Set value" sid="976" type="System">
                             <param id="0" name="Variable">OpacityShifter</param>
                             <param id="1" name="Value">-OpacityShifter</param>
