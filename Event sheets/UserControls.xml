@@ -4,7 +4,7 @@
     <name>UserControls</name>
     <events>
         <variable comment="Time for reverse gear engaging" constant="0" name="ReverseGearEngageTime" sid="1069" static="0" type="number">0</variable>
-        <event-group description="movement controls" sid="1037" title="Movement">
+        <event-group collapsed="1" description="movement controls" sid="1037" title="Movement">
             <sub-events>
                 <comment>Movement and Navigation Controls</comment>
                 <event-block sid="1038">
@@ -381,6 +381,21 @@
                         <action id="6" name="Stop" sid="428" type="Audio">
                             <param id="0" name="Tag">&quot;tankdriving&quot;</param>
                         </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Controls on HUD" sid="1251" title="HUD Controls">
+            <sub-events>
+                <comment>Pause the Game</comment>
+                <event-block sid="1252">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1253" type="Touch">
+                            <param id="0" name="Object">healthbar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Toggle pause" sid="1254" type="Pause" />
                     </actions>
                 </event-block>
             </sub-events>

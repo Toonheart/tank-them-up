@@ -6,6 +6,7 @@
         <include>FadeInOuts</include>
         <include>MissionFailedScreen</include>
         <include>AreaCompletedScreen</include>
+        <include>GamePausedScreen</include>
         <include>HealthSystem</include>
         <include>EnemyAI</include>
         <include>Debug</include>

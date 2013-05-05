@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GamePausedScreen</name>
+    <events>
+        <event-group description="actions that user can take when game is paused." sid="1255" title="User Actions on Game Paused">
+            <sub-events>
+                <comment>Note: There is No strike red for pause screen as it will need a wait time and WAIT on pause is an infinite pause</comment>
+                <comment>Restart Level - buggy</comment>
+                <event-block sid="1278">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1279" type="Touch">
+                            <param id="0" name="Object">Text_Restart_Level</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1280" type="System">
+                            <param id="0" name="Variable">ScreenChange</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="1281" type="StrikeRED">
+                            <param id="0" name="Object">Text_Restart_Level</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="1282" type="StrikeRED">
+                            <param id="0" name="Width">Text_Restart_Level.Width+100</param>
+                        </action>
+                        <action id="1" name="Set pause state" sid="1320" type="Pause">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="1284" type="System" />
+                    </actions>
+                </event-block>
+                <comment>HELP  - How to Play the Game - Tutorial Page</comment>
+                <event-block sid="1303">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1304" type="Touch">
+                            <param id="0" name="Object">Text_Help</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <comment>Resume Level</comment>
+                <event-block sid="1285">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1286" type="Touch">
+                            <param id="0" name="Object">Text_Resume_Level</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="1292" type="Pause">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Music Toggle OFF</comment>
+                <event-block sid="1293">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1294" type="Touch">
+                            <param id="0" name="Object">Text_Music</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="1295" type="System">
+                            <param id="0" name="Variable">IsMusic</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1296" type="System">
+                            <param id="0" name="Variable">IsMusic</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1297" type="Text_Music">
+                            <param id="0" name="Animation">&quot;NoMusic&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Music Toggle ON</comment>
+                <event-block sid="1298">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1299" type="Touch">
+                            <param id="0" name="Object">Text_Music</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="1300" type="System">
+                            <param id="0" name="Variable">IsMusic</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1301" type="System">
+                            <param id="0" name="Variable">IsMusic</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1302" type="Text_Music">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Abort Game</comment>
+                <event-block sid="1271">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1272" type="Touch">
+                            <param id="0" name="Object">Text_Abort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1273" type="System">
+                            <param id="0" name="Variable">ScreenChange</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="1" name="Set pause state" sid="1322" type="Pause">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="1277" type="System">
+                            <param id="0" name="Layout">TitleScreen</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="game pause happens when pause  is on pause" sid="1270" title="Condition for Pause Screen">
+            <sub-events>
+                <comment>When Pause is triggered, Bring up Pause Screen</comment>
+                <event-block sid="1256">
+                    <conditions>
+                        <condition id="0" name="On pause" sid="1257" type="Pause" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="1260" type="Tile_PopMenus">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="1261" type="Text_GamePaused">
+                            <param id="0" name="Object">Tile_PopMenus</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="1267" type="Text_Resume_Level">
+                            <param id="0" name="Object">Tile_PopMenus</param>
+                            <param id="1" name="Image point (optional)">4</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="1265" type="Text_Restart_Level">
+                            <param id="0" name="Object">Tile_PopMenus</param>
+                            <param id="1" name="Image point (optional)">5</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="1266" type="Text_Help">
+                            <param id="0" name="Object">Tile_PopMenus</param>
+                            <param id="1" name="Image point (optional)">6</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="1268" type="Text_Music">
+                            <param id="0" name="Object">Tile_PopMenus</param>
+                            <param id="1" name="Image point (optional)">7</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="1269" type="Text_Abort">
+                            <param id="0" name="Object">Tile_PopMenus</param>
+                            <param id="1" name="Image point (optional)">8</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1262" type="System">
+                            <param id="0" name="Variable">ScreenChange</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>When Resume is triggered, move  Pause Screen away</comment>
+                <event-block sid="1309">
+                    <conditions>
+                        <condition id="1" name="On resume" sid="1310" type="Pause" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="1311" type="Tile_PopMenus">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="1312" type="Text_GamePaused">
+                            <param id="0" name="X">LayoutWidth+1000</param>
+                            <param id="1" name="Y">LayoutHeight+1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="1313" type="Text_Resume_Level">
+                            <param id="0" name="X">LayoutWidth+1000</param>
+                            <param id="1" name="Y">LayoutHeight+1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="1314" type="Text_Restart_Level">
+                            <param id="0" name="X">LayoutWidth+1000</param>
+                            <param id="1" name="Y">LayoutHeight+1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="1315" type="Text_Help">
+                            <param id="0" name="X">LayoutWidth+1000</param>
+                            <param id="1" name="Y">LayoutHeight+1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="1316" type="Text_Music">
+                            <param id="0" name="X">LayoutWidth+1000</param>
+                            <param id="1" name="Y">LayoutHeight+1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="1317" type="Text_Abort">
+                            <param id="0" name="X">LayoutWidth+1000</param>
+                            <param id="1" name="Y">LayoutHeight+1000</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1318" type="System">
+                            <param id="0" name="Variable">ScreenChange</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="1319" type="StrikeRED">
+                            <param id="0" name="X">LayoutWidth+1000</param>
+                            <param id="1" name="Y">LayoutHeight+1000</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

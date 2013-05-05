@@ -6,7 +6,7 @@
     <author>Srikrishna Das(krish) - krish@toonheart.com</author>
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>12600</saved-with-version>
-    <next-sid>1251</next-sid>
+    <next-sid>1323</next-sid>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
@@ -1453,11 +1453,6 @@
         </object-type>
         <object-type name="Text_Music" sid="191">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor" sid="192">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="193" speed="5">
                     <frame duration="1" hotspotX="0.500879" hotspotY="0.502825" />
@@ -1496,11 +1491,6 @@
         </object-type>
         <object-type name="Text_Help" sid="197">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor" sid="198">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="199" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -1726,9 +1716,32 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1167" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0">
-                        <image-point name="missionfailed" x="0.5" y="0.351563" />
+                        <image-point name="AllTitles" x="0.5" y="0.351563" />
                         <image-point name="failedretry" x="0.5" y="0.46875" />
                         <image-point name="failedabort" x="0.5" y="0.546875" />
+                        <image-point name="pauseResume" x="0.5" y="0.546875" />
+                        <image-point name="pauseRestart" x="0.265625" y="0.445313" />
+                        <image-point name="pauseHelp" x="0.734375" y="0.445313" />
+                        <image-point name="pauseMusic" x="0.265625" y="0.648438" />
+                        <image-point name="pauseAbort" x="0.734375" y="0.648438" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text_GamePaused" sid="1263">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1264" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0182232" y="0.133333" />
+                            <point x="0.5" y="0.225" />
+                            <point x="0.988611" y="0.0833333" />
+                            <point x="0.988611" y="0.916667" />
+                            <point x="0.5" y="0.558333" />
+                            <point x="0.0193622" y="0.858333" />
+                            <point x="0.00569476" y="0.5" />
+                        </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
@@ -1757,6 +1770,7 @@
         <event-sheet>TitleScreenEvents.xml</event-sheet>
         <event-sheet>FadeInOuts.xml</event-sheet>
         <event-sheet>MusicSounds.xml</event-sheet>
+        <event-sheet>GamePausedScreen.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="194">

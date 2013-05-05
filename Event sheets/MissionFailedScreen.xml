@@ -66,17 +66,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>Pause the Game</comment>
-                <event-block sid="755">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="756" type="Touch">
-                            <param id="0" name="Object">hudHolder</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Toggle pause" sid="757" type="Pause" />
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group description="conditions that fail a mission or area" sid="1181" title="Condition to Mission Fail">
