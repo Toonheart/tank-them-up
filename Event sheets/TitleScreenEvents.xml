@@ -5,6 +5,7 @@
     <events>
         <variable comment="Whether Music is ON or OFF" constant="0" name="IsMusic" sid="1118" static="0" type="number">1</variable>
         <variable comment="Shifts Opacity of layers" constant="0" name="OpacityShifter" sid="956" static="0" type="number">0.3</variable>
+        <include>Debug</include>
         <include>FadeInOuts</include>
         <event-group description="Actions for the menus" sid="957" title="Menu Actions">
             <sub-events>
@@ -54,50 +55,58 @@
                     <actions />
                 </event-block>
                 <comment>Music Toggle OFF</comment>
-                <event-block sid="1109">
+                <event-block sid="1335">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="1110" type="Touch">
+                        <condition id="3" name="On touched object" sid="1336" type="Touch">
                             <param id="0" name="Object">Text_Music</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="1141" type="System">
-                            <param id="0" name="Variable">IsMusic</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="1142" type="System">
-                            <param id="0" name="Variable">IsMusic</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="1143" type="Text_Music">
-                            <param id="0" name="Animation">&quot;NoMusic&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <comment>Music Toggle ON</comment>
-                <event-block sid="1119">
+                <event-block sid="1339">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="1145" type="Touch">
+                        <condition id="3" name="On touched object" sid="1340" type="Touch">
                             <param id="0" name="Object">Text_Music</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="1120" type="System">
-                            <param id="0" name="Variable">IsMusic</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="1121" type="System">
-                            <param id="0" name="Variable">IsMusic</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="1127" type="Text_Music">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1360">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1337" type="System">
+                                    <param id="0" name="Variable">IsMusic</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1344" type="System">
+                                    <param id="0" name="Variable">IsMusic</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="1338" type="Text_Music">
+                                    <param id="0" name="Animation">&quot;UnMusic&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1362">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1363" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1364" type="System">
+                                    <param id="0" name="Variable">IsMusic</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="1365" type="Text_Music">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>About - Info about Toonheart</comment>
                 <event-block sid="1242">

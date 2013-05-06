@@ -6,16 +6,17 @@
     <author>Srikrishna Das(krish) - krish@toonheart.com</author>
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>12600</saved-with-version>
-    <next-sid>1323</next-sid>
+    <next-sid>1366</next-sid>
     <used-plugins>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="" id="Rex_DebugPanel" version="0.100000001">Debug Panel</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
@@ -1451,24 +1452,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Text_Music" sid="191">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="193" speed="5">
-                    <frame duration="1" hotspotX="0.500879" hotspotY="0.502825" />
-                </animation>
-                <animation framecount="1" loop="0" name="NoMusic" pingpong="0" repeatcount="1" repeatto="0" sid="1108" speed="5">
-                    <frame duration="1" hotspotX="-1" hotspotY="-1">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0" y="0.960452" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Text_About" sid="194">
             <plugin id="Sprite" />
             <behaviors>
@@ -1722,8 +1705,7 @@
                         <image-point name="pauseResume" x="0.5" y="0.546875" />
                         <image-point name="pauseRestart" x="0.265625" y="0.445313" />
                         <image-point name="pauseHelp" x="0.734375" y="0.445313" />
-                        <image-point name="pauseMusic" x="0.265625" y="0.648438" />
-                        <image-point name="pauseAbort" x="0.734375" y="0.648438" />
+                        <image-point name="pauseAbort" x="0.5" y="0.648438" />
                     </frame>
                 </animation>
             </animation-folder>
@@ -1743,6 +1725,43 @@
                             <point x="0.00569476" y="0.5" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="DebugPanel" sid="1324">
+            <plugin id="Rex_DebugPanel" />
+        </object-type>
+        <object-type name="Text_Music" sid="1332">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1333" speed="1">
+                    <frame duration="1" hotspotX="0.500879" hotspotY="0.502825" />
+                </animation>
+                <animation framecount="1" loop="0" name="UnMusic" pingpong="0" repeatcount="1" repeatto="0" sid="1334" speed="1">
+                    <frame duration="1" hotspotX="0.500879" hotspotY="0.502825">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0.00564972" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text_NextArea" sid="1346">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1347" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505495" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text_NextMission" sid="1348">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1349" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505376" />
                 </animation>
             </animation-folder>
         </object-type>

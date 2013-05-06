@@ -53,52 +53,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>Music Toggle OFF</comment>
-                <event-block sid="1293">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="1294" type="Touch">
-                            <param id="0" name="Object">Text_Music</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="1295" type="System">
-                            <param id="0" name="Variable">IsMusic</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="1296" type="System">
-                            <param id="0" name="Variable">IsMusic</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="1297" type="Text_Music">
-                            <param id="0" name="Animation">&quot;NoMusic&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Music Toggle ON</comment>
-                <event-block sid="1298">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="1299" type="Touch">
-                            <param id="0" name="Object">Text_Music</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="1300" type="System">
-                            <param id="0" name="Variable">IsMusic</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="1301" type="System">
-                            <param id="0" name="Variable">IsMusic</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="1302" type="Text_Music">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <comment>Abort Game</comment>
                 <event-block sid="1271">
                     <conditions>
@@ -148,13 +102,9 @@
                             <param id="0" name="Object">Tile_PopMenus</param>
                             <param id="1" name="Image point (optional)">6</param>
                         </action>
-                        <action id="-4" name="Set position to another object" sid="1268" type="Text_Music">
-                            <param id="0" name="Object">Tile_PopMenus</param>
-                            <param id="1" name="Image point (optional)">7</param>
-                        </action>
                         <action id="-4" name="Set position to another object" sid="1269" type="Text_Abort">
                             <param id="0" name="Object">Tile_PopMenus</param>
-                            <param id="1" name="Image point (optional)">8</param>
+                            <param id="1" name="Image point (optional)">7</param>
                         </action>
                         <action id="-9" name="Set value" sid="1262" type="System">
                             <param id="0" name="Variable">ScreenChange</param>
@@ -184,10 +134,6 @@
                             <param id="1" name="Y">LayoutHeight+1000</param>
                         </action>
                         <action id="-3" name="Set position" sid="1315" type="Text_Help">
-                            <param id="0" name="X">LayoutWidth+1000</param>
-                            <param id="1" name="Y">LayoutHeight+1000</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="1316" type="Text_Music">
                             <param id="0" name="X">LayoutWidth+1000</param>
                             <param id="1" name="Y">LayoutHeight+1000</param>
                         </action>

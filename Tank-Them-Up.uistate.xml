@@ -10,9 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout>stage1</layout>
-        <event-sheet active="1">GamePausedScreen</event-sheet>
-        <event-sheet>MissionFailedScreen</event-sheet>
+        <layout>TitleScreen</layout>
+        <event-sheet active="1">TitleScreenEvents</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />

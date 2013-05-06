@@ -60,13 +60,13 @@
                                 <action id="-15" name="Set visible" sid="1213" type="Tile_PopMenus">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action disabled="1" id="-4" name="Set position to another object" sid="1214" type="Text_AreaConquered">
+                                <action id="-4" name="Set position to another object" sid="1214" type="Text_AreaConquered">
                                     <param id="0" name="Object">Tile_PopMenus</param>
                                     <param id="1" name="Image point (optional)">1</param>
                                 </action>
-                                <action id="-4" name="Set position to another object" sid="1223" type="Text_MissionAccomplished">
+                                <action id="-4" name="Set position to another object" sid="1350" type="Text_NextArea">
                                     <param id="0" name="Object">Tile_PopMenus</param>
-                                    <param id="1" name="Image point (optional)">1</param>
+                                    <param id="1" name="Image point (optional)">4</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="1215" type="System">
                                     <param id="0" name="Variable">ScreenChange</param>
@@ -89,13 +89,13 @@
                                 <action id="-15" name="Set visible" sid="1219" type="Tile_PopMenus">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action disabled="1" id="-4" name="Set position to another object" sid="1220" type="Text_AreaConquered">
+                                <action id="-4" name="Set position to another object" sid="1220" type="Text_AreaConquered">
                                     <param id="0" name="Object">Tile_PopMenus</param>
                                     <param id="1" name="Image point (optional)">1</param>
                                 </action>
-                                <action id="-4" name="Set position to another object" sid="1224" type="Text_MissionAccomplished">
+                                <action id="-4" name="Set position to another object" sid="1351" type="Text_NextArea">
                                     <param id="0" name="Object">Tile_PopMenus</param>
-                                    <param id="1" name="Image point (optional)">1</param>
+                                    <param id="1" name="Image point (optional)">4</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="1221" type="System">
                                     <param id="0" name="Variable">ScreenChange</param>
@@ -104,6 +104,36 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="actions that user can take on area completed" sid="1352" title="User Actions on Area Complete">
+            <sub-events>
+                <event-block sid="1353">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1354" type="Touch">
+                            <param id="0" name="Object">Text_NextArea</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="1356" type="StrikeRED">
+                            <param id="0" name="Object">Text_NextArea</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="1357" type="StrikeRED">
+                            <param id="0" name="Width">Text_NextArea.Width+100</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1355" type="System">
+                            <param id="0" name="Variable">ScreenChange</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1358" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="1359" type="System">
+                            <param id="0" name="Layout">stage1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

@@ -3597,7 +3597,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Music" uid="183">
+                <instance type="Text_NextArea" uid="189">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3606,14 +3606,35 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2927.419189453</x>
-                        <y>4567.3125</y>
+                        <x>-2452</x>
+                        <y>2840</y>
                         <z>0</z>
-                        <width>367.293395996</width>
-                        <height>114.254707336</height>
+                        <width>526</width>
+                        <height>91</height>
                         <depth>0</depth>
-                        <hotspotX>0.500878751</hotspotX>
-                        <hotspotY>0.502824843</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505494535</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text_NextMission" uid="200">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-2232</x>
+                        <y>4280</y>
+                        <z>0</z>
+                        <width>700</width>
+                        <height>93</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505376339</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

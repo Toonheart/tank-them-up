@@ -615,27 +615,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Music" uid="189">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1098</x>
-                        <y>1272</y>
-                        <z>0</z>
-                        <width>569</width>
-                        <height>177</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500878751</hotspotX>
-                        <hotspotY>0.502824843</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Text_About" uid="190">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -740,6 +719,27 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Text_Music" uid="184">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1098</x>
+                        <y>1250</y>
+                        <z>0</z>
+                        <width>569</width>
+                        <height>177</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500878751</hotspotX>
+                        <hotspotY>0.502824843</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -760,6 +760,15 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="DebugPanel" uid="183">
+            <properties>
+                <enable>Yes</enable>
+                <activated>Yes</activated>
+                <stay-on-top>No</stay-on-top>
+                <log-buffer-length>100</log-buffer-length>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>
