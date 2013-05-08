@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TurretAI</name>
+    <events>
+        <variable comment="hit point for lazer turret" constant="0" name="LzrTurretHitPoint" sid="1658" static="0" type="number">0</variable>
+        <event-block sid="1678">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1679" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Turret" id="1" name="Add object to target" sid="1677" type="enemyLazerTurret">
+                    <param id="0" name="Target">playertank</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1659">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="1661" type="enemyLazerTurret" />
+                <condition behavior="Turret" id="0" name="Has target" sid="1680" type="enemyLazerTurret" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1675">
+                    <conditions>
+                        <condition behavior="Turret" id="1" name="On shoot" sid="1681" type="enemyLazerTurret" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="1670" type="lineofsight">
+                            <param id="0" name="Object">trees</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="1671" type="lineofsight">
+                            <param id="0" name="Object">sidewallshexdigi</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="1672" type="enemyLazerTurret">
+                            <param id="0" name="Object">enemynormalbullet</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

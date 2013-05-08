@@ -265,7 +265,6 @@
                                 <default-controls>Yes</default-controls>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="ScrollTo" />
                         <behavior-instance type="Solid" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>

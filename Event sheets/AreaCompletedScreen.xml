@@ -9,23 +9,13 @@
                 <event-block sid="925">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="926" type="System">
-                            <param id="0" name="First value">enemytower.Count</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="927" type="System">
-                            <param id="0" name="First value">enemytank.Count</param>
+                            <param id="0" name="First value">enemyLazerTurret.Count</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="928" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="ScrollTo" id="0" name="Shake" sid="929" type="playertank">
-                            <param id="0" name="Magnitude">20</param>
-                            <param id="1" name="Duration">0.5</param>
-                            <param id="2" name="Mode">0</param>
-                        </action>
                         <action behavior="Car" id="0" name="Stop" sid="930" type="playertank" />
                         <action behavior="Car" id="2" name="Set ignoring input" sid="931" type="playertank">
                             <param id="0" name="Input">1</param>

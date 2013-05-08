@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ScarabAI</name>
+    <events>
+        <variable comment="hitpoints for scarab - flexibility to change in every level" constant="0" name="ScarabHitPoint" sid="1656" static="0" type="number">0</variable>
+        <event-group description="how scarabs move towards tank" sid="1366" title="Player in Range - Attack">
+            <sub-events>
+                <comment>Every second, activate nearest scarab .. Change angle towards the player</comment>
+                <event-block sid="866">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="867" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" sid="868" type="scarab">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">playertank.X</param>
+                            <param id="2" name="Y">playertank.Y</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" sid="869" type="lineofsight">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">scarab.X</param>
+                            <param id="2" name="Y">scarab.Y</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="870" type="scarab">
+                            <param id="0" name="Object">MarkerSTOP</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="871" type="scarab">
+                            <param id="0" name="Object">sidewallshexdigi</param>
+                        </condition>
+                        <condition disabled="1" id="-8" inverted="1" name="Compare two values" sid="1404" type="System">
+                            <param id="0" name="First value">distance(scarab.X,scarab.Y,playertank.X,playertank.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">200</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="1435" type="scarab" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>If calculated distance is within Range of the enemy,  check if line of sight is passing through any of the solid objects that should be blocking enemy&apos;s view.&#x0D;&#x0A;If the LoS is clear, then fire the effing player&apos;s ass.</comment>
+                        <event-block sid="872">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="873" type="System">
+                                    <param id="0" name="First value">distance(scarab.X,scarab.Y,playertank.X,playertank.Y)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">scarab.range</param>
+                                </condition>
+                                <condition disabled="1" id="-8" inverted="1" name="Compare two values" sid="1437" type="System">
+                                    <param id="0" name="First value">distance(scarab.X,scarab.Y,playertank.X,playertank.Y)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">200</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="877" type="scarab">
+                                    <param id="0" name="X">playertank.X</param>
+                                    <param id="1" name="Y">playertank.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="scarab patrolling" sid="1367" title="Player Out of Range - Patrol">
+            <sub-events>
+                <comment>On screen but not too close to player</comment>
+                <event-block sid="1406">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="1434" type="scarab" />
+                        <condition disabled="1" id="-8" inverted="1" name="Compare two values" sid="1433" type="System">
+                            <param id="0" name="First value">distance(scarab.X,scarab.Y,playertank.X,playertank.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="7" name="Simulate control" sid="1412" type="scarab">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Patrolling on Colliding with solids </comment>
+                <event-block sid="1419">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1420" type="scarab">
+                            <param id="0" name="Object">sidewallshexdigi</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="1423" type="scarab">
+                            <param id="0" name="Angle">scarab.Angle+random(90,180)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Dont run into player" sid="1377" title="Scarab too Close to Player">
+            <sub-events>
+                <event-block disabled="1" sid="1378">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1379" type="System">
+                            <param id="0" name="First value">distance(scarab.X,scarab.Y,playertank.X,playertank.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="0" name="Stop" sid="1380" type="scarab" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Save cpu cycles dont do anything when not on screen." sid="1429" title="Scarab Not on Screen">
+            <sub-events>
+                <event-block sid="1430">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="1431" type="scarab" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="0" name="Stop" sid="1432" type="scarab" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1611" title="Scarab Collision">
+            <sub-events>
+                <comment>Scarab on player mine collision</comment>
+                <event-block sid="1599">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1600" type="scarab">
+                            <param id="0" name="Object">playersmine</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="1601" type="Audio">
+                            <param id="0" name="Audio file">mineexplode</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;mineexplosion&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="1602" type="playersmine">
+                            <param id="0" name="Object">explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="1603" type="explosion" />
+                        <action id="9" name="Set scale" sid="1604" type="explosion">
+                            <param id="0" name="Scale">3</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1605" type="playersmine" />
+                        <action id="4" name="Set animation" sid="1606" type="explosion">
+                            <param id="0" name="Animation">&quot;BlowUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Car" id="0" name="Stop" sid="1607" type="scarab" />
+                        <action id="-16" name="Wait" sid="1608" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1609" type="explosion" />
+                        <action id="-9" name="Destroy" sid="1610" type="scarab" />
+                    </actions>
+                </event-block>
+                <comment>Scarab touching tank </comment>
+                <event-block sid="1639">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1640" type="scarab">
+                            <param id="0" name="Object">playertank</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="1641" type="Audio">
+                            <param id="0" name="Audio file">mineexplode</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-13</param>
+                            <param id="1" name="Tag (optional)">&quot;missleexplosion&quot;</param>
+                        </action>
+                        <action behavior="Car" id="0" name="Stop" sid="1655" type="scarab" />
+                        <action id="0" name="Spawn another object" sid="1642" type="scarab">
+                            <param id="0" name="Object">explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1650" type="scarab" />
+                        <action id="-24" name="Move to top" sid="1643" type="explosion" />
+                        <action id="-9" name="Destroy" sid="1645" type="missile" />
+                        <action id="9" name="Set scale" sid="1646" type="explosion">
+                            <param id="0" name="Scale">3</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1647" type="explosion">
+                            <param id="0" name="Animation">&quot;BlowUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1648" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1649" type="explosion" />
+                        <action id="-10" name="Set value" sid="1651" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">playertank.health-5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1612">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1613" type="scarab">
+                            <param id="0" name="Object">normalbullet</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="1614" type="Audio">
+                            <param id="0" name="Audio file">smallexplosion</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="1615" type="scarab">
+                            <param id="0" name="Object">explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="1616" type="explosion" />
+                        <action id="9" name="Set scale" sid="1617" type="explosion">
+                            <param id="0" name="Scale">2</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1618" type="normalbullet" />
+                        <action id="4" name="Set animation" sid="1619" type="explosion">
+                            <param id="0" name="Animation">&quot;BlowUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1620" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1621" type="explosion" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1622">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1623" type="scarab">
+                                    <param id="0" name="Instance variable">hitcount</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">ScarabHitPoint</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="1624" type="scarab">
+                                    <param id="0" name="Instance variable">hitcount</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1625">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1626" type="scarab">
+                                    <param id="0" name="Instance variable">hitcount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">ScarabHitPoint</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="1635" type="scarab" />
+                            </actions>
+                            <sub-events>
+                                <event-block sid="1636">
+                                    <conditions>
+                                        <condition id="-15" name="Pick nearest/furthest" sid="1637" type="lineofsight">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="X">scarab.X</param>
+                                            <param id="2" name="Y">scarab.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="1638" type="lineofsight" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

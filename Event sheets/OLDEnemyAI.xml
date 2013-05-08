@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>EnemyAI</name>
+    <name>OLDEnemyAI</name>
     <events>
         <event-group description="Aritificial intelligent for enemy minions and Bosses." sid="842" title="Enemy AI">
             <sub-events>
@@ -10,17 +10,17 @@
                     <conditions>
                         <condition id="-1" name="Every tick" sid="844" type="System" />
                         <condition id="-11" name="For Each" sid="845" type="System">
-                            <param id="0" name="Object">enemytank</param>
+                            <param id="0" name="Object">scarab</param>
                         </condition>
                         <condition id="-15" name="Pick nearest/furthest" sid="846" type="lineofsight">
                             <param id="0" name="Which">0</param>
-                            <param id="1" name="X">enemytank.X</param>
-                            <param id="2" name="Y">enemytank.Y</param>
+                            <param id="1" name="X">scarab.X</param>
+                            <param id="2" name="Y">scarab.Y</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-4" name="Set position to another object" sid="847" type="lineofsight">
-                            <param id="0" name="Object">enemytank</param>
+                            <param id="0" name="Object">scarab</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
                     </actions>
@@ -29,37 +29,37 @@
                     <conditions>
                         <condition id="-1" name="Every tick" sid="849" type="System" />
                         <condition id="-11" name="For Each" sid="850" type="System">
-                            <param id="0" name="Object">enemytower</param>
+                            <param id="0" name="Object">enemyLazerTurret</param>
                         </condition>
                         <condition id="-15" name="Pick nearest/furthest" sid="851" type="lineofsight">
                             <param id="0" name="Which">0</param>
-                            <param id="1" name="X">enemytower.X</param>
-                            <param id="2" name="Y">enemytower.Y</param>
+                            <param id="1" name="X">enemyLazerTurret.X</param>
+                            <param id="2" name="Y">enemyLazerTurret.Y</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-4" name="Set position to another object" sid="852" type="lineofsight">
-                            <param id="0" name="Object">enemytower</param>
+                            <param id="0" name="Object">enemyLazerTurret</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
                     </actions>
                 </event-block>
                 <comment>Every 3 secs, activate the enemy nearest to the player along with the line of sight, align angle towards the player and calculate distance to player</comment>
-                <event-block sid="853">
+                <event-block collapsed="1" sid="853">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="854" type="System">
                             <param id="0" name="Interval (seconds)">3</param>
                         </condition>
-                        <condition id="-3" name="Is on-screen" sid="1101" type="enemytower" />
-                        <condition id="-15" name="Pick nearest/furthest" sid="855" type="enemytower">
+                        <condition id="-3" name="Is on-screen" sid="1101" type="enemyLazerTurret" />
+                        <condition id="-15" name="Pick nearest/furthest" sid="855" type="enemyLazerTurret">
                             <param id="0" name="Which">0</param>
                             <param id="1" name="X">playertank.X</param>
                             <param id="2" name="Y">playertank.Y</param>
                         </condition>
                         <condition id="-15" name="Pick nearest/furthest" sid="856" type="lineofsight">
                             <param id="0" name="Which">0</param>
-                            <param id="1" name="X">enemytower.X</param>
-                            <param id="2" name="Y">enemytower.Y</param>
+                            <param id="1" name="X">enemyLazerTurret.X</param>
+                            <param id="2" name="Y">enemyLazerTurret.Y</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -68,9 +68,9 @@
                             <param id="1" name="Y">playertank.Y</param>
                         </action>
                         <action id="-5" name="Set width" sid="858" type="lineofsight">
-                            <param id="0" name="Width">distance(enemytower.X,enemytower.Y,playertank.X,playertank.Y)</param>
+                            <param id="0" name="Width">distance(enemyLazerTurret.X,enemyLazerTurret.Y,playertank.X,playertank.Y)</param>
                         </action>
-                        <action id="-22" name="Set angle toward position" sid="859" type="enemytower">
+                        <action id="-22" name="Set angle toward position" sid="859" type="enemyLazerTurret">
                             <param id="0" name="X">playertank.X</param>
                             <param id="1" name="Y">playertank.Y</param>
                         </action>
@@ -80,9 +80,9 @@
                         <event-block sid="860">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="861" type="System">
-                                    <param id="0" name="First value">distance(enemytower.X,enemytower.Y,playertank.X,playertank.Y)</param>
+                                    <param id="0" name="First value">distance(enemyLazerTurret.X,enemyLazerTurret.Y,playertank.X,playertank.Y)</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Second value">enemytower.range</param>
+                                    <param id="2" name="Second value">enemyLazerTurret.range</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -97,7 +97,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="865" type="enemytower">
+                                        <action id="0" name="Spawn another object" sid="865" type="enemyLazerTurret">
                                             <param id="0" name="Object">enemynormalbullet</param>
                                             <param id="1" name="Layer">1</param>
                                             <param id="2" name="Image point">1</param>
@@ -109,25 +109,25 @@
                     </sub-events>
                 </event-block>
                 <comment>Do the same for Moving Enemy.. keep it under seperate block to avoid clutter and confusion</comment>
-                <event-block sid="866">
+                <event-block collapsed="1" sid="866">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="867" type="System">
                             <param id="0" name="Interval (seconds)">1</param>
                         </condition>
-                        <condition id="-15" name="Pick nearest/furthest" sid="868" type="enemytank">
+                        <condition id="-15" name="Pick nearest/furthest" sid="868" type="scarab">
                             <param id="0" name="Which">0</param>
                             <param id="1" name="X">playertank.X</param>
                             <param id="2" name="Y">playertank.Y</param>
                         </condition>
                         <condition id="-15" name="Pick nearest/furthest" sid="869" type="lineofsight">
                             <param id="0" name="Which">0</param>
-                            <param id="1" name="X">enemytank.X</param>
-                            <param id="2" name="Y">enemytank.Y</param>
+                            <param id="1" name="X">scarab.X</param>
+                            <param id="2" name="Y">scarab.Y</param>
                         </condition>
-                        <condition id="1" inverted="1" name="Is overlapping another object" sid="870" type="enemytank">
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="870" type="scarab">
                             <param id="0" name="Object">MarkerSTOP</param>
                         </condition>
-                        <condition id="1" inverted="1" name="Is overlapping another object" sid="871" type="enemytank">
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="871" type="scarab">
                             <param id="0" name="Object">sidewallshexdigi</param>
                         </condition>
                     </conditions>
@@ -137,12 +137,12 @@
                         <event-block sid="872">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="873" type="System">
-                                    <param id="0" name="First value">distance(enemytank.X,enemytank.Y,playertank.X,playertank.Y)</param>
+                                    <param id="0" name="First value">distance(scarab.X,scarab.Y,playertank.X,playertank.Y)</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Second value">enemytank.range</param>
+                                    <param id="2" name="Second value">scarab.range</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="874" type="System">
-                                    <param id="0" name="First value">distance(enemytank.X,enemytank.Y,playertank.X,playertank.Y)</param>
+                                    <param id="0" name="First value">distance(scarab.X,scarab.Y,playertank.X,playertank.Y)</param>
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Second value">200</param>
                                 </condition>
@@ -153,9 +153,9 @@
                                     <param id="1" name="Y">playertank.Y</param>
                                 </action>
                                 <action id="-5" name="Set width" sid="876" type="lineofsight">
-                                    <param id="0" name="Width">distance(enemytower.X,enemytower.Y,playertank.X,playertank.Y)</param>
+                                    <param id="0" name="Width">distance(enemyLazerTurret.X,enemyLazerTurret.Y,playertank.X,playertank.Y)</param>
                                 </action>
-                                <action id="-22" name="Set angle toward position" sid="877" type="enemytank">
+                                <action id="-22" name="Set angle toward position" sid="877" type="scarab">
                                     <param id="0" name="X">playertank.X</param>
                                     <param id="1" name="Y">playertank.Y</param>
                                 </action>
@@ -171,7 +171,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action disabled="1" id="0" name="Spawn another object" sid="881" type="enemytank">
+                                        <action disabled="1" id="0" name="Spawn another object" sid="881" type="scarab">
                                             <param id="0" name="Object">enemynormalbullet</param>
                                             <param id="1" name="Layer">1</param>
                                             <param id="2" name="Image point">1</param>
@@ -186,20 +186,20 @@
                 <event-block sid="882">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="883" type="System" />
-                        <condition id="1" inverted="1" name="Is overlapping another object" sid="884" type="enemytank">
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="884" type="scarab">
                             <param id="0" name="Object">MarkerSTOP</param>
                         </condition>
-                        <condition id="1" inverted="1" name="Is overlapping another object" sid="885" type="enemytank">
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="885" type="scarab">
                             <param id="0" name="Object">MarkerLeftRight</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Compare two values" sid="886" type="System">
-                            <param id="0" name="First value">distance(enemytank.X,enemytank.Y,playertank.X,playertank.Y)</param>
+                            <param id="0" name="First value">distance(scarab.X,scarab.Y,playertank.X,playertank.Y)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">200</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Car" id="7" name="Simulate control" sid="887" type="enemytank">
+                        <action behavior="Car" id="7" name="Simulate control" sid="887" type="scarab">
                             <param id="0" name="Control">2</param>
                         </action>
                     </actions>
@@ -207,33 +207,33 @@
                 <event-block sid="888">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="889" type="System">
-                            <param id="0" name="First value">distance(enemytank.X,enemytank.Y,playertank.X,playertank.Y)</param>
+                            <param id="0" name="First value">distance(scarab.X,scarab.Y,playertank.X,playertank.Y)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">200</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Car" id="0" name="Stop" sid="890" type="enemytank" />
+                        <action behavior="Car" id="0" name="Stop" sid="890" type="scarab" />
                     </actions>
                 </event-block>
                 <comment>Patrolling on reaching open end of maps</comment>
                 <event-block disabled="1" sid="891">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="892" type="enemytank">
+                        <condition id="1" name="Is overlapping another object" sid="892" type="scarab">
                             <param id="0" name="Object">MarkerLeftRight</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Compare two values" sid="893" type="System">
-                            <param id="0" name="First value">distance(enemytank.X,enemytank.Y,playertank.X,playertank.Y)</param>
+                            <param id="0" name="First value">distance(scarab.X,scarab.Y,playertank.X,playertank.Y)</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">enemytank.range</param>
+                            <param id="2" name="Second value">scarab.range</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Car" id="0" name="Stop" sid="894" type="enemytank" />
-                        <action id="-8" name="Set angle" sid="895" type="enemytank">
-                            <param id="0" name="Angle">enemytank.Angle+random(90)</param>
+                        <action behavior="Car" id="0" name="Stop" sid="894" type="scarab" />
+                        <action id="-8" name="Set angle" sid="895" type="scarab">
+                            <param id="0" name="Angle">scarab.Angle+random(90)</param>
                         </action>
-                        <action behavior="Car" id="7" name="Simulate control" sid="896" type="enemytank">
+                        <action behavior="Car" id="7" name="Simulate control" sid="896" type="scarab">
                             <param id="0" name="Control">2</param>
                         </action>
                     </actions>
@@ -241,21 +241,21 @@
                 <comment>Patrolling on Colliding with solids </comment>
                 <event-block disabled="1" sid="897">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="898" type="enemytank">
+                        <condition id="0" name="On collision with another object" sid="898" type="scarab">
                             <param id="0" name="Object">sidewallshexdigi</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Compare two values" sid="899" type="System">
-                            <param id="0" name="First value">distance(enemytank.X,enemytank.Y,playertank.X,playertank.Y)</param>
+                            <param id="0" name="First value">distance(scarab.X,scarab.Y,playertank.X,playertank.Y)</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">enemytank.range</param>
+                            <param id="2" name="Second value">scarab.range</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Car" id="0" name="Stop" sid="900" type="enemytank" />
-                        <action id="-8" name="Set angle" sid="901" type="enemytank">
-                            <param id="0" name="Angle">enemytank.Angle+random(180)</param>
+                        <action behavior="Car" id="0" name="Stop" sid="900" type="scarab" />
+                        <action id="-8" name="Set angle" sid="901" type="scarab">
+                            <param id="0" name="Angle">scarab.Angle+random(180)</param>
                         </action>
-                        <action behavior="Car" id="7" name="Simulate control" sid="902" type="enemytank">
+                        <action behavior="Car" id="7" name="Simulate control" sid="902" type="scarab">
                             <param id="0" name="Control">2</param>
                         </action>
                     </actions>
@@ -263,14 +263,14 @@
                 <comment>Change Patrol direction regardless of enemy in range or not - Enemies dont cross this line</comment>
                 <event-block disabled="1" sid="903">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="904" type="enemytank">
+                        <condition id="1" name="Is overlapping another object" sid="904" type="scarab">
                             <param id="0" name="Object">MarkerSTOP</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Car" id="0" name="Stop" sid="905" type="enemytank" />
-                        <action id="-8" name="Set angle" sid="906" type="enemytank">
-                            <param id="0" name="Angle">enemytank.Angle+180</param>
+                        <action behavior="Car" id="0" name="Stop" sid="905" type="scarab" />
+                        <action id="-8" name="Set angle" sid="906" type="scarab">
+                            <param id="0" name="Angle">scarab.Angle+180</param>
                         </action>
                     </actions>
                 </event-block>

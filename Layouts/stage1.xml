@@ -843,7 +843,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="enemytank" uid="48">
+                <instance type="scarab" uid="48">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -879,8 +879,8 @@
                         <x>914</x>
                         <y>4471</y>
                         <z>0</z>
-                        <width>50</width>
-                        <height>50</height>
+                        <width>128</width>
+                        <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0.693333328</hotspotX>
                         <hotspotY>0.409999996</hotspotY>
@@ -950,14 +950,13 @@
                                 <default-controls>Yes</default-controls>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="ScrollTo" />
                         <behavior-instance type="Solid" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>792</x>
-                        <y>9993</y>
+                        <x>780</x>
+                        <y>10003</y>
                         <z>0</z>
                         <width>328.133422852</width>
                         <height>382.401641846</height>
@@ -2015,8 +2014,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>786</x>
-                        <y>1310</y>
+                        <x>781</x>
+                        <y>302</y>
                         <z>0</z>
                         <width>506.772613525</width>
                         <height>497.481842041</height>
@@ -2285,7 +2284,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="enemytank" uid="110">
+                <instance type="scarab" uid="110">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2321,8 +2320,8 @@
                         <x>1081</x>
                         <y>2216</y>
                         <z>0</z>
-                        <width>50</width>
-                        <height>50</height>
+                        <width>128</width>
+                        <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0.693333328</hotspotX>
                         <hotspotY>0.409999996</hotspotY>
@@ -2330,7 +2329,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="enemytank" uid="111">
+                <instance type="scarab" uid="111">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2366,8 +2365,8 @@
                         <x>1331</x>
                         <y>6004</y>
                         <z>0</z>
-                        <width>50</width>
-                        <height>50</height>
+                        <width>128</width>
+                        <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0.693333328</hotspotX>
                         <hotspotY>0.409999996</hotspotY>
@@ -2375,7 +2374,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="enemytank" uid="112">
+                <instance type="scarab" uid="112">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2411,8 +2410,8 @@
                         <x>281</x>
                         <y>7631</y>
                         <z>0</z>
-                        <width>50</width>
-                        <height>50</height>
+                        <width>128</width>
+                        <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0.693333328</hotspotX>
                         <hotspotY>0.409999996</hotspotY>
@@ -2420,7 +2419,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="enemytank" uid="113">
+                <instance type="scarab" uid="113">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2456,8 +2455,8 @@
                         <x>980</x>
                         <y>2591</y>
                         <z>0</z>
-                        <width>50</width>
-                        <height>50</height>
+                        <width>128</width>
+                        <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0.693333328</hotspotX>
                         <hotspotY>0.409999996</hotspotY>
@@ -2555,6 +2554,35 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="scrollerPIN" uid="183">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1890</x>
+                        <y>10151</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>100</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -2581,8 +2609,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>809</x>
-                        <y>9992</y>
+                        <x>797</x>
+                        <y>10002</y>
                         <z>0</z>
                         <width>358.810760498</width>
                         <height>113.623413086</height>
@@ -2593,7 +2621,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="enemytower" uid="116">
+                <instance type="enemyLazerTurret" uid="116">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2605,12 +2633,23 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
+                        <behavior-instance type="Turret">
+                            <properties>
+                                <range>1800</range>
+                                <rate-of-fire>5</rate-of-fire>
+                                <rotate>Yes</rotate>
+                                <rotate-speed>180</rotate-speed>
+                                <target-mode>First in range</target-mode>
+                                <predictive-aim>No</predictive-aim>
+                                <projectile-speed>500</projectile-speed>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>808</x>
-                        <y>1354</y>
+                        <y>372</y>
                         <z>0</z>
                         <width>524.666687012</width>
                         <height>400.254119873</height>

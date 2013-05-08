@@ -3,12 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>stage1events</name>
     <events>
+        <include>TurretAI</include>
+        <include>ScarabAI</include>
         <include>FadeInOuts</include>
         <include>MissionFailedScreen</include>
         <include>AreaCompletedScreen</include>
         <include>GamePausedScreen</include>
         <include>HealthSystem</include>
-        <include>EnemyAI</include>
         <include>Debug</include>
         <include>Collectibles</include>
         <include>AmmoSystem</include>
@@ -67,21 +68,21 @@
                         <action id="-8" name="Set angle" sid="258" type="planertankshadow">
                             <param id="0" name="Angle">270</param>
                         </action>
-                        <action id="-10" name="Set value" sid="259" type="enemytower">
+                        <action id="-10" name="Set value" sid="259" type="enemyLazerTurret">
                             <param id="0" name="Instance variable">range</param>
                             <param id="1" name="Value">2048</param>
                         </action>
-                        <action id="-10" name="Set value" sid="260" type="enemytank">
+                        <action id="-10" name="Set value" sid="260" type="scarab">
                             <param id="0" name="Instance variable">range</param>
-                            <param id="1" name="Value">600</param>
+                            <param id="1" name="Value">768</param>
                         </action>
                         <action id="-9" name="Destroy" sid="261" type="lineofsight" />
-                        <action id="0" name="Spawn another object" sid="262" type="enemytower">
+                        <action id="0" name="Spawn another object" sid="262" type="enemyLazerTurret">
                             <param id="0" name="Object">lineofsight</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="263" type="enemytank">
+                        <action id="0" name="Spawn another object" sid="263" type="scarab">
                             <param id="0" name="Object">lineofsight</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
@@ -139,6 +140,47 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;theme&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="scrolling camera at end of level" sid="1688" title="Camera Scrolling">
+            <sub-events>
+                <event-block sid="1689">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="1699" type="playertank">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">2048</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="1700" type="scrollerPIN">
+                            <param id="0" name="Object">playertank</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1692">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="1693" type="playertank">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">2048</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="1714" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="1701" type="scrollerPIN">
+                            <param id="0" name="Object">enemyLazerTurret</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-18" name="Set layer opacity" sid="1712" type="System">
+                            <param id="0" name="Layer">&quot;Black&quot;</param>
+                            <param id="1" name="Opacity">100</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1713" type="System">
+                            <param id="0" name="Variable">ScreenChange</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>

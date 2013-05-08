@@ -6,17 +6,16 @@
     <author>Srikrishna Das(krish) - krish@toonheart.com</author>
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>12600</saved-with-version>
-    <next-sid>1366</next-sid>
+    <next-sid>1715</next-sid>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="" id="Rex_DebugPanel" version="0.100000001">Debug Panel</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
@@ -24,6 +23,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Car" version="1">Car</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -74,9 +74,6 @@
                 </behavior-type>
                 <behavior-type name="Car" sid="11">
                     <behavior id="Car" />
-                </behavior-type>
-                <behavior-type name="ScrollTo" sid="12">
-                    <behavior id="scrollto" />
                 </behavior-type>
                 <behavior-type name="Solid" sid="13">
                     <behavior id="solid" />
@@ -269,8 +266,8 @@
                         <collision-poly>
                             <point x="0.245409" y="0.0462777" />
                             <point x="0.689482" y="0.0402414" />
-                            <point x="0.934891" y="0.466801" />
-                            <point x="0.676127" y="0.949698" />
+                            <point x="0.951585" y="0.462777" />
+                            <point x="0.686144" y="0.953722" />
                             <point x="0.267112" y="0.95171" />
                             <point x="0" y="0.503018" />
                         </collision-poly>
@@ -512,7 +509,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="enemytower" sid="61">
+        <object-type name="enemyLazerTurret" sid="61">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable comment="To count hits taken by object" name="hitcount" sid="62" type="number" />
@@ -521,6 +518,9 @@
             <behaviors>
                 <behavior-type name="Solid" sid="64">
                     <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Turret" sid="1657">
+                    <behavior id="Turret" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -559,7 +559,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="enemytank" sid="68">
+        <object-type name="scarab" sid="68">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable comment="counts number of hits taken by object" name="hitcount" sid="69" type="number" />
@@ -581,14 +581,14 @@
                     <frame duration="1" hotspotX="0.693333" hotspotY="0.41">
                         <image-point name="Imagepoint 1" x="0.306667" y="1.02333" />
                         <collision-poly>
-                            <point x="0.973333" y="0.263333" />
-                            <point x="0.91" y="0.5" />
+                            <point x="0.993333" y="0.223333" />
+                            <point x="0.996667" y="0.51" />
                             <point x="0.973333" y="0.776667" />
-                            <point x="0.5" y="0.72" />
-                            <point x="0.0966668" y="0.886667" />
+                            <point x="0.363333" y="0.86" />
+                            <point x="0" y="0.783334" />
                             <point x="0.0733333" y="0.5" />
-                            <point x="0.0600002" y="0.223333" />
-                            <point x="0.5" y="0.27" />
+                            <point x="0" y="0.213333" />
+                            <point x="0.37" y="0.146667" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -1728,9 +1728,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type global="1" name="DebugPanel" sid="1324">
-            <plugin id="Rex_DebugPanel" />
-        </object-type>
         <object-type name="Text_Music" sid="1332">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -1765,6 +1762,22 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="scrollerPIN" sid="1682">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="1685">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="1687">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1683" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -1784,12 +1797,14 @@
         <event-sheet>HealthSystem.xml</event-sheet>
         <event-sheet>AmmoSystem.xml</event-sheet>
         <event-sheet>Collectibles.xml</event-sheet>
-        <event-sheet>EnemyAI.xml</event-sheet>
+        <event-sheet>OLDEnemyAI.xml</event-sheet>
         <event-sheet>AreaCompletedScreen.xml</event-sheet>
         <event-sheet>TitleScreenEvents.xml</event-sheet>
         <event-sheet>FadeInOuts.xml</event-sheet>
         <event-sheet>MusicSounds.xml</event-sheet>
         <event-sheet>GamePausedScreen.xml</event-sheet>
+        <event-sheet>ScarabAI.xml</event-sheet>
+        <event-sheet>TurretAI.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="194">
