@@ -204,7 +204,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Controls to fire or plant bombs" sid="357" title="Firing and Bombing Controls">
+        <event-group description="Controls to fire or plant bombs" sid="357" title="Firing and Bombing Controls">
             <sub-events>
                 <comment>Planting landmine on touching the tank</comment>
                 <event-block collapsed="1" sid="386">
@@ -316,11 +316,11 @@
                                 </action>
                                 <action id="0" name="Spawn another object" sid="412" type="playertank_turret">
                                     <param id="0" name="Object">explosion</param>
-                                    <param id="1" name="Layer">1</param>
+                                    <param id="1" name="Layer">&quot;Turret&quot;</param>
                                     <param id="2" name="Image point">1</param>
                                 </action>
                                 <action id="9" name="Set scale" sid="413" type="explosion">
-                                    <param id="0" name="Scale">0.4</param>
+                                    <param id="0" name="Scale">0.5</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="414" type="explosion">
                                     <param id="0" name="Animation">&quot;BlowUp&quot;</param>

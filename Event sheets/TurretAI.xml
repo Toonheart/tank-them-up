@@ -4,42 +4,157 @@
     <name>TurretAI</name>
     <events>
         <variable comment="hit point for lazer turret" constant="0" name="LzrTurretHitPoint" sid="1658" static="0" type="number">0</variable>
-        <event-block sid="1678">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="1679" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="Turret" id="1" name="Add object to target" sid="1677" type="enemyLazerTurret">
-                    <param id="0" name="Target">playertank</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="1659">
-            <conditions>
-                <condition id="-3" name="Is on-screen" sid="1661" type="enemyLazerTurret" />
-                <condition behavior="Turret" id="0" name="Has target" sid="1680" type="enemyLazerTurret" />
-            </conditions>
-            <actions />
+        <event-group description="" sid="1715" title="Target and Firing">
             <sub-events>
-                <event-block sid="1675">
+                <event-block sid="1678">
                     <conditions>
-                        <condition behavior="Turret" id="1" name="On shoot" sid="1681" type="enemyLazerTurret" />
-                        <condition id="1" inverted="1" name="Is overlapping another object" sid="1670" type="lineofsight">
-                            <param id="0" name="Object">trees</param>
-                        </condition>
-                        <condition id="1" inverted="1" name="Is overlapping another object" sid="1671" type="lineofsight">
-                            <param id="0" name="Object">sidewallshexdigi</param>
-                        </condition>
+                        <condition id="-2" name="On start of layout" sid="1679" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="1672" type="enemyLazerTurret">
-                            <param id="0" name="Object">enemynormalbullet</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="Image point">1</param>
+                        <action behavior="Turret" id="1" name="Add object to target" sid="1677" type="enemyBulletTurret">
+                            <param id="0" name="Target">playertank</param>
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="1659">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="1661" type="enemyBulletTurret" />
+                        <condition behavior="Turret" id="0" name="Has target" sid="1680" type="enemyBulletTurret" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1675">
+                            <conditions>
+                                <condition behavior="Turret" id="1" name="On shoot" sid="1681" type="enemyBulletTurret" />
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="1670" type="lineofsight">
+                                    <param id="0" name="Object">trees</param>
+                                </condition>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="1671" type="lineofsight">
+                                    <param id="0" name="Object">sidewallshexdigi</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="1672" type="enemyBulletTurret">
+                                    <param id="0" name="Object">enemynormalbullet</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
+        <event-group description="" sid="1716" title="Hitpoint">
+            <sub-events>
+                <comment>EnemyTower on taking a Bullet Hit Behavior - Damage</comment>
+                <event-block sid="1717">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1718" type="enemyBulletTurret">
+                            <param id="0" name="Object">normalbullet</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="1719" type="Audio">
+                            <param id="0" name="Audio file">smallexplosion</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="1720" type="normalbullet">
+                            <param id="0" name="Object">explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="1721" type="explosion" />
+                        <action id="9" name="Set scale" sid="1722" type="explosion">
+                            <param id="0" name="Scale">2</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1723" type="normalbullet" />
+                        <action id="4" name="Set animation" sid="1724" type="explosion">
+                            <param id="0" name="Animation">&quot;BlowUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1725" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1726" type="explosion" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1727">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1728" type="enemyBulletTurret">
+                                    <param id="0" name="Instance variable">hitcount</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="1729" type="enemyBulletTurret">
+                                    <param id="0" name="Instance variable">hitcount</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1730">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1731" type="enemyBulletTurret">
+                                    <param id="0" name="Instance variable">hitcount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="1732" type="normalbullet">
+                                    <param id="0" name="Object">explosion</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="1733" type="explosion">
+                                    <param id="0" name="Scale">3</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="1734" type="normalbullet" />
+                                <action id="4" name="Set animation" sid="1735" type="explosion">
+                                    <param id="0" name="Animation">&quot;BlowUp&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="1736" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="1737" type="explosion" />
+                                <action id="-9" name="Destroy" sid="1753" type="scrollerPIN" />
+                                <action id="-9" name="Destroy" sid="1738" type="enemyBulletTurret" />
+                            </actions>
+                            <sub-events>
+                                <event-block sid="1739">
+                                    <conditions>
+                                        <condition id="-15" name="Pick nearest/furthest" sid="1740" type="lineofsight">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="X">enemyBulletTurret.X</param>
+                                            <param id="2" name="Y">enemyBulletTurret.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="1741" type="lineofsight" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1742">
+                                    <conditions>
+                                        <condition id="-15" name="Pick nearest/furthest" sid="1743" type="fuelpod">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="X">enemyBulletTurret.X</param>
+                                            <param id="2" name="Y">enemyBulletTurret.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="1750" type="fuelpod" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

@@ -29,17 +29,17 @@
                     <conditions>
                         <condition id="-1" name="Every tick" sid="849" type="System" />
                         <condition id="-11" name="For Each" sid="850" type="System">
-                            <param id="0" name="Object">enemyLazerTurret</param>
+                            <param id="0" name="Object">enemyBulletTurret</param>
                         </condition>
                         <condition id="-15" name="Pick nearest/furthest" sid="851" type="lineofsight">
                             <param id="0" name="Which">0</param>
-                            <param id="1" name="X">enemyLazerTurret.X</param>
-                            <param id="2" name="Y">enemyLazerTurret.Y</param>
+                            <param id="1" name="X">enemyBulletTurret.X</param>
+                            <param id="2" name="Y">enemyBulletTurret.Y</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-4" name="Set position to another object" sid="852" type="lineofsight">
-                            <param id="0" name="Object">enemyLazerTurret</param>
+                            <param id="0" name="Object">enemyBulletTurret</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
                     </actions>
@@ -50,16 +50,16 @@
                         <condition id="-6" name="Every X seconds" sid="854" type="System">
                             <param id="0" name="Interval (seconds)">3</param>
                         </condition>
-                        <condition id="-3" name="Is on-screen" sid="1101" type="enemyLazerTurret" />
-                        <condition id="-15" name="Pick nearest/furthest" sid="855" type="enemyLazerTurret">
+                        <condition id="-3" name="Is on-screen" sid="1101" type="enemyBulletTurret" />
+                        <condition id="-15" name="Pick nearest/furthest" sid="855" type="enemyBulletTurret">
                             <param id="0" name="Which">0</param>
                             <param id="1" name="X">playertank.X</param>
                             <param id="2" name="Y">playertank.Y</param>
                         </condition>
                         <condition id="-15" name="Pick nearest/furthest" sid="856" type="lineofsight">
                             <param id="0" name="Which">0</param>
-                            <param id="1" name="X">enemyLazerTurret.X</param>
-                            <param id="2" name="Y">enemyLazerTurret.Y</param>
+                            <param id="1" name="X">enemyBulletTurret.X</param>
+                            <param id="2" name="Y">enemyBulletTurret.Y</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -68,9 +68,9 @@
                             <param id="1" name="Y">playertank.Y</param>
                         </action>
                         <action id="-5" name="Set width" sid="858" type="lineofsight">
-                            <param id="0" name="Width">distance(enemyLazerTurret.X,enemyLazerTurret.Y,playertank.X,playertank.Y)</param>
+                            <param id="0" name="Width">distance(enemyBulletTurret.X,enemyBulletTurret.Y,playertank.X,playertank.Y)</param>
                         </action>
-                        <action id="-22" name="Set angle toward position" sid="859" type="enemyLazerTurret">
+                        <action id="-22" name="Set angle toward position" sid="859" type="enemyBulletTurret">
                             <param id="0" name="X">playertank.X</param>
                             <param id="1" name="Y">playertank.Y</param>
                         </action>
@@ -80,9 +80,9 @@
                         <event-block sid="860">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="861" type="System">
-                                    <param id="0" name="First value">distance(enemyLazerTurret.X,enemyLazerTurret.Y,playertank.X,playertank.Y)</param>
+                                    <param id="0" name="First value">distance(enemyBulletTurret.X,enemyBulletTurret.Y,playertank.X,playertank.Y)</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Second value">enemyLazerTurret.range</param>
+                                    <param id="2" name="Second value">enemyBulletTurret.range</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -97,7 +97,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="865" type="enemyLazerTurret">
+                                        <action id="0" name="Spawn another object" sid="865" type="enemyBulletTurret">
                                             <param id="0" name="Object">enemynormalbullet</param>
                                             <param id="1" name="Layer">1</param>
                                             <param id="2" name="Image point">1</param>
@@ -153,7 +153,7 @@
                                     <param id="1" name="Y">playertank.Y</param>
                                 </action>
                                 <action id="-5" name="Set width" sid="876" type="lineofsight">
-                                    <param id="0" name="Width">distance(enemyLazerTurret.X,enemyLazerTurret.Y,playertank.X,playertank.Y)</param>
+                                    <param id="0" name="Width">distance(enemyBulletTurret.X,enemyBulletTurret.Y,playertank.X,playertank.Y)</param>
                                 </action>
                                 <action id="-22" name="Set angle toward position" sid="877" type="scarab">
                                     <param id="0" name="X">playertank.X</param>

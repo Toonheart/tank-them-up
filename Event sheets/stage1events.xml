@@ -68,7 +68,7 @@
                         <action id="-8" name="Set angle" sid="258" type="planertankshadow">
                             <param id="0" name="Angle">270</param>
                         </action>
-                        <action id="-10" name="Set value" sid="259" type="enemyLazerTurret">
+                        <action id="-10" name="Set value" sid="259" type="enemyBulletTurret">
                             <param id="0" name="Instance variable">range</param>
                             <param id="1" name="Value">2048</param>
                         </action>
@@ -77,7 +77,7 @@
                             <param id="1" name="Value">768</param>
                         </action>
                         <action id="-9" name="Destroy" sid="261" type="lineofsight" />
-                        <action id="0" name="Spawn another object" sid="262" type="enemyLazerTurret">
+                        <action id="0" name="Spawn another object" sid="262" type="enemyBulletTurret">
                             <param id="0" name="Object">lineofsight</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
@@ -171,7 +171,7 @@
                     </conditions>
                     <actions>
                         <action id="-4" name="Set position to another object" sid="1701" type="scrollerPIN">
-                            <param id="0" name="Object">enemyLazerTurret</param>
+                            <param id="0" name="Object">enemyBulletTurret</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
                         <action id="-18" name="Set layer opacity" sid="1712" type="System">

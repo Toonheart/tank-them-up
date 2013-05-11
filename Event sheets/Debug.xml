@@ -60,7 +60,7 @@
                     </actions>
                 </event-block>
                 <comment>Player in GOD Mode -  To test the whole game without dying... except this doesnt test for math on player health</comment>
-                <event-block disabled="1" sid="742">
+                <event-block sid="742">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="743" type="System" />
                     </conditions>

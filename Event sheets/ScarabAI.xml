@@ -146,7 +146,7 @@
                         </action>
                         <action id="-24" name="Move to top" sid="1603" type="explosion" />
                         <action id="9" name="Set scale" sid="1604" type="explosion">
-                            <param id="0" name="Scale">3</param>
+                            <param id="0" name="Scale">2</param>
                         </action>
                         <action id="-9" name="Destroy" sid="1605" type="playersmine" />
                         <action id="4" name="Set animation" sid="1606" type="explosion">
@@ -185,7 +185,7 @@
                         <action id="-24" name="Move to top" sid="1643" type="explosion" />
                         <action id="-9" name="Destroy" sid="1645" type="missile" />
                         <action id="9" name="Set scale" sid="1646" type="explosion">
-                            <param id="0" name="Scale">3</param>
+                            <param id="0" name="Scale">2</param>
                         </action>
                         <action id="4" name="Set animation" sid="1647" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
