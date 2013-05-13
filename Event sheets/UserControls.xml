@@ -4,9 +4,31 @@
     <name>UserControls</name>
     <events>
         <variable comment="Time for reverse gear engaging" constant="0" name="ReverseGearEngageTime" sid="1069" static="0" type="number">0</variable>
-        <event-group collapsed="1" description="movement controls" sid="1037" title="Movement">
+        <event-group description="movement controls" sid="1037" title="Movement">
             <sub-events>
                 <comment>Movement and Navigation Controls</comment>
+                <event-block sid="1767">
+                    <conditions>
+                        <condition behavior="Car" id="0" name="Is moving" sid="1768" type="playertank" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1769" type="playertank">
+                            <param id="0" name="Animation">&quot;accelerate&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1770">
+                    <conditions>
+                        <condition behavior="Car" id="0" inverted="1" name="Is moving" sid="1771" type="playertank" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1772" type="playertank">
+                            <param id="0" name="Animation">&quot;default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="1038">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="1039" type="Touch">
@@ -204,7 +226,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Controls to fire or plant bombs" sid="357" title="Firing and Bombing Controls">
+        <event-group collapsed="1" description="Controls to fire or plant bombs" sid="357" title="Firing and Bombing Controls">
             <sub-events>
                 <comment>Planting landmine on touching the tank</comment>
                 <event-block collapsed="1" sid="386">
@@ -385,7 +407,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Controls on HUD" sid="1251" title="HUD Controls">
+        <event-group collapsed="1" description="Controls on HUD" sid="1251" title="HUD Controls">
             <sub-events>
                 <comment>Pause the Game</comment>
                 <event-block sid="1252">

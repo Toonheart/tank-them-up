@@ -11,15 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout active="1">stage1</layout>
-        <layout>TitleScreen</layout>
-        <event-sheet>TurretAI</event-sheet>
-        <event-sheet>stage1events</event-sheet>
-        <event-sheet>ScarabAI</event-sheet>
         <event-sheet>Collisions</event-sheet>
+        <event-sheet>TurretAI</event-sheet>
         <event-sheet>UserControls</event-sheet>
-        <event-sheet>HealthSystem</event-sheet>
-        <event-sheet>Debug</event-sheet>
-        <event-sheet>AreaCompletedScreen</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />

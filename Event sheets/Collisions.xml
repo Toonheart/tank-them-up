@@ -300,6 +300,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="4" name="Set animation" sid="1780" type="playertank">
+                            <param id="0" name="Animation">&quot;default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="0" name="Play" sid="504" type="Audio">
                             <param id="0" name="Audio file">smallexplosion</param>
                             <param id="2" name="Loop">0</param>
@@ -313,9 +317,6 @@
                         </action>
                         <action id="-24" name="Move to top" sid="506" type="explosion" />
                         <action id="-9" name="Destroy" sid="507" type="normalbullet" />
-                        <action id="9" name="Set scale" sid="508" type="explosion">
-                            <param id="0" name="Scale">2</param>
-                        </action>
                         <action id="4" name="Set animation" sid="509" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
@@ -347,9 +348,6 @@
                         </action>
                         <action id="-24" name="Move to top" sid="516" type="explosion" />
                         <action id="-9" name="Destroy" sid="517" type="normalbullet" />
-                        <action id="9" name="Set scale" sid="518" type="explosion">
-                            <param id="0" name="Scale">2</param>
-                        </action>
                         <action id="4" name="Set animation" sid="519" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
@@ -382,7 +380,7 @@
                         <action id="-24" name="Move to top" sid="526" type="explosion" />
                         <action id="-9" name="Destroy" sid="527" type="normalbullet" />
                         <action id="9" name="Set scale" sid="528" type="explosion">
-                            <param id="0" name="Scale">3</param>
+                            <param id="0" name="Scale">1.5</param>
                         </action>
                         <action id="4" name="Set animation" sid="529" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
@@ -462,7 +460,7 @@
                         </action>
                         <action id="-24" name="Move to top" sid="547" type="explosion" />
                         <action id="9" name="Set scale" sid="548" type="explosion">
-                            <param id="0" name="Scale">3</param>
+                            <param id="0" name="Scale">1.5</param>
                         </action>
                         <action id="-9" name="Destroy" sid="549" type="landmine" />
                         <action id="4" name="Set animation" sid="550" type="explosion">
@@ -534,9 +532,6 @@
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-24" name="Move to top" sid="582" type="explosion" />
-                        <action id="9" name="Set scale" sid="583" type="explosion">
-                            <param id="0" name="Scale">2</param>
-                        </action>
                         <action id="-9" name="Destroy" sid="584" type="enemynormalbullet" />
                         <action id="4" name="Set animation" sid="585" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
@@ -702,7 +697,7 @@
                         <action id="-24" name="Move to top" sid="695" type="explosion" />
                         <action id="-9" name="Destroy" sid="696" type="missile" />
                         <action id="9" name="Set scale" sid="697" type="explosion">
-                            <param id="0" name="Scale">5</param>
+                            <param id="0" name="Scale">3</param>
                         </action>
                         <action id="4" name="Set animation" sid="698" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>

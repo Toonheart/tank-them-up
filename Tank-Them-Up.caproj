@@ -6,9 +6,10 @@
     <author>Srikrishna Das(krish) - krish@toonheart.com</author>
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>12600</saved-with-version>
-    <next-sid>1760</next-sid>
+    <next-sid>1783</next-sid>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -16,7 +17,6 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
@@ -80,18 +80,34 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="14" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="14" speed="1">
                     <frame duration="1" hotspotX="0.561538" hotspotY="0.504951">
                         <image-point name="Imagepoint 1" x="0.453846" y="0.491749" />
                         <collision-poly>
-                            <point x="0.938462" y="0.0528053" />
-                            <point x="0.830769" y="0.49835" />
-                            <point x="0.938462" y="0.947195" />
-                            <point x="0.5" y="0.706271" />
-                            <point x="0.0192308" y="0.983498" />
-                            <point x="0.180769" y="0.49835" />
-                            <point x="0.0192308" y="0.0165017" />
-                            <point x="0.5" y="0.293729" />
+                            <point x="1" y="0.059406" />
+                            <point x="0.98077" y="0.937294" />
+                            <point x="0" y="1" />
+                            <point x="0.0192308" y="5.07571e-008" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="accelerate" pingpong="0" repeatcount="1" repeatto="0" sid="1766" speed="6">
+                    <frame duration="1" hotspotX="0.559259" hotspotY="0.510386">
+                        <image-point name="Imagepoint 1" x="0.47037" y="0.510386" />
+                        <collision-poly>
+                            <point x="0.985185" y="0.11276" />
+                            <point x="0.985185" y="0.893175" />
+                            <point x="0.0342593" y="0.952522" />
+                            <point x="0.0296296" y="0.0623145" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.535211" hotspotY="0.520661">
+                        <image-point name="Imagepoint 1" x="0.457746" y="0.509642" />
+                        <collision-poly>
+                            <point x="0.957016" y="0.140308" />
+                            <point x="0.957016" y="0.884911" />
+                            <point x="0.0229656" y="0.932388" />
+                            <point x="0.0331508" y="0.0981272" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -400,7 +416,7 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="44" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="15" loop="0" name="BlowUp" pingpong="0" repeatcount="1" repeatto="0" sid="45" speed="12">
+                <animation framecount="15" loop="0" name="BlowUp" pingpong="0" repeatcount="1" repeatto="0" sid="45" speed="16">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.509804" hotspotY="0.509804" />
                     <frame duration="1" hotspotX="0.536585" hotspotY="0.530303" />
