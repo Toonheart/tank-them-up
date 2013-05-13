@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>BridgeFans</name>
+    <events>
+        <event-block sid="1783">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="1786" type="System" />
+                <condition id="-3" name="Is on-screen" sid="1784" type="smallFanBlade" />
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="1785" type="smallFanBlade">
+                    <param id="0" name="Degrees">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

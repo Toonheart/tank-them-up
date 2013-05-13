@@ -460,7 +460,7 @@
                         </action>
                         <action id="-24" name="Move to top" sid="547" type="explosion" />
                         <action id="9" name="Set scale" sid="548" type="explosion">
-                            <param id="0" name="Scale">1.5</param>
+                            <param id="0" name="Scale">2</param>
                         </action>
                         <action id="-9" name="Destroy" sid="549" type="landmine" />
                         <action id="4" name="Set animation" sid="550" type="explosion">

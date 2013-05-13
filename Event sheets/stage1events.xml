@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>stage1events</name>
     <events>
+        <include>FuelPod</include>
+        <include>BridgeFans</include>
         <include>TurretAI</include>
         <include>ScarabAI</include>
         <include>FadeInOuts</include>
@@ -155,9 +157,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-4" name="Set position to another object" sid="1700" type="scrollerPIN">
-                            <param id="0" name="Object">playertank</param>
-                            <param id="1" name="Image point (optional)">0</param>
+                        <action id="-3" name="Set position" sid="1700" type="scrollerPIN">
+                            <param id="0" name="X">playertank.X</param>
+                            <param id="1" name="Y">playertank.Y-300</param>
                         </action>
                     </actions>
                 </event-block>

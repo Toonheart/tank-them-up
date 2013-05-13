@@ -10,10 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1">stage1</layout>
+        <layout>stage1</layout>
         <event-sheet>Collisions</event-sheet>
-        <event-sheet>TurretAI</event-sheet>
-        <event-sheet>UserControls</event-sheet>
+        <event-sheet>BridgeFans</event-sheet>
+        <event-sheet>stage1events</event-sheet>
+        <event-sheet active="1">FuelPod</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />

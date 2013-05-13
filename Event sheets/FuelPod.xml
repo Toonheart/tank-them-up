@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>FuelPod</name>
+    <events>
+        <event-block sid="1789">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="1790" type="System">
+                    <param id="0" name="First value">distance(fuelpipe.X,fuelpipe.Y,playertank.X,playertank.Y)</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1791" type="fuelpipe">
+                    <param id="0" name="Animation">&quot;extend&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1797">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="1798" type="playertank">
+                    <param id="0" name="Object">fuelpipe</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1799" type="fuelpipe">
+                    <param id="0" name="Animation">&quot;fillup&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
