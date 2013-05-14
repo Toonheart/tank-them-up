@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CameraScroll</name>
+    <events>
+        <event-group description="scrolling camera at end of level" sid="1811" title="Camera Scrolling">
+            <sub-events>
+                <event-block sid="1689">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="1699" type="playertank">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">2048</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="1700" type="scrollerPIN">
+                            <param id="0" name="X">playertank.X</param>
+                            <param id="1" name="Y">playertank.Y-300</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1692">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="1693" type="playertank">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">2048</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="1714" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="1701" type="scrollerPIN">
+                            <param id="0" name="Object">enemyBulletTurret</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-18" name="Set layer opacity" sid="1712" type="System">
+                            <param id="0" name="Layer">&quot;Black&quot;</param>
+                            <param id="1" name="Opacity">100</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1713" type="System">
+                            <param id="0" name="Variable">ScreenChange</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

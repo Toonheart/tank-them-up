@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>HouseKeeping</name>
+    <events>
+        <event-group description="Stuff that needs to make the game smooth." sid="1833" title="Game HouseKeeping and Stability Stuff">
+            <sub-events>
+                <comment>Allows spawning of bullet, explosion, forcefield, lineofsight objects later.  Also Set Range of Player to WindowWidth.. so it dynamically differs for different devices.&#x0D;&#x0A;Range can also be changed to hard values depending on different enemy.. lets say later if you want an enemy who can shoot you from any distance.</comment>
+                <event-block sid="244">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="245" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="246" type="normalbullet" />
+                        <action id="-9" name="Destroy" sid="247" type="explosion" />
+                        <action id="-9" name="Destroy" sid="248" type="forcefield" />
+                        <action id="-9" name="Destroy" sid="249" type="airplane" />
+                        <action id="-9" name="Destroy" sid="250" type="missile" />
+                        <action id="-9" name="Destroy" sid="251" type="playersmine" />
+                        <action id="-10" name="Set value" sid="259" type="enemyBulletTurret">
+                            <param id="0" name="Instance variable">range</param>
+                            <param id="1" name="Value">2048</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="260" type="scarab">
+                            <param id="0" name="Instance variable">range</param>
+                            <param id="1" name="Value">768</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="261" type="lineofsight" />
+                        <action id="0" name="Spawn another object" sid="262" type="enemyBulletTurret">
+                            <param id="0" name="Object">lineofsight</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="263" type="scarab">
+                            <param id="0" name="Object">lineofsight</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

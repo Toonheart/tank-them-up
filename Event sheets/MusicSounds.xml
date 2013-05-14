@@ -21,5 +21,47 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="1812" title="PreLoads">
+            <sub-events>
+                <event-block sid="1813">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="1814" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Preload" sid="1815" type="Audio">
+                            <param id="0" name="Audio file">dropmine</param>
+                        </action>
+                        <action id="4" name="Preload" sid="1816" type="Audio">
+                            <param id="0" name="Audio file">metalexplosion</param>
+                        </action>
+                        <action id="4" name="Preload" sid="1817" type="Audio">
+                            <param id="0" name="Audio file">missle</param>
+                        </action>
+                        <action id="4" name="Preload" sid="1818" type="Audio">
+                            <param id="0" name="Audio file">tankfire</param>
+                        </action>
+                        <action id="4" name="Preload" sid="1819" type="Audio">
+                            <param id="0" name="Audio file">smallexplosion</param>
+                        </action>
+                        <action id="4" name="Preload" sid="1820" type="Audio">
+                            <param id="0" name="Audio file">backgroundtheme1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1821">
+                    <conditions>
+                        <condition id="-25" name="On loader layout complete" sid="1822" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="1823" type="Audio">
+                            <param id="0" name="Audio file">backgroundtheme1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;theme&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
