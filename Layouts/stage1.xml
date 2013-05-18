@@ -1281,9 +1281,6 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1767,9 +1764,6 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3213,15 +3207,6 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances>
-        <instance type="DebugPanel" uid="207">
-            <properties>
-                <enable>Yes</enable>
-                <activated>Yes</activated>
-                <stay-on-top>No</stay-on-top>
-                <log-buffer-length>100</log-buffer-length>
-            </properties>
-        </instance>
-    </nonworld-instances>
+    <nonworld-instances />
     <effects />
 </c2layout>

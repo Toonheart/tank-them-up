@@ -23,5 +23,16 @@
         <include>Collisions</include>
         <include>UserControls</include>
         <comment>STAGE 1 - EVENT SHEET</comment>
+        <event-block sid="2022">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2023" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2024" type="System">
+                    <param id="0" name="Variable">LevelNumber</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

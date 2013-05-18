@@ -358,6 +358,7 @@
                         <action id="-9" name="Destroy" sid="521" type="explosion" />
                     </actions>
                 </event-block>
+                <comment>NOTE: MAKE SURE TWO BARRIERS ARE NEVER ON-SCREEN AT SAME TIME. FIX THIS LATER</comment>
                 <comment>Bullet hit behavior for Spikes.  Spikes retract on getting hit</comment>
                 <event-block sid="522">
                     <conditions>
@@ -397,13 +398,39 @@
                                 <condition id="-19" name="Pick all" sid="533" type="System">
                                     <param id="0" name="Object">spikebarrier</param>
                                 </condition>
+                                <condition id="-3" name="Is on-screen" sid="2020" type="spikebarrier" />
                             </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="534" type="spikebarrier">
-                                    <param id="0" name="X">spikebarrier.X-100</param>
-                                    <param id="1" name="Y">spikebarrier.Y</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2012">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="2013" type="spikebarrier">
+                                            <param id="0" name="First angle">170</param>
+                                            <param id="1" name="Second angle">190</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="2019" type="spikebarrier">
+                                            <param id="0" name="X">spikebarrier.X+100</param>
+                                            <param id="1" name="Y">spikebarrier.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2018">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="2015" type="spikebarrier">
+                                            <param id="0" name="First angle">0</param>
+                                            <param id="1" name="Second angle">10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="534" type="spikebarrier">
+                                            <param id="0" name="X">spikebarrier.X-100</param>
+                                            <param id="1" name="Y">spikebarrier.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
