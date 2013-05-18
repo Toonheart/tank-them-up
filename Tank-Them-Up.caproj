@@ -6,7 +6,7 @@
     <author>Srikrishna Das(krish) - krish@toonheart.com</author>
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>12600</saved-with-version>
-    <next-sid>2000</next-sid>
+    <next-sid>2011</next-sid>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
@@ -53,10 +53,6 @@
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-type name="background" sid="0">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
         <object-type name="playertank" sid="1">
             <plugin id="Sprite" />
             <instance-variables>
@@ -1978,15 +1974,21 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1889" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1889" speed="6">
+                    <frame duration="1" hotspotX="0.456753" hotspotY="0.495935">
                         <collision-poly>
-                            <point x="0.730679" y="0.361635" />
-                            <point x="0.983607" y="0.5" />
-                            <point x="0.730679" y="0.638365" />
-                            <point x="0.5" y="0.992138" />
-                            <point x="0.0386417" y="0.5" />
-                            <point x="0.5" y="0.00786164" />
+                            <point x="0.955994" y="0.497967" />
+                            <point x="0.433991" y="1" />
+                            <point x="0.256449" y="0.487805" />
+                            <point x="0.444613" y="0.00203252" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.453435" hotspotY="0.498982">
+                        <collision-poly>
+                            <point x="0.955994" y="0.497967" />
+                            <point x="0.433991" y="1" />
+                            <point x="0.256449" y="0.487805" />
+                            <point x="0.444613" y="0.00203252" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -2003,13 +2005,21 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1907" speed="5">
-                    <frame duration="1" hotspotX="0.501285" hotspotY="0.503497">
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1907" speed="4">
+                    <frame duration="1" hotspotX="0.501279" hotspotY="0.503448">
                         <collision-poly>
-                            <point x="0.832905" y="0.307692" />
-                            <point x="0.997429" y="0.461539" />
-                            <point x="0.825193" y="0.636364" />
-                            <point x="0.0462725" y="0.496504" />
+                            <point x="0.997442" y="0.00689655" />
+                            <point x="0.997442" y="1" />
+                            <point x="0.00255754" y="1" />
+                            <point x="0.00255754" y="0.00689655" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503448">
+                        <collision-poly>
+                            <point x="0.997409" y="0" />
+                            <point x="0.997409" y="0.993103" />
+                            <point x="0" y="0.993103" />
+                            <point x="0" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -2050,8 +2060,10 @@
     <layout-folder expanded="1">
         <layout>menu.xml</layout>
         <layout>stage1.xml</layout>
+        <layout>stage2.xml</layout>
         <layout>stage0.xml</layout>
         <layout>TitleScreen.xml</layout>
+        <layout>GraphicStore.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>stage1events.xml</event-sheet>
@@ -2079,6 +2091,7 @@
         <event-sheet>Player.xml</event-sheet>
         <event-sheet>directionPoint.xml</event-sheet>
         <event-sheet>FriendlyAirStrike.xml</event-sheet>
+        <event-sheet>stage2events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="194">

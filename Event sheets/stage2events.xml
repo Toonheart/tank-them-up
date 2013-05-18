@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>stage2events</name>
+    <events>
+        <include>FriendlyAirStrike</include>
+        <include>directionPoint</include>
+        <include>Player</include>
+        <include>HouseKeeping</include>
+        <include>MusicSounds</include>
+        <include>CameraScroll</include>
+        <include>BridgeFans</include>
+        <include>BulletTurretAI</include>
+        <include>ScarabAI</include>
+        <include>FadeInOuts</include>
+        <include>MissionFailedScreen</include>
+        <include>AreaCompletedScreen</include>
+        <include>GamePausedScreen</include>
+        <include>HealthSystem</include>
+        <include>Debug</include>
+        <include>Collectibles</include>
+        <include>AmmoSystem</include>
+        <include>Collisions</include>
+        <include>UserControls</include>
+        <comment>STAGE 1 - EVENT SHEET</comment>
+    </events>
+</c2eventsheet>

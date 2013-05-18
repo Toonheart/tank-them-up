@@ -10,7 +10,7 @@
                 <condition id="-7" name="Compare instance variable" sid="1895" type="playertank">
                     <param id="0" name="Instance variable">EnergySpheres</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">10</param>
+                    <param id="2" name="Value">1</param>
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="1905" type="System" />
             </conditions>
@@ -28,7 +28,7 @@
                     <param id="0" name="Object to create">playerAirSupportShadow</param>
                     <param id="1" name="Layer">&quot;Sky&quot;</param>
                     <param id="2" name="X">playerAirSupport.X+200</param>
-                    <param id="3" name="Y">playerAirSupport.Y</param>
+                    <param id="3" name="Y">playerAirSupport.Y-250</param>
                 </action>
                 <action id="-25" name="Move to bottom" sid="1998" type="playerAirSupportShadow" />
                 <action id="-8" name="Set angle" sid="1992" type="playerAirSupportShadow">
