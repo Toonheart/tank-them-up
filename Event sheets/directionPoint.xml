@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>directionPoint</name>
+    <events>
+        <comment>Keeps direction hovering at tank position</comment>
+        <event-block sid="1868">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1869" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="1870" type="directionPoint">
+                    <param id="0" name="Pin to">playertank</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

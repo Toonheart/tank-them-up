@@ -246,6 +246,7 @@
                         <secondaryAmmo>5</secondaryAmmo>
                         <PrevTouch_Accelerator>true</PrevTouch_Accelerator>
                         <ReverseGearEngaged>false</ReverseGearEngaged>
+                        <EnergySpheres>0</EnergySpheres>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">

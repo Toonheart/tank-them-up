@@ -641,7 +641,7 @@
                 <event-block sid="679">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="680" type="playertank">
-                            <param id="0" name="Object">missile</param>
+                            <param id="0" name="Object">enemymissile</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -651,13 +651,13 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;missleexplosion&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="682" type="missile">
+                        <action id="0" name="Spawn another object" sid="682" type="enemymissile">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-24" name="Move to top" sid="683" type="explosion" />
-                        <action id="-9" name="Destroy" sid="685" type="missile" />
+                        <action id="-9" name="Destroy" sid="685" type="enemymissile" />
                         <action id="9" name="Set scale" sid="686" type="explosion">
                             <param id="0" name="Scale">3</param>
                         </action>
@@ -679,7 +679,7 @@
                 <event-block sid="691">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="692" type="playersmine">
-                            <param id="0" name="Object">missile</param>
+                            <param id="0" name="Object">enemymissile</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -689,13 +689,13 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;mineexplosion&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="694" type="missile">
+                        <action id="0" name="Spawn another object" sid="694" type="enemymissile">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-24" name="Move to top" sid="695" type="explosion" />
-                        <action id="-9" name="Destroy" sid="696" type="missile" />
+                        <action id="-9" name="Destroy" sid="696" type="enemymissile" />
                         <action id="9" name="Set scale" sid="697" type="explosion">
                             <param id="0" name="Scale">3</param>
                         </action>
@@ -713,7 +713,7 @@
                 <comment>Missile hitting the ground</comment>
                 <event-block sid="702">
                     <conditions>
-                        <condition id="-5" name="Compare width" sid="703" type="missile">
+                        <condition id="-5" name="Compare width" sid="703" type="enemymissile">
                             <param id="0" name="Comparison">3</param>
                             <param id="1" name="Width">5</param>
                         </condition>
@@ -725,13 +725,13 @@
                             <param id="3" name="Volume">-13</param>
                             <param id="1" name="Tag (optional)">&quot;missleexplosion&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="705" type="missile">
+                        <action id="0" name="Spawn another object" sid="705" type="enemymissile">
                             <param id="0" name="Object">explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-24" name="Move to top" sid="706" type="explosion" />
-                        <action id="-9" name="Destroy" sid="708" type="missile" />
+                        <action id="-9" name="Destroy" sid="708" type="enemymissile" />
                         <action id="9" name="Set scale" sid="709" type="explosion">
                             <param id="0" name="Scale">3</param>
                         </action>

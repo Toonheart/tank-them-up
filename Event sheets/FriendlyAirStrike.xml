@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>FriendlyAirStrike</name>
+    <events>
+        <comment>When to provide AirSupport</comment>
+        <comment>Shadow effect of flying airstrike by pinning shadow</comment>
+        <event-block sid="1894">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1895" type="playertank">
+                    <param id="0" name="Instance variable">EnergySpheres</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="1905" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="1896" type="System">
+                    <param id="0" name="Object to create">playerAirSupport</param>
+                    <param id="1" name="Layer">&quot;Sky&quot;</param>
+                    <param id="2" name="X">random(0,WindowWidth)</param>
+                    <param id="3" name="Y">playertank.Y+300</param>
+                </action>
+                <action id="-8" name="Set angle" sid="1897" type="playerAirSupport">
+                    <param id="0" name="Angle">270</param>
+                </action>
+                <action id="-3" name="Create object" sid="1991" type="System">
+                    <param id="0" name="Object to create">playerAirSupportShadow</param>
+                    <param id="1" name="Layer">&quot;Sky&quot;</param>
+                    <param id="2" name="X">playerAirSupport.X+200</param>
+                    <param id="3" name="Y">playerAirSupport.Y</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="1998" type="playerAirSupportShadow" />
+                <action id="-8" name="Set angle" sid="1992" type="playerAirSupportShadow">
+                    <param id="0" name="Angle">playerAirSupport.Angle</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="1997" type="playerAirSupportShadow">
+                    <param id="0" name="Pin to">playerAirSupport</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Lose AirSupport if player can&apos;t keep up with the plane.</comment>
+        <event-block sid="1929">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="1930" type="playerAirSupport" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1931" type="playerAirSupport" />
+                <action id="-9" name="Destroy" sid="1999" type="playerAirSupportShadow" />
+            </actions>
+        </event-block>
+        <comment>AirStrike the fuck out of enemies</comment>
+        <event-block sid="1977">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="1978" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+                <condition id="-3" name="Is on-screen" sid="1975" type="playerAirSupport" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="1979" type="playerAirSupport">
+                    <param id="0" name="Object">playerMissle</param>
+                    <param id="1" name="Layer">&quot;Sky&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="1980" type="playerMissle" />
+            </actions>
+            <sub-events>
+                <event-block sid="1900">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="1901" type="enemyBulletTurret" />
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" sid="1899" type="playerMissle">
+                            <param id="0" name="X">enemyBulletTurret.X</param>
+                            <param id="1" name="Y">enemyBulletTurret.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1902">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="1903" type="scarab" />
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" sid="1904" type="playerMissle">
+                            <param id="0" name="X">scarab.X</param>
+                            <param id="1" name="Y">scarab.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Adding Depth to Missles... they stoop down towards ground</comment>
+        <event-block sid="1984">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="1985" type="System" />
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="1986" type="playerMissle">
+                    <param id="0" name="Width">playerMissle.Width*0.99</param>
+                    <param id="1" name="Height">playerMissle.Height*0.99</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

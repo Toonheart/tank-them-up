@@ -125,6 +125,55 @@
         </event-group>
         <event-group description="" sid="1611" title="Scarab Collision">
             <sub-events>
+                <comment>Scarab gets fucked by missle</comment>
+                <event-block sid="1910">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="1911" type="scarab">
+                            <param id="0" name="Object">playerMissle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="1912" type="Audio">
+                            <param id="0" name="Audio file">mineexplode</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1937" type="playerMissle" />
+                        <action id="0" name="Spawn another object" sid="1913" type="scarab">
+                            <param id="0" name="Object">explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="1914" type="explosion" />
+                        <action id="9" name="Set scale" sid="1915" type="explosion">
+                            <param id="0" name="Scale">3</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1917" type="explosion">
+                            <param id="0" name="Animation">&quot;BlowUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1918" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1919" type="explosion" />
+                        <action id="-9" name="Destroy" sid="1925" type="scarab" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1926">
+                            <conditions>
+                                <condition id="-15" name="Pick nearest/furthest" sid="1927" type="lineofsight">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="X">scarab.X</param>
+                                    <param id="2" name="Y">scarab.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="1928" type="lineofsight" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <comment>Scarab on player mine collision</comment>
                 <event-block sid="1599">
                     <conditions>
@@ -183,7 +232,7 @@
                         </action>
                         <action id="-9" name="Destroy" sid="1650" type="scarab" />
                         <action id="-24" name="Move to top" sid="1643" type="explosion" />
-                        <action id="-9" name="Destroy" sid="1645" type="missile" />
+                        <action id="-9" name="Destroy" sid="1645" type="enemymissile" />
                         <action id="9" name="Set scale" sid="1646" type="explosion">
                             <param id="0" name="Scale">2</param>
                         </action>
@@ -201,6 +250,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Scarab gets hit by normal bullet</comment>
                 <event-block sid="1612">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="1613" type="scarab">

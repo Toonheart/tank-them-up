@@ -6,11 +6,12 @@
     <author>Srikrishna Das(krish) - krish@toonheart.com</author>
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>12600</saved-with-version>
-    <next-sid>1862</next-sid>
+    <next-sid>2000</next-sid>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="" id="Rex_DebugPanel" version="0.100000001">Debug Panel</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -23,6 +24,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Car" version="1">Car</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
@@ -67,6 +69,7 @@
                 <instance-variable comment="Secondary Ammo Count" name="secondaryAmmo" sid="8" type="number" />
                 <instance-variable comment="Was previous touch on accelerator then true.. if it was brake then false." name="PrevTouch_Accelerator" sid="9" type="boolean" />
                 <instance-variable comment="Whether reverse gear is engaged or Not" name="ReverseGearEngaged" sid="1071" type="boolean" />
+                <instance-variable comment="Number of energy sphere&apos;s collected" name="EnergySpheres" sid="1892" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="10">
@@ -696,7 +699,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="airplane" sid="84">
+        <object-type name="enemyAirstrike" sid="84">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable comment="custom Drift of airplane in degrees" name="customdrift" sid="85" type="number" />
@@ -711,22 +714,22 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="88" speed="5">
-                    <frame duration="1" hotspotX="0.88535" hotspotY="0.516971">
+                    <frame duration="1" hotspotX="0.483607" hotspotY="0.88522">
                         <collision-poly>
-                            <point x="0.878981" y="0.109661" />
-                            <point x="0.996815" y="0.498695" />
-                            <point x="0.878981" y="0.887728" />
-                            <point x="0.5" y="0.545692" />
-                            <point x="0.531847" y="0.548303" />
-                            <point x="0.00318474" y="0.498695" />
-                            <point x="0.535032" y="0.451697" />
-                            <point x="0.5" y="0.454308" />
+                            <point x="0.730679" y="0.361635" />
+                            <point x="0.983607" y="0.5" />
+                            <point x="0.730679" y="0.638365" />
+                            <point x="0.5" y="0.992138" />
+                            <point x="0.30445" y="0.591195" />
+                            <point x="0.0386417" y="0.5" />
+                            <point x="0.324356" y="0.435535" />
+                            <point x="0.5" y="0.00786164" />
                         </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="missile" sid="89">
+        <object-type name="enemymissile" sid="89">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Bullet" sid="90">
@@ -735,12 +738,12 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="91" speed="5">
-                    <frame duration="1" hotspotX="0.494845" hotspotY="0.521739">
+                    <frame duration="1" hotspotX="0.478149" hotspotY="0.496504">
                         <collision-poly>
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0.546392" y="1" />
-                            <point x="0.536082" y="0.0434783" />
+                            <point x="0.817481" y="0.314685" />
+                            <point x="1" y="0.468532" />
+                            <point x="0.822622" y="0.622378" />
+                            <point x="0.0462725" y="0.496504" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.494845" hotspotY="0.521739">
@@ -1940,6 +1943,108 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="directionPoint" sid="1862">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="1867">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1863" speed="5">
+                    <frame duration="1" hotspotX="0.491228" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.684211" y="0.257143" />
+                            <point x="1" y="0.5" />
+                            <point x="0.701754" y="0.757143" />
+                            <point x="0.508772" y="0.9" />
+                            <point x="0.614035" y="0.5" />
+                            <point x="0.631579" y="0.5" />
+                            <point x="0.631579" y="0.514286" />
+                            <point x="0.508772" y="0.1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="playerAirSupport" sid="1888">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="1890">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="1891">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1889" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.730679" y="0.361635" />
+                            <point x="0.983607" y="0.5" />
+                            <point x="0.730679" y="0.638365" />
+                            <point x="0.5" y="0.992138" />
+                            <point x="0.0386417" y="0.5" />
+                            <point x="0.5" y="0.00786164" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="playerMissle" sid="1906">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="1908">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="1909">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1907" speed="5">
+                    <frame duration="1" hotspotX="0.501285" hotspotY="0.503497">
+                        <collision-poly>
+                            <point x="0.832905" y="0.307692" />
+                            <point x="0.997429" y="0.461539" />
+                            <point x="0.825193" y="0.636364" />
+                            <point x="0.0462725" y="0.496504" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="DebugPanel" sid="1982">
+            <plugin id="Rex_DebugPanel" />
+        </object-type>
+        <object-type name="playerAirSupportShadow" sid="1987">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="1990">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="1996">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1988" speed="5">
+                    <frame duration="1" hotspotX="0.498623" hotspotY="0.501792">
+                        <collision-poly>
+                            <point x="0.702479" y="0.387097" />
+                            <point x="0.853994" y="0.498208" />
+                            <point x="0.705234" y="0.616487" />
+                            <point x="0.501377" y="0.917563" />
+                            <point x="0.338843" y="0.55914" />
+                            <point x="0.126722" y="0.498208" />
+                            <point x="0.341598" y="0.444444" />
+                            <point x="0.501377" y="0.0824373" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -1966,12 +2071,14 @@
         <event-sheet>MusicSounds.xml</event-sheet>
         <event-sheet>GamePausedScreen.xml</event-sheet>
         <event-sheet>ScarabAI.xml</event-sheet>
-        <event-sheet>TurretAI.xml</event-sheet>
+        <event-sheet>BulletTurretAI.xml</event-sheet>
         <event-sheet>BridgeFans.xml</event-sheet>
         <event-sheet>FuelPod.xml</event-sheet>
         <event-sheet>CameraScroll.xml</event-sheet>
         <event-sheet>HouseKeeping.xml</event-sheet>
         <event-sheet>Player.xml</event-sheet>
+        <event-sheet>directionPoint.xml</event-sheet>
+        <event-sheet>FriendlyAirStrike.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="194">

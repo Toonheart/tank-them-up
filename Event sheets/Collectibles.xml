@@ -19,14 +19,14 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;collectiblesound&quot;</param>
                         </action>
-                        <action id="-11" name="Add to" sid="825" type="playertank">
-                            <param id="0" name="Instance variable">primaryAmmo</param>
-                            <param id="1" name="Value">10</param>
-                        </action>
                         <action id="-9" name="Destroy" sid="826" type="energyatom" />
                         <action id="-11" name="Add to" sid="827" type="playertank">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="1893" type="playertank">
+                            <param id="0" name="Instance variable">EnergySpheres</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>

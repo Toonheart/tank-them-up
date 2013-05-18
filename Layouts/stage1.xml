@@ -931,6 +931,7 @@
                         <secondaryAmmo>5</secondaryAmmo>
                         <PrevTouch_Accelerator>true</PrevTouch_Accelerator>
                         <ReverseGearEngaged>false</ReverseGearEngaged>
+                        <EnergySpheres>0</EnergySpheres>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -2535,6 +2536,30 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="directionPoint" uid="89">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>944.183349609</x>
+                        <y>10002.359375</y>
+                        <z>0</z>
+                        <width>69.289451599</width>
+                        <height>85.092315674</height>
+                        <depth>0</depth>
+                        <hotspotX>0.491228074</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -2621,8 +2646,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-129</x>
-                        <y>3314</y>
+                        <x>76</x>
+                        <y>4106</y>
                         <z>0</z>
                         <width>388.647399902</width>
                         <height>213.108322144</height>
@@ -2630,27 +2655,6 @@
                         <hotspotX>0.161666662</hotspotX>
                         <hotspotY>0.033434652</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="fuelpipe" uid="207">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>604</x>
-                        <y>8040</y>
-                        <z>0</z>
-                        <width>388.647399902</width>
-                        <height>213.108322144</height>
-                        <depth>0</depth>
-                        <hotspotX>0.161666662</hotspotX>
-                        <hotspotY>0.033434652</hotspotY>
-                        <angle>0.001408239</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -2671,7 +2675,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="missile" uid="117">
+                <instance type="enemymissile" uid="117">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2691,19 +2695,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1848.770751953</x>
-                        <y>-273.377990723</y>
+                        <x>-1480</x>
+                        <y>764</y>
                         <z>0</z>
-                        <width>343.723693848</width>
-                        <height>81.501502991</height>
+                        <width>475.052001953</width>
+                        <height>174.633514404</height>
                         <depth>0</depth>
-                        <hotspotX>0.494845361</hotspotX>
-                        <hotspotY>0.521739125</hotspotY>
+                        <hotspotX>0.478149086</hotspotX>
+                        <hotspotY>0.496503502</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="airplane" uid="118">
+                <instance type="enemyAirstrike" uid="118">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2727,14 +2731,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-1041</x>
-                        <y>1418</y>
+                        <x>-893</x>
+                        <y>1940</y>
                         <z>0</z>
-                        <width>149.690139771</width>
-                        <height>182.583831787</height>
+                        <width>940.625427246</width>
+                        <height>700.512573242</height>
                         <depth>0</depth>
-                        <hotspotX>0.885350347</hotspotX>
-                        <hotspotY>0.51697129</hotspotY>
+                        <hotspotX>0.483606547</hotspotX>
+                        <hotspotY>0.88522011</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -2861,6 +2865,97 @@
                         <depth>0</depth>
                         <hotspotX>0.498154968</hotspotX>
                         <hotspotY>0.469090909</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="playerMissle" uid="104">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>900</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-848</x>
+                        <y>3076</y>
+                        <z>0</z>
+                        <width>339.360809326</width>
+                        <height>124.752174377</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501285374</hotspotX>
+                        <hotspotY>0.503496528</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="playerAirSupportShadow" uid="208">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-965</x>
+                        <y>3158</y>
+                        <z>0</z>
+                        <width>649.315673828</width>
+                        <height>499.060791016</height>
+                        <depth>0</depth>
+                        <hotspotX>0.498622596</hotspotX>
+                        <hotspotY>0.501792133</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="playerAirSupport" uid="91">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-1070</x>
+                        <y>2803</y>
+                        <z>0</z>
+                        <width>854</width>
+                        <height>636</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -3818,6 +3913,15 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="DebugPanel" uid="207">
+            <properties>
+                <enable>Yes</enable>
+                <activated>Yes</activated>
+                <stay-on-top>No</stay-on-top>
+                <log-buffer-length>100</log-buffer-length>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>

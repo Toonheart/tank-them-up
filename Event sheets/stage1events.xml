@@ -3,13 +3,14 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>stage1events</name>
     <events>
+        <include>FriendlyAirStrike</include>
+        <include>directionPoint</include>
         <include>Player</include>
         <include>HouseKeeping</include>
         <include>MusicSounds</include>
         <include>CameraScroll</include>
-        <include>FuelPod</include>
         <include>BridgeFans</include>
-        <include>TurretAI</include>
+        <include>BulletTurretAI</include>
         <include>ScarabAI</include>
         <include>FadeInOuts</include>
         <include>MissionFailedScreen</include>
