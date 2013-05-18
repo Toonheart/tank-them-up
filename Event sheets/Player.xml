@@ -57,6 +57,10 @@
                     <param id="0" name="Instance variable">health</param>
                     <param id="1" name="Value">70</param>
                 </action>
+                <action id="-10" name="Set value" sid="2121" type="playertank">
+                    <param id="0" name="Instance variable">EnergySpheres</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
     </events>

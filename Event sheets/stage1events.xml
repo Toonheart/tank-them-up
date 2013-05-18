@@ -3,12 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>stage1events</name>
     <events>
+        <include>CameraScroll</include>
         <include>FriendlyAirStrike</include>
         <include>directionPoint</include>
         <include>Player</include>
         <include>HouseKeeping</include>
         <include>MusicSounds</include>
-        <include>CameraScroll</include>
         <include>BridgeFans</include>
         <include>BulletTurretAI</include>
         <include>ScarabAI</include>
@@ -31,6 +31,14 @@
                 <action id="-9" name="Set value" sid="2024" type="System">
                     <param id="0" name="Variable">LevelNumber</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="2098" type="System">
+                    <param id="0" name="Variable">BulletTurretHitPoint</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-9" name="Set value" sid="2118" type="System">
+                    <param id="0" name="Variable">AirStrikeCall</param>
+                    <param id="1" name="Value">5</param>
                 </action>
             </actions>
         </event-block>

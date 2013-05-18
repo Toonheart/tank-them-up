@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>AmmoSystem</name>
     <events>
-        <event-group collapsed="1" description="Deals with Ammo calculations" sid="808" title="Ammo System">
+        <event-group description="Deals with Ammo calculations" sid="808" title="Ammo System">
             <sub-events>
                 <comment>Primary Ammo count is 2 digit... looks out of alignment when it counts down to single digits.&#x0D;&#x0A;So reset X position to secondary Ammo to keep it aligned.</comment>
                 <event-block sid="809">
@@ -55,13 +55,13 @@
                         <condition id="-7" name="Compare instance variable" sid="819" type="playertank">
                             <param id="0" name="Instance variable">secondaryAmmo</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">5</param>
+                            <param id="2" name="Value">9</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="820" type="playertank">
                             <param id="0" name="Instance variable">secondaryAmmo</param>
-                            <param id="1" name="Value">5</param>
+                            <param id="1" name="Value">9</param>
                         </action>
                     </actions>
                 </event-block>

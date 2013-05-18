@@ -6,10 +6,9 @@
     <author>Srikrishna Das(krish) - krish@toonheart.com</author>
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>12600</saved-with-version>
-    <next-sid>2064</next-sid>
+    <next-sid>2210</next-sid>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -17,6 +16,7 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
@@ -129,7 +129,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="8" loop="0" name="recoil" pingpong="0" repeatcount="1" repeatto="0" sid="17" speed="24">
+                <animation framecount="8" loop="0" name="recoil" pingpong="0" repeatcount="1" repeatto="0" sid="17" speed="48">
                     <frame duration="1" hotspotX="0.27" hotspotY="0.505263">
                         <image-point name="Imagepoint 1" x="1.00333" y="0.484211" />
                         <collision-poly>
@@ -680,15 +680,29 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="83" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="83" speed="6">
+                    <frame duration="1" hotspotX="0.0892857" hotspotY="0.489796">
                         <collision-poly>
-                            <point x="0.05" y="0.113095" />
-                            <point x="0.765789" y="0.529762" />
-                            <point x="0.973684" y="0.5" />
-                            <point x="0.942105" y="0.869048" />
-                            <point x="0.242105" y="0.452381" />
-                            <point x="0.0184211" y="0.5" />
+                            <point x="0.107143" y="0.0952381" />
+                            <point x="0.928571" y="0.115646" />
+                            <point x="0.932143" y="0.877551" />
+                            <point x="0.0964286" y="0.891156" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.088968" hotspotY="0.489796">
+                        <collision-poly>
+                            <point x="0.107143" y="0.0952381" />
+                            <point x="0.953431" y="0.0748299" />
+                            <point x="0.960612" y="0.897959" />
+                            <point x="0.0964286" y="0.891156" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.0892857" hotspotY="0.489796">
+                        <collision-poly>
+                            <point x="0.0714286" y="0.047619" />
+                            <point x="0.967857" y="0.0544218" />
+                            <point x="0.978572" y="0.891156" />
+                            <point x="0.0678571" y="0.911565" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -2059,6 +2073,7 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2042" speed="5">
                     <frame duration="1" hotspotX="0.500635" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.950445" y="0.506667" />
                         <collision-poly>
                             <point x="0.946633" y="0.5" />
                             <point x="0.500635" y="0.74" />
@@ -2070,12 +2085,46 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="BOSS_Scarab" sid="2145">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="number of hit points to die" name="hitpoint" sid="2157" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="2173">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2146" speed="4">
+                    <frame duration="1" hotspotX="0.500675" hotspotY="0.511287">
+                        <image-point name="Lazer" x="0.881242" y="0.316027" />
+                        <image-point name="Bullet" x="0.879892" y="0.655756" />
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.500675" hotspotY="0.488713">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>menu.xml</layout>
         <layout>stage1.xml</layout>
         <layout>stage2.xml</layout>
+        <layout>stage3.xml</layout>
         <layout>stage0.xml</layout>
         <layout>TitleScreen.xml</layout>
         <layout>GraphicStore.xml</layout>
@@ -2107,6 +2156,9 @@
         <event-sheet>directionPoint.xml</event-sheet>
         <event-sheet>FriendlyAirStrike.xml</event-sheet>
         <event-sheet>stage2events.xml</event-sheet>
+        <event-sheet>LazerTurretAI.xml</event-sheet>
+        <event-sheet>stage3events.xml</event-sheet>
+        <event-sheet>BOSS_scarab.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="194">

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>FriendlyAirStrike</name>
     <events>
+        <variable comment="Number of energy orbs required for airstrike" constant="0" name="AirStrikeCall" sid="2117" static="0" type="number">5</variable>
         <comment>When to provide AirSupport</comment>
         <comment>Shadow effect of flying airstrike by pinning shadow</comment>
         <event-block sid="1894">
@@ -10,7 +11,7 @@
                 <condition id="-7" name="Compare instance variable" sid="1895" type="playertank">
                     <param id="0" name="Instance variable">EnergySpheres</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
+                    <param id="2" name="Value">AirStrikeCall</param>
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="1905" type="System" />
             </conditions>
@@ -86,6 +87,17 @@
                         <action id="-22" name="Set angle toward position" sid="1904" type="playerMissle">
                             <param id="0" name="X">scarab.X</param>
                             <param id="1" name="Y">scarab.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2114">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="2115" type="enemyLazerTurret" />
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" sid="2116" type="playerMissle">
+                            <param id="0" name="X">enemyLazerTurret.X</param>
+                            <param id="1" name="Y">enemyLazerTurret.Y</param>
                         </action>
                     </actions>
                 </event-block>

@@ -3,78 +3,104 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>CameraScroll</name>
     <events>
-        <event-group description="scrolling camera at end of level" sid="1811" title="Camera Scrolling" />
-        <event-block sid="2046">
-            <conditions>
-                <condition id="-2" name="Compare Y" sid="2047" type="playertank">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Y co-ordinate">2048</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="2048" type="scrollerPIN">
-                    <param id="0" name="X">playertank.X</param>
-                    <param id="1" name="Y">playertank.Y-300</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2049">
-            <conditions>
-                <condition id="-2" name="Compare Y" sid="2050" type="playertank">
-                    <param id="0" name="Comparison">3</param>
-                    <param id="1" name="Y co-ordinate">2048</param>
-                </condition>
-                <condition id="-4" name="Trigger once while true" sid="2051" type="System" />
-            </conditions>
-            <actions />
+        <event-group description="scrolling camera at end of level" sid="1811" title="Camera Scrolling">
             <sub-events>
-                <event-block sid="2055">
+                <event-block sid="2046">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="2056" type="System">
-                            <param id="0" name="Variable">LevelNumber</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                        <condition id="-2" name="Compare Y" sid="2047" type="playertank">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">2048</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-4" name="Set position to another object" sid="2052" type="scrollerPIN">
-                            <param id="0" name="Object">enemyBulletTurret</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="-18" name="Set layer opacity" sid="2053" type="System">
-                            <param id="0" name="Layer">&quot;Black&quot;</param>
-                            <param id="1" name="Opacity">100</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="2054" type="System">
-                            <param id="0" name="Variable">ScreenChange</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="-3" name="Set position" sid="2048" type="scrollerPIN">
+                            <param id="0" name="X">playertank.X</param>
+                            <param id="1" name="Y">playertank.Y-300</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2057">
+                <event-block sid="2049">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="2058" type="System">
-                            <param id="0" name="Variable">LevelNumber</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
+                        <condition id="-2" name="Compare Y" sid="2050" type="playertank">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">2048</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="2051" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="2038" type="scrollerPIN">
-                            <param id="0" name="Object">enemyLazerTurret</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="-18" name="Set layer opacity" sid="2039" type="System">
-                            <param id="0" name="Layer">&quot;Black&quot;</param>
-                            <param id="1" name="Opacity">100</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="2040" type="System">
-                            <param id="0" name="Variable">ScreenChange</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2055">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2056" type="System">
+                                    <param id="0" name="Variable">LevelNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="2052" type="scrollerPIN">
+                                    <param id="0" name="Object">enemyBulletTurret</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-18" name="Set layer opacity" sid="2053" type="System">
+                                    <param id="0" name="Layer">&quot;Black&quot;</param>
+                                    <param id="1" name="Opacity">100</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2054" type="System">
+                                    <param id="0" name="Variable">ScreenChange</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2057">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2058" type="System">
+                                    <param id="0" name="Variable">LevelNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="2038" type="scrollerPIN">
+                                    <param id="0" name="Object">enemyLazerTurret</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-18" name="Set layer opacity" sid="2039" type="System">
+                                    <param id="0" name="Layer">&quot;Black&quot;</param>
+                                    <param id="1" name="Opacity">100</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2040" type="System">
+                                    <param id="0" name="Variable">ScreenChange</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2174">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2175" type="System">
+                                    <param id="0" name="Variable">LevelNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="2176" type="scrollerPIN">
+                                    <param id="0" name="Object">BOSS_Scarab</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-18" name="Set layer opacity" sid="2177" type="System">
+                                    <param id="0" name="Layer">&quot;Black&quot;</param>
+                                    <param id="1" name="Opacity">100</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2178" type="System">
+                                    <param id="0" name="Variable">ScreenChange</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>

@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>stage2events</name>
+    <name>stage3events</name>
     <events>
+        <include>BOSS_scarab</include>
         <include>CameraScroll</include>
         <include>FriendlyAirStrike</include>
         <include>directionPoint</include>
@@ -23,37 +24,37 @@
         <include>AmmoSystem</include>
         <include>Collisions</include>
         <include>UserControls</include>
-        <comment>STAGE 2 - EVENT SHEET</comment>
-        <event-block sid="2025">
+        <comment>STAGE 3 - EVENT SHEET</comment>
+        <event-block sid="2131">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="2026" type="System" />
+                <condition id="-2" name="On start of layout" sid="2132" type="System" />
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="2027" type="System">
+                <action id="-9" name="Set value" sid="2133" type="System">
                     <param id="0" name="Variable">LevelNumber</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="2134" type="System">
+                    <param id="0" name="Variable">BulletTurretHitPoint</param>
                     <param id="1" name="Value">2</param>
                 </action>
-                <action id="-9" name="Set value" sid="2099" type="System">
-                    <param id="0" name="Variable">BulletTurretHitPoint</param>
-                    <param id="1" name="Value">3</param>
-                </action>
-                <action id="-9" name="Set value" sid="2100" type="System">
+                <action id="-9" name="Set value" sid="2135" type="System">
                     <param id="0" name="Variable">LzrTurretHitPoint</param>
-                    <param id="1" name="Value">3</param>
+                    <param id="1" name="Value">2</param>
                 </action>
-                <action id="-9" name="Set value" sid="2119" type="System">
+                <action id="-9" name="Set value" sid="2136" type="System">
                     <param id="0" name="Variable">AirStrikeCall</param>
-                    <param id="1" name="Value">7</param>
+                    <param id="1" name="Value">9</param>
                 </action>
-                <action id="-10" name="Set value" sid="2138" type="playertank">
+                <action id="-10" name="Set value" sid="2137" type="playertank">
                     <param id="0" name="Instance variable">secondaryAmmo</param>
-                    <param id="1" name="Value">7</param>
+                    <param id="1" name="Value">9</param>
                 </action>
-                <action behavior="Turret" id="6" name="Set range" sid="2143" type="enemyLazerTurret">
-                    <param id="0" name="Range">1300</param>
+                <action behavior="Turret" id="6" name="Set range" sid="2141" type="enemyLazerTurret">
+                    <param id="0" name="Range">800</param>
                 </action>
-                <action behavior="Turret" id="6" name="Set range" sid="2144" type="enemyBulletTurret">
-                    <param id="0" name="Range">1400</param>
+                <action behavior="Turret" id="6" name="Set range" sid="2142" type="enemyBulletTurret">
+                    <param id="0" name="Range">1200</param>
                 </action>
             </actions>
         </event-block>

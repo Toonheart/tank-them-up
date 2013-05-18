@@ -804,14 +804,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>383</x>
-                        <y>2055</y>
+                        <x>-1472</x>
+                        <y>2439</y>
                         <z>0</z>
-                        <width>380</width>
-                        <height>168</height>
+                        <width>280</width>
+                        <height>147</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.089285716</hotspotX>
+                        <hotspotY>0.489795923</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1366,8 +1366,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2738</x>
-                        <y>115</y>
+                        <x>-2412</x>
+                        <y>1415</y>
                         <z>0</z>
                         <width>348</width>
                         <height>466</height>
@@ -2272,6 +2272,33 @@
                         <depth>0</depth>
                         <hotspotX>0.500635326</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BOSS_Scarab" uid="485">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitpoint>0</hitpoint>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-3384</x>
+                        <y>259</y>
+                        <z>0</z>
+                        <width>741</width>
+                        <height>886</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500674784</hotspotX>
+                        <hotspotY>0.511286676</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -226,10 +226,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Controls to fire or plant bombs" sid="357" title="Firing and Bombing Controls">
+        <event-group description="Controls to fire or plant bombs" sid="357" title="Firing and Bombing Controls">
             <sub-events>
                 <comment>Planting landmine on touching the tank</comment>
-                <event-block collapsed="1" sid="386">
+                <event-block sid="386">
                     <conditions>
                         <condition id="3" name="On touched object" sid="387" type="Touch">
                             <param id="0" name="Object">playertank</param>
@@ -358,7 +358,7 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="417" type="System">
-                                    <param id="0" name="Seconds">1.0</param>
+                                    <param id="0" name="Seconds">0.5</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="418" type="explosion" />
                                 <action id="4" name="Set animation" sid="419" type="playertank_turret">

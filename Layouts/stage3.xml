@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>stage2</name>
-    <sid>2002</sid>
-    <event-sheet>stage2events</event-sheet>
+    <name>stage3</name>
+    <sid>2122</sid>
+    <event-sheet>stage3events</event-sheet>
     <size>
         <width>1536</width>
         <height>10240</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Ground" sid="2004">
+        <layer name="Ground" sid="2124">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="BG_Mission1" uid="117">
+                <instance type="BG_Mission1" uid="302">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -50,7 +50,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Objects" sid="2005">
+        <layer name="Objects" sid="2125">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -64,31 +64,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="sidewallshexdigi" uid="295">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-122</x>
-                        <y>1842</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="planertankshadow" uid="296">
+                <instance type="planertankshadow" uid="304">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -109,7 +85,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="armor" uid="306">
+                <instance type="armor" uid="305">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -130,7 +106,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lineofsight" uid="308">
+                <instance type="lineofsight" uid="307">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -151,7 +127,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trees" uid="310">
+                <instance type="trees" uid="309">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -179,7 +155,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="bush" uid="312">
+                <instance type="bush" uid="311">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -206,7 +182,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MarkerLeftRight" uid="321">
+                <instance type="MarkerLeftRight" uid="313">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -227,7 +203,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MarkerLeftRight" uid="322">
+                <instance type="MarkerLeftRight" uid="314">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -248,7 +224,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MarkerLeftRight" uid="323">
+                <instance type="MarkerLeftRight" uid="315">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -269,7 +245,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="scarab" uid="325">
+                <instance type="scarab" uid="316">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -302,8 +278,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>645</x>
-                        <y>4406</y>
+                        <x>890</x>
+                        <y>7103</y>
                         <z>0</z>
                         <width>201.926376343</width>
                         <height>270.395629883</height>
@@ -314,7 +290,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="playertank" uid="327">
+                <instance type="playertank" uid="317">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -367,7 +343,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sidewallshexdigi" uid="328">
+                <instance type="sidewallshexdigi" uid="318">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -391,7 +367,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sidewallshexdigi" uid="331">
+                <instance type="sidewallshexdigi" uid="319">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -415,7 +391,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sidewallshexdigi" uid="333">
+                <instance type="sidewallshexdigi" uid="320">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -439,7 +415,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sidewallshexdigi" uid="335">
+                <instance type="sidewallshexdigi" uid="324">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -451,8 +427,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1602</x>
-                        <y>8703</y>
+                        <x>1592</x>
+                        <y>8845</y>
                         <z>0</z>
                         <width>599</width>
                         <height>497</height>
@@ -463,7 +439,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sidewallshexdigi" uid="341">
+                <instance type="sidewallshexdigi" uid="326">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -487,79 +463,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sidewallshexdigi" uid="344">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1281</x>
-                        <y>7802</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>0.03872177</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sidewallshexdigi" uid="345">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1653</x>
-                        <y>8009</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sidewallshexdigi" uid="346">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>834</x>
-                        <y>8002</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>-3.110595703</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="energyatom" uid="347">
+                <instance type="energyatom" uid="334">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -568,8 +472,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>241</x>
-                        <y>9043</y>
+                        <x>791</x>
+                        <y>8705</y>
                         <z>0</z>
                         <width>458.729400635</width>
                         <height>391.230651855</height>
@@ -580,7 +484,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="playersmine" uid="348">
+                <instance type="playersmine" uid="336">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -601,148 +505,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="spikebarrier" uid="349">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>489</x>
-                        <y>6859</y>
-                        <z>0</z>
-                        <width>283</width>
-                        <height>396</height>
-                        <depth>0</depth>
-                        <hotspotX>0.13176471</hotspotX>
-                        <hotspotY>0.456558764</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="spikebarrier" uid="350">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>682</x>
-                        <y>6859</y>
-                        <z>0</z>
-                        <width>283</width>
-                        <height>396</height>
-                        <depth>0</depth>
-                        <hotspotX>0.13176471</hotspotX>
-                        <hotspotY>0.456558764</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sidewallshexdigi" uid="351">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1443</x>
-                        <y>7065</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sidewallshexdigi" uid="352">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1441</x>
-                        <y>6638</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="spikebase" uid="353">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1021</x>
-                        <y>6839</y>
-                        <z>0</z>
-                        <width>786</width>
-                        <height>488</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.501043856</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="MarkerSTOP" uid="354">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>901</x>
-                        <y>6865</y>
-                        <z>0</z>
-                        <width>51</width>
-                        <height>219</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0.007506745</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="explosion" uid="355">
+                <instance type="explosion" uid="356">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -751,8 +514,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-1376</x>
-                        <y>2101</y>
+                        <x>2261</x>
+                        <y>3193</y>
                         <z>0</z>
                         <width>467.093139648</width>
                         <height>467.093139648</height>
@@ -763,28 +526,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="landmine" uid="357">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1323</x>
-                        <y>2918</y>
-                        <z>0</z>
-                        <width>294.463470459</width>
-                        <height>291.421539307</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.511482239</hotspotY>
-                        <angle>-0.203318432</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sidewallshexdigi" uid="361">
+                <instance type="sidewallshexdigi" uid="381">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -796,32 +538,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1534</x>
-                        <y>964</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sidewallshexdigi" uid="362">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>88</x>
-                        <y>557</y>
+                        <x>-64</x>
+                        <y>8863</y>
                         <z>0</z>
                         <width>599</width>
                         <height>497</height>
@@ -832,148 +550,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sidewallshexdigi" uid="363">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>0</x>
-                        <y>982</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>0.019765694</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sidewallshexdigi" uid="364">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1453</x>
-                        <y>535</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sidewallshexdigi" uid="365">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1658</x>
-                        <y>1818</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sidewallshexdigi" uid="366">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1596</x>
-                        <y>1385</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sidewallshexdigi" uid="367">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>115</x>
-                        <y>5590</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="fuelpod" uid="368">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>769</x>
-                        <y>457</y>
-                        <z>0</z>
-                        <width>506.772613525</width>
-                        <height>497.481842041</height>
-                        <depth>0</depth>
-                        <hotspotX>0.501666665</hotspotX>
-                        <hotspotY>0.500848889</hotspotY>
-                        <angle>-1.570796371</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="normalbullet" uid="369">
+                <instance type="normalbullet" uid="394">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1006,7 +583,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="landmine" uid="370">
+                <instance type="landmine" uid="395">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1015,8 +592,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>286</x>
-                        <y>4762</y>
+                        <x>1076</x>
+                        <y>4817</y>
                         <z>0</z>
                         <width>294.463470459</width>
                         <height>291.421539307</height>
@@ -1027,28 +604,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="landmine" uid="371">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>483</x>
-                        <y>8360</y>
-                        <z>0</z>
-                        <width>294.463470459</width>
-                        <height>291.421539307</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.511482239</hotspotY>
-                        <angle>-0.113437913</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="enemynormalbullet" uid="373">
+                <instance type="enemynormalbullet" uid="435">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1081,7 +637,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="energyatom" uid="374">
+                <instance type="energyatom" uid="436">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1102,52 +658,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="landmine" uid="375">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>761</x>
-                        <y>1156</y>
-                        <z>0</z>
-                        <width>294.463470459</width>
-                        <height>291.421539307</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.511482239</hotspotY>
-                        <angle>0.240375519</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sidewallshexdigi" uid="376">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-68</x>
-                        <y>1412</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="scarab" uid="379">
+                <instance type="scarab" uid="439">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1188,11 +699,11 @@
                         <depth>0</depth>
                         <hotspotX>0.491379321</hotspotX>
                         <hotspotY>0.493562222</hotspotY>
-                        <angle>0</angle>
+                        <angle>-0.966800511</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="scarab" uid="382">
+                <instance type="scarab" uid="440">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1233,11 +744,11 @@
                         <depth>0</depth>
                         <hotspotX>0.491379321</hotspotX>
                         <hotspotY>0.493562222</hotspotY>
-                        <angle>0</angle>
+                        <angle>-1.277587414</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="energyatom" uid="383">
+                <instance type="energyatom" uid="441">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1258,7 +769,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sidewallshexdigi" uid="384">
+                <instance type="sidewallshexdigi" uid="442">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1270,8 +781,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>108</x>
-                        <y>5162</y>
+                        <x>-71</x>
+                        <y>8435</y>
                         <z>0</z>
                         <width>599</width>
                         <height>497</height>
@@ -1282,7 +793,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="fuelpod" uid="385">
+                <instance type="fuelpod" uid="443">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1291,8 +802,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>153</x>
-                        <y>5363</y>
+                        <x>-26</x>
+                        <y>8636</y>
                         <z>0</z>
                         <width>506.772613525</width>
                         <height>497.481842041</height>
@@ -1303,7 +814,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="scrollerPIN" uid="386">
+                <instance type="scrollerPIN" uid="444">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1332,7 +843,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="scarab" uid="387">
+                <instance type="scarab" uid="445">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1365,19 +876,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>441</x>
-                        <y>689</y>
+                        <x>250</x>
+                        <y>696</y>
                         <z>0</z>
                         <width>201.926376343</width>
                         <height>270.395629883</height>
                         <depth>0</depth>
                         <hotspotX>0.491379321</hotspotX>
                         <hotspotY>0.493562222</hotspotY>
-                        <angle>0</angle>
+                        <angle>1.086686373</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="scarab" uid="388">
+                <instance type="scarab" uid="446">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1410,19 +921,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1226.021972656</x>
-                        <y>752.063476563</y>
+                        <x>1324</x>
+                        <y>1033</y>
                         <z>0</z>
                         <width>201.926376343</width>
                         <height>270.395629883</height>
                         <depth>0</depth>
                         <hotspotX>0.491379321</hotspotX>
                         <hotspotY>0.493562222</hotspotY>
-                        <angle>0</angle>
+                        <angle>2.028346539</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="directionPoint" uid="389">
+                <instance type="directionPoint" uid="447">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1446,7 +957,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sidewallshexdigi" uid="26">
+                <instance type="spikebarrier" uid="452">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1458,146 +969,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>306</x>
-                        <y>9503</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>0.019765694</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sidewallshexdigi" uid="27">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>686</x>
-                        <y>9288</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>0.019765694</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="scarab" uid="28">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <hitcount>0</hitcount>
-                        <range>0</range>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Edge</bound-by>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Car">
-                            <properties>
-                                <max-speed>150</max-speed>
-                                <acceleration>200</acceleration>
-                                <deceleration>200</deceleration>
-                                <steer-speed>100</steer-speed>
-                                <drift-recover>185</drift-recover>
-                                <friction>0.8</friction>
-                                <set-angle>Yes</set-angle>
-                                <default-controls>No</default-controls>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>230</x>
-                        <y>8634</y>
-                        <z>0</z>
-                        <width>201.926376343</width>
-                        <height>270.395629883</height>
-                        <depth>0</depth>
-                        <hotspotX>0.491379321</hotspotX>
-                        <hotspotY>0.493562222</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="scarab" uid="29">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <hitcount>0</hitcount>
-                        <range>0</range>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Edge</bound-by>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Car">
-                            <properties>
-                                <max-speed>150</max-speed>
-                                <acceleration>200</acceleration>
-                                <deceleration>200</deceleration>
-                                <steer-speed>100</steer-speed>
-                                <drift-recover>185</drift-recover>
-                                <friction>0.8</friction>
-                                <set-angle>Yes</set-angle>
-                                <default-controls>No</default-controls>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1200</x>
-                        <y>8300</y>
-                        <z>0</z>
-                        <width>201.926376343</width>
-                        <height>270.395629883</height>
-                        <depth>0</depth>
-                        <hotspotX>0.491379321</hotspotX>
-                        <hotspotY>0.493562222</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="spikebarrier" uid="30">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>940</x>
-                        <y>3129</y>
+                        <x>860</x>
+                        <y>3491</y>
                         <z>0</z>
                         <width>283</width>
                         <height>396</height>
@@ -1608,7 +981,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="spikebarrier" uid="32">
+                <instance type="spikebarrier" uid="453">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1620,8 +993,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>748</x>
-                        <y>3131</y>
+                        <x>668</x>
+                        <y>3491</y>
                         <z>0</z>
                         <width>283</width>
                         <height>396</height>
@@ -1632,7 +1005,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sidewallshexdigi" uid="33">
+                <instance type="sidewallshexdigi" uid="454">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1644,8 +1017,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-13</x>
-                        <y>3362</y>
+                        <x>-93</x>
+                        <y>3722</y>
                         <z>0</z>
                         <width>599</width>
                         <height>497</height>
@@ -1656,7 +1029,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sidewallshexdigi" uid="34">
+                <instance type="sidewallshexdigi" uid="455">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1668,8 +1041,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-15</x>
-                        <y>2935</y>
+                        <x>-95</x>
+                        <y>3295</y>
                         <z>0</z>
                         <width>599</width>
                         <height>497</height>
@@ -1680,7 +1053,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="spikebase" uid="35">
+                <instance type="spikebase" uid="456">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1692,8 +1065,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>409</x>
-                        <y>3149</y>
+                        <x>329</x>
+                        <y>3509</y>
                         <z>0</z>
                         <width>786</width>
                         <height>488</height>
@@ -1704,7 +1077,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MarkerSTOP" uid="36">
+                <instance type="MarkerSTOP" uid="457">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1713,8 +1086,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>520</x>
-                        <y>3133</y>
+                        <x>440</x>
+                        <y>3493</y>
                         <z>0</z>
                         <width>51</width>
                         <height>219</height>
@@ -1725,7 +1098,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sidewallshexdigi" uid="37">
+                <instance type="sidewallshexdigi" uid="460">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1737,8 +1110,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1528</x>
-                        <y>4994</y>
+                        <x>-31</x>
+                        <y>5576</y>
                         <z>0</z>
                         <width>599</width>
                         <height>497</height>
@@ -1749,7 +1122,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sidewallshexdigi" uid="39">
+                <instance type="sidewallshexdigi" uid="462">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1761,112 +1134,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1535</x>
-                        <y>5419</y>
+                        <x>57</x>
+                        <y>7120</y>
                         <z>0</z>
                         <width>599</width>
                         <height>497</height>
                         <depth>0</depth>
                         <hotspotX>0.505843043</hotspotX>
                         <hotspotY>0.501006007</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sidewallshexdigi" uid="38">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1159</x>
-                        <y>5212</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sidewallshexdigi" uid="40">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1554</x>
-                        <y>3991</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sidewallshexdigi" uid="41">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1547</x>
-                        <y>3563</y>
-                        <z>0</z>
-                        <width>599</width>
-                        <height>497</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505843043</hotspotX>
-                        <hotspotY>0.501006007</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="fuelpod" uid="42">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1512</x>
-                        <y>3764</y>
-                        <z>0</z>
-                        <width>506.772613525</width>
-                        <height>497.481842041</height>
-                        <depth>0</depth>
-                        <hotspotX>0.501666665</hotspotX>
-                        <hotspotY>0.500848889</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="scarab" uid="47">
+                <instance type="scarab" uid="466">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -1899,98 +1179,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1104</x>
-                        <y>3574</y>
-                        <z>0</z>
-                        <width>201.926376343</width>
-                        <height>270.395629883</height>
-                        <depth>0</depth>
-                        <hotspotX>0.491379321</hotspotX>
-                        <hotspotY>0.493562222</hotspotY>
-                        <angle>1.380992174</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="scarab" uid="49">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <hitcount>0</hitcount>
-                        <range>0</range>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Edge</bound-by>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Car">
-                            <properties>
-                                <max-speed>150</max-speed>
-                                <acceleration>200</acceleration>
-                                <deceleration>200</deceleration>
-                                <steer-speed>100</steer-speed>
-                                <drift-recover>185</drift-recover>
-                                <friction>0.8</friction>
-                                <set-angle>Yes</set-angle>
-                                <default-controls>No</default-controls>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1302</x>
-                        <y>5834</y>
-                        <z>0</z>
-                        <width>201.926376343</width>
-                        <height>270.395629883</height>
-                        <depth>0</depth>
-                        <hotspotX>0.491379321</hotspotX>
-                        <hotspotY>0.493562222</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="scarab" uid="118">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <hitcount>0</hitcount>
-                        <range>0</range>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Edge</bound-by>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Car">
-                            <properties>
-                                <max-speed>150</max-speed>
-                                <acceleration>200</acceleration>
-                                <deceleration>200</deceleration>
-                                <steer-speed>100</steer-speed>
-                                <drift-recover>185</drift-recover>
-                                <friction>0.8</friction>
-                                <set-angle>Yes</set-angle>
-                                <default-controls>No</default-controls>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>215</x>
-                        <y>5973</y>
+                        <x>255</x>
+                        <y>7743</y>
                         <z>0</z>
                         <width>201.926376343</width>
                         <height>270.395629883</height>
@@ -2001,7 +1191,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="energyatom" uid="207">
+                <instance type="energyatom" uid="467">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2010,8 +1200,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>924</x>
-                        <y>7273</y>
+                        <x>1308</x>
+                        <y>7825</y>
                         <z>0</z>
                         <width>458.729400635</width>
                         <height>391.230651855</height>
@@ -2022,7 +1212,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="energyatom" uid="294">
+                <instance type="energyatom" uid="468">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2031,8 +1221,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1278</x>
-                        <y>6186</y>
+                        <x>417</x>
+                        <y>6394</y>
                         <z>0</z>
                         <width>458.729400635</width>
                         <height>391.230651855</height>
@@ -2043,7 +1233,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="energyatom" uid="297">
+                <instance type="energyatom" uid="469">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2052,8 +1242,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>406</x>
-                        <y>3550</y>
+                        <x>326</x>
+                        <y>4800</y>
                         <z>0</z>
                         <width>458.729400635</width>
                         <height>391.230651855</height>
@@ -2064,7 +1254,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="energyatom" uid="298">
+                <instance type="energyatom" uid="470">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2073,8 +1263,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1126</x>
-                        <y>2621</y>
+                        <x>1296</x>
+                        <y>3061</y>
                         <z>0</z>
                         <width>458.729400635</width>
                         <height>391.230651855</height>
@@ -2082,13 +1272,991 @@
                         <hotspotX>0.439999998</hotspotX>
                         <hotspotY>0.415410399</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sidewallshexdigi" uid="448">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-70</x>
+                        <y>9287</y>
+                        <z>0</z>
+                        <width>599</width>
+                        <height>497</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
+                        <angle>0.019765694</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sidewallshexdigi" uid="521">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1604</x>
+                        <y>9269</y>
+                        <z>0</z>
+                        <width>599</width>
+                        <height>497</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sidewallshexdigi" uid="523">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1582</x>
+                        <y>8421</y>
+                        <z>0</z>
+                        <width>599</width>
+                        <height>497</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="fuelpod" uid="434">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1531</x>
+                        <y>8632</y>
+                        <z>0</z>
+                        <width>506.772613525</width>
+                        <height>497.481842041</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501666665</hotspotX>
+                        <hotspotY>0.500848889</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sidewallshexdigi" uid="329">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>403</x>
+                        <y>5354</y>
+                        <z>0</z>
+                        <width>599</width>
+                        <height>497</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="fuelpod" uid="392">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>166</x>
+                        <y>5418</y>
+                        <z>0</z>
+                        <width>506.772613525</width>
+                        <height>497.481842041</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501666665</hotspotX>
+                        <hotspotY>0.500848889</hotspotY>
+                        <angle>-2.094395161</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sidewallshexdigi" uid="330">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>50</x>
+                        <y>6689</y>
+                        <z>0</z>
+                        <width>599</width>
+                        <height>497</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sidewallshexdigi" uid="332">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>43</x>
+                        <y>6261</y>
+                        <z>0</z>
+                        <width>599</width>
+                        <height>497</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sidewallshexdigi" uid="337">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1572</x>
+                        <y>7501</y>
+                        <z>0</z>
+                        <width>599</width>
+                        <height>497</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sidewallshexdigi" uid="338">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1565</x>
+                        <y>7070</y>
+                        <z>0</z>
+                        <width>599</width>
+                        <height>497</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sidewallshexdigi" uid="339">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1527</x>
+                        <y>5640</y>
+                        <z>0</z>
+                        <width>599</width>
+                        <height>497</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sidewallshexdigi" uid="340">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1518</x>
+                        <y>5210</y>
+                        <z>0</z>
+                        <width>599</width>
+                        <height>497</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sidewallshexdigi" uid="342">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1511</x>
+                        <y>4779</y>
+                        <z>0</z>
+                        <width>599</width>
+                        <height>497</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="scarab" uid="450">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitcount>0</hitcount>
+                        <range>0</range>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Car">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>200</acceleration>
+                                <deceleration>200</deceleration>
+                                <steer-speed>100</steer-speed>
+                                <drift-recover>185</drift-recover>
+                                <friction>0.8</friction>
+                                <set-angle>Yes</set-angle>
+                                <default-controls>No</default-controls>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>566</x>
+                        <y>6811</y>
+                        <z>0</z>
+                        <width>201.926376343</width>
+                        <height>270.395629883</height>
+                        <depth>0</depth>
+                        <hotspotX>0.491379321</hotspotX>
+                        <hotspotY>0.493562222</hotspotY>
+                        <angle>1.380992174</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="scarab" uid="451">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitcount>0</hitcount>
+                        <range>0</range>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Car">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>200</acceleration>
+                                <deceleration>200</deceleration>
+                                <steer-speed>100</steer-speed>
+                                <drift-recover>185</drift-recover>
+                                <friction>0.8</friction>
+                                <set-angle>Yes</set-angle>
+                                <default-controls>No</default-controls>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>860</x>
+                        <y>7467</y>
+                        <z>0</z>
+                        <width>201.926376343</width>
+                        <height>270.395629883</height>
+                        <depth>0</depth>
+                        <hotspotX>0.491379321</hotspotX>
+                        <hotspotY>0.493562222</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="landmine" uid="458">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1323</x>
+                        <y>6283</y>
+                        <z>0</z>
+                        <width>294.463470459</width>
+                        <height>291.421539307</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.511482239</hotspotY>
+                        <angle>0.240375519</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="landmine" uid="459">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>457</x>
+                        <y>7356</y>
+                        <z>0</z>
+                        <width>294.463470459</width>
+                        <height>291.421539307</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.511482239</hotspotY>
+                        <angle>0.240375519</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spikebarrier" uid="463">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1053</x>
+                        <y>3491</y>
+                        <z>0</z>
+                        <width>283</width>
+                        <height>396</height>
+                        <depth>0</depth>
+                        <hotspotX>0.13176471</hotspotX>
+                        <hotspotY>0.456558764</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spikebarrier" uid="473">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1241</x>
+                        <y>3491</y>
+                        <z>0</z>
+                        <width>283</width>
+                        <height>396</height>
+                        <depth>0</depth>
+                        <hotspotX>0.13176471</hotspotX>
+                        <hotspotY>0.456558764</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="energyatom" uid="461">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1253</x>
+                        <y>6712</y>
+                        <z>0</z>
+                        <width>458.729400635</width>
+                        <height>391.230651855</height>
+                        <depth>0</depth>
+                        <hotspotX>0.439999998</hotspotX>
+                        <hotspotY>0.415410399</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sidewallshexdigi" uid="524">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1506</x>
+                        <y>4353</y>
+                        <z>0</z>
+                        <width>599</width>
+                        <height>497</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505843043</hotspotX>
+                        <hotspotY>0.501006007</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="fuelpod" uid="343">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1470</x>
+                        <y>4556</y>
+                        <z>0</z>
+                        <width>506.772613525</width>
+                        <height>497.481842041</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501666665</hotspotX>
+                        <hotspotY>0.500848889</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="energyatom" uid="464">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>321</x>
+                        <y>3922</y>
+                        <z>0</z>
+                        <width>458.729400635</width>
+                        <height>391.230651855</height>
+                        <depth>0</depth>
+                        <hotspotX>0.439999998</hotspotX>
+                        <hotspotY>0.415410399</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="energyatom" uid="465">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1160</x>
+                        <y>1871</y>
+                        <z>0</z>
+                        <width>458.729400635</width>
+                        <height>391.230651855</height>
+                        <depth>0</depth>
+                        <hotspotX>0.439999998</hotspotX>
+                        <hotspotY>0.415410399</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="scarab" uid="437">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitcount>0</hitcount>
+                        <range>0</range>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Car">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>200</acceleration>
+                                <deceleration>200</deceleration>
+                                <steer-speed>100</steer-speed>
+                                <drift-recover>185</drift-recover>
+                                <friction>0.8</friction>
+                                <set-angle>Yes</set-angle>
+                                <default-controls>No</default-controls>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>842</x>
+                        <y>1220</y>
+                        <z>0</z>
+                        <width>201.926376343</width>
+                        <height>270.395629883</height>
+                        <depth>0</depth>
+                        <hotspotX>0.491379321</hotspotX>
+                        <hotspotY>0.493562222</hotspotY>
+                        <angle>-1.754366159</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="scarab" uid="522">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitcount>0</hitcount>
+                        <range>0</range>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Car">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>200</acceleration>
+                                <deceleration>200</deceleration>
+                                <steer-speed>100</steer-speed>
+                                <drift-recover>185</drift-recover>
+                                <friction>0.8</friction>
+                                <set-angle>Yes</set-angle>
+                                <default-controls>No</default-controls>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1061</x>
+                        <y>975</y>
+                        <z>0</z>
+                        <width>201.926376343</width>
+                        <height>270.395629883</height>
+                        <depth>0</depth>
+                        <hotspotX>0.491379321</hotspotX>
+                        <hotspotY>0.493562222</hotspotY>
+                        <angle>2.273777246</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="scarab" uid="525">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitcount>0</hitcount>
+                        <range>0</range>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Car">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>200</acceleration>
+                                <deceleration>200</deceleration>
+                                <steer-speed>100</steer-speed>
+                                <drift-recover>185</drift-recover>
+                                <friction>0.8</friction>
+                                <set-angle>Yes</set-angle>
+                                <default-controls>No</default-controls>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>339</x>
+                        <y>1275</y>
+                        <z>0</z>
+                        <width>201.926376343</width>
+                        <height>270.395629883</height>
+                        <depth>0</depth>
+                        <hotspotX>0.491379321</hotspotX>
+                        <hotspotY>0.493562222</hotspotY>
+                        <angle>1.137652636</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="scarab" uid="527">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitcount>0</hitcount>
+                        <range>0</range>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Car">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>200</acceleration>
+                                <deceleration>200</deceleration>
+                                <steer-speed>100</steer-speed>
+                                <drift-recover>185</drift-recover>
+                                <friction>0.8</friction>
+                                <set-angle>Yes</set-angle>
+                                <default-controls>No</default-controls>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>842</x>
+                        <y>2840</y>
+                        <z>0</z>
+                        <width>201.926376343</width>
+                        <height>270.395629883</height>
+                        <depth>0</depth>
+                        <hotspotX>0.491379321</hotspotX>
+                        <hotspotY>0.493562222</hotspotY>
+                        <angle>1.243231893</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="scarab" uid="528">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitcount>0</hitcount>
+                        <range>0</range>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Car">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>200</acceleration>
+                                <deceleration>200</deceleration>
+                                <steer-speed>100</steer-speed>
+                                <drift-recover>185</drift-recover>
+                                <friction>0.8</friction>
+                                <set-angle>Yes</set-angle>
+                                <default-controls>No</default-controls>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1138</x>
+                        <y>2811</y>
+                        <z>0</z>
+                        <width>201.926376343</width>
+                        <height>270.395629883</height>
+                        <depth>0</depth>
+                        <hotspotX>0.491379321</hotspotX>
+                        <hotspotY>0.493562222</hotspotY>
+                        <angle>1.554341197</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="scarab" uid="529">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitcount>0</hitcount>
+                        <range>0</range>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Car">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>200</acceleration>
+                                <deceleration>200</deceleration>
+                                <steer-speed>100</steer-speed>
+                                <drift-recover>185</drift-recover>
+                                <friction>0.8</friction>
+                                <set-angle>Yes</set-angle>
+                                <default-controls>No</default-controls>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>586</x>
+                        <y>2783</y>
+                        <z>0</z>
+                        <width>201.926376343</width>
+                        <height>270.395629883</height>
+                        <depth>0</depth>
+                        <hotspotX>0.491379321</hotspotX>
+                        <hotspotY>0.493562222</hotspotY>
+                        <angle>1.074597478</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="scarab" uid="530">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitcount>0</hitcount>
+                        <range>0</range>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Car">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>200</acceleration>
+                                <deceleration>200</deceleration>
+                                <steer-speed>100</steer-speed>
+                                <drift-recover>185</drift-recover>
+                                <friction>0.8</friction>
+                                <set-angle>Yes</set-angle>
+                                <default-controls>No</default-controls>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>594</x>
+                        <y>3067</y>
+                        <z>0</z>
+                        <width>201.926376343</width>
+                        <height>270.395629883</height>
+                        <depth>0</depth>
+                        <hotspotX>0.491379321</hotspotX>
+                        <hotspotY>0.493562222</hotspotY>
+                        <angle>1.179775715</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="energyatom" uid="358">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1258</x>
+                        <y>3819</y>
+                        <z>0</z>
+                        <width>458.729400635</width>
+                        <height>391.230651855</height>
+                        <depth>0</depth>
+                        <hotspotX>0.439999998</hotspotX>
+                        <hotspotY>0.415410399</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="energyatom" uid="531">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1129</x>
+                        <y>5922</y>
+                        <z>0</z>
+                        <width>458.729400635</width>
+                        <height>391.230651855</height>
+                        <depth>0</depth>
+                        <hotspotX>0.439999998</hotspotX>
+                        <hotspotY>0.415410399</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BOSS_Scarab" uid="486">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitpoint>0</hitpoint>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>779</x>
+                        <y>672</y>
+                        <z>0</z>
+                        <width>741</width>
+                        <height>886</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500674784</hotspotX>
+                        <hotspotY>0.511286676</hotspotY>
+                        <angle>1.566277266</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
             <effects />
         </layer>
-        <layer name="Turret" sid="2006">
+        <layer name="Turret" sid="2126">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -2102,7 +2270,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="playertank_turret" uid="390">
+                <instance type="playertank_turret" uid="471">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2123,7 +2291,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="enemyBulletTurret" uid="391">
+                <instance type="enemyBulletTurret" uid="472">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2150,8 +2318,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>252</x>
-                        <y>5368</y>
+                        <x>73</x>
+                        <y>8641</y>
                         <z>0</z>
                         <width>494.083740234</width>
                         <height>337.323394775</height>
@@ -2162,46 +2330,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="enemyBulletTurret" uid="43">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <hitcount>0</hitcount>
-                        <range>0</range>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                        <behavior-instance type="Turret">
-                            <properties>
-                                <range>1800</range>
-                                <rate-of-fire>5</rate-of-fire>
-                                <rotate>Yes</rotate>
-                                <rotate-speed>180</rotate-speed>
-                                <target-mode>First in range</target-mode>
-                                <predictive-aim>No</predictive-aim>
-                                <projectile-speed>500</projectile-speed>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1361</x>
-                        <y>3769</y>
-                        <z>0</z>
-                        <width>494.083740234</width>
-                        <height>337.323394775</height>
-                        <depth>0</depth>
-                        <hotspotX>0.394097209</hotspotX>
-                        <hotspotY>0.503816783</hotspotY>
-                        <angle>-3.139369965</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="enemyLazerTurret" uid="300">
+                <instance type="enemyLazerTurret" uid="474">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2226,8 +2355,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>790</x>
-                        <y>610</y>
+                        <x>246</x>
+                        <y>5609</y>
                         <z>0</z>
                         <width>541.813171387</width>
                         <height>413.072265625</height>
@@ -2238,7 +2367,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lazershock" uid="301">
+                <instance type="lazershock" uid="475">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2265,10 +2394,86 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="enemyBulletTurret" uid="449">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitcount>0</hitcount>
+                        <range>0</range>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                        <behavior-instance type="Turret">
+                            <properties>
+                                <range>1800</range>
+                                <rate-of-fire>5</rate-of-fire>
+                                <rotate>Yes</rotate>
+                                <rotate-speed>180</rotate-speed>
+                                <target-mode>First in range</target-mode>
+                                <predictive-aim>No</predictive-aim>
+                                <projectile-speed>500</projectile-speed>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1430</x>
+                        <y>8637</y>
+                        <z>0</z>
+                        <width>494.083740234</width>
+                        <height>337.323394775</height>
+                        <depth>0</depth>
+                        <hotspotX>0.394097209</hotspotX>
+                        <hotspotY>0.503816783</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="enemyLazerTurret" uid="526">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <hitcount>0</hitcount>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Turret">
+                            <properties>
+                                <range>1500</range>
+                                <rate-of-fire>10</rate-of-fire>
+                                <rotate>Yes</rotate>
+                                <rotate-speed>180</rotate-speed>
+                                <target-mode>First in range</target-mode>
+                                <predictive-aim>No</predictive-aim>
+                                <projectile-speed>500</projectile-speed>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1260</x>
+                        <y>4580</y>
+                        <z>0</z>
+                        <width>541.813171387</width>
+                        <height>413.072265625</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500635326</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>2.99148941</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
-        <layer name="Sky" sid="2007">
+        <layer name="Sky" sid="2127">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -2282,7 +2487,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="levelendbridge1" uid="393">
+                <instance type="levelendbridge1" uid="476">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2303,7 +2508,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="levelendbridge1" uid="396">
+                <instance type="levelendbridge1" uid="477">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2312,8 +2517,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>777</x>
-                        <y>108</y>
+                        <x>757</x>
+                        <y>97</y>
                         <z>0</z>
                         <width>1692.815917969</width>
                         <height>701.639404297</height>
@@ -2324,7 +2529,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="fanholder" uid="397">
+                <instance type="fanholder" uid="478">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2333,8 +2538,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>597</x>
-                        <y>64</y>
+                        <x>481</x>
+                        <y>55</y>
                         <z>0</z>
                         <width>306</width>
                         <height>329</height>
@@ -2345,7 +2550,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="smallFanBlade" uid="398">
+                <instance type="smallFanBlade" uid="479">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2354,19 +2559,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>592</x>
-                        <y>64</y>
+                        <x>476</x>
+                        <y>55</y>
                         <z>0</z>
                         <width>271</width>
                         <height>275</height>
                         <depth>0</depth>
                         <hotspotX>0.498154968</hotspotX>
                         <hotspotY>0.469090909</hotspotY>
-                        <angle>1.04719758</angle>
+                        <angle>0.52359879</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="playerMissle" uid="399">
+                <instance type="playerMissle" uid="480">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2399,7 +2604,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="playerAirSupportShadow" uid="400">
+                <instance type="playerAirSupportShadow" uid="481">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2424,7 +2629,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="playerAirSupport" uid="401">
+                <instance type="playerAirSupport" uid="482">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2457,7 +2662,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="fanholder" uid="20">
+                <instance type="fanholder" uid="483">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2466,8 +2671,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>942</x>
-                        <y>67</y>
+                        <x>756</x>
+                        <y>55</y>
                         <z>0</z>
                         <width>306</width>
                         <height>329</height>
@@ -2478,7 +2683,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="smallFanBlade" uid="21">
+                <instance type="smallFanBlade" uid="484">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2487,19 +2692,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>937</x>
-                        <y>64</y>
+                        <x>751</x>
+                        <y>52</y>
                         <z>0</z>
                         <width>271</width>
                         <height>275</height>
                         <depth>0</depth>
                         <hotspotX>0.498154968</hotspotX>
                         <hotspotY>0.469090909</hotspotY>
-                        <angle>0.52359879</angle>
+                        <angle>1.04719758</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="fanholder" uid="22">
+                <instance type="fanholder" uid="303">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2508,8 +2713,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>593</x>
-                        <y>2320</y>
+                        <x>1018</x>
+                        <y>55</y>
                         <z>0</z>
                         <width>306</width>
                         <height>329</height>
@@ -2520,7 +2725,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="smallFanBlade" uid="23">
+                <instance type="smallFanBlade" uid="359">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2529,8 +2734,50 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>594</x>
-                        <y>2320</y>
+                        <x>1013</x>
+                        <y>52</y>
+                        <z>0</z>
+                        <width>271</width>
+                        <height>275</height>
+                        <depth>0</depth>
+                        <hotspotX>0.498154968</hotspotX>
+                        <hotspotY>0.469090909</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="fanholder" uid="360">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>502</x>
+                        <y>2319</y>
+                        <z>0</z>
+                        <width>306</width>
+                        <height>329</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.477203637</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="smallFanBlade" uid="372">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>497</x>
+                        <y>2319</y>
                         <z>0</z>
                         <width>271</width>
                         <height>275</height>
@@ -2541,7 +2788,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="fanholder" uid="24">
+                <instance type="fanholder" uid="377">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2550,8 +2797,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>938</x>
-                        <y>2323</y>
+                        <x>777</x>
+                        <y>2319</y>
                         <z>0</z>
                         <width>306</width>
                         <height>329</height>
@@ -2562,7 +2809,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="smallFanBlade" uid="25">
+                <instance type="smallFanBlade" uid="378">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2571,22 +2818,64 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>939</x>
-                        <y>2320</y>
+                        <x>772</x>
+                        <y>2316</y>
                         <z>0</z>
                         <width>271</width>
                         <height>275</height>
                         <depth>0</depth>
                         <hotspotX>0.498154968</hotspotX>
                         <hotspotY>0.469090909</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="fanholder" uid="380">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1039</x>
+                        <y>2319</y>
+                        <z>0</z>
+                        <width>306</width>
+                        <height>329</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.477203637</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="smallFanBlade" uid="438">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1034</x>
+                        <y>2316</y>
+                        <z>0</z>
+                        <width>271</width>
+                        <height>275</height>
+                        <depth>0</depth>
+                        <hotspotX>0.498154968</hotspotX>
+                        <hotspotY>0.469090909</hotspotY>
+                        <angle>2.356194496</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
             <effects />
         </layer>
-        <layer name="HUD" sid="2008">
+        <layer name="HUD" sid="2128">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -2600,7 +2889,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="hudHolder" uid="402">
+                <instance type="hudHolder" uid="489">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2631,7 +2920,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="hudHolder" uid="403">
+                <instance type="hudHolder" uid="490">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2662,7 +2951,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="reloadButton" uid="404">
+                <instance type="reloadButton" uid="491">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2693,7 +2982,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="healthbar" uid="405">
+                <instance type="healthbar" uid="492">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2725,7 +3014,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="fpscounter" uid="406">
+                <instance type="fpscounter" uid="493">
                     <properties>
                         <text>fps &amp; &quot; FPS (&quot; &amp; renderer &amp; &quot;)&quot;</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -2762,7 +3051,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="healthbar" uid="407">
+                <instance type="healthbar" uid="494">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2794,7 +3083,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="healthbar" uid="408">
+                <instance type="healthbar" uid="495">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2826,7 +3115,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="healthbar" uid="409">
+                <instance type="healthbar" uid="496">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2858,7 +3147,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="healthbar" uid="410">
+                <instance type="healthbar" uid="497">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2890,7 +3179,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="healthbar" uid="411">
+                <instance type="healthbar" uid="498">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2922,7 +3211,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="healthbar" uid="412">
+                <instance type="healthbar" uid="499">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2954,7 +3243,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="HUDsecond" uid="413">
+                <instance type="HUDsecond" uid="500">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -2985,7 +3274,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="HUDprime" uid="414">
+                <instance type="HUDprime" uid="501">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3016,7 +3305,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="AmmoCntPrimary" uid="415">
+                <instance type="AmmoCntPrimary" uid="502">
                     <properties>
                         <text>99</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -3054,7 +3343,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="AmmoCntSecondary" uid="416">
+                <instance type="AmmoCntSecondary" uid="503">
                     <properties>
                         <text>5</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -3092,7 +3381,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="dpadUP" uid="417">
+                <instance type="dpadUP" uid="504">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3123,7 +3412,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="dpadRIGHT" uid="418">
+                <instance type="dpadRIGHT" uid="505">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3154,7 +3443,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="dpadDOWN" uid="419">
+                <instance type="dpadDOWN" uid="506">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3185,7 +3474,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="dpadLEFT" uid="420">
+                <instance type="dpadLEFT" uid="507">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3219,7 +3508,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Menus" sid="2009">
+        <layer name="Menus" sid="2129">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -3233,7 +3522,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Tile_PopMenus" uid="421">
+                <instance type="Tile_PopMenus" uid="508">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3264,7 +3553,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Title_MissionFailed" uid="422">
+                <instance type="Title_MissionFailed" uid="509">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3285,7 +3574,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Retry" uid="423">
+                <instance type="Text_Retry" uid="510">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3306,7 +3595,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Abort" uid="424">
+                <instance type="Text_Abort" uid="511">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3327,7 +3616,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_MissionAccomplished" uid="425">
+                <instance type="Text_MissionAccomplished" uid="512">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3348,7 +3637,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_AreaConquered" uid="426">
+                <instance type="Text_AreaConquered" uid="513">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3369,7 +3658,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Restart_Level" uid="427">
+                <instance type="Text_Restart_Level" uid="514">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3390,7 +3679,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Resume_Level" uid="428">
+                <instance type="Text_Resume_Level" uid="515">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3411,7 +3700,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="StrikeRED" uid="429">
+                <instance type="StrikeRED" uid="516">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3432,7 +3721,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_GamePaused" uid="430">
+                <instance type="Text_GamePaused" uid="517">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3453,7 +3742,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Help" uid="431">
+                <instance type="Text_Help" uid="518">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3474,7 +3763,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_NextArea" uid="432">
+                <instance type="Text_NextArea" uid="519">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3495,7 +3784,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_NextMission" uid="433">
+                <instance type="Text_NextMission" uid="520">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -3519,7 +3808,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Black" sid="2010">
+        <layer name="Black" sid="2130">
             <initially-visible>1</initially-visible>
             <background-color>0,0,0</background-color>
             <transparent>0</transparent>
