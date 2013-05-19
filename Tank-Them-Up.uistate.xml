@@ -10,15 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1">stage3</layout>
-        <layout>stage1</layout>
-        <layout>stage2</layout>
-        <event-sheet>AreaCompletedScreen</event-sheet>
-        <event-sheet>stage3events</event-sheet>
-        <event-sheet>stage1events</event-sheet>
-        <event-sheet>Debug</event-sheet>
+        <layout>stage3</layout>
+        <layout>TitleScreen</layout>
         <event-sheet>GamePausedScreen</event-sheet>
         <event-sheet>BOSS_scarab</event-sheet>
+        <event-sheet>TitleScreenEvents</event-sheet>
+        <event-sheet active="1">AreaCompletedScreen</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />
