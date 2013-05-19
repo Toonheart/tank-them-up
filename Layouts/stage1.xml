@@ -3207,6 +3207,15 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="DebugPanel" uid="487">
+            <properties>
+                <enable>Yes</enable>
+                <activated>Yes</activated>
+                <stay-on-top>No</stay-on-top>
+                <log-buffer-length>100</log-buffer-length>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>

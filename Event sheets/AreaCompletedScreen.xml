@@ -28,10 +28,6 @@
                             <param id="0" name="Key">&quot;SaveCompletedLevels&quot;</param>
                             <param id="1" name="Value">&quot;1&quot;</param>
                         </action>
-                        <action id="-10" name="Add to" sid="2203" type="System">
-                            <param id="0" name="Variable">LevelNumber</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <comment>OverWrite Webstorage completed level only if next stage is NOT unlocked already</comment>
@@ -125,10 +121,6 @@
                         <action id="0" name="Set local value" sid="2077" type="WebStorage">
                             <param id="0" name="Key">&quot;SaveCompletedLevels&quot;</param>
                             <param id="1" name="Value">&quot;2&quot;</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="2205" type="System">
-                            <param id="0" name="Variable">LevelNumber</param>
-                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -224,10 +216,6 @@
                             <param id="0" name="Key">&quot;SaveCompletedLevels&quot;</param>
                             <param id="1" name="Value">&quot;3&quot;</param>
                         </action>
-                        <action id="-9" name="Set value" sid="2206" type="System">
-                            <param id="0" name="Variable">LevelNumber</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <comment>OverWrite Webstorage completed level only if next stage is NOT unlocked already</comment>
@@ -322,11 +310,20 @@
                             <param id="0" name="Variable">ScreenChange</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-10" name="Add to" sid="2213" type="System">
+                            <param id="0" name="Variable">LevelNumber</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                         <action id="-16" name="Wait" sid="1358" type="System">
                             <param id="0" name="Seconds">2</param>
                         </action>
-                        <action id="-25" name="Go to layout (by name)" sid="1359" type="System">
-                            <param id="0" name="Layout">&quot;stage&quot; &amp; LevelNumber</param>
+                        <action id="-3" name="Set position" sid="2218" type="Text_AreaConquered">
+                            <param id="0" name="X">LayoutWidth+1000</param>
+                            <param id="1" name="Y">LayoutHeight-1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="2219" type="Text_NextArea">
+                            <param id="0" name="X">LayoutWidth+1000</param>
+                            <param id="1" name="Y">LayoutHeight-1000</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -335,12 +332,26 @@
                                 <condition id="-14" name="Compare variable" sid="2208" type="System">
                                     <param id="0" name="Variable">LevelNumber</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
+                                    <param id="2" name="Value">4</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-2" name="Go to layout" sid="2209" type="System">
                                     <param id="0" name="Layout">TitleScreen</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2214">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2215" type="System">
+                                    <param id="0" name="Variable">LevelNumber</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="2217" type="System">
+                                    <param id="0" name="Layout">&quot;stage&quot; &amp; LevelNumber</param>
                                 </action>
                             </actions>
                         </event-block>
