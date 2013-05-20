@@ -6,7 +6,7 @@
     <author>Srikrishna Das(krish) - krish@toonheart.com</author>
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>12600</saved-with-version>
-    <next-sid>2259</next-sid>
+    <next-sid>2281</next-sid>
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
@@ -39,7 +39,7 @@
         <height>2048</height>
     </window-size>
     <pixel-rounding>1</pixel-rounding>
-    <first-layout>stage0</first-layout>
+    <first-layout>LogoPage</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -51,7 +51,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-type name="playertank" sid="1">
             <plugin id="Sprite" />
             <instance-variables>
@@ -2121,6 +2121,25 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Logo" sid="2267">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2268" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501385">
+                        <collision-poly>
+                            <point x="0.241888" y="0.454294" />
+                            <point x="0.5" y="0.102493" />
+                            <point x="0.781711" y="0.409972" />
+                            <point x="0.998525" y="0.498615" />
+                            <point x="0.910029" y="0.831025" />
+                            <point x="0.5" y="0.66759" />
+                            <point x="0.0840708" y="0.842105" />
+                            <point x="0.0147493" y="0.498615" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -2131,6 +2150,7 @@
         <layout>stage0.xml</layout>
         <layout>TitleScreen.xml</layout>
         <layout>GraphicStore.xml</layout>
+        <layout>LogoPage.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>stage1events.xml</event-sheet>
@@ -2162,6 +2182,7 @@
         <event-sheet>LazerTurretAI.xml</event-sheet>
         <event-sheet>stage3events.xml</event-sheet>
         <event-sheet>BOSS_scarab.xml</event-sheet>
+        <event-sheet>LogoPageEvents.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="194">
@@ -2188,7 +2209,7 @@
             </properties>
         </global-instance>
     </global-instances>
-    <sounds-folder expanded="1">
+    <sounds-folder expanded="0">
         <file name="dropmine.m4a" />
         <file name="dropmine.ogg" />
         <file name="dropmine.wav" />
@@ -2211,6 +2232,9 @@
         <file name="tada.m4a" />
         <file name="tada.ogg" />
         <file name="tada.wav" />
+        <file name="lazershoot.m4a" />
+        <file name="lazershoot.ogg" />
+        <file name="lazershoot.wav" />
     </sounds-folder>
     <music-folder expanded="1">
         <file name="backgroundtheme1.m4a" />

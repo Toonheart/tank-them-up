@@ -48,6 +48,12 @@
                 <condition id="-3" name="Is on-screen" sid="2154" type="BOSS_Scarab" />
             </conditions>
             <actions>
+                <action id="0" name="Play" sid="2260" type="Audio">
+                    <param id="0" name="Audio file">lazershoot</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;playerfires&quot;</param>
+                </action>
                 <action id="0" name="Spawn another object" sid="2155" type="BOSS_Scarab">
                     <param id="0" name="Object">lazershock</param>
                     <param id="1" name="Layer">&quot;Turret&quot;</param>

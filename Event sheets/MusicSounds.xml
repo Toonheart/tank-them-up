@@ -46,6 +46,9 @@
                         <action id="4" name="Preload" sid="1820" type="Audio">
                             <param id="0" name="Audio file">backgroundtheme1</param>
                         </action>
+                        <action id="4" name="Preload" sid="2259" type="Audio">
+                            <param id="0" name="Audio file">lazershoot</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="1821">

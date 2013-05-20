@@ -67,7 +67,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1716" title="Hitpoint">
+        <event-group description="" sid="1716" title="Hitpoint">
             <sub-events>
                 <comment>Scarab gets fucked by missle</comment>
                 <event-block sid="1938">

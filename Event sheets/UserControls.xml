@@ -387,7 +387,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="sounds on user controls" sid="423" title="Sounds on Controls">
+        <event-group description="sounds on user controls" sid="423" title="Sounds on Controls">
             <sub-events>
                 <event-block sid="424">
                     <conditions>
