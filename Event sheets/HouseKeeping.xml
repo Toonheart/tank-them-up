@@ -50,10 +50,20 @@
                     <actions>
                         <action id="-24" name="Move to top" sid="2231" type="landmine" />
                         <action id="-24" name="Move to top" sid="2230" type="energyatom" />
+                        <action id="-24" name="Move to top" sid="2241" type="scarab" />
                         <action id="-24" name="Move to top" sid="2232" type="planertankshadow" />
                         <action id="-24" name="Move to top" sid="2229" type="playertank" />
                         <action id="-24" name="Move to top" sid="2227" type="sidewallshexdigi" />
                         <action id="-24" name="Move to top" sid="2228" type="fuelpod" />
+                    </actions>
+                </event-block>
+                <comment>Menus Layer</comment>
+                <event-block sid="2238">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="2239" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Move to bottom" sid="2240" type="Tile_PopMenus" />
                     </actions>
                 </event-block>
             </sub-events>

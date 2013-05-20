@@ -5,7 +5,7 @@
     <events>
         <event-group description="Conditions for area completion of a mssion." sid="924" title="Area Completion">
             <sub-events>
-                <event-block sid="925">
+                <event-block collapsed="1" sid="925">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="926" type="System">
                             <param id="0" name="First value">enemyBulletTurret.Count</param>
@@ -28,6 +28,7 @@
                             <param id="0" name="Key">&quot;SaveCompletedLevels&quot;</param>
                             <param id="1" name="Value">&quot;1&quot;</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="2242" type="scrollerPIN" />
                     </actions>
                     <sub-events>
                         <comment>OverWrite Webstorage completed level only if next stage is NOT unlocked already</comment>
@@ -62,6 +63,8 @@
                                     <param id="0" name="Object">Tile_PopMenus</param>
                                     <param id="1" name="Image point (optional)">4</param>
                                 </action>
+                                <action id="-24" name="Move to top" sid="2247" type="Text_AreaConquered" />
+                                <action id="-24" name="Move to top" sid="2248" type="Text_NextArea" />
                                 <action id="-9" name="Set value" sid="1215" type="System">
                                     <param id="0" name="Variable">ScreenChange</param>
                                     <param id="1" name="Value">0</param>
@@ -91,6 +94,8 @@
                                     <param id="0" name="Object">Tile_PopMenus</param>
                                     <param id="1" name="Image point (optional)">4</param>
                                 </action>
+                                <action id="-24" name="Move to top" sid="2249" type="Text_AreaConquered" />
+                                <action id="-24" name="Move to top" sid="2250" type="Text_NextArea" />
                                 <action id="-9" name="Set value" sid="1221" type="System">
                                     <param id="0" name="Variable">ScreenChange</param>
                                     <param id="1" name="Value">0</param>
@@ -99,7 +104,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="2072">
+                <event-block collapsed="1" sid="2072">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="2073" type="System">
                             <param id="0" name="First value">enemyLazerTurret.Count</param>
@@ -122,6 +127,7 @@
                             <param id="0" name="Key">&quot;SaveCompletedLevels&quot;</param>
                             <param id="1" name="Value">&quot;2&quot;</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="2243" type="scrollerPIN" />
                     </actions>
                     <sub-events>
                         <comment>OverWrite Webstorage completed level only if next stage is NOT unlocked already</comment>
@@ -156,6 +162,8 @@
                                     <param id="0" name="Object">Tile_PopMenus</param>
                                     <param id="1" name="Image point (optional)">4</param>
                                 </action>
+                                <action id="-24" name="Move to top" sid="2251" type="Text_AreaConquered" />
+                                <action id="-24" name="Move to top" sid="2252" type="Text_NextArea" />
                                 <action id="-9" name="Set value" sid="2086" type="System">
                                     <param id="0" name="Variable">ScreenChange</param>
                                     <param id="1" name="Value">0</param>
@@ -185,6 +193,8 @@
                                     <param id="0" name="Object">Tile_PopMenus</param>
                                     <param id="1" name="Image point (optional)">4</param>
                                 </action>
+                                <action id="-24" name="Move to top" sid="2253" type="Text_AreaConquered" />
+                                <action id="-24" name="Move to top" sid="2254" type="Text_NextArea" />
                                 <action id="-9" name="Set value" sid="2094" type="System">
                                     <param id="0" name="Variable">ScreenChange</param>
                                     <param id="1" name="Value">0</param>
@@ -193,7 +203,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="2179">
+                <event-block collapsed="1" sid="2179">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="2180" type="System">
                             <param id="0" name="First value">BOSS_scarab.Count</param>
@@ -216,6 +226,7 @@
                             <param id="0" name="Key">&quot;SaveCompletedLevels&quot;</param>
                             <param id="1" name="Value">&quot;3&quot;</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="2244" type="scrollerPIN" />
                     </actions>
                     <sub-events>
                         <comment>OverWrite Webstorage completed level only if next stage is NOT unlocked already</comment>
@@ -250,6 +261,8 @@
                                     <param id="0" name="Object">Tile_PopMenus</param>
                                     <param id="1" name="Image point (optional)">4</param>
                                 </action>
+                                <action id="-24" name="Move to top" sid="2255" type="Text_AreaConquered" />
+                                <action id="-24" name="Move to top" sid="2256" type="Text_NextArea" />
                                 <action id="-9" name="Set value" sid="2194" type="System">
                                     <param id="0" name="Variable">ScreenChange</param>
                                     <param id="1" name="Value">0</param>
@@ -279,6 +292,8 @@
                                     <param id="0" name="Object">Tile_PopMenus</param>
                                     <param id="1" name="Image point (optional)">4</param>
                                 </action>
+                                <action id="-24" name="Move to top" sid="2257" type="Text_AreaConquered" />
+                                <action id="-24" name="Move to top" sid="2258" type="Text_NextArea" />
                                 <action id="-9" name="Set value" sid="2202" type="System">
                                     <param id="0" name="Variable">ScreenChange</param>
                                     <param id="1" name="Value">0</param>

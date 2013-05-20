@@ -13,8 +13,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>stage3</layout>
         <event-sheet>BOSS_scarab</event-sheet>
         <event-sheet>TitleScreenEvents</event-sheet>
-        <event-sheet active="1">Debug</event-sheet>
+        <event-sheet>Debug</event-sheet>
         <event-sheet>UserControls</event-sheet>
+        <event-sheet active="1">AreaCompletedScreen</event-sheet>
+        <event-sheet>HouseKeeping</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />

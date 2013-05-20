@@ -10,12 +10,7 @@
                     <conditions>
                         <condition id="-1" name="Every tick" sid="728" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="3" name="Update watch variable" sid="2211" type="DebugPanel">
-                            <param id="0" name="Name">&quot;LevelNumber&quot;</param>
-                            <param id="1" name="Value">LevelNumber</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <comment>Enable / Disable AI markers for Enemy - Useful in Debugging</comment>
                 <event-block disabled="1" sid="729">
