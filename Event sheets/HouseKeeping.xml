@@ -40,5 +40,23 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="z order to make them look right" sid="2224" title="Z-Order of Stuff">
+            <sub-events>
+                <comment>Object Layer</comment>
+                <event-block sid="2225">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="2226" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="2231" type="landmine" />
+                        <action id="-24" name="Move to top" sid="2230" type="energyatom" />
+                        <action id="-24" name="Move to top" sid="2232" type="planertankshadow" />
+                        <action id="-24" name="Move to top" sid="2229" type="playertank" />
+                        <action id="-24" name="Move to top" sid="2227" type="sidewallshexdigi" />
+                        <action id="-24" name="Move to top" sid="2228" type="fuelpod" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

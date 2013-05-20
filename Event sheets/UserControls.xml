@@ -407,7 +407,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Controls on HUD" sid="1251" title="HUD Controls">
+        <event-group description="Controls on HUD" sid="1251" title="HUD Controls">
             <sub-events>
                 <comment>Pause the Game</comment>
                 <event-block sid="1252">
@@ -418,6 +418,19 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Toggle pause" sid="1254" type="Pause" />
+                    </actions>
+                </event-block>
+                <comment>Toggle God Mode</comment>
+                <event-block sid="2234">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="2235" type="Touch">
+                            <param id="0" name="Object">HUDsecond</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="2236" type="playertank">
+                            <param id="0" name="Instance variable">GodMode</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

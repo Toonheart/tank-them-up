@@ -68,6 +68,9 @@
                 <event-block sid="742">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="743" type="System" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="2237" type="playertank">
+                            <param id="0" name="Instance variable">GodMode</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="744" type="playertank">

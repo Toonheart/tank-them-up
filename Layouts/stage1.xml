@@ -300,6 +300,7 @@
                         <PrevTouch_Accelerator>true</PrevTouch_Accelerator>
                         <ReverseGearEngaged>false</ReverseGearEngaged>
                         <EnergySpheres>0</EnergySpheres>
+                        <GodMode>false</GodMode>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">

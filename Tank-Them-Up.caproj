@@ -6,7 +6,7 @@
     <author>Srikrishna Das(krish) - krish@toonheart.com</author>
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>12600</saved-with-version>
-    <next-sid>2223</next-sid>
+    <next-sid>2238</next-sid>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
@@ -66,6 +66,7 @@
                 <instance-variable comment="Was previous touch on accelerator then true.. if it was brake then false." name="PrevTouch_Accelerator" sid="9" type="boolean" />
                 <instance-variable comment="Whether reverse gear is engaged or Not" name="ReverseGearEngaged" sid="1071" type="boolean" />
                 <instance-variable comment="Number of energy sphere&apos;s collected" name="EnergySpheres" sid="1892" type="number" />
+                <instance-variable comment="toggle god mode for debug" name="GodMode" sid="2233" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="10">
