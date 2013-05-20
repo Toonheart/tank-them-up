@@ -10,7 +10,7 @@
             </conditions>
             <actions>
                 <action id="-18" name="Rotate clockwise" sid="1785" type="smallFanBlade">
-                    <param id="0" name="Degrees">1</param>
+                    <param id="0" name="Degrees">2</param>
                 </action>
             </actions>
         </event-block>

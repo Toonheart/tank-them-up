@@ -5,7 +5,7 @@
     <events>
         <variable comment="Level number" constant="0" name="LevelNumber" sid="2021" static="0" type="number">0</variable>
         <variable comment="Whether Music is ON or OFF" constant="0" name="IsMusic" sid="1118" static="0" type="number">1</variable>
-        <variable comment="Shifts Opacity of layers" constant="0" name="OpacityShifter" sid="956" static="0" type="number">0.3</variable>
+        <variable comment="Shifts Opacity of layers" constant="0" name="OpacityShifter" sid="956" static="0" type="number">0.4</variable>
         <include>Debug</include>
         <include>FadeInOuts</include>
         <event-group description="Actions for the menus" sid="957" title="Menu Actions">
@@ -203,8 +203,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="1250" type="System">
-                            <param id="0" name="Seconds">5</param>
+                        <action disabled="1" id="-16" name="Wait" sid="1250" type="System">
+                            <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="-9" name="Set value" sid="976" type="System">
                             <param id="0" name="Variable">OpacityShifter</param>
