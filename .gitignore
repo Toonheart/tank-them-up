@@ -1,4 +1,5 @@
 # Ignore these files from being committed to repo
 Textures/*
 Animations/*
+Files/*
 *.backup*
