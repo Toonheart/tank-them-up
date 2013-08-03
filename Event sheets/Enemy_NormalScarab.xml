@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>ScarabAI</name>
+    <name>Enemy_NormalScarab</name>
     <events>
         <variable comment="hitpoints for scarab - flexibility to change in every level" constant="0" name="ScarabHitPoint" sid="1656" static="0" type="number">0</variable>
         <event-group description="how scarabs move towards tank" sid="1366" title="Player in Range - Attack">

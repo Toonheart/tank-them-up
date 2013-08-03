@@ -4,10 +4,13 @@
     <description>A Top down 2D tank shooter game with lots and lots of bombs!</description>
     <version>0.4</version>
     <author>Srikrishna Das(krish) - krish@toonheart.com</author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
     <unique-id>11x3p9zew2lzl</unique-id>
-    <saved-with-version>12600</saved-with-version>
-    <next-sid>2281</next-sid>
+    <saved-with-version>13200</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -15,12 +18,11 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Car" version="1">Car</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
@@ -51,7 +53,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-type name="playertank" sid="1">
             <plugin id="Sprite" />
             <instance-variables>
@@ -2099,23 +2101,23 @@
             <animation-folder expanded="1">
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2146" speed="2">
                     <frame duration="1" hotspotX="0.500675" hotspotY="0.511287">
-                        <image-point name="Lazer" x="0.881242" y="0.316027" />
-                        <image-point name="Bullet" x="0.879892" y="0.655756" />
+                        <image-point name="Lazer" x="0.904184" y="0.31377" />
+                        <image-point name="Bullet" x="0.932524" y="0.654628" />
                         <collision-poly>
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
+                            <point x="0.681511" y="0.293454" />
+                            <point x="0.692307" y="0.672686" />
+                            <point x="0.0809717" y="0.688487" />
+                            <point x="0.0890688" y="0.311512" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.500675" hotspotY="0.488713">
                         <image-point name="Lazer" x="0.881242" y="0.316027" />
                         <image-point name="Bullet" x="0.879892" y="0.655756" />
                         <collision-poly>
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
+                            <point x="0.681511" y="0.293454" />
+                            <point x="0.692307" y="0.672686" />
+                            <point x="0.0809717" y="0.688487" />
+                            <point x="0.0890688" y="0.311512" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -2169,19 +2171,18 @@
         <event-sheet>FadeInOuts.xml</event-sheet>
         <event-sheet>MusicSounds.xml</event-sheet>
         <event-sheet>GamePausedScreen.xml</event-sheet>
-        <event-sheet>ScarabAI.xml</event-sheet>
+        <event-sheet>Enemy_NormalScarab.xml</event-sheet>
         <event-sheet>BulletTurretAI.xml</event-sheet>
         <event-sheet>BridgeFans.xml</event-sheet>
         <event-sheet>FuelPod.xml</event-sheet>
         <event-sheet>CameraScroll.xml</event-sheet>
         <event-sheet>HouseKeeping.xml</event-sheet>
-        <event-sheet>Player.xml</event-sheet>
         <event-sheet>directionPoint.xml</event-sheet>
         <event-sheet>FriendlyAirStrike.xml</event-sheet>
         <event-sheet>stage2events.xml</event-sheet>
-        <event-sheet>LazerTurretAI.xml</event-sheet>
+        <event-sheet>Enemy_LazerTurret.xml</event-sheet>
         <event-sheet>stage3events.xml</event-sheet>
-        <event-sheet>BOSS_scarab.xml</event-sheet>
+        <event-sheet>Enemy_BOSS_scarab.xml</event-sheet>
         <event-sheet>LogoPageEvents.xml</event-sheet>
     </event-folder>
     <global-instances>

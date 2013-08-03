@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>HouseKeeping</name>
     <events>
-        <event-group description="Stuff that needs to make the game smooth." sid="1833" title="Game HouseKeeping and Stability Stuff">
+        <event-group collapsed="1" description="Stuff that needs to make the game smooth." sid="1833" title="Game HouseKeeping and Stability Stuff">
             <sub-events>
                 <comment>Allows spawning of bullet, explosion, forcefield, lineofsight objects later.  Also Set Range of Player to WindowWidth.. so it dynamically differs for different devices.&#x0D;&#x0A;Range can also be changed to hard values depending on different enemy.. lets say later if you want an enemy who can shoot you from any distance.</comment>
                 <event-block sid="244">
@@ -55,6 +55,7 @@
                         <action id="-24" name="Move to top" sid="2229" type="playertank" />
                         <action id="-24" name="Move to top" sid="2227" type="sidewallshexdigi" />
                         <action id="-24" name="Move to top" sid="2228" type="fuelpod" />
+                        <action id="-24" name="Move to top" sid="6475886742767215" type="BOSS_Scarab" />
                     </actions>
                 </event-block>
                 <comment>Menus Layer</comment>
@@ -64,6 +65,85 @@
                     </conditions>
                     <actions>
                         <action id="-25" name="Move to bottom" sid="2240" type="Tile_PopMenus" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8844547243682315" title="Killing UnNeeded Animations">
+            <sub-events>
+                <comment>Ensure explosion sprites are killed after they end. Better solution than waiting 1 sec for animation finish.</comment>
+                <event-block sid="3436351061152607">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="9564432555832424" type="explosion" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="1484737987579671" type="explosion" />
+                    </actions>
+                </event-block>
+                <comment>Ensure lazer sprites are killed after they end. Better solution than waiting 1 sec for animation finish.</comment>
+                <event-block sid="9281601882245625">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="84059656212538" type="lazershock" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4714699175157096" type="lazershock" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Ensuring player is placed in right angle and that turret stays on player" sid="9214379970550301" title="Player Stability">
+            <sub-events>
+                <comment>Turret to stay on Tank always</comment>
+                <event-block sid="2376015826856855">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="7674150079826148" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="9830769807797769" type="playertank_turret">
+                            <param id="0" name="X">playertank.X</param>
+                            <param id="1" name="Y">playertank.Y</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="5885255507005801" type="planertankshadow">
+                            <param id="0" name="Object">playertank</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="3361915146984076" type="planertankshadow">
+                            <param id="0" name="Angle">playertank.Angle</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="1062083862768723" type="playertank" />
+                    </actions>
+                </event-block>
+                <comment>To turn tank to game layer flow angle at start of layout</comment>
+                <event-block sid="9556376405274302">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="9842050778634009" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="8640895829288845" type="playertank">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="7055108055459247" type="playertank_turret">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="8672046137928055" type="planertankshadow">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="978621218536903" type="playertank">
+                            <param id="0" name="Instance variable">primaryAmmo</param>
+                            <param id="1" name="Value">99</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9191660166561854" type="playertank">
+                            <param id="0" name="Instance variable">secondaryAmmo</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2999829656533451" type="playertank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">70</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2777760657348586" type="playertank">
+                            <param id="0" name="Instance variable">EnergySpheres</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

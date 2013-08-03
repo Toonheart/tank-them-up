@@ -4,7 +4,7 @@
     <name>UserControls</name>
     <events>
         <variable comment="Time for reverse gear engaging" constant="0" name="ReverseGearEngageTime" sid="1069" static="0" type="number">0</variable>
-        <event-group description="movement controls" sid="1037" title="Movement">
+        <event-group collapsed="1" description="movement controls" sid="1037" title="Movement">
             <sub-events>
                 <comment>Movement and Navigation Controls</comment>
                 <event-block sid="1767">
@@ -265,6 +265,9 @@
                                     <param id="0" name="Instance variable">secondaryAmmo</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="0" name="Set text" sid="5313880344327816" type="AmmoCntSecondary">
+                                    <param id="0" name="Text">playertank.secondaryAmmo</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="395">
@@ -350,12 +353,15 @@
                                 </action>
                                 <action id="0" name="Spawn another object" sid="415" type="playertank_turret">
                                     <param id="0" name="Object">normalbullet</param>
-                                    <param id="1" name="Layer">1</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
                                     <param id="2" name="Image point">1</param>
                                 </action>
                                 <action id="-12" name="Subtract from" sid="416" type="playertank">
                                     <param id="0" name="Instance variable">primaryAmmo</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="4108897674204307" type="AmmoCntPrimary">
+                                    <param id="0" name="Text">playertank.primaryAmmo</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="417" type="System">
                                     <param id="0" name="Seconds">0.5</param>

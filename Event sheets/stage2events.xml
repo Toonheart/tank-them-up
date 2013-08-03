@@ -6,13 +6,12 @@
         <include>CameraScroll</include>
         <include>FriendlyAirStrike</include>
         <include>directionPoint</include>
-        <include>Player</include>
         <include>HouseKeeping</include>
         <include>MusicSounds</include>
         <include>BridgeFans</include>
-        <include>LazerTurretAI</include>
+        <include>Enemy_LazerTurret</include>
         <include>BulletTurretAI</include>
-        <include>ScarabAI</include>
+        <include>Enemy_NormalScarab</include>
         <include>FadeInOuts</include>
         <include>MissionFailedScreen</include>
         <include>AreaCompletedScreen</include>
