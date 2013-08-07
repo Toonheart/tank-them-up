@@ -12,7 +12,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="3144673459800925" type="fpscounter">
-                            <param id="0" name="Text">fps &amp; &quot; FPS (&quot; &amp; renderer &amp; &quot;)&quot; &#x0D;&#x0A;&amp; newline &amp;&#x0D;&#x0A;&quot;Expl Cnt - &quot; &amp; explosion.Count &#x0D;&#x0A;&amp; newline &amp;&#x0D;&#x0A;&quot;Lzr Cnt - &quot; &amp; lazershock.Count</param>
+                            <param id="0" name="Text">fps &amp; &quot; FPS (&quot; &amp; renderer &amp; &quot;)&quot; &#x0D;&#x0A;&amp; newline &amp;&#x0D;&#x0A;&quot;Expl Cnt - &quot; &amp; explosion.Count &#x0D;&#x0A;&amp; newline &amp;&#x0D;&#x0A;&quot;Lzr Cnt - &quot; &amp; lazershock.Count&#x0D;&#x0A;&amp; newline &amp;&#x0D;&#x0A;&quot;Black Op&quot; &amp; LayerOpacity(&quot;Black&quot;)</param>
                         </action>
                     </actions>
                 </event-block>

@@ -10,7 +10,7 @@
         <include>MusicSounds</include>
         <include>BridgeFans</include>
         <include>Enemy_LazerTurret</include>
-        <include>BulletTurretAI</include>
+        <include>Enemy_BulletTurret</include>
         <include>Enemy_NormalScarab</include>
         <include>FadeInOuts</include>
         <include>MissionFailedScreen</include>

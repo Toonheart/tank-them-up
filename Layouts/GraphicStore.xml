@@ -372,7 +372,6 @@
                     </properties>
                     <instance-variables>
                         <hitcount>0</hitcount>
-                        <range>0</range>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
@@ -646,6 +645,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>

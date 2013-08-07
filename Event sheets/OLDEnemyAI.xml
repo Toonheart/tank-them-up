@@ -78,13 +78,7 @@
                     <sub-events>
                         <comment>If calculated distance is within Range of the enemy,  check if line of sight is passing through any of the solid objects that should be blocking enemy&apos;s view.&#x0D;&#x0A;If the LoS is clear, then fire the effing player&apos;s ass.</comment>
                         <event-block sid="860">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="861" type="System">
-                                    <param id="0" name="First value">distance(enemyBulletTurret.X,enemyBulletTurret.Y,playertank.X,playertank.Y)</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Second value">enemyBulletTurret.range</param>
-                                </condition>
-                            </conditions>
+                            <conditions />
                             <actions />
                             <sub-events>
                                 <event-block sid="862">

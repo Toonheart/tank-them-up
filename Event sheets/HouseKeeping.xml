@@ -17,10 +17,6 @@
                         <action id="-9" name="Destroy" sid="249" type="enemyAirstrike" />
                         <action id="-9" name="Destroy" sid="250" type="enemymissile" />
                         <action id="-9" name="Destroy" sid="251" type="playersmine" />
-                        <action id="-10" name="Set value" sid="259" type="enemyBulletTurret">
-                            <param id="0" name="Instance variable">range</param>
-                            <param id="1" name="Value">2048</param>
-                        </action>
                         <action id="-10" name="Set value" sid="260" type="scarab">
                             <param id="0" name="Instance variable">range</param>
                             <param id="1" name="Value">768</param>

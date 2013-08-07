@@ -3,9 +3,83 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>AreaCompletedScreen</name>
     <events>
-        <event-group description="Conditions for area completion of a mssion." sid="924" title="Area Completion">
+        <event-group collapsed="1" description="actions that user can take on area completed" sid="1352" title="User Actions on Area Complete">
             <sub-events>
-                <event-block sid="925">
+                <event-block collapsed="1" sid="1353">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1354" type="Touch">
+                            <param id="0" name="Object">Text_NextArea</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="1356" type="StrikeRED">
+                            <param id="0" name="Object">Text_NextArea</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="1357" type="StrikeRED">
+                            <param id="0" name="Width">Text_NextArea.Width+100</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1355" type="System">
+                            <param id="0" name="Variable">ScreenChange</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="2213" type="System">
+                            <param id="0" name="Variable">LevelNumber</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1358" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="2218" type="Text_AreaConquered">
+                            <param id="0" name="X">LayoutWidth+1000</param>
+                            <param id="1" name="Y">LayoutHeight-1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="2219" type="Text_NextArea">
+                            <param id="0" name="X">LayoutWidth+1000</param>
+                            <param id="1" name="Y">LayoutHeight-1000</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2207">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2208" type="System">
+                                    <param id="0" name="Variable">LevelNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2222" type="System">
+                                    <param id="0" name="Variable">LevelNumber</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="2209" type="System">
+                                    <param id="0" name="Layout">TitleScreen</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2214">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2215" type="System">
+                                    <param id="0" name="Variable">LevelNumber</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="2217" type="System">
+                                    <param id="0" name="Layout">&quot;stage&quot; &amp; LevelNumber</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="how area completes on level1" sid="924" title="Level1 - Area Completion">
+            <sub-events>
+                <comment>When Player kills all enemies, Level is complete. Stop input. Let player know and save the completed level number</comment>
+                <event-block collapsed="1" disabled="1" sid="925">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="926" type="System">
                             <param id="0" name="First value">enemyBulletTurret.Count</param>
@@ -32,7 +106,7 @@
                     </actions>
                     <sub-events>
                         <comment>OverWrite Webstorage completed level only if next stage is NOT unlocked already</comment>
-                        <event-block sid="938">
+                        <event-block disabled="1" sid="938">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="939" type="System">
                                     <param id="0" name="First value">int(WebStorage.LocalValue(&quot;SaveCompletedLevels&quot;))</param>
@@ -45,43 +119,35 @@
                                     <param id="0" name="Key">&quot;SaveCompletedLevels&quot;</param>
                                     <param id="1" name="Value">&quot;1&quot;</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="1211" type="System">
-                                    <param id="0" name="Variable">ScreenChange</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="0" name="Spawn another object" sid="8482800301917577" type="BOSS_Ender">
+                                    <param id="0" name="Object">explosion</param>
+                                    <param id="1" name="Layer">&quot;Turret&quot;</param>
+                                    <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="1212" type="System">
-                                    <param id="0" name="Seconds">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="1213" type="Tile_PopMenus">
+                                <action id="-15" name="Set visible" sid="2104173070890604" type="Tile_PopMenus">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="-4" name="Set position to another object" sid="1214" type="Text_AreaConquered">
+                                <action id="-4" name="Set position to another object" sid="7132942614230786" type="Text_AreaConquered">
                                     <param id="0" name="Object">Tile_PopMenus</param>
                                     <param id="1" name="Image point (optional)">1</param>
                                 </action>
-                                <action id="-4" name="Set position to another object" sid="1350" type="Text_NextArea">
+                                <action id="-4" name="Set position to another object" sid="7351765485329377" type="Text_NextArea">
                                     <param id="0" name="Object">Tile_PopMenus</param>
                                     <param id="1" name="Image point (optional)">4</param>
                                 </action>
-                                <action id="-24" name="Move to top" sid="2247" type="Text_AreaConquered" />
-                                <action id="-24" name="Move to top" sid="2248" type="Text_NextArea" />
-                                <action id="-9" name="Set value" sid="1215" type="System">
-                                    <param id="0" name="Variable">ScreenChange</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
+                                <action id="-24" name="Move to top" sid="5812955633688851" type="Text_AreaConquered" />
+                                <action id="-24" name="Move to top" sid="8225666098355547" type="Text_NextArea" />
                             </actions>
                         </event-block>
-                        <event-block sid="942">
+                        <event-block disabled="1" sid="942">
                             <conditions>
                                 <condition id="-22" name="Else" sid="943" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="1217" type="System">
-                                    <param id="0" name="Variable">ScreenChange</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="1218" type="System">
-                                    <param id="0" name="Seconds">1</param>
+                                <action id="0" name="Spawn another object" sid="3811585052499648" type="BOSS_Ender">
+                                    <param id="0" name="Object">explosion</param>
+                                    <param id="1" name="Layer">&quot;Turret&quot;</param>
+                                    <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="1219" type="Tile_PopMenus">
                                     <param id="0" name="Visibility">1</param>
@@ -96,14 +162,92 @@
                                 </action>
                                 <action id="-24" name="Move to top" sid="2249" type="Text_AreaConquered" />
                                 <action id="-24" name="Move to top" sid="2250" type="Text_NextArea" />
-                                <action id="-9" name="Set value" sid="1221" type="System">
-                                    <param id="0" name="Variable">ScreenChange</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Another way - Dramatic Ending</comment>
+                <event-block sid="2002547577059084">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1789048227716904" type="System">
+                            <param id="0" name="First value">enemyBulletTurret.Count</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="8768962369250871" type="System">
+                            <param id="0" name="Variable">LevelNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="7133430390876512" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="0" name="Stop" sid="24500133736655" type="playertank" />
+                        <action behavior="Car" id="2" name="Set ignoring input" sid="8721882602177056" type="playertank">
+                            <param id="0" name="Input">1</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set local value" sid="2417754790547964" type="WebStorage">
+                            <param id="0" name="Key">&quot;SaveCompletedLevels&quot;</param>
+                            <param id="1" name="Value">&quot;1&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="9904923932991093" type="scrollerPIN" />
+                    </actions>
+                    <sub-events>
+                        <comment>OverWrite Webstorage completed level only if next stage is NOT unlocked already</comment>
+                        <event-block sid="4992968956417046">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="6285451077256646" type="System">
+                                    <param id="0" name="First value">int(WebStorage.LocalValue(&quot;SaveCompletedLevels&quot;))</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Set local value" sid="5435905047713597" type="WebStorage">
+                                    <param id="0" name="Key">&quot;SaveCompletedLevels&quot;</param>
+                                    <param id="1" name="Value">&quot;1&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="1999090661374146" type="Tile_PopMenus">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="3078074517852523" type="Text_AreaConquered">
+                                    <param id="0" name="Object">Tile_PopMenus</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="3582905718012755" type="Text_NextArea">
+                                    <param id="0" name="Object">Tile_PopMenus</param>
+                                    <param id="1" name="Image point (optional)">4</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="2683754591433286" type="Text_AreaConquered" />
+                                <action id="-24" name="Move to top" sid="1489456947724681" type="Text_NextArea" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="7532946423545701">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8390012358468959" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="9098961844346188" type="Tile_PopMenus">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="3072239949011929" type="Text_AreaConquered">
+                                    <param id="0" name="Object">Tile_PopMenus</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="5754113118248121" type="Text_NextArea">
+                                    <param id="0" name="Object">Tile_PopMenus</param>
+                                    <param id="1" name="Image point (optional)">4</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="1543983765392627" type="Text_AreaConquered" />
+                                <action id="-24" name="Move to top" sid="7365325063662926" type="Text_NextArea" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="how area completes on level2" sid="9443395429107425" title="Level2 - Area Completion">
+            <sub-events>
                 <event-block sid="2072">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="2073" type="System">
@@ -164,11 +308,24 @@
                                 </action>
                                 <action id="-24" name="Move to top" sid="2251" type="Text_AreaConquered" />
                                 <action id="-24" name="Move to top" sid="2252" type="Text_NextArea" />
-                                <action id="-9" name="Set value" sid="2086" type="System">
-                                    <param id="0" name="Variable">ScreenChange</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="7877715275489523">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="2319264385639646" type="System">
+                                            <param id="0" name="First value">LayerOpacity(&quot;Black&quot;)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="5049105144978659" type="System">
+                                            <param id="0" name="Variable">ScreenChange</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="2087">
                             <conditions>
@@ -195,14 +352,31 @@
                                 </action>
                                 <action id="-24" name="Move to top" sid="2253" type="Text_AreaConquered" />
                                 <action id="-24" name="Move to top" sid="2254" type="Text_NextArea" />
-                                <action id="-9" name="Set value" sid="2094" type="System">
-                                    <param id="0" name="Variable">ScreenChange</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="4603914841871495">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="5280354237452114" type="System">
+                                            <param id="0" name="First value">LayerOpacity(&quot;Black&quot;)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="6592599726333945" type="System">
+                                            <param id="0" name="Variable">ScreenChange</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="how area completes on level3" sid="43662720118488" title="Level3 - Area Completion">
+            <sub-events>
                 <event-block sid="2179">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="2180" type="System">
@@ -297,80 +471,6 @@
                                 <action id="-9" name="Set value" sid="2202" type="System">
                                     <param id="0" name="Variable">ScreenChange</param>
                                     <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>When Player kills all enemies, Level is complete. Stop input. Let player know and save the completed level number</comment>
-            </sub-events>
-        </event-group>
-        <event-group description="actions that user can take on area completed" sid="1352" title="User Actions on Area Complete">
-            <sub-events>
-                <event-block sid="1353">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="1354" type="Touch">
-                            <param id="0" name="Object">Text_NextArea</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="1356" type="StrikeRED">
-                            <param id="0" name="Object">Text_NextArea</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="-5" name="Set width" sid="1357" type="StrikeRED">
-                            <param id="0" name="Width">Text_NextArea.Width+100</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="1355" type="System">
-                            <param id="0" name="Variable">ScreenChange</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="2213" type="System">
-                            <param id="0" name="Variable">LevelNumber</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="1358" type="System">
-                            <param id="0" name="Seconds">2</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="2218" type="Text_AreaConquered">
-                            <param id="0" name="X">LayoutWidth+1000</param>
-                            <param id="1" name="Y">LayoutHeight-1000</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="2219" type="Text_NextArea">
-                            <param id="0" name="X">LayoutWidth+1000</param>
-                            <param id="1" name="Y">LayoutHeight-1000</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="2207">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="2208" type="System">
-                                    <param id="0" name="Variable">LevelNumber</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="2222" type="System">
-                                    <param id="0" name="Variable">LevelNumber</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-2" name="Go to layout" sid="2209" type="System">
-                                    <param id="0" name="Layout">TitleScreen</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2214">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="2215" type="System">
-                                    <param id="0" name="Variable">LevelNumber</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-25" name="Go to layout (by name)" sid="2217" type="System">
-                                    <param id="0" name="Layout">&quot;stage&quot; &amp; LevelNumber</param>
                                 </action>
                             </actions>
                         </event-block>

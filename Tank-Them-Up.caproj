@@ -10,6 +10,7 @@
     <unique-id>11x3p9zew2lzl</unique-id>
     <saved-with-version>13200</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
@@ -18,11 +19,10 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Car" version="1">Car</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
@@ -568,7 +568,6 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable comment="To count hits taken by object" name="hitcount" sid="62" type="number" />
-                <instance-variable comment="Range of enemy&apos;s fire which is distance between enemy and player when the enemy will start firing" name="range" sid="63" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="64">
@@ -633,11 +632,12 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="74" speed="4">
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="74" speed="6">
                     <frame duration="1" hotspotX="0.491379" hotspotY="0.493562">
                         <collision-poly>
-                            <point x="0.850574" y="0.381974" />
-                            <point x="0.867816" y="0.587983" />
+                            <point x="0.813218" y="0.379828" />
+                            <point x="0.821839" y="0.480687" />
+                            <point x="0.83046" y="0.581545" />
                             <point x="0.0977011" y="0.733906" />
                             <point x="0.0804598" y="0.266095" />
                         </collision-poly>
@@ -1135,6 +1135,11 @@
         </object-type>
         <object-type name="fuelpod" sid="135">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="6183782500365392">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="137" speed="5">
                     <frame duration="1" hotspotX="0.501667" hotspotY="0.500849">
@@ -2142,6 +2147,25 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="BOSS_Ender" sid="2122607458963741">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5524871692184574" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.514286" y="0.114286" />
+                        <image-point name="Imagepoint 2" x="0.15" y="0.507143" />
+                        <image-point name="Imagepoint 3" x="0.892857" y="0.5" />
+                        <image-point name="Imagepoint 4" x="0.514286" y="0.871429" />
+                        <collision-poly>
+                            <point x="0.510714" y="0.0178571" />
+                            <point x="0.996429" y="0.482143" />
+                            <point x="0.517857" y="0.989286" />
+                            <point x="0.0285714" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -2172,7 +2196,7 @@
         <event-sheet>MusicSounds.xml</event-sheet>
         <event-sheet>GamePausedScreen.xml</event-sheet>
         <event-sheet>Enemy_NormalScarab.xml</event-sheet>
-        <event-sheet>BulletTurretAI.xml</event-sheet>
+        <event-sheet>Enemy_BulletTurret.xml</event-sheet>
         <event-sheet>BridgeFans.xml</event-sheet>
         <event-sheet>FuelPod.xml</event-sheet>
         <event-sheet>CameraScroll.xml</event-sheet>
@@ -2184,6 +2208,7 @@
         <event-sheet>stage3events.xml</event-sheet>
         <event-sheet>Enemy_BOSS_scarab.xml</event-sheet>
         <event-sheet>LogoPageEvents.xml</event-sheet>
+        <event-sheet>AllGlobalVariables.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="194">
