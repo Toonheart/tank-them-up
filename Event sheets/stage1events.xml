@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>stage1events</name>
     <events>
+        <include>AllGlobalVariables</include>
         <include>CameraScroll</include>
         <include>FriendlyAirStrike</include>
         <include>directionPoint</include>
@@ -32,7 +33,7 @@
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-9" name="Set value" sid="2098" type="System">
-                    <param id="0" name="Variable">BulletTurretHitPoint</param>
+                    <param id="0" name="Variable">EnemyBulletTurret_Health</param>
                     <param id="1" name="Value">5</param>
                 </action>
                 <action id="-9" name="Set value" sid="2118" type="System">
