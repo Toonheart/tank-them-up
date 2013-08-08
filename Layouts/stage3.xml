@@ -3131,7 +3131,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="fpscounter" uid="493">
+                <instance type="OSDebug" uid="493">
                     <properties>
                         <text>fps &amp; &quot; FPS (&quot; &amp; renderer &amp; &quot;)&quot;</text>
                         <initial-visibility>Visible</initial-visibility>

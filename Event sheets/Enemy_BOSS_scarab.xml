@@ -5,7 +5,8 @@
     <events>
         <event-group description="Attack  Behavior" sid="5502671497570139" title="Attack">
             <sub-events>
-                <event-block collapsed="1" sid="2149">
+                <comment>Alternate between Firing and Lazers</comment>
+                <event-block sid="2149">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="2148" type="BOSS_Scarab" />
                     </conditions>
@@ -18,6 +19,7 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="2" name="Stop" sid="8029574689446568" type="BOSS_Scarab" />
                                 <action id="0" name="Play" sid="2165" type="Audio">
                                     <param id="0" name="Audio file">tankfire</param>
                                     <param id="2" name="Loop">0</param>
@@ -26,7 +28,7 @@
                                 </action>
                                 <action id="0" name="Spawn another object" sid="2166" type="BOSS_Scarab">
                                     <param id="0" name="Object">explosion</param>
-                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="1" name="Layer">&quot;Turret&quot;</param>
                                     <param id="2" name="Image point">2</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="2151" type="BOSS_Scarab">
@@ -34,7 +36,6 @@
                                     <param id="1" name="Layer">&quot;Turret&quot;</param>
                                     <param id="2" name="Image point">2</param>
                                 </action>
-                                <action id="2" name="Stop" sid="8029574689446568" type="BOSS_Scarab" />
                                 <action id="9" name="Set scale" sid="2167" type="explosion">
                                     <param id="0" name="Scale">0.5</param>
                                 </action>
@@ -54,6 +55,7 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="2" name="Stop" sid="6370650888773115" type="BOSS_Scarab" />
                                 <action id="0" name="Play" sid="2260" type="Audio">
                                     <param id="0" name="Audio file">lazershoot</param>
                                     <param id="2" name="Loop">0</param>
@@ -62,10 +64,9 @@
                                 </action>
                                 <action id="0" name="Spawn another object" sid="2155" type="BOSS_Scarab">
                                     <param id="0" name="Object">lazershock</param>
-                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="1" name="Layer">&quot;Turret&quot;</param>
                                     <param id="2" name="Image point">1</param>
                                 </action>
-                                <action id="2" name="Stop" sid="6370650888773115" type="BOSS_Scarab" />
                                 <action id="-5" name="Set width" sid="2164" type="lazershock">
                                     <param id="0" name="Width">distance(self.X,self.Y,playertank.X,playertank.Y)</param>
                                 </action>
@@ -140,39 +141,21 @@
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="1957" type="normalbullet">
+                                <action id="0" name="Spawn another object" sid="1957" type="playerMissle">
                                     <param id="0" name="Object">explosion</param>
                                     <param id="1" name="Layer">&quot;Turret&quot;</param>
                                     <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="1972" type="playerMissle" />
-                                <action id="9" name="Set scale" sid="1958" type="explosion">
-                                    <param id="0" name="Scale">4</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="1960" type="explosion">
                                     <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="1964" type="BOSS_Scarab" />
-                                <action id="-3" name="Set position" sid="2066" type="scrollerPIN">
-                                    <param id="0" name="X">playertank.X</param>
-                                    <param id="1" name="Y">playertank.Y-300</param>
+                                <action id="9" name="Set scale" sid="1958" type="explosion">
+                                    <param id="0" name="Scale">4</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="1972" type="playerMissle" />
+                                <action id="-9" name="Destroy" sid="1964" type="BOSS_Scarab" />
                             </actions>
-                            <sub-events>
-                                <event-block sid="1965">
-                                    <conditions>
-                                        <condition id="-15" name="Pick nearest/furthest" sid="1966" type="lineofsight">
-                                            <param id="0" name="Which">0</param>
-                                            <param id="1" name="X">enemyBulletTurret.X</param>
-                                            <param id="2" name="Y">enemyBulletTurret.Y</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Destroy" sid="1967" type="lineofsight" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -192,18 +175,18 @@
                         </action>
                         <action id="0" name="Spawn another object" sid="1720" type="normalbullet">
                             <param id="0" name="Object">explosion</param>
-                            <param id="1" name="Layer">2</param>
+                            <param id="1" name="Layer">&quot;Turret&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-24" name="Move to top" sid="1721" type="explosion" />
-                        <action id="9" name="Set scale" sid="1722" type="explosion">
-                            <param id="0" name="Scale">3</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="1723" type="normalbullet" />
                         <action id="4" name="Set animation" sid="1724" type="explosion">
                             <param id="0" name="Animation">&quot;BlowUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="9" name="Set scale" sid="1722" type="explosion">
+                            <param id="0" name="Scale">3</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1723" type="normalbullet" />
                     </actions>
                     <sub-events>
                         <event-block sid="1727">
@@ -238,37 +221,19 @@
                                 </action>
                                 <action id="0" name="Spawn another object" sid="1732" type="normalbullet">
                                     <param id="0" name="Object">explosion</param>
-                                    <param id="1" name="Layer">2</param>
+                                    <param id="1" name="Layer">&quot;Turret&quot;</param>
                                     <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="1735" type="explosion">
+                                    <param id="0" name="Animation">&quot;BlowUp&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                                 <action id="9" name="Set scale" sid="1733" type="explosion">
                                     <param id="0" name="Scale">4</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="1734" type="normalbullet" />
-                                <action id="4" name="Set animation" sid="1735" type="explosion">
-                                    <param id="0" name="Animation">&quot;BlowUp&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
                                 <action id="-9" name="Destroy" sid="2220" type="BOSS_Scarab" />
-                                <action id="-3" name="Set position" sid="2095" type="scrollerPIN">
-                                    <param id="0" name="X">playertank.X</param>
-                                    <param id="1" name="Y">playertank.Y-300</param>
-                                </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="1739">
-                                    <conditions>
-                                        <condition id="-15" name="Pick nearest/furthest" sid="1740" type="lineofsight">
-                                            <param id="0" name="Which">0</param>
-                                            <param id="1" name="X">enemyBulletTurret.X</param>
-                                            <param id="2" name="Y">enemyBulletTurret.Y</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Destroy" sid="1741" type="lineofsight" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

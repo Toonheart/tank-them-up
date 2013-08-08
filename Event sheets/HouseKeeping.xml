@@ -89,6 +89,18 @@
         </event-group>
         <event-group collapsed="1" description="Ensuring player is placed in right angle and that turret stays on player" sid="9214379970550301" title="Player Stability">
             <sub-events>
+                <comment>Keeps direction hovering at tank position</comment>
+                <event-block sid="3321931481744895">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="7259187491290278" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="8487450771889083" type="directionPoint">
+                            <param id="0" name="Pin to">playertank</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <comment>Turret to stay on Tank always</comment>
                 <event-block sid="2376015826856855">
                     <conditions>
@@ -144,8 +156,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Changing damage points to affect more if enemy is a Boss" sid="6924851497824155" title="Make BOSS Deadlier">
+        <event-group collapsed="1" description="Changing damage points to affect more if enemy is a Boss" sid="6924851497824155" title="Make BOSS Deadlier">
             <sub-events>
+                <comment>Increasing boss damages</comment>
                 <event-block sid="2870009653438885">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="6182340534509285" type="BOSS_Ender" />
@@ -158,6 +171,21 @@
                         <action id="-9" name="Set value" sid="2135497445585099" type="System">
                             <param id="0" name="Variable">Damage_LazerShock</param>
                             <param id="1" name="Value">15</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="All animations that is not event driven but probably needs to run when sprite on screens or generally in game environment" sid="8611032917340593" title="Event Independent Animations">
+            <sub-events>
+                <comment>Small Fans - If on-screen... keep rotating to give a nice environment feel</comment>
+                <event-block sid="9529434140690437">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="439865787516277" type="smallFanBlade" />
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Rotate clockwise" sid="7580766942798524" type="smallFanBlade">
+                            <param id="0" name="Degrees">2</param>
                         </action>
                     </actions>
                 </event-block>

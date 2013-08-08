@@ -246,9 +246,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="how area completes on level2" sid="9443395429107425" title="Level2 - Area Completion">
+        <event-group description="how area completes on level2" sid="9443395429107425" title="Level2 - Area Completion">
             <sub-events>
-                <event-block collapsed="1" sid="2072">
+                <event-block sid="2072">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="2073" type="System">
                             <param id="0" name="First value">enemyLazerTurret.Count</param>

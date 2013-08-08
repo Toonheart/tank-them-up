@@ -54,13 +54,19 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Armor Pinning when Armor is ON</comment>
                 <event-block sid="834">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="835" type="playertank">
                             <param id="0" name="Instance variable">is_armor</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="38613702968596" type="forcefield">
+                            <param id="0" name="Pin to">playertank</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="836">
                             <conditions>
@@ -71,18 +77,8 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action behavior="Pin" id="1" name="Unpin" sid="7629489850743961" type="forcefield" />
                                 <action id="-9" name="Destroy" sid="838" type="forcefield" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="839">
-                            <conditions>
-                                <condition id="-1" name="Every tick" sid="840" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-4" name="Set position to another object" sid="841" type="forcefield">
-                                    <param id="0" name="Object">playertank</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
                             </actions>
                         </event-block>
                     </sub-events>

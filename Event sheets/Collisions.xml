@@ -566,7 +566,7 @@
                         </action>
                         <action id="-12" name="Subtract from" sid="586" type="playertank">
                             <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Value">5</param>
+                            <param id="1" name="Value">Damage_EnemyNormalBullet</param>
                         </action>
                         <action id="-16" name="Wait" sid="588" type="System">
                             <param id="0" name="Seconds">1.0</param>
@@ -596,7 +596,7 @@
                         </action>
                         <action id="-12" name="Subtract from" sid="595" type="playertank">
                             <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Value">10</param>
+                            <param id="1" name="Value">Damage_LazerShock</param>
                         </action>
                         <action id="-16" name="Wait" sid="598" type="System">
                             <param id="0" name="Seconds">1.0</param>
