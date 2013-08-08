@@ -79,7 +79,7 @@
         <event-group description="how area completes on level1" sid="924" title="Level1 - Area Completion">
             <sub-events>
                 <comment>When Player kills all enemies, Level is complete. Stop input. Let player know and save the completed level number</comment>
-                <event-block collapsed="1" disabled="1" sid="925">
+                <event-block disabled="1" sid="925">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="926" type="System">
                             <param id="0" name="First value">enemyBulletTurret.Count</param>
@@ -246,9 +246,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="how area completes on level2" sid="9443395429107425" title="Level2 - Area Completion">
+        <event-group collapsed="1" description="how area completes on level2" sid="9443395429107425" title="Level2 - Area Completion">
             <sub-events>
-                <event-block sid="2072">
+                <event-block collapsed="1" sid="2072">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="2073" type="System">
                             <param id="0" name="First value">enemyLazerTurret.Count</param>
@@ -377,7 +377,7 @@
         </event-group>
         <event-group description="how area completes on level3" sid="43662720118488" title="Level3 - Area Completion">
             <sub-events>
-                <event-block sid="2179">
+                <event-block collapsed="1" sid="2179">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="2180" type="System">
                             <param id="0" name="First value">BOSS_scarab.Count</param>

@@ -69,7 +69,7 @@
         <event-group description="" sid="1716" title="Hitpoint">
             <sub-events>
                 <comment>Scarab gets fucked by missle</comment>
-                <event-block sid="1938">
+                <event-block collapsed="1" disabled="1" sid="1938">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="1939" type="enemyBulletTurret">
                             <param id="0" name="Object">playerMissle</param>
@@ -102,12 +102,12 @@
                         <action id="-9" name="Destroy" sid="1947" type="explosion" />
                     </actions>
                     <sub-events>
-                        <event-block sid="1952">
+                        <event-block disabled="1" sid="1952">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="1953" type="enemyBulletTurret">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">BulletTurretHitPoint</param>
+                                    <param id="2" name="Value">EnemyBulletTurret_Health</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -117,12 +117,12 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="1955">
+                        <event-block disabled="1" sid="1955">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="1956" type="enemyBulletTurret">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">BulletTurretHitPoint</param>
+                                    <param id="2" name="Value">EnemyBulletTurret_Health</param>
                                 </condition>
                                 <condition id="1" inverted="1" name="Is overlapping another object" sid="1076736877553108" type="enemyBulletTurret">
                                     <param id="0" name="Object">BOSS_Ender</param>
@@ -149,17 +149,13 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="1964" type="enemyBulletTurret" />
-                                <action id="-3" name="Set position" sid="2066" type="scrollerPIN">
-                                    <param id="0" name="X">playertank.X</param>
-                                    <param id="1" name="Y">playertank.Y-300</param>
-                                </action>
                                 <action id="-16" name="Wait" sid="1961" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="1962" type="explosion" />
                             </actions>
                             <sub-events>
-                                <event-block sid="1965">
+                                <event-block disabled="1" sid="1965">
                                     <conditions>
                                         <condition id="-15" name="Pick nearest/furthest" sid="1966" type="lineofsight">
                                             <param id="0" name="Which">0</param>
@@ -173,12 +169,12 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="6581869989566283">
+                        <event-block disabled="1" sid="6581869989566283">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="6143430675206189" type="enemyBulletTurret">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">BulletTurretHitPoint</param>
+                                    <param id="2" name="Value">EnemyBulletTurret_Health</param>
                                 </condition>
                                 <condition id="1" name="Is overlapping another object" sid="5611715659415543" type="enemyBulletTurret">
                                     <param id="0" name="Object">BOSS_Ender</param>
@@ -210,14 +206,9 @@
                                 <action id="-9" name="Destroy" sid="509656666001315" type="explosion" />
                             </actions>
                             <sub-events>
-                                <event-block sid="4891981572144711">
+                                <event-block disabled="1" sid="4891981572144711">
                                     <conditions>
                                         <condition id="-23" name="While" sid="2859892763278444" type="System" />
-                                        <condition id="-8" name="Compare two values" sid="2863787260657653" type="System">
-                                            <param id="0" name="First value">BossExplosionCnt</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Second value">0</param>
-                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Spawn another object" sid="9269901763878684" type="BOSS_Ender">
@@ -232,13 +223,9 @@
                                         <action id="-16" name="Wait" sid="9285866303397208" type="System">
                                             <param id="0" name="Seconds">1.0</param>
                                         </action>
-                                        <action id="-10" name="Add to" sid="2363163801626585" type="System">
-                                            <param id="0" name="Variable">BossExplosionCnt</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="6935537303193005">
+                                <event-block disabled="1" sid="6935537303193005">
                                     <conditions>
                                         <condition id="-15" name="Pick nearest/furthest" sid="4521369619651732" type="lineofsight">
                                             <param id="0" name="Which">0</param>
@@ -250,14 +237,8 @@
                                         <action id="-9" name="Destroy" sid="3421392734209701" type="lineofsight" />
                                     </actions>
                                 </event-block>
-                                <event-block sid="2537151123820341">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="3525700478639584" type="System">
-                                            <param id="0" name="First value">BossExplosionCnt</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Second value">0</param>
-                                        </condition>
-                                    </conditions>
+                                <event-block disabled="1" sid="2537151123820341">
+                                    <conditions />
                                     <actions>
                                         <action id="-16" name="Wait" sid="2406062649588279" type="System">
                                             <param id="0" name="Seconds">1.0</param>
@@ -312,7 +293,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="1728" type="enemyBulletTurret">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">BulletTurretHitPoint</param>
+                                    <param id="2" name="Value">EnemyBulletTurret_Health</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -327,7 +308,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="2729472608435858" type="enemyBulletTurret">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">BulletTurretHitPoint</param>
+                                    <param id="2" name="Value">EnemyBulletTurret_Health</param>
                                 </condition>
                                 <condition id="1" inverted="1" name="Is overlapping another object" sid="6411753658373418" type="enemyBulletTurret">
                                     <param id="0" name="Object">BOSS_Ender</param>
@@ -345,7 +326,7 @@
                                     <param id="1" name="Layer">&quot;Turret&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="249799382035563" type="playerMissle" />
+                                <action id="-9" name="Destroy" sid="249799382035563" type="normalbullet" />
                                 <action id="9" name="Set scale" sid="783585757429777" type="explosion">
                                     <param id="0" name="Scale">3</param>
                                 </action>
@@ -354,10 +335,6 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="8458266757200458" type="enemyBulletTurret" />
-                                <action id="-3" name="Set position" sid="8207001055238083" type="scrollerPIN">
-                                    <param id="0" name="X">playertank.X</param>
-                                    <param id="1" name="Y">playertank.Y-300</param>
-                                </action>
                                 <action id="-16" name="Wait" sid="7246483681782954" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
@@ -383,7 +360,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="1731" type="enemyBulletTurret">
                                     <param id="0" name="Instance variable">hitcount</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">BulletTurretHitPoint</param>
+                                    <param id="2" name="Value">EnemyBulletTurret_Health</param>
                                 </condition>
                                 <condition id="1" name="Is overlapping another object" sid="6611603560369831" type="enemyBulletTurret">
                                     <param id="0" name="Object">BOSS_Ender</param>
@@ -398,7 +375,7 @@
                                 </action>
                                 <action id="0" name="Spawn another object" sid="1732" type="normalbullet">
                                     <param id="0" name="Object">explosion</param>
-                                    <param id="1" name="Layer">2</param>
+                                    <param id="1" name="Layer">&quot;Turret&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="9" name="Set scale" sid="1733" type="explosion">
@@ -413,59 +390,9 @@
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="1737" type="explosion" />
-                                <action id="-3" name="Set position" sid="2095" type="scrollerPIN">
-                                    <param id="0" name="X">playertank.X</param>
-                                    <param id="1" name="Y">playertank.Y-300</param>
-                                </action>
+                                <action id="-9" name="Destroy" sid="9017990224565627" type="enemyBulletTurret" />
                             </actions>
                             <sub-events>
-                                <event-block sid="7672146866004546">
-                                    <conditions>
-                                        <condition id="-23" name="While" sid="2213506375052306" type="System" />
-                                        <condition id="-8" name="Compare two values" sid="6524517968275562" type="System">
-                                            <param id="0" name="First value">BossExplosionCnt</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Second value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Spawn another object" sid="3687535103437665" type="BOSS_Ender">
-                                            <param id="0" name="Object">explosion</param>
-                                            <param id="1" name="Layer">&quot;Turret&quot;</param>
-                                            <param id="2" name="Image point">0</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="502682213982198" type="explosion">
-                                            <param id="0" name="Animation">&quot;BlowUp&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="9773292058425344" type="System">
-                                            <param id="0" name="Seconds">1.0</param>
-                                        </action>
-                                        <action id="-10" name="Add to" sid="8451329797549245" type="System">
-                                            <param id="0" name="Variable">BossExplosionCnt</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="4101778525576143">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="1411221242741405" type="System">
-                                            <param id="0" name="First value">BossExplosionCnt</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Second value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-16" name="Wait" sid="2059771591605647" type="System">
-                                            <param id="0" name="Seconds">1.0</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="5123381334166808" type="scrollerPIN">
-                                            <param id="0" name="X">playertank.X</param>
-                                            <param id="1" name="Y">playertank.Y-300</param>
-                                        </action>
-                                        <action id="-9" name="Destroy" sid="9017990224565627" type="enemyBulletTurret" />
-                                    </actions>
-                                </event-block>
                                 <event-block sid="1739">
                                     <conditions>
                                         <condition id="-15" name="Pick nearest/furthest" sid="1740" type="lineofsight">
