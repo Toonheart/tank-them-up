@@ -36,7 +36,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="z order to make them look right" sid="2224" title="Z-Order of Stuff">
+        <event-group collapsed="1" description="z order to make them look right" sid="2224" title="Z-Order of Stuff">
             <sub-events>
                 <comment>Object Layer</comment>
                 <event-block sid="2225">
@@ -65,7 +65,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8844547243682315" title="Killing UnNeeded Animations">
+        <event-group collapsed="1" description="" sid="8844547243682315" title="Killing UnNeeded Animations">
             <sub-events>
                 <comment>Ensure explosion sprites are killed after they end. Better solution than waiting 1 sec for animation finish.</comment>
                 <event-block sid="3436351061152607">
@@ -87,7 +87,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Ensuring player is placed in right angle and that turret stays on player" sid="9214379970550301" title="Player Stability">
+        <event-group collapsed="1" description="Ensuring player is placed in right angle and that turret stays on player" sid="9214379970550301" title="Player Stability">
             <sub-events>
                 <comment>Turret to stay on Tank always</comment>
                 <event-block sid="2376015826856855">
@@ -139,6 +139,25 @@
                         <action id="-10" name="Set value" sid="2777760657348586" type="playertank">
                             <param id="0" name="Instance variable">EnergySpheres</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Changing damage points to affect more if enemy is a Boss" sid="6924851497824155" title="Make BOSS Deadlier">
+            <sub-events>
+                <event-block sid="2870009653438885">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="6182340534509285" type="BOSS_Ender" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7719807714261104" type="System">
+                            <param id="0" name="Variable">Damage_EnemyNormalBullet</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2135497445585099" type="System">
+                            <param id="0" name="Variable">Damage_LazerShock</param>
+                            <param id="1" name="Value">15</param>
                         </action>
                     </actions>
                 </event-block>
