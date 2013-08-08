@@ -3,7 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>AllGlobalVariables</name>
     <events>
-        <variable comment="hit point for bullet turret" constant="0" name="BulletTurretHitPoint" sid="5721575555181571" static="0" type="number">5</variable>
-        <variable comment="Explosion counter after Boss End" constant="0" name="BossExplosionCnt" sid="4794210903699472" static="0" type="number">10</variable>
+        <variable comment="Number of explosions on boss ending" constant="0" name="BOSS_Explosion_DramaCnt" sid="2909760608013534" static="0" type="number">5</variable>
+        <variable comment="Damage to player due to enemy normal bullet" constant="0" name="Damage_EnemyNormalBullet" sid="7795876019734177" static="0" type="number">5</variable>
+        <variable comment="Damage to player due to enemy lazer" constant="0" name="Damage_LazerShock" sid="3355909155238455" static="0" type="number">10</variable>
+        <variable comment="hit point for bullet turret" constant="0" name="EnemyBulletTurret_Health" sid="5721575555181571" static="0" type="number">5</variable>
     </events>
 </c2eventsheet>
